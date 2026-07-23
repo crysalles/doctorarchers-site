@@ -1,0 +1,16 @@
+# Netlify deploy config for doctorarchers.com
+[build]
+  publish = "."
+
+# Security + privacy headers (best practice)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Netlify serves clean URLs automatically (/about, /book, /contact). The contact
+# form is captured by Netlify Forms via the data-netlify attribute on /contact.
