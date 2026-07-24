@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://book.doctorarchers.com/sitemap.xml
+Sitemap: https://book.laveenaarchers.com/sitemap.xml

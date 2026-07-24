@@ -38,7 +38,7 @@ ROOT = Path(__file__).resolve().parent
 POSTS_DIR = ROOT / "posts"
 OUT_DIR = ROOT / "blog"
 
-SITE_URL = "https://book.doctorarchers.com"
+SITE_URL = "https://book.laveenaarchers.com"
 
 # --------------------------------------------------------------------------
 # Shared page template (mirrors the hand-written pages, with ../ paths)
@@ -146,19 +146,19 @@ SITE_JSON_LD = """{
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://book.doctorarchers.com/#laveena",
+      "@id": "https://book.laveenaarchers.com/#laveena",
       "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.doctorarchers.com/",
+      "url": "https://book.laveenaarchers.com/",
       "email": "mailto:hi@doctorarchers.com",
       "description": "Holistic Functional Medicine practitioner and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
       "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
     },
     {
       "@type": "WebSite",
-      "@id": "https://book.doctorarchers.com/#website",
-      "url": "https://book.doctorarchers.com/",
+      "@id": "https://book.laveenaarchers.com/#website",
+      "url": "https://book.laveenaarchers.com/",
       "name": "DoctorArchers.com",
-      "publisher": { "@id": "https://book.doctorarchers.com/#laveena" },
+      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
       "inLanguage": "en"
     }
   ]
