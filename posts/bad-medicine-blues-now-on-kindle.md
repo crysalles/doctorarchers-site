@@ -21,7 +21,7 @@ I wanted this book to reach the woman who needs it, not only the woman who can s
 
 # Read it
 
-You can find Bad Medicine Blues on Amazon Kindle here: [Read on Amazon Kindle](https://amzn.to/4fDUnDB).
+You can find Bad Medicine Blues on Amazon Kindle here: [Read on Amazon Kindle](https://amzn.to/4fDUnDB). As an Amazon Associate, I earn from qualifying purchases.
 
 If it speaks to you, a short and honest review helps another woman find it more than almost anything else. And if you know someone in the thick of the change who has been feeling unseen, this book was written for her too.
 
