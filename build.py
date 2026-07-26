@@ -79,7 +79,7 @@ HEADER = """<!DOCTYPE html>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="../index.html">Dr. LaVeena Archers</a>
+    <a class="brand" href="../index.html">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a href="../index.html">Home</a>
@@ -111,14 +111,13 @@ FOOTER = """
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h3>Dr. LaVeena Archers</h3>
-        <p>Awaken To Your ICONIC Potential.<br>Sedona, Arizona · serving clients worldwide.<br>© 2026 Rev. Dr. LaVeena B. Archers, PhD.</p>
+        <h3>Rev. Dr. LaVeena Archers</h3>
+        <p>Awaken To Your ICONIC Potential.<br>Serving clients worldwide.<br>© 2026 Rev. Dr. LaVeena B. Archers, PhD.</p>
       </div>
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
           <li><a href="mailto:hi@doctorarchers.com">hi@doctorarchers.com</a></li>
-          <li><a href="[INSTAGRAM_URL]">Instagram</a></li>
         </ul>
       </div>
       <div>
@@ -334,7 +333,7 @@ def build_post_page(meta, body_html):
     canonical = f"{SITE_URL}/blog/{meta['slug']}.html"
     json_ld = SITE_JSON_LD
     head = HEADER.format(
-        title_tag=esc_attr(meta["title"]) + " — Dr. LaVeena Archers",
+        title_tag=esc_attr(meta["title"]) + " — Rev. Dr. LaVeena Archers",
         description=esc_attr(meta["summary"]),
         canonical=canonical,
         og_type="article",
@@ -356,11 +355,11 @@ def build_post_page(meta, body_html):
 def build_index_page(posts):
     canonical = f"{SITE_URL}/blog/index.html"
     head = HEADER.format(
-        title_tag="Blog — Dr. LaVeena Archers",
+        title_tag="Blog — Rev. Dr. LaVeena Archers",
         description="Notes on holistic functional health, clear-eyed and grounded, from Rev. Dr. LaVeena B. Archers, PhD.",
         canonical=canonical,
         og_type="website",
-        og_title="Blog — Dr. LaVeena Archers",
+        og_title="Blog — Rev. Dr. LaVeena Archers",
         json_ld=SITE_JSON_LD,
     )
     cards = []
