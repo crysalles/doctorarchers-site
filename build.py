@@ -753,6 +753,17 @@ SITEMAP_PRIORITY = {
 SITEMAP_SKIP = {"404.html"}
 
 
+def is_indexable(path):
+    """False for pages that ask robots not to index them.
+
+    Thank-you and delivery pages carry <meta name="robots" content="noindex">;
+    listing them in the sitemap or llms.txt would contradict that."""
+    if path.name in SITEMAP_SKIP:
+        return False
+    head = path.read_text(encoding="utf-8")[:4000]
+    return "noindex" not in head
+
+
 def build_sitemap(posts):
     """Generate sitemap.xml from what is actually on disk.
 
@@ -760,7 +771,7 @@ def build_sitemap(posts):
     entries = []
 
     for page in sorted(ROOT.glob("*.html")):
-        if page.name in SITEMAP_SKIP:
+        if not is_indexable(page):
             continue
         loc = f"{SITE_URL}/" if page.name == "index.html" else f"{SITE_URL}/{page.name}"
         entries.append((loc, SITEMAP_PRIORITY.get(page.name, "0.5"), None))
@@ -840,7 +851,7 @@ def build_llms_txt(posts):
     lines = [LLMS_INTRO.format(site=SITE_URL)]
 
     for page in sorted(ROOT.glob("*.html")):
-        if page.name in SITEMAP_SKIP:
+        if not is_indexable(page):
             continue
         title, desc = extract_meta(page)
         loc = f"{SITE_URL}/" if page.name == "index.html" else f"{SITE_URL}/{page.name}"
