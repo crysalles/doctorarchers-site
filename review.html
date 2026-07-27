@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Leave a review | Your Body's Own GLP-1</title>
+<link rel="canonical" href="https://book.laveenaarchers.com/review">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+  // ==================================================================
+  // ON LAUNCH DAY: paste the Kindle ASIN between the quotes below.
+  // As soon as ASIN is set, this page redirects straight to the Amazon
+  // "write a review" form. While it is empty, readers see the friendly
+  // pre-launch message instead of a broken Amazon link.
+  //   e.g.  var ASIN = "B0XXXXXXXX";
+  // ==================================================================
+  var ASIN = "";
+  var REVIEW_URL = "https://www.amazon.com/review/create-review?asin=" + ASIN;
+  if (ASIN) { window.location.replace(REVIEW_URL); }
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="testing.html">Testing &amp; Learning</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="review-title">
+    <div class="wrap narrow center">
+
+      <!-- Shown once the book is live (ASIN set). If the auto-redirect is
+           slow or blocked, this button still gets them there. -->
+      <div id="live" hidden>
+        <span class="eyebrow">Thank you</span>
+        <h1 id="review-title">Taking you to the review page…</h1>
+        <p class="lede">Thank you for taking a moment. A sentence or two is plenty, and it is the kindest thing you can do for the next woman deciding what to believe.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary" id="review-link" href="#" rel="noopener">Write your review</a>
+        </div>
+        <p class="microcopy" style="margin-top:1.25rem">If the page does not open on its own, tap the button above.</p>
+      </div>
+
+      <!-- Shown before launch (ASIN still empty). -->
+      <div id="prelaunch">
+        <span class="eyebrow">Almost there</span>
+        <h1>Reviews open on launch day.</h1>
+        <p class="lede"><em>Your Body's Own GLP-1</em> is not quite live yet. The moment it is, this page will take you straight to the spot where you can leave a review. Thank you for wanting to, it means a great deal.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary" href="glp1-book.html">Read the first chapter free</a>
+        </div>
+        <p class="microcopy" style="margin-top:1.25rem">Join the reader list on that page and I will write to you the day it goes live.</p>
+      </div>
+
+      <p style="margin-top:2rem"><a href="glp1-book.html">&larr; About the book</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-green">
+  <div class="wrap">
+    <p class="disclaimer" style="text-align:center"><strong>Rev. Dr. LaVeena Archers.</strong> Awaken to your ICONIC potential. &copy; 2026 Rev. Dr. LaVeena B. Archers.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script src="assets/analytics.js" defer></script>
+<script>
+  // Toggle the visible state to match whether the ASIN is set.
+  (function () {
+    var live = document.getElementById("live");
+    var pre = document.getElementById("prelaunch");
+    if (typeof ASIN !== "undefined" && ASIN) {
+      var link = document.getElementById("review-link");
+      if (link) link.href = REVIEW_URL;
+      if (live) live.hidden = false;
+      if (pre) pre.hidden = true;
+    }
+  })();
+</script>
+</body>
+</html>
