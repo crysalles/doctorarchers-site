@@ -157,7 +157,7 @@ To publish a run of posts on a drip rather than all at once, just set the
   posts on the live site. Re-run plain `python3 build.py` before committing.
 
 The GitHub Action in `.github/workflows/publish-scheduled-posts.yml` runs the
-build once a day at 13:00 UTC (06:00 Arizona). When a post comes due it commits
+build once a day at 19:00 UTC (noon in Arizona). When a post comes due it commits
 and pushes, which triggers the Netlify deploy. If nothing is due, it exits
 without committing. You can also run it on demand from the repo's **Actions**
 tab, and the schedule needs no maintenance as you add posts.

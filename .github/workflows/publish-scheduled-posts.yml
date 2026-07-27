@@ -1,0 +1,47 @@
+# Publishes any post whose date has arrived.
+#
+# build.py holds back posts dated in the future. This job re-runs the build
+# once a day, so on the morning a post is due it appears on the site with no
+# action from anyone. If nothing is due, the build produces no changes and the
+# job exits without committing.
+#
+# Pushing to main is what triggers the Netlify deploy.
+
+name: Publish scheduled posts
+
+on:
+  schedule:
+    # 19:00 UTC daily = 12:00 noon in Arizona (MST, no daylight saving).
+    # GitHub's scheduler is best-effort and can run late at busy times, so
+    # treat this as "around noon" rather than exactly on the hour.
+    - cron: "0 19 * * *"
+  workflow_dispatch:        # lets you publish on demand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build the site
+        run: python3 build.py
+
+      - name: Commit and push if anything became due
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing due today. No changes to publish."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          NEW=$(git diff --cached --name-only --diff-filter=A -- blog/ | sed 's|blog/||;s|\.html$||' | paste -sd', ' -)
+          git commit -m "Publish scheduled post(s): ${NEW:-rebuild}"
+          git push
