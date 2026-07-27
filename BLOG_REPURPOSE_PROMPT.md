@@ -87,9 +87,9 @@ Posts are published every other day and the queue is already full to 16 August:
 
   Jul 29 FDA hormone warning, Jul 31 normal lab results, Aug 02 ferritin, Aug 04 TSH,
   Aug 06 perimenopause, Aug 08 3am waking, Aug 10 protein, Aug 12 GLP-1 muscle,
-  Aug 14 fibre, Aug 16 blue zones
+  Aug 14 fibre, Aug 16 blue zones, Aug 18 chrononutrition
 
-**Start new posts at 18 August and continue every other day** (18, 20, 22...). A post dated today
+**Start new posts at 20 August and continue every other day** (20, 22, 24...). A post dated today
 publishes on the next push, which double-posts and breaks the cadence. `build.py` holds back any
 future-dated post and prints what is queued, so run it and read that list before choosing a date.
 
@@ -105,3 +105,11 @@ before staging.
 Stage your own files by name. **Do not `git add -A`**, because it will sweep up another agent's
 half-finished work and publish it. Check `git status` before committing and leave anything you did
 not create alone.
+
+## Which opt-in form to embed
+These longevity posts feed a **dedicated Kit list**, separate from the site default. `build.py`
+defaults the blog opt-in to form `9680686` (the BMB reader list). For these posts, embed the new
+**"The Good Years — Longevity"** form instead, ID `{{GOODYEARS_FORM_ID}}` — Dr. Archers pastes the ID
+here once she creates the form in Kit. Its dedicated welcome sequence is written and waiting in
+`email-templates/goodyears-longevity-nurture.md`. If the ID is not yet filled in, leave the default
+`9680686` and flag it rather than blocking, and **never invent a form ID.**
