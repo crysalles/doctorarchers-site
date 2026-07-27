@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /email-templates/
+Disallow: /posts/
 
 Sitemap: https://book.laveenaarchers.com/sitemap.xml

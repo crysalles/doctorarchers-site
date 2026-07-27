@@ -82,18 +82,61 @@ booking `https://go.oncehub.com/HealthConsultation`, labs
   MailerLite, Buttondown, etc.) create a form; either point the existing
   `<form action="...">` at the provider's POST endpoint (keep the `email`
   input name it expects) or replace the whole form with the provider embed.
-  Same for the blog **newsletter** form (edit it in `build.py`, then re-run).
+- **Sitewide reader opt-in** — the same Companion Workbook offer appears near
+  the foot of every content page, mid-way through longer blog posts, and on
+  the blog index. For the hand-written pages the form lives in the page HTML;
+  for anything generated, change `OPTIN_FORM_ACTION` at the top of `build.py`
+  and re-run. Legal and utility pages (`privacy`, `scope-of-practice`, `404`)
+  are deliberately left clean, and `book.html` keeps its own dedicated card.
 - **PMA signup** — put the membership agreement link or embed into
   `join-pma.html` at `[PMA_SIGNUP_URL_OR_EMBED]`.
+- **Analytics** — `assets/analytics.js` loads Cloudflare Web Analytics
+  (free, cookieless, no consent banner needed). Paste your site token into the
+  `TOKEN` line in that file and analytics switches on everywhere at once.
+  Until then it makes no requests at all. Full instructions are in the file.
 
 ## The blog
 
-1. Write markdown in `posts/`, one file per post, with front matter:
-   `title`, `date` (YYYY-MM-DD), `slug`, `summary` (see `posts/welcome.md`,
-   which is a sample — replace it before launch).
+1. Write markdown in `posts/`, one file per post, with front matter.
+   `title`, `date` (YYYY-MM-DD), `slug` and `summary` are required:
+
+   ```
+   ---
+   title: Creatine for Women in Midlife
+   date: 2026-07-12
+   slug: creatine-for-women-midlife
+   summary: One or two sentences shown on the blog index.
+   reviewed: 2026-07-27
+   questions:
+     - Is creatine only for athletes? :: No. It is one of the most studied...
+   references:
+     - Smith-Ryan AE, et al. Creatine Supplementation in Women's Health.
+       Nutrients. 2021;13(3):877. https://doi.org/10.3390/nu13030877
+   ---
+   ```
+
+   The optional fields:
+
+   - **`reviewed`** — when you last checked the piece for accuracy. Shows as
+     "Last reviewed …" when it differs from the publication date, and becomes
+     `dateModified` in the article's structured data. Bump it whenever you
+     revisit a post.
+   - **`references`** — one source per `- ` line. These render as a numbered
+     "Sources" section at the foot of the post, with any trailing URL linked,
+     and are published as citations in the structured data. Cite them in the
+     body with bracketed numbers — `…after 40 [1], and creatine helps [2,3]` —
+     which become superscript links down to the source list.
+   - **`questions`** — `Question :: Answer` pairs. These render as a "Quick
+     answers" box at the head of the post and are published as FAQ structured
+     data, so AI assistants can lift a question and its answer together.
+   - **`image`** — social-share image for the post (absolute URL, or a path
+     like `assets/foo.jpg`). Defaults to the portrait.
+
 2. Run `python3 build.py` (any Python 3; no packages to install).
 3. It writes `blog/<slug>.html` for each post and regenerates
-   `blog/index.html`, newest first. Commit/deploy the `blog/` output.
+   `blog/index.html`, newest first. It also regenerates `sitemap.xml` and
+   `llms.txt` from what is actually on disk, so neither can drift out of
+   date — do not edit those two by hand. Commit/deploy the output.
 
 Markdown supported: `#`–`######` headings (auto-shifted down one level so
 the post title stays the page's only `h1`), paragraphs, `-`/`*` and `1.`
