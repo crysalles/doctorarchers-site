@@ -138,6 +138,30 @@ booking `https://go.oncehub.com/HealthConsultation`, labs
    `llms.txt` from what is actually on disk, so neither can drift out of
    date — do not edit those two by hand. Commit/deploy the output.
 
+## Scheduling posts ahead
+
+**A post dated in the future is scheduled, not published.** `build.py` skips
+it, deletes any previously generated copy, and keeps it out of `blog/index.html`,
+`sitemap.xml` and `llms.txt`. It prints a line like:
+
+```
+  scheduled  why-you-wake-at-3am  (publishes 2026-08-07)
+```
+
+To publish a run of posts on a drip rather than all at once, just set the
+`date:` fields apart — every other day, weekly, whatever you want.
+
+- `python3 build.py` builds what is due today. This is what you normally run.
+- `python3 build.py --all` renders scheduled posts too, so you can preview
+  them locally. **Do not commit the output of `--all`** — it puts unpublished
+  posts on the live site. Re-run plain `python3 build.py` before committing.
+
+The GitHub Action in `.github/workflows/publish-scheduled-posts.yml` runs the
+build once a day at 13:00 UTC (06:00 Arizona). When a post comes due it commits
+and pushes, which triggers the Netlify deploy. If nothing is due, it exits
+without committing. You can also run it on demand from the repo's **Actions**
+tab, and the schedule needs no maintenance as you add posts.
+
 Markdown supported: `#`–`######` headings (auto-shifted down one level so
 the post title stays the page's only `h1`), paragraphs, `-`/`*` and `1.`
 lists, `>` quotes, ``` fences, bold/italic/inline code/links.

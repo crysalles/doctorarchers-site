@@ -1,0 +1,82 @@
+---
+title: The Protein Number You Were Given Was Never a Target
+date: 2026-08-09
+slug: protein-midlife-women
+summary: The official protein recommendation is 0.8 grams per kilogram. It was set as a minimum to prevent deficiency, not as an amount that supports muscle in a woman past forty, and the researchers who study this say so plainly.
+questions:
+  - How much protein does the official guidance recommend? :: The Dietary Reference Intakes set the RDA at 0.8 grams of protein per kilogram of body weight per day for everyone over 19. A growing body of evidence suggests this is inadequate for older individuals.
+  - How much do researchers in the field propose instead? :: One review proposes at least 1.2 g/kg/day for older adults. A sports nutrition position stand covering women at all stages of menstrual function recommends 1.4 to 2.2 g/kg/day, with peri- and post-menopausal women at the upper end.
+  - Is high protein bad for kidneys or bones? :: In people with healthy kidneys, the frequently cited harms to kidney and bone health from higher protein intakes are described in the research literature as being without scientific foundation in humans.
+references:
+  - Traylor DA, Gorissen SHM, Phillips SM. Perspective- protein requirements and optimal intakes in aging- are we ready to recommend more than the Recommended Daily Allowance? Adv Nutr. 2018;9(3):171-182. https://doi.org/10.1093/advances/nmy003
+  - Sims ST, Kerksick CM, Smith-Ryan AE, et al. International Society of Sports Nutrition position stand- nutritional concerns of the female athlete. J Int Soc Sports Nutr. 2023;20(1):2204066. https://doi.org/10.1080/15502783.2023.2204066
+  - Locatelli JC, Costa JG, Haynes A, et al. Incretin-based weight loss pharmacotherapy- can resistance exercise optimize changes in body composition? Diabetes Care. 2024;47(10):1718-1730. https://doi.org/10.2337/dci23-0100
+---
+
+Somewhere along the way you were told you need 0.8 grams of protein per kilogram of body weight. For a woman of seventy kilos that is fifty-six grams a day, and it sounds reassuringly achievable.
+
+Almost nobody is told where that number came from. Once you know, the whole conversation changes.
+
+# It is a floor, not a target
+
+The Dietary Reference Intakes set the protein RDA at 0.8 g per kilogram per day for everyone over nineteen [1].
+
+An RDA answers a specific and narrow question: what is the smallest amount that will prevent deficiency in nearly everyone in a population. It is a public health floor. It was never built to answer how much protein supports a fifty year old woman in keeping her muscle, and it has been applied to that question anyway for decades.
+
+This is the same error that runs through lab reference ranges. A number built to describe the minimum acceptable gets mistaken for a description of the desirable.
+
+# The researchers say it outright
+
+This is not my extrapolation. A review in *Advances in Nutrition* by researchers in exercise metabolism states that a growing body of evidence suggests the protein RDA may be inadequate for older individuals, and proposes that older adults consume at least 1.2 g per kilogram per day [1].
+
+For our seventy kilo woman, that moves the figure from fifty-six grams to eighty-four. It is a meaningfully different day of eating.
+
+The same review highlights the amino acid leucine, which plays a central role in signalling muscle to build [1]. That is why protein quality and distribution matter, not only the daily total.
+
+The reasoning behind the higher figure is age-related loss of muscle mass and function, and how much of that decline adequate protein might offset [1]. The authors are careful, and note honestly that longer-term intervention trials are still needed [1]. But the direction of the evidence is not seriously in dispute.
+
+# For women, the numbers go higher
+
+The International Society of Sports Nutrition position stand on the female athlete recommends daily protein in the mid to upper range of 1.4 to 2.2 g per kilogram per day for women at all stages of menstrual function, whether pre-, peri- or post-menopausal, or using contraceptives [2].
+
+And it makes a distinction that matters for the women reading this. Peri- and post-menopausal women are advised to aim for the upper end of that range, and to take in a bolus of roughly 10 grams of essential amino acids from intact protein close to exercise, specifically to overcome anabolic resistance [2].
+
+Anabolic resistance is the phrase worth carrying away. As we age, muscle becomes less responsive to the same amount of protein. The signal that comfortably triggered muscle building at twenty-five does not reliably do it at fifty-five. The requirement rises not because you are doing less, but because the same input produces less response.
+
+That is also why "I eat the same as I always did" is not the reassurance it sounds like. Your intake stayed constant. The threshold moved.
+
+# Spread it out
+
+The position stand advises distributing protein evenly across the day, every three to four hours, rather than backloading it [2].
+
+Most women I have known eat almost nothing at breakfast, something small at lunch, and then the bulk of their protein at dinner. That pattern can hit a respectable daily total while missing the repeated signal muscle actually responds to.
+
+# The kidney objection
+
+This comes up every time, so let me deal with it directly.
+
+The review states that the often-cited negative effects of higher protein intakes on renal and bone health are without a scientific foundation in humans [1].
+
+That is unusually blunt language for a scientific paper, and it is worth taking seriously. The kidney concern originates largely in people who already have kidney disease, where protein restriction genuinely is part of management, and was then generalised to everyone. If you have kidney disease or reduced kidney function, that is a real conversation to have with your doctor and I am not waving it away. If you do not, the fear has been doing more harm than the protein.
+
+# Protein alone builds nothing
+
+Protein is the raw material. Resistance training is the signal that tells your body to use it. Supervised resistance programmes running longer than ten weeks have produced increases of roughly three kilograms in lean mass and about twenty-five percent in strength, in men and women [3].
+
+Protein without training gives your body materials it has no particular reason to use. Training without adequate protein asks for a build and supplies no bricks. They are not alternatives, and the research consistently treats them as a pair.
+
+# What this looks like in a normal day
+
+Not a special diet. Just deliberate.
+
+Protein at breakfast rather than at dinner alone. A source at every meal instead of two out of three. Attention to whether you are actually reaching the number rather than assuming, because most people substantially overestimate their intake until they count it for a few days.
+
+And if your appetite is suppressed for any reason, whether by medication, illness or age, the case for making every meal count gets stronger.
+
+# Where the evidence thins
+
+The higher figures come substantially from research in older adults and in athletes [1,2]. A woman in her late forties who does not train sits at neither pole, and the precise number for her has not been established with the same rigour. The authors of the review say plainly that longer-term trials are still needed [1].
+
+But the central claim holds, and the people who study this state it openly: 0.8 g/kg was set as a minimum to prevent deficiency, and it is not an optimum for maintaining muscle in midlife [1].
+
+None of this is medical advice, and if you have kidney disease or any condition affecting how you handle protein, the right amount for you belongs with a professional who knows your history.

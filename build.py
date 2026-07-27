@@ -58,7 +58,8 @@ Markdown supported (a deliberate, honest subset):
 import html
 import json
 import re
-from datetime import datetime
+import sys
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -875,16 +876,33 @@ def main():
         raise SystemExit("ERROR: posts/ directory not found next to build.py.")
     OUT_DIR.mkdir(exist_ok=True)
 
+    # A post dated in the future is scheduled, not published: it is skipped
+    # until its date arrives. Pass --all to render everything for previewing.
+    include_future = "--all" in sys.argv
+    today = date.today()
+
     posts = []
+    scheduled = []
     for md_file in sorted(POSTS_DIR.glob("*.md")):
         text = md_file.read_text(encoding="utf-8")
         meta, body = parse_front_matter(text, md_file.name)
+
+        if meta["date_obj"].date() > today and not include_future:
+            scheduled.append(meta)
+            stale = OUT_DIR / f"{meta['slug']}.html"
+            if stale.exists():
+                stale.unlink()   # never leave a scheduled post reachable
+            continue
+
         body_html = markdown_to_html(body)
         page = build_post_page(meta, body_html)
         out_file = OUT_DIR / f"{meta['slug']}.html"
         out_file.write_text(page, encoding="utf-8")
         print(f"  wrote blog/{out_file.name}  ({md_file.name})")
         posts.append(meta)
+
+    for meta in sorted(scheduled, key=lambda m: m["date_obj"]):
+        print(f"  scheduled  {meta['slug']}  (publishes {meta['date']})")
 
     posts.sort(key=lambda m: m["date_obj"], reverse=True)  # newest first
     (OUT_DIR / "index.html").write_text(build_index_page(posts), encoding="utf-8")
