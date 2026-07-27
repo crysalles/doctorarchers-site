@@ -1,6 +1,6 @@
 ---
 title: What Changes First in Perimenopause
-date: 2026-08-05
+date: 2026-08-06
 slug: what-changes-first-perimenopause
 summary: Most women are told to think about their bones and their sleep after menopause. The research suggests the fastest changes happen during the transition itself, in the years before the milestone everyone is waiting for.
 questions:

@@ -1,6 +1,6 @@
 ---
 title: What "Normal" on a Lab Report Actually Means
-date: 2026-07-30
+date: 2026-07-31
 slug: what-normal-lab-results-mean
 summary: "Everything came back normal" is one of the most deflating sentences in medicine, and one of the most misunderstood, including by some of the people saying it. Here is how a reference range is built, and what it can and cannot tell you.
 questions:

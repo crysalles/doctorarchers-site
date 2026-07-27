@@ -1,6 +1,6 @@
 ---
 title: What the GLP-1 Drugs Take From Your Muscle
-date: 2026-08-11
+date: 2026-08-12
 slug: glp1-muscle-loss
 summary: The weight-loss injections work. About a quarter of what comes off is lean mass, and for a woman in midlife that matters more than the number on the scale. Here is the evidence, and what protects muscle while the drug does its work.
 questions:

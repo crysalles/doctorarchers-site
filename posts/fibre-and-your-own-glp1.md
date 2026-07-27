@@ -1,6 +1,6 @@
 ---
 title: Fibre and Your Own GLP-1: What the Evidence Shows
-date: 2026-08-13
+date: 2026-08-14
 slug: fibre-and-your-own-glp1
 summary: There is real science connecting dietary fibre, your gut bacteria, and the GLP-1 your body makes itself. There is also a great deal of overselling built on top of it. Here is where the line falls.
 questions:

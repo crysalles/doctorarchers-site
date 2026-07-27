@@ -1,6 +1,6 @@
 ---
 title: Why You Wake at 3am
-date: 2026-08-07
+date: 2026-08-08
 slug: why-you-wake-at-3am
 summary: Everyone tells you the hot flash is waking you up. A clever experiment suggests it may work the other way round, that you wake first and then notice the flush. Here is what was measured, and what it changes.
 questions:

@@ -1,6 +1,6 @@
 ---
 title: Your TSH Is "Slightly High." Here Is What the Best Trial Found.
-date: 2026-08-03
+date: 2026-08-04
 slug: tsh-slightly-high-what-trials-found
 summary: A mildly raised TSH with normal thyroid hormone is one of the most argued-over results in women's health. The largest placebo-controlled trial gave an uncomfortable answer, and it is not the one either side of the argument wants.
 questions:

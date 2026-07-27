@@ -1,6 +1,6 @@
 ---
 title: The Protein Number You Were Given Was Never a Target
-date: 2026-08-09
+date: 2026-08-10
 slug: protein-midlife-women
 summary: The official protein recommendation is 0.8 grams per kilogram. It was set as a minimum to prevent deficiency, not as an amount that supports muscle in a woman past forty, and the researchers who study this say so plainly.
 questions:

@@ -1,6 +1,6 @@
 ---
 title: Your Ferritin Is "Normal" and You Are Still Exhausted
-date: 2026-08-01
+date: 2026-08-02
 slug: ferritin-normal-still-exhausted
 summary: Iron can run low long before it shows up as anaemia, and taking iron does not always fix it. I tested low for twenty years and nobody asked why. Here is what ferritin measures, and the question that usually goes unasked.
 questions:
