@@ -12,9 +12,13 @@ coming course.
    steps, with the send delays shown (immediately, then every 2 to 3 days).
 3. **Automation / rule:** when someone subscribes to the new form, subscribe them to the sequence and
    tag them `the-good-years`. (Tagging keeps this audience separable from your other lists.)
-4. **Lead magnet:** the blog opt-in offers a free **Good Years Starter** (the self-check plus the
-   handful of free levers, adapted from the book's appendix). Email 1 delivers it. Host the PDF and
-   drop its link where you see `{{STARTER_LINK}}`.
+4. **Lead magnet:** the blog opt-in offers the free **Good Years Workbook** (a gentle eight-week
+   on-ramp, a beginner at-home strength program, a real-food week with five simple recipes, and
+   printable habit trackers). Email 1 delivers it. The page already lives at the site root as
+   `good-years-workbook.html`, so drop its link where you see `{{WORKBOOK_LINK}}`. That link is
+   `https://book.laveenaarchers.com/good-years-workbook.html` (or the `doctorarchers.com` equivalent
+   if that domain fronts the site). The lighter `good-years-starter.html` still exists if you ever
+   want a shorter one-page freebie instead, but the Workbook is the richer magnet.
 5. **Wire the posts:** give your blog agent the new form ID so the new posts embed it instead of the
    default 9680686. Replace `{{BOOK_LINK}}` with the live Amazon/Kindle URL once the book is published;
    until then point it at your site book page.
@@ -36,7 +40,7 @@ Welcome. You joined because some part of you suspects the longevity conversation
 
 Here is the whole promise in one breath. More good years, the kind where you are strong and clear and able to do what your life asks of you, built for your body rather than a man's, and mostly free. Not a supplement stack. Not a machine for your garage. The levers that actually move the needle, told honestly, including when the honest answer is "save your money."
 
-Your free **Good Years Starter** is here: **{{STARTER_LINK}}**. It has the self-check to find where to begin, and the short list of levers that do the heavy lifting.
+Your free **Good Years Workbook** is here: **{{WORKBOOK_LINK}}**. Inside is a gentle eight-week on-ramp that tells you exactly where to start, a strength routine you can do at home, a real-food week with five simple recipes, and trackers to make it all stick.
 
 If you do one thing today, make it this. Stand up from a chair without using your hands, ten times, and take a brisk ten-minute walk. Muscle and movement are the single most powerful lever there is, at every age, and they cost nothing.
 
@@ -155,6 +159,6 @@ Rev. Dr. LaVeena B. Archers, PhD
 - **PMA framing is deliberate.** Every email describes what the book explains and routes real decisions
   to the reader's own clinician. Do not add symptom-fixing or treatment claims.
 - **No incentives for anything Amazon-related**, and no dosing numbers anywhere.
-- Swap `{{STARTER_LINK}}` and `{{BOOK_LINK}}` before turning the sequence on. Until the book is live on
+- Swap `{{WORKBOOK_LINK}}` and `{{BOOK_LINK}}` before turning the sequence on. Until the book is live on
   Amazon, point `{{BOOK_LINK}}` at your site's book page.
 - Once the course exists, add a seventh email (or a follow-up sequence) for the `course`-tagged repliers.
