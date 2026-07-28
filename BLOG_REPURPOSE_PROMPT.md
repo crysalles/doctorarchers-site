@@ -109,7 +109,8 @@ not create alone.
 ## Which opt-in form to embed
 These longevity posts feed a **dedicated Kit list**, separate from the site default. `build.py`
 defaults the blog opt-in to form `9680686` (the BMB reader list). For these posts, embed the new
-**"The Good Years — Longevity"** form instead, ID `{{GOODYEARS_FORM_ID}}` — Dr. Archers pastes the ID
-here once she creates the form in Kit. Its dedicated welcome sequence is written and waiting in
-`email-templates/goodyears-longevity-nurture.md`. If the ID is not yet filled in, leave the default
-`9680686` and flag it rather than blocking, and **never invent a form ID.**
+**"The Good Years — Longevity"** form instead, ID **`9734257`** (created in Kit, live). Post to
+`https://app.kit.com/forms/9734257/subscriptions` with `data-sv-form="9734257"`, matching the pattern
+already used on `support-kit.html` and `glp1-quiz.html`. Its dedicated welcome sequence lives in
+`email-templates/goodyears-longevity-nurture.md`; that sequence still needs to be built inside Kit and
+its automation switched on before the posts start driving signups, so confirm that before relying on it.

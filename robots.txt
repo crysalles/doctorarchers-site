@@ -2,5 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /email-templates/
 Disallow: /posts/
+Disallow: /assets/glp1-ch1-sample-7k2m9x.pdf
+Disallow: /blog/nature-glp1.html
+Disallow: /glp1-chapter-thanks
+Disallow: /support-kit-thanks
 
 Sitemap: https://book.laveenaarchers.com/sitemap.xml
