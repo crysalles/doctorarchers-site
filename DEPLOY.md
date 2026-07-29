@@ -10,7 +10,7 @@ Netlify is the recommended host because your contact form uses Netlify Forms.
 This is the plan. It is the **safe, email-proof** way to launch now while your
 Squarespace site stays exactly as it is until it lapses (Feb 14, 2027). You are
 only **adding** one subdomain record. You are **not** changing the apex domain,
-and you are **not** touching your MX (email) records, so `hi@doctorarchers.com`
+and you are **not** touching your MX (email) records, so `the contact form`
 cannot be affected.
 
 1. **Deploy the zip to Netlify.** Sign up at netlify.com (free), then drag
@@ -19,7 +19,7 @@ cannot be affected.
    click around; the whole site should work.
 2. **Turn on the contact form.** Netlify → your site → **Forms** → it should show
    a "contact" form. **Form notifications → Add notification → Email** →
-   `hi@doctorarchers.com`.
+   `the contact form`.
 3. **Add the subdomain in Netlify.** Domain management → **Add a domain** → type
    **`book.laveenaarchers.com`** → Netlify shows you the target to point it at
    (your `random-name.netlify.app`).
@@ -51,7 +51,7 @@ Plan for about 30–45 minutes. Your current Squarespace site stays live until t
 very last step (DNS), so nothing breaks while you set up.
 
 > ⚠️ **The one thing not to skip:** when you change DNS, you must KEEP your Google
-> Workspace **MX records** or email to **hi@doctorarchers.com stops working.**
+> Workspace **MX records** or email to **the contact form stops working.**
 > Step 5 tells you exactly how. Read it before you touch DNS.
 
 ---
@@ -86,7 +86,7 @@ required — drag-and-drop is fine; to update you just re-drag the new zip.)*
 1. Netlify → your site → **Forms**. It should already show a form named
    **"contact"** (detected automatically).
 2. **Forms → Form notifications → Add notification → Email notification** →
-   send to **hi@doctorarchers.com**. Now messages from the site's contact form
+   send to **the contact form**. Now messages from the site's contact form
    land in your inbox, and your address never appears on the site. A spam
    honeypot is already built in.
 
@@ -115,7 +115,7 @@ Squarespace/Google Domains/Squarespace Domains, or your registrar). Pick ONE opt
   - **CNAME** for `www` → your Netlify site (`your-site-name.netlify.app`).
 - This leaves your MX (email) records untouched — the safest path.
 
-> ⚠️ **EMAIL — do not break this.** `hi@doctorarchers.com` runs on Google
+> ⚠️ **EMAIL — do not break this.** `the contact form` runs on Google
 > Workspace, which uses **MX records** on your domain. Changing the A/CNAME above
 > does NOT affect email. But if you switch nameservers (Option A), the old MX
 > records don't come along — you must re-create them in Netlify DNS. Google
@@ -140,9 +140,9 @@ at https://laveenaarchers.com.
 ## Post-launch checklist
 - [ ] Every page loads and looks right on **phone** and desktop.
 - [ ] Send yourself a test through the **contact form** → it arrives at
-      hi@doctorarchers.com.
+      the contact form.
 - [ ] Test the **free-chapter opt-in** and **Buy** button (after Kit is wired).
-- [ ] **Email still works** — send a test to hi@doctorarchers.com from another
+- [ ] **Email still works** — send a test to the contact form from another
       account and confirm it arrives.
 - [ ] Booking (**OnceHub**), **Shop Labs** (Rupa), **Shop Supplements**
       (Fullscript) links all open.

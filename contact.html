@@ -106,7 +106,7 @@
         <div class="col-card contact-form-card">
           <h2 id="form-title" style="font-size:1.35rem">Send a message</h2>
           <p>Fill in the form and hit send, and it opens a ready-to-go email to me in your mail app. I read every note. Please allow a few days for a reply.</p>
-          <form class="contact-form" id="contact-form-el" name="contact">
+          <form class="contact-form" id="contact-form-el" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <p hidden aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <label for="cf-name">Your name</label>
             <input id="cf-name" type="text" name="name" autocomplete="name" required>
@@ -191,27 +191,5 @@
 
 <script src="assets/site.js"></script>
 <script src="assets/analytics.js" defer></script>
-<script>
-  // Contact form: compose an email to Dr. Archers using the visitor's own mail app.
-  // (Static hosting has no form backend; this keeps the message private and needs no third party.)
-  (function () {
-    var form = document.getElementById("contact-form-el");
-    if (!form) return;
-    var TO = "hi@doctorarchers.com";
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (form.querySelector('[name="bot-field"]').value) return; // honeypot
-      var name = (form.querySelector('[name="name"]').value || "").trim();
-      var email = (form.querySelector('[name="email"]').value || "").trim();
-      var subject = (form.querySelector('[name="subject"]').value || "").trim();
-      var message = (form.querySelector('[name="message"]').value || "").trim();
-      var subj = subject || ("Message from " + (name || "your website"));
-      var body = message + "\n\n— " + name + " (" + email + ")";
-      window.location.href = "mailto:" + TO +
-        "?subject=" + encodeURIComponent(subj) +
-        "&body=" + encodeURIComponent(body);
-    });
-  })();
-</script>
 </body>
 </html>

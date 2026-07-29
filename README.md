@@ -64,7 +64,7 @@ These are already REAL and hardcoded — do not placeholder them:
 booking `https://go.oncehub.com/HealthConsultation`, labs
 `https://labs.rupahealth.com/store/storefront_nYeZEmn`, supplements
 `https://us.fullscript.com/welcome/iconic/store-start`, email
-`hi@doctorarchers.com`.
+`the contact form`.
 
 ## Wiring things up
 
@@ -244,7 +244,7 @@ Results Test after deploying.
 ## Contact form (email kept private)
 
 The site no longer shows an email address anywhere (better for spam). All
-"contact" links point to the **form on `/contact`**, and `hi@doctorarchers.com`
+"contact" links point to the **form on `/contact`**, and `the contact form`
 is only ever the *private destination* the form delivers to — it is never printed
 on a page or in the page source / structured data.
 
@@ -252,7 +252,7 @@ on a page or in the page source / structured data.
 1. Deploy the site on Netlify. Netlify auto-detects the form (it has
    `data-netlify="true"` and a hidden `form-name="contact"`).
 2. In Netlify → **Forms → Form notifications**, add an email notification to
-   `hi@doctorarchers.com`. Submissions now arrive in your inbox; the address stays
+   `the contact form`. Submissions now arrive in your inbox; the address stays
    private. A honeypot field is already included for spam.
 3. (Optional) create a `/thank-you` page and set the form `action` to it for a
    nicer post-submit screen.
@@ -260,12 +260,12 @@ on a page or in the page source / structured data.
 **If you host on Cloudflare Pages or elsewhere instead**, use a form backend and
 change the form `action` in `contact.html`:
 - **Formspree** or **Web3Forms** (both free): create a form, set the destination to
-  `hi@doctorarchers.com` (private), and paste their endpoint URL into
+  `the contact form` (private), and paste their endpoint URL into
   `action="[CONTACT_FORM_ENDPOINT]"`.
 
 Until a handler is connected, the form is inert (submitting just reloads with
 `?sent=1`), so the page previews safely. Your Google Workspace address
-`hi@doctorarchers.com` is the reply-to / destination in whichever tool you choose.
+`the contact form` is the reply-to / destination in whichever tool you choose.
 
 ---
 
@@ -309,7 +309,7 @@ them inert so the site previews safely.
   confirmation/thank-you (or set a redirect in the form's settings).
 - Automated **sequences** require Kit's paid **Creator** plan; the **free** plan
   still covers Commerce (selling the book) and broadcasts.
-- Your Google Workspace address `hi@doctorarchers.com` is the from/reply-to inside
+- Your Google Workspace address `the contact form` is the from/reply-to inside
   Kit, so replies land in your inbox. (It is never shown on the site — the contact
   form is separate; see "Contact form" above.)
 - Prefer Kit's fancy inline embed instead of the plain form? You can paste Kit's

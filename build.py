@@ -152,7 +152,7 @@ FOOTER = """
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="mailto:hi@doctorarchers.com">hi@doctorarchers.com</a></li>
+          <li><a href="../contact.html">Contact form</a></li>
         </ul>
       </div>
       <div>
@@ -237,7 +237,6 @@ PERSON_NODE = {
     "name": AUTHOR_NAME,
     "alternateName": "Rev. Dr. LaVeena Archers",
     "url": f"{SITE_URL}/",
-    "email": "mailto:hi@doctorarchers.com",
     "description": (
         "Holistic Functional Medicine educator and author of Bad Medicine Blues. "
         "Educates and supports; does not diagnose, treat, prescribe, or manage "
