@@ -5,7 +5,16 @@
 # action from anyone. If nothing is due, the build produces no changes and the
 # job exits without committing.
 #
-# Pushing to main is what triggers the Netlify deploy.
+# The site is hosted on Cloudflare Pages (project: doctorarchers-site), which
+# has NO Git connection. Pushing to GitHub does not deploy anything by itself,
+# so this job deploys explicitly with wrangler after committing.
+#
+# Requires one repository secret:
+#   CLOUDFLARE_API_TOKEN - a Cloudflare API token with "Cloudflare Pages: Edit"
+#                          permission on this account.
+#
+# Until that secret exists the job still builds and commits, then skips the
+# deploy with a loud warning rather than failing red every single day.
 
 name: Publish scheduled posts
 
@@ -23,6 +32,14 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
+    # Lifted to job level so the deploy step can test whether the token exists.
+    # The `secrets` context cannot be read directly inside an `if:` expression.
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: 1d18bf879817a7681e338e3682580a87
+      PAGES_PROJECT: doctorarchers-site
+
     steps:
       - uses: actions/checkout@v4
 
@@ -34,9 +51,11 @@ jobs:
         run: python3 build.py
 
       - name: Commit and push if anything became due
+        id: commit
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "Nothing due today. No changes to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
@@ -45,3 +64,18 @@ jobs:
           NEW=$(git diff --cached --name-only --diff-filter=A -- blog/ | sed 's|blog/||;s|\.html$||' | paste -sd', ' -)
           git commit -m "Publish scheduled post(s): ${NEW:-rebuild}"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.changed == 'true' && env.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          npx --yes wrangler@4 pages deploy . \
+            --project-name "$PAGES_PROJECT" \
+            --branch main \
+            --commit-dirty=true
+
+      - name: Warn loudly if nothing was deployed
+        if: steps.commit.outputs.changed == 'true' && env.CLOUDFLARE_API_TOKEN == ''
+        run: |
+          echo "::warning title=Committed but NOT deployed::A scheduled post was committed to GitHub, but CLOUDFLARE_API_TOKEN is not set, so it was not deployed. The article is in the repo and NOT on the live site. Add the secret to fix this."
+          exit 1
