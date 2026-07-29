@@ -5,7 +5,19 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
+# Gated lead magnets. Each is delivered by email or from a noindex thanks
+# page, so none of them should be findable in search. Without these rules a
+# reader can download the magnet without ever joining the list.
 /assets/glp1-ch1-sample-7k2m9x.pdf
+  X-Robots-Tag: noindex, noarchive, nofollow
+
+/assets/companion-workbook.pdf
+  X-Robots-Tag: noindex, noarchive, nofollow
+
+/assets/glp1-support-kit.pdf
+  X-Robots-Tag: noindex, noarchive, nofollow
+
+/assets/glp1-resistant-starch-trick.pdf
   X-Robots-Tag: noindex, noarchive, nofollow
 
 /blog/nature-glp1.html
