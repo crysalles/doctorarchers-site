@@ -66,8 +66,14 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      # Deploys when a post came due, and always on a manual run. The manual
+      # case matters: edits to pages, styles or the footer are committed by
+      # hand and would otherwise sit in the repo, never reaching the site,
+      # because the Pages project has no Git connection.
       - name: Deploy to Cloudflare Pages
-        if: steps.commit.outputs.changed == 'true' && env.CLOUDFLARE_API_TOKEN != ''
+        if: >-
+          env.CLOUDFLARE_API_TOKEN != '' &&
+          (steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
         run: |
           npx --yes wrangler@4 pages deploy . \
             --project-name "$PAGES_PROJECT" \
