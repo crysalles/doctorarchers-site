@@ -118,10 +118,10 @@ HEADER = """<!DOCTYPE html>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
+      <a href="index.html" aria-current="page">Library</a>
       <a href="../books.html">Books</a>
+      <a href="../about.html">About</a>
       <a href="../testing.html">Testing &amp; Learning</a>
-      <a href="index.html" aria-current="page">Blog</a>
       <a href="../contact.html">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
