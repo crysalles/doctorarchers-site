@@ -16,7 +16,7 @@ coming course.
    on-ramp, a beginner at-home strength program, a real-food week with five simple recipes, and
    printable habit trackers). Email 1 delivers it. The page already lives at the site root as
    `good-years-workbook.html`, so drop its link where you see `{{WORKBOOK_LINK}}`. That link is
-   `https://book.laveenaarchers.com/good-years-workbook.html` (or the `doctorarchers.com` equivalent
+   `https://book.laveenaarchers.com/good-years-workbook.html` (or the `laveenaarchers.com` equivalent
    if that domain fronts the site). The lighter `good-years-starter.html` still exists if you ever
    want a shorter one-page freebie instead, but the Workbook is the richer magnet.
 5. **Wire the posts:** give your blog agent the new form ID so the new posts embed it instead of the

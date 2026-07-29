@@ -5,7 +5,7 @@ Netlify is the recommended host because your contact form uses Netlify Forms.
 
 ---
 
-## 🟢 CHOSEN PATH: launch on a subdomain (`book.doctorarchers.com`)
+## 🟢 CHOSEN PATH: launch on a subdomain (`book.laveenaarchers.com`)
 
 This is the plan. It is the **safe, email-proof** way to launch now while your
 Squarespace site stays exactly as it is until it lapses (Feb 14, 2027). You are
@@ -21,9 +21,9 @@ cannot be affected.
    a "contact" form. **Form notifications → Add notification → Email** →
    `hi@doctorarchers.com`.
 3. **Add the subdomain in Netlify.** Domain management → **Add a domain** → type
-   **`book.doctorarchers.com`** → Netlify shows you the target to point it at
+   **`book.laveenaarchers.com`** → Netlify shows you the target to point it at
    (your `random-name.netlify.app`).
-4. **Add ONE DNS record where doctorarchers.com's DNS lives** (Squarespace domains
+4. **Add ONE DNS record where laveenaarchers.com's DNS lives** (Squarespace domains
    dashboard, or Namecheap Advanced DNS, wherever you manage it):
 
    | Type  | Host / Name | Value                        | TTL       |
@@ -33,14 +33,14 @@ cannot be affected.
    That is the whole DNS change. **Do not touch** the `@`/apex records, and **do
    not touch** any `MX` or `TXT` records. Your website and email keep working.
 5. **HTTPS.** Once the record resolves (minutes to a couple of hours), Netlify
-   auto-issues SSL for `book.doctorarchers.com`. Turn on **Force HTTPS**. Done:
-   the book is live at **https://book.doctorarchers.com**.
+   auto-issues SSL for `book.laveenaarchers.com`. Turn on **Force HTTPS**. Done:
+   the book is live at **https://book.laveenaarchers.com**.
 6. **Later (optional), Feb 2027 or whenever:** to move the whole site onto the
-   main `doctorarchers.com`, follow the full apex + MX instructions below. Not
+   main `laveenaarchers.com`, follow the full apex + MX instructions below. Not
    needed now.
 
 > The rest of this document (apex A-record + the MX/email warnings) only applies
-> if you later point the **root** `doctorarchers.com` at Netlify. For the
+> if you later point the **root** `laveenaarchers.com` at Netlify. For the
 > subdomain launch above, you can ignore it.
 
 ---
@@ -91,13 +91,13 @@ required — drag-and-drop is fine; to update you just re-drag the new zip.)*
    honeypot is already built in.
 
 ## Step 4 — Add your domain
-1. Netlify → **Domain management → Add a domain** → type **doctorarchers.com**.
+1. Netlify → **Domain management → Add a domain** → type **laveenaarchers.com**.
 2. Netlify will confirm you own it and then show you the DNS to set (Step 5).
-   Add **both** `doctorarchers.com` and `www.doctorarchers.com` (Netlify redirects
+   Add **both** `laveenaarchers.com` and `www.laveenaarchers.com` (Netlify redirects
    one to the other automatically).
 
 ## Step 5 — Point DNS (the careful step) 🔑
-Your domain's DNS is managed wherever **doctorarchers.com** is registered (likely
+Your domain's DNS is managed wherever **laveenaarchers.com** is registered (likely
 Squarespace/Google Domains/Squarespace Domains, or your registrar). Pick ONE option:
 
 **Option A — Netlify DNS (simplest, Netlify recommends).**
@@ -109,7 +109,7 @@ Squarespace/Google Domains/Squarespace Domains, or your registrar). Pick ONE opt
 
 **Option B — Keep current DNS, just point the site (safest for email).**
 - Leave your nameservers alone. At your current DNS host, set:
-  - **A record** for `doctorarchers.com` (the apex/root) → **`75.2.60.5`**
+  - **A record** for `laveenaarchers.com` (the apex/root) → **`75.2.60.5`**
     (Netlify's load balancer), OR an ALIAS/ANAME to your Netlify site if your host
     supports it.
   - **CNAME** for `www` → your Netlify site (`your-site-name.netlify.app`).
@@ -126,14 +126,14 @@ Squarespace/Google Domains/Squarespace Domains, or your registrar). Pick ONE opt
 ## Step 6 — HTTPS (automatic)
 Once DNS resolves (minutes to a few hours), Netlify auto-issues a free SSL
 certificate. Turn on **"Force HTTPS"** in Domain settings. Done — the site is live
-at https://doctorarchers.com.
+at https://laveenaarchers.com.
 
 ## Step 7 — Finish the connections
 - **Kit**: create the opt-in form (with the free-chapter incentive email),
   newsletter form, and the Commerce product, then paste the IDs into the brackets
   and re-deploy (Step 2). Full steps are in `README.md → Kit setup`.
-- **Google Search Console**: add doctorarchers.com and submit
-  `https://doctorarchers.com/sitemap.xml` so Google indexes the new site.
+- **Google Search Console**: add laveenaarchers.com and submit
+  `https://laveenaarchers.com/sitemap.xml` so Google indexes the new site.
 
 ---
 
@@ -163,7 +163,7 @@ just choosing where the domain points.
 
 ## Namecheap DNS — exact records (this domain is registered at Namecheap)
 
-**First check:** Namecheap → Domain List → Manage doctorarchers.com → **Domain**
+**First check:** Namecheap → Domain List → Manage laveenaarchers.com → **Domain**
 tab → **Nameservers**.
 - "Namecheap BasicDNS" → DNS is here; your Google MX records are already here, so
   do Section A and leave email alone.
@@ -197,5 +197,5 @@ Re-add email so it keeps working:
   copied from your screenshot.
 
 ### Netlify side
-Add doctorarchers.com + www in Netlify → Domain management. After it verifies
+Add laveenaarchers.com + www in Netlify → Domain management. After it verifies
 (minutes to a few hours), enable Force HTTPS.

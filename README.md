@@ -1,6 +1,6 @@
 # DoctorArchers.com — static site
 
-A clean, fast, accessible, code-based rebuild of doctorarchers.com, off
+A clean, fast, accessible, code-based rebuild of laveenaarchers.com, off
 Squarespace, unified with the look of *Bad Medicine Blues*. Plain HTML + one
 shared stylesheet + a tiny Python blog generator. No frameworks, no build
 tools, no third-party requests of any kind.
@@ -166,11 +166,11 @@ Markdown supported: `#`–`######` headings (auto-shifted down one level so
 the post title stays the page's only `h1`), paragraphs, `-`/`*` and `1.`
 lists, `>` quotes, ``` fences, bold/italic/inline code/links.
 
-## Deploying to doctorarchers.com
+## Deploying to laveenaarchers.com
 
 **Netlify:** drag this folder onto app.netlify.com (or connect a Git repo;
 no build command, publish directory = the folder itself). Then Domain
-settings → add `doctorarchers.com`. At your DNS registrar, point an `A`/
+settings → add `laveenaarchers.com`. At your DNS registrar, point an `A`/
 `ALIAS` record for the apex to Netlify (or switch nameservers to Netlify
 DNS) and a `CNAME` for `www` to your site's `*.netlify.app` name. To serve
 `book.html` as `/book`, either enable "Pretty URLs" (Site settings → Build &
