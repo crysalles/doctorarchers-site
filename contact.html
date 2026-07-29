@@ -105,9 +105,10 @@
       <section id="contact-form" style="margin-top:2.5rem" aria-labelledby="form-title">
         <div class="col-card contact-form-card">
           <h2 id="form-title" style="font-size:1.35rem">Send a message</h2>
-          <p>Fill in the form and hit send, and it opens a ready-to-go email to me in your mail app. I read every note. Please allow a few days for a reply.</p>
-          <form class="contact-form" id="contact-form-el" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <p>Fill in the form and hit send. It comes straight to my inbox, and I read every note. Please allow a few days for a reply.</p>
+          <form class="contact-form" id="contact-form-el" name="contact" method="POST" action="/api/contact">
             <p hidden aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <input type="hidden" name="ts" value="">
             <label for="cf-name">Your name</label>
             <input id="cf-name" type="text" name="name" autocomplete="name" required>
             <label for="cf-email">Your email</label>
@@ -119,6 +120,7 @@
             <button type="submit" class="btn btn-primary">Send message</button>
             <p class="microcopy" style="margin-top:.75rem">Your message goes privately to Dr. Archers. Your email is used only to reply, and it is never shared.</p>
           </form>
+          <p id="cf-status" class="contact-status" role="status" aria-live="polite" hidden></p>
         </div>
       </section>
       <div class="scope-callout" style="margin-top:2.5rem">
@@ -190,6 +192,7 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script src="assets/contact.js"></script>
 <script src="assets/analytics.js" defer></script>
 </body>
 </html>

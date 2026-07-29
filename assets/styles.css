@@ -493,6 +493,9 @@ section{padding:4rem 0}
 .contact-form textarea{resize:vertical;min-height:9rem}
 .contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-color:var(--green)}
 .contact-form button{margin-top:1.25rem}
+/* Inline result of a contact-form submission */
+.contact-status{margin:0;padding:.9rem 1rem;border-radius:8px;border-left:4px solid var(--green);background:#eef3ef;font-size:1rem}
+.contact-status.is-error{border-left-color:#a3402f;background:#f8eeeb}
 
 /* Status pill for the Books catalog (In progress / Planned) */
 .pill{
