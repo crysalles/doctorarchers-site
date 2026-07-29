@@ -8,15 +8,22 @@
  * Workers feature and is not among the bindings supported by Pages Functions,
  * so this calls the Email Sending REST API instead.
  *
+ * WHY THIS COSTS NOTHING: paid Email Sending is only needed to mail arbitrary
+ * recipients. Sending to a *verified destination address* on the account is
+ * free on every plan, including Workers Free, and does not count against any
+ * quota. This form only ever mails one fixed address, so CONTACT_TO must be a
+ * verified destination address and CONTACT_FROM must sit on a domain that has
+ * Email Routing enabled. Point CONTACT_TO anywhere else and the send fails.
+ *
  * REQUIRED environment variables, set in the Cloudflare dashboard under
  * Workers & Pages -> doctorarchers-site -> Settings -> Variables and Secrets.
  * None of these may ever appear in the repo or in any HTML:
  *
  *   CF_ACCOUNT_ID    plain variable  Cloudflare account id
  *   EMAIL_API_TOKEN  SECRET          API token with email sending permission
- *   CONTACT_TO       SECRET          the inbox messages are delivered to
- *   CONTACT_FROM     plain variable  e.g. noreply@laveenaarchers.com, on a
- *                                    domain onboarded to Email Sending
+ *   CONTACT_TO       SECRET          verified destination address to deliver to
+ *   CONTACT_FROM     plain variable  e.g. contact@laveenaarchers.com, on a
+ *                                    domain with Email Routing enabled
  *
  * Spam defence without any storage: a honeypot field that humans never see,
  * plus a render timestamp. Bots post instantly; people take longer than three
