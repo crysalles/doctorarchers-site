@@ -1,4 +1,4 @@
-# DoctorArchers.com — static site
+# LaVeenaArchers.com — static site
 
 A clean, fast, accessible, code-based rebuild of laveenaarchers.com, off
 Squarespace, unified with the look of *Bad Medicine Blues*. Plain HTML + one

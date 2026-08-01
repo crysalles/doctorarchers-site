@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build.py — markdown blog generator for DoctorArchers.com.
+build.py — markdown blog generator for LaVeenaArchers.com.
 
 Python 3 standard library only. No dependencies to install.
 
@@ -91,7 +91,7 @@ HEADER = """<!DOCTYPE html>
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:site_name" content="DoctorArchers.com">
+<meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="{og_image}">
 
 <!-- Twitter card -->
@@ -262,7 +262,7 @@ WEBSITE_NODE = {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     "url": f"{SITE_URL}/",
-    "name": "DoctorArchers.com",
+    "name": "LaVeenaArchers.com",
     "description": (
         "Holistic Functional Medicine education and support from "
         "Rev. Dr. LaVeena B. Archers, PhD."
@@ -793,7 +793,7 @@ def build_sitemap(posts):
     return len(entries)
 
 
-LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — DoctorArchers.com
+LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — LaVeenaArchers.com
 
 > Root-cause health education for women, grounded in the peer-reviewed
 > literature. Author of the Dr. Archers Root-Cause Guides, beginning with

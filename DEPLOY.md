@@ -1,4 +1,4 @@
-# Deploy DoctorArchers.com — step by step
+# Deploy LaVeenaArchers.com — step by step
 
 Your site is packaged and ready: **`doctorarchers-site-DEPLOY.zip`** (in Downloads).
 Netlify is the recommended host because your contact form uses Netlify Forms.

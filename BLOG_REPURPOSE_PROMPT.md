@@ -1,4 +1,4 @@
-# Blog Repurpose Prompt - The Good Years -> DoctorArchers.com posts
+# Blog Repurpose Prompt - The Good Years -> LaVeenaArchers.com posts
 
 ## Goal
 Turn the deep-dive material in the book *The Good Years* into standalone SEO blog posts that
