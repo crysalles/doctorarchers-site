@@ -32,7 +32,7 @@ Opinions and judgments carry no tag.
 
 **† not in women your age.** It marks a claim whose evidence comes from people older or younger than you, or from men, or from some other group you don't belong to. In the text the dagger usually appears on its own, tucked inside the bracket, as in **[shown in people †]**. It means the same thing every time.
 
-**The count.** This book makes 49 tagged claims. Thirty-eight are shown in people, ten of those drawn from a group you may not belong to. Three are associated only. Four are animals only. Two are tested, didn't hold. Two are not studied. Ten claims in forty-nine, roughly one in five, carry the dagger.
+**The count.** This book makes 49 tagged claims. Thirty-eight are shown in people, ten of those drawn from a group you may not belong to. Two are associated only. Four are animals only. Two are tested, didn't hold. Three are not studied. Ten claims in forty-nine, roughly one in five, carry the dagger.
 
 **How to weigh them.** Use the tags this way as you read. When you see *shown in people* with no flag attached, give it the most weight. When you see *tested, didn't hold*, give it the least: that one has already been checked and found wanting, and no amount of hope should move it back up the list. When you see any other tag, or the dagger, treat the claim as a possibility worth weighing rather than a settled fact, and decide for yourself how much it should move you.
 
@@ -646,7 +646,7 @@ Perimenopause resists a clean before-and-after story. Cycles shift, then don't, 
 
 **Why the ground is actually moving**
 
-Chapter 3 covered the mechanism: estrogen has a real, traceable role in keeping insulin working efficiently, and that role weakens as estrogen production becomes erratic through the transition, not simply low. Erratic is the operative word. Estrogen during perimenopause doesn't decline in a smooth line; it swings, sometimes higher than a woman's own baseline before dropping again, on a timeline that varies from cycle to cycle. A body's insulin sensitivity, tied to that hormone, moves along with it. A fasting glucose or A1C drawn during a higher-estrogen stretch can look different from one drawn a few months later during a lower stretch, in the same woman, without anything else in her life changing. **[associated only]** The estrogen fluctuation pattern itself is well documented; a study specifically tracking glucose changes in step with those individual hormonal swings, in the same women over time, hasn't been done at the scale this book would want before calling it proven.
+Chapter 3 covered the mechanism: estrogen has a real, traceable role in keeping insulin working efficiently, and that role weakens as estrogen production becomes erratic through the transition, not simply low. Erratic is the operative word. Estrogen during perimenopause doesn't decline in a smooth line; it swings, sometimes higher than a woman's own baseline before dropping again, on a timeline that varies from cycle to cycle. A body's insulin sensitivity, tied to that hormone, moves along with it. A fasting glucose or A1C drawn during a higher-estrogen stretch can look different from one drawn a few months later during a lower stretch, in the same woman, without anything else in her life changing. **[not studied]** The estrogen fluctuation pattern itself is well documented, and Chapter 3 already covered the mechanism connecting it to insulin sensitivity. But no study has directly tracked glucose against an individual woman's own hormonal swings over time. This claim is reasoning stitched together from that other evidence, not a finding drawn from a study of its own.
 
 **What to actually do with a moving target**
 
@@ -835,7 +835,7 @@ Every tagged claim in this book, gathered in one place. Chapter references point
 | 13 | Compounded semaglutide produced fat loss alongside close to a kilogram of skeletal muscle loss over three months | shown in people |
 | 13 | Liraglutide measurably reduced absolute lean mass in trunk and limbs within 35 days | shown in people |
 | 13 | One year after stopping semaglutide, participants regained about two-thirds of lost weight and cardiometabolic gains reverted | shown in people |
-| 14 | Fluctuating estrogen through perimenopause produces corresponding swings in insulin sensitivity | associated only |
+| 14 | Fluctuating estrogen through perimenopause produces corresponding swings in insulin sensitivity | not studied |
 | 15 | Family history of diabetes raised prediabetes odds to 1.40 unadjusted and 1.26 adjusted, most clearly in non-obese adults | shown in people |
 
 ## Appendix G: Glucose Unit Conversion
