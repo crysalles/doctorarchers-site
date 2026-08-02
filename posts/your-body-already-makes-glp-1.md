@@ -30,4 +30,4 @@ This is the same foundation that supports everything else in your health, pointe
 
 The most useful place to stand is in the middle: fair to the medicine, and clear that the natural path supports your own GLP-1 without pretending to replace the drugs. That is exactly the ground my next book, *Your Body's Own GLP-1*, is being written to cover, in full and without hype.
 
-For now, if you want the whole root-cause picture of women's health, the first chapter of *Bad Medicine Blues* is free. [Read a free chapter](../book.html#free-chapter).
+For now, if you want the whole root-cause picture of women's health, the first chapter of *A Symptom Is a Signal* is free. [Read a free chapter](../book.html#free-chapter).

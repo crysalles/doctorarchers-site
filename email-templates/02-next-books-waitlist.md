@@ -12,7 +12,7 @@ which one they actually want.
 2. Two more books are coming. Which one do you need first?
 3. The next one is about GLP-1
 
-**Preview text:** Bad Medicine Blues was the first of a series. Here is what comes after it.
+**Preview text:** A Symptom Is a Signal was the first of a series. Here is what comes after it.
 
 ---
 
@@ -20,7 +20,7 @@ which one they actually want.
 
 Hi {{ subscriber.first_name | default: "there" }},
 
-*Bad Medicine Blues* was never meant to stand on its own. It is the first of a
+*A Symptom Is a Signal* was never meant to stand on its own. It is the first of a
 series — the Root-Cause Guides — and two more are already taking shape.
 
 **Your Body's Own GLP-1** *(in progress)*
@@ -54,7 +54,7 @@ Thank you for being here,
 
 Rev. Dr. LaVeena B. Archers, PhD
 
-P.S. If you have read *Bad Medicine Blues* and have not left a review yet, it
+P.S. If you have read *A Symptom Is a Signal* and have not left a review yet, it
 would still help enormously. Two honest sentences is plenty:
 [leave one here](https://www.amazon.com/review/create-review?asin=B0H9JKKSRT).
 

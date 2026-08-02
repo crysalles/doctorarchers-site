@@ -77,4 +77,4 @@ The useful posture in the middle is the same one I keep coming back to. Ask what
 
 Being taken seriously and being told the truth are not opposites. You are entitled to both, and this summer's arguments are only unusual in that each side is loudly right about the other's failure and quiet about its own.
 
-*Bad Medicine Blues* is my attempt at the third position, which is careful about the evidence and refuses to dismiss you. [Read a free chapter](../book.html#free-chapter).
+*A Symptom Is a Signal* is my attempt at the third position, which is careful about the evidence and refuses to dismiss you. [Read a free chapter](../book.html#free-chapter).

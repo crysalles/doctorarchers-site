@@ -68,4 +68,4 @@ Ask what is being done about bone now rather than later, particularly if you are
 
 None of this is medical advice, and what it means for your body belongs with a professional who knows your history. But the timing question is one you can raise yourself, and on this research it is the right one to be raising.
 
-*Bad Medicine Blues* is a map of these years, written for the woman who is in them now rather than looking back. [Read a free chapter](../book.html#free-chapter).
+*A Symptom Is a Signal* is a map of these years, written for the woman who is in them now rather than looking back. [Read a free chapter](../book.html#free-chapter).

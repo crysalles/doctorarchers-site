@@ -20,7 +20,7 @@ pages = ["index.html","about.html","book.html","services.html","training.html",
          "contact.html","faq.html","testimonials.html","privacy.html","join-pma.html","404.html"]
 navrx = re.compile(r'<nav id="site-nav".*?</nav>', re.S)
 cons = '<li><a href="https://go.oncehub.com/HealthConsultation" rel="noopener">Book a consultation</a></li>'
-bookli = '<li><a href="book.html">Bad Medicine Blues — the book</a></li>'
+bookli = '<li><a href="book.html">A Symptom Is a Signal — the book</a></li>'
 for name in pages:
     f = root/name
     if not f.exists(): 
