@@ -636,6 +636,11 @@ HUB_DEFINITIONS = [
                 "text": "Free GLP-1 Support Kit — the plate, the protein cheat sheet, and questions to bring to your prescriber",
             },
             {
+                # #reader-list is the sitewide opt-in <section id="reader-list">
+                # on books.html (the "Join the waitlist" / "Join the reader
+                # list" card links there too). Confirmed present directly in
+                # books.html as of 2026-08-02 -- if this section is ever
+                # renamed or removed, update the id here to match.
                 "href": "../books.html#reader-list",
                 "text": "Join the reader list for Your Body's Own GLP-1, the next book in the series",
             },
