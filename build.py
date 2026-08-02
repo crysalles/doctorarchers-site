@@ -1105,6 +1105,7 @@ SITEMAP_PRIORITY = {
     "index.html": "1.0",
     "book.html": "0.9",
     "glp1-book.html": "0.9",
+    "symptom-is-a-signal.html": "0.9",
     "books.html": "0.9",
     "about.html": "0.8",
     "testing.html": "0.8",
