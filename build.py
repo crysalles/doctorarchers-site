@@ -517,6 +517,130 @@ HUB_DEFINITIONS = [
         # special-case a hub that doesn't use it.
         "extra_links": [],
     },
+    {
+        "hub_slug": "perimenopause-midlife",
+        "title": "What Actually Changes in Perimenopause, and What Helps",
+        "description": (
+            "Perimenopause is not one vague cloud of symptoms. Specific "
+            "things change in a specific order, one common explanation for "
+            "disrupted sleep doesn't hold up as cleanly as the folklore "
+            "suggests, and two of the most boring-sounding interventions "
+            "in existence have more research behind them than almost "
+            "anything marketed to you directly."
+        ),
+        "intro_html": (
+            "<p>Perimenopause gets talked about as a single, vague cloud "
+            "of symptoms. It is not. Specific things change in a specific "
+            "order, some of the folk explanations for what disrupts you "
+            "do not hold up to the evidence, and two of the most "
+            "boring-sounding interventions in existence have more research "
+            "behind them than almost anything marketed to you directly. "
+            "Read these four in order.</p>"
+        ),
+        "members": [
+            {
+                "slug": "what-changes-first-perimenopause",
+                "framing": (
+                    "Start here. Bone loss and disrupted sleep do not "
+                    "arrive on the same schedule or for the same reasons — "
+                    "what the actual data says changes first, and why body "
+                    "weight and hormone levels predict how fast."
+                ),
+            },
+            {
+                "slug": "why-you-wake-at-3am",
+                "framing": (
+                    "The honest version of a very common complaint: the "
+                    "usual explanation blaming hot flashes for waking you "
+                    "up does not hold up as cleanly as the folklore "
+                    "suggests."
+                ),
+            },
+            {
+                "slug": "protein-midlife-women",
+                "framing": (
+                    "The official protein number was set as a floor to "
+                    "prevent deficiency, not a target for keeping the "
+                    "muscle you have — and the researchers who study this "
+                    "say so plainly."
+                ),
+            },
+            {
+                "slug": "creatine-for-women-midlife",
+                "framing": (
+                    "One of the best-studied supplements in existence, for "
+                    "muscle, bone, mood, and memory — and, unlike so much "
+                    "else on this list, backed by decades of real "
+                    "evidence."
+                ),
+            },
+        ],
+        "extra_links": [],
+    },
+    {
+        "hub_slug": "glp1-metabolic",
+        "title": "The Real Science of GLP-1, Your Body's Own and the Medications",
+        "description": (
+            "The weight-loss drugs everyone is discussing copy a hormone "
+            "your body already makes. Four articles on how that hormone "
+            "works, what actually supports it naturally, what the "
+            "medications cost your muscle, and where the real evidence for "
+            "'natural GLP-1' stops."
+        ),
+        "intro_html": (
+            "<p>GLP-1 is not new, and no prescription invented it. Your "
+            "gut has been making it your whole life. These four pieces "
+            "cover what that hormone actually does, an honest look at "
+            "what does and does not support it naturally, what the "
+            "medications take from your body alongside the weight, and "
+            "the specific role fiber plays in the whole system.</p>"
+        ),
+        "members": [
+            {
+                "slug": "your-body-already-makes-glp-1",
+                "framing": (
+                    "Start here. What GLP-1 actually is, what it already "
+                    "does in your body, and how the medications relate to "
+                    "a hormone you make yourself."
+                ),
+            },
+            {
+                "slug": "nature-glp1",
+                "framing": (
+                    "An honest look at the “nature's Ozempic” supplements "
+                    "— what has real evidence behind it, what does not, "
+                    "and the foundations that actually move the hormone "
+                    "you already have."
+                ),
+            },
+            {
+                "slug": "glp1-muscle-loss",
+                "framing": (
+                    "The part the marketing leaves out. About a quarter of "
+                    "the weight the drugs remove is muscle, and what that "
+                    "means for a woman in midlife specifically."
+                ),
+            },
+            {
+                "slug": "fibre-and-your-own-glp1",
+                "framing": (
+                    "The one piece of the “natural GLP-1” story with a "
+                    "real trial behind it — and exactly where that "
+                    "evidence stops."
+                ),
+            },
+        ],
+        "extra_links": [
+            {
+                "href": "../support-kit.html",
+                "text": "Free GLP-1 Support Kit — the plate, the protein cheat sheet, and questions to bring to your prescriber",
+            },
+            {
+                "href": "../books.html#reader-list",
+                "text": "Join the reader list for Your Body's Own GLP-1, the next book in the series",
+            },
+        ],
+    },
 ]
 
 
