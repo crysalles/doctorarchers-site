@@ -2,6 +2,7 @@
 title: What "Normal" on a Lab Report Actually Means
 date: 2026-07-31
 slug: what-normal-lab-results-mean
+tags: lab-results, medical-dismissal
 summary: "Everything came back normal" is one of the most deflating sentences in medicine, and one of the most misunderstood, including by some of the people saying it. Here is how a reference range is built, and what it can and cannot tell you.
 questions:
   - How is a normal range decided? :: A laboratory measures a marker in a group of people considered healthy and defines the normal range as the middle 95% of those results, cutting off the lowest 2.5% and the highest 2.5%. It describes what is common in that group.

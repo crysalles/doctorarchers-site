@@ -2,6 +2,7 @@
 title: Your Body Already Makes GLP-1: The Natural Side of the Ozempic Conversation
 date: 2026-07-10
 slug: your-body-already-makes-glp-1
+tags: glp1, weight-loss-drugs, appetite, blood-sugar
 summary: The weight-loss injections everyone is talking about copy a hormone you already produce. Here is a clear-eyed look at GLP-1, what the drugs do, and how to support your own.
 ---
 

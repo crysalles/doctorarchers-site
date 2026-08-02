@@ -2,6 +2,7 @@
 title: What the GLP-1 Drugs Take From Your Muscle
 date: 2026-08-12
 slug: glp1-muscle-loss
+tags: glp1, weight-loss-drugs, muscle, protein, midlife
 summary: The weight-loss injections work. About a quarter of what comes off is lean mass, and for a woman in midlife that matters more than the number on the scale. Here is the evidence, and what protects muscle while the drug does its work.
 questions:
   - How much of the weight lost on GLP-1 drugs is muscle? :: In a network meta-analysis of 22 randomized trials, lean mass loss made up roughly 25% of total weight lost, averaging about 0.86 kg. A separate review of the more potent agents put the figure nearer 10% of body weight, or around 6 kg.

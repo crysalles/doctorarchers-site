@@ -2,6 +2,7 @@
 title: When Your Bloodwork Is Normal But You Still Feel Awful
 date: 2026-07-14
 slug: normal-bloodwork-still-feel-awful
+tags: lab-results, fatigue, medical-dismissal, midlife
 summary: If your labs keep coming back normal while your energy, sleep, and mood say otherwise, you are not imagining it. Here is what that gap usually means, and where to start.
 ---
 

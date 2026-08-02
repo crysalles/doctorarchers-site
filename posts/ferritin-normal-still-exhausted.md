@@ -2,6 +2,7 @@
 title: Your Ferritin Is "Normal" and You Are Still Exhausted
 date: 2026-08-02
 slug: ferritin-normal-still-exhausted
+tags: lab-results, iron, fatigue, midlife
 summary: Iron can run low long before it shows up as anemia, and taking iron does not always fix it. I tested low for twenty years and nobody asked why. Here is what ferritin measures, and the question that usually goes unasked.
 questions:
   - Can you be iron deficient without being anemic? :: Yes. Anemia happens once iron stores have been depleted long enough to affect red blood cells. Stores can run low well before that, which is why a normal hemoglobin does not rule out low iron.

@@ -2,6 +2,7 @@
 title: The FDA Changed the Hormone Therapy Warning. Here Is What It Actually Says.
 date: 2026-07-29
 slug: fda-hormone-therapy-warning-change
+tags: hormone-therapy, menopause, perimenopause, medical-dismissal
 summary: The headlines said the FDA removed the breast cancer warning from hormone therapy. What the FDA actually did is narrower and more interesting than that, and the part almost nobody reported is the part you most need to know.
 questions:
   - What did the FDA actually change? :: It asked drug companies to remove risk statements about cardiovascular disease, breast cancer and probable dementia from the boxed warning on menopausal hormone therapy products, and to make other safety labelling changes.

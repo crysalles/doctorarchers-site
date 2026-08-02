@@ -2,6 +2,7 @@
 title: What the Blue Zones Actually Ate (It Was Never 95% Plants)
 date: 2026-08-16
 slug: blue-zones-what-they-actually-ate
+tags: nutrition, longevity, diet-myths
 summary: The famous "95 percent plant-based" Blue Zones number leaves out the cheese, eggs, lard, and fish that were on those tables every week. Here is what the longest-lived people actually ate, drawn from the researchers who studied them, including the ones who coined the term.
 reviewed: 2026-07-27
 questions:

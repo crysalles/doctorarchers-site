@@ -2,6 +2,7 @@
 title: Why You Wake at 3am
 date: 2026-08-08
 slug: why-you-wake-at-3am
+tags: sleep, perimenopause, midlife
 summary: Everyone tells you the hot flash is waking you up. A clever experiment suggests it may work the other way round, that you wake first and then notice the flush. Here is what was measured, and what it changes.
 questions:
   - Do hot flashes wake you up? :: Less clearly than assumed. When nocturnal hot flashes were measured objectively alongside sleep recordings, objective flashes were not associated with increased transitions into wakefulness, but self-reported flashes were, suggesting waking may increase awareness of the flush rather than the flush causing the waking.

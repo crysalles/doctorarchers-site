@@ -2,6 +2,7 @@
 title: Fiber and Your Own GLP-1: What the Evidence Shows
 date: 2026-08-14
 slug: fibre-and-your-own-glp1
+tags: glp1, fiber, gut-health, nutrition, blood-sugar
 summary: There is real science connecting dietary fiber, your gut bacteria, and the GLP-1 your body makes itself. There is also a great deal of overselling built on top of it. Here is where the line falls.
 questions:
   - Does fiber increase your own GLP-1? :: In a randomized controlled trial, a high-fiber diet promoted a specific group of short-chain-fatty-acid-producing gut bacteria, and greater diversity and abundance of those bacteria was linked to better blood sugar control, partly via increased GLP-1 production.

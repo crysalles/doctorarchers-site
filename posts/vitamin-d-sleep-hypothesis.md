@@ -2,6 +2,7 @@
 title: Is Your Sleep Problem Actually a Vitamin D Problem?
 date: 2026-08-20
 slug: vitamin-d-sleep-hypothesis
+tags: vitamin-d, sleep, supplements, gut-health
 summary: A neurologist built a widely shared theory linking vitamin D, gut bacteria, and B vitamins to the sleep disorders she could not otherwise explain. Her own papers are hypothesis pieces, not trials. Here is what independent research actually backs up, and where it does not.
 questions:
   - Does low vitamin D cause sleep problems? :: A modest, real effect shows up in meta-analyses of vitamin D supplementation trials, but the size and consistency vary a lot between studies, and a systematic review focused specifically on restless legs syndrome found no significant benefit from vitamin D. It is one contributor among several, not an established primary cause.

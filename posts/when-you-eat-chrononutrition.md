@@ -2,6 +2,7 @@
 title: When You Eat Matters. The Popular Version Has It Backwards.
 date: 2026-08-18
 slug: when-you-eat-chrononutrition
+tags: meal-timing, metabolism, blood-sugar, nutrition
 summary: There is real science showing meal timing affects your metabolism independently of what and how much you eat. There is also a popular protocol built on top of it that points in the wrong direction, and costs you muscle on the way.
 questions:
   - Does the timing of meals actually matter, or is it just calories? :: In a controlled feeding study where weight was held steady, eating in an early six-hour window improved insulin sensitivity, blood pressure and oxidative stress without any weight loss. In a separate crossover trial with calories matched exactly, late eating increased hunger and lowered daytime energy expenditure.

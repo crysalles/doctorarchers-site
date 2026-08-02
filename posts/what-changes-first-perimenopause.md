@@ -2,6 +2,7 @@
 title: What Changes First in Perimenopause
 date: 2026-08-06
 slug: what-changes-first-perimenopause
+tags: perimenopause, midlife, bone-health, sleep
 summary: Most women are told to think about their bones and their sleep after menopause. The research suggests the fastest changes happen during the transition itself, in the years before the milestone everyone is waiting for.
 questions:
   - When does bone loss actually happen? :: In a prospective study following women through the menopausal transition, there was no significant bone loss while women were still premenopausal. The maximal loss occurred during the transition stages themselves, before the final menstrual period.

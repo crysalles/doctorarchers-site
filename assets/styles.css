@@ -419,6 +419,37 @@ section{padding:4rem 0}
 .hub-callout ul{margin:.6rem 0 0;padding-left:1.25rem}
 .hub-callout li{margin-bottom:.3rem}
 
+/* ============ Related reading (foot of a post) ============
+   Deliberately plain: this competes with the opt-in directly below it, and a
+   heavily styled card here pulls attention away from the article that just
+   earned the reader's trust. The summary line is what makes a link worth
+   clicking, so it stays full-size rather than shrinking to fine print. */
+.related{
+  margin:3rem 0 0;
+  padding-top:1.75rem;
+  border-top:2px solid var(--line);
+}
+.related h2{
+  font-size:1.2rem;
+  margin-bottom:1rem;
+}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:1.25rem}
+.related li{margin:0}
+.related a{
+  font-family:var(--serif);
+  font-size:1.1rem;
+  font-weight:600;
+  line-height:1.3;
+  display:inline-block;
+}
+.related .related-summary{
+  display:block;
+  margin-top:.35rem;
+  font-size:.95rem;
+  line-height:1.55;
+  color:#5d5548;
+}
+
 /* ============ Blog ============ */
 .post-list{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1.5rem}
 .post-card{

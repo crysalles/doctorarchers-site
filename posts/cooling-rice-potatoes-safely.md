@@ -2,6 +2,7 @@
 title: Cook It, Cool It, Keep It. The Part Nobody Tells You About Cooled Rice and Potatoes.
 date: 2026-08-03
 slug: cooling-rice-potatoes-safely
+tags: nutrition, blood-sugar, resistant-starch, food-safety
 summary: Cooking starch and cooling it overnight really does change it, and it is a technique I recommend. It also creates the exact conditions behind two of the better documented kinds of food poisoning. Here is how to do it without making yourself ill.
 questions:
   - Does reheating cooled rice make it safe? :: No. The bacterium is killed by heat, but the toxin it produces is not. Cereulide is resistant to heat and acid during cooking, so thorough reheating destroys the bacteria and leaves the compound that makes you ill.

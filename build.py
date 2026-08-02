@@ -44,6 +44,14 @@ What it does:
                    or a path like assets/foo.jpg relative to the site root.
                    Defaults to the portrait.
 
+       tags:       optional topic list, comma separated on one line, e.g.
+                   "tags: thyroid, lab-results, midlife". Drives the
+                   "Related reading" block at the foot of the post. Posts are
+                   ranked by shared tags, weighting rarer tags more heavily,
+                   so a shared "ferritin" counts for far more than a shared
+                   "midlife". Only published posts are ever linked. A post
+                   with no tagged neighbours simply gets no block.
+
     3. Renders each post to blog/<slug>.html using the shared site template
        (same header, footer, and assets/styles.css as the rest of the site).
     4. Generates blog/index.html listing all posts, newest first.
@@ -437,6 +445,23 @@ def parse_front_matter(text, path):
             )
         parsed.append((question.strip(), answer.strip()))
     meta["questions"] = parsed
+
+    # "tags:" is an optional topic list driving the "Related reading" block.
+    # Accepts either a comma-separated line or one "  - " entry per line.
+    # Normalised to lowercase hyphenated slugs so "Thyroid" and "thyroid"
+    # are the same tag and a stray capital never silently splits a topic.
+    tags = meta.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t for t in tags.split(",")]
+    seen_tags = set()
+    clean_tags = []
+    for tag in tags:
+        norm = re.sub(r"[^a-z0-9]+", "-", tag.strip().lower()).strip("-")
+        if norm and norm not in seen_tags:
+            seen_tags.add(norm)
+            clean_tags.append(norm)
+    meta["tags"] = clean_tags
+
     return meta, body
 
 
@@ -784,6 +809,75 @@ def render_hub_callout(meta, posts_by_slug, built_hub_slugs):
     )
 
 
+def related_posts(meta, posts_by_slug, exclude=frozenset(), limit=3):
+    """Rank other live posts by shared tags. Returns a list of metas.
+
+    Scoring weights each shared tag by how rare it is: two posts both tagged
+    "ferritin" are far more related than two both tagged "women", and a plain
+    count of shared tags cannot tell those apart. Weight is 1/(posts carrying
+    the tag), so a tag on every post contributes almost nothing.
+
+    Only posts in posts_by_slug are considered, and that holds this run's LIVE
+    posts only — so a related link can never point at a scheduled post whose
+    page does not exist yet. Ties break toward the newer post.
+    """
+    if not meta.get("tags"):
+        return []
+
+    frequency = {}
+    for other in posts_by_slug.values():
+        for tag in other.get("tags", ()):
+            frequency[tag] = frequency.get(tag, 0) + 1
+
+    mine = set(meta["tags"])
+    scored = []
+    for slug, other in posts_by_slug.items():
+        if slug == meta["slug"] or slug in exclude:
+            continue
+        shared = mine & set(other.get("tags", ()))
+        if not shared:
+            continue
+        score = sum(1.0 / frequency[tag] for tag in shared)
+        scored.append((score, other["date_obj"], other))
+
+    scored.sort(key=lambda row: (row[0], row[1]), reverse=True)
+    return [row[2] for row in scored[:limit]]
+
+
+def render_related(meta, posts_by_slug, built_hub_slugs):
+    """A 'Related reading' block at the foot of a post.
+
+    Skipped entirely when the post has no tagged neighbours — three
+    irrelevant links are worse for a reader than none at all.
+
+    Posts already listed in the hub callout are excluded, so a hub member
+    does not show the same siblings twice on one page.
+    """
+    already_shown = set()
+    hub, _ = hub_for_slug(meta["slug"])
+    if hub and hub["hub_slug"] in built_hub_slugs:
+        already_shown = {m["slug"] for m in hub["members"]}
+
+    matches = related_posts(meta, posts_by_slug, exclude=already_shown)
+    if not matches:
+        return ""
+
+    items = []
+    for other in matches:
+        items.append(
+            '        <li>\n'
+            f'          <a href="{esc_attr(other["slug"])}.html">{render_inline(other["title"])}</a>\n'
+            f'          <span class="related-summary">{render_inline(other["summary"])}</span>\n'
+            '        </li>'
+        )
+    return (
+        '\n    <aside class="related" aria-labelledby="related-title">\n'
+        '      <h2 id="related-title">Related reading</h2>\n'
+        '      <ul>\n' + "\n".join(items) + '\n      </ul>\n'
+        '    </aside>\n'
+    )
+
+
 def markdown_to_html(md):
     """Convert the supported markdown subset to HTML."""
     out = []
@@ -965,6 +1059,7 @@ def build_post_page(meta, body_html, posts_by_slug=None, built_hub_slugs=frozens
 {insert_inline_optin(body_html)}
 {render_references(refs)}
 {render_hub_callout(meta, posts_by_slug, built_hub_slugs)}
+{render_related(meta, posts_by_slug, built_hub_slugs)}
     <p style="margin-top:2.5rem"><a href="index.html">← All posts</a></p>
   </article>
 """

@@ -2,6 +2,7 @@
 title: You Were Dismissed. Then You Were Sold To.
 date: 2026-07-27
 slug: dismissed-then-sold-to
+tags: perimenopause, medical-dismissal, midlife
 summary: Two arguments about perimenopause are running at once this summer, and they look like opposites. Medicine is failing women. The industry that rushed in is overselling. Both are true, and the second happened because of the first.
 questions:
   - What did the new Lancet review find? :: A scoping review screening 4,056 records and analyzing 89 studies found that women commonly experience fragmented care and limited access to evidence-based treatment, and report feeling dismissed, unsupported and uninformed about their options. Provider training was inadequate and national guidelines were inconsistently applied.

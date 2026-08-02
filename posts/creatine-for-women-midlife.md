@@ -2,6 +2,7 @@
 title: Creatine for Women in Midlife: What the Research Actually Says
 date: 2026-07-12
 slug: creatine-for-women-midlife
+tags: supplements, creatine, muscle, midlife, bone-health
 summary: Creatine has quietly become one of the best-studied supplements for women over 40, for muscle, bone, mood, and even memory. Here is a calm look at what it does and how to think about it.
 reviewed: 2026-07-27
 questions:

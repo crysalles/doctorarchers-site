@@ -2,6 +2,7 @@
 title: Bad Medicine Blues Is Now on Kindle, and Free to Read in Kindle Unlimited
 date: 2026-07-24
 slug: bad-medicine-blues-now-on-kindle
+tags: books, perimenopause, medical-dismissal
 summary: My book first came into the world last November. As of this week it is on Amazon Kindle, and free to read for anyone with Kindle Unlimited. Here is what is inside and who it is for.
 ---
 
