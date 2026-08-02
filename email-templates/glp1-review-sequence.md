@@ -14,7 +14,7 @@ then. So this sequence is safe to switch on before the book is live.
 |---|---|---|---|
 | 1 | Welcome | Day 0 (immediately) | Warm hello, set expectations, deepen the relationship |
 | 2 | The one thing about the drugs | Day 4 | Give real value, earn the next open, soft nudge to the book |
-| 3 | A small favour | Day 8 | Ask a reader who has the book for a short review |
+| 3 | A small favor | Day 8 | Ask a reader who has the book for a short review |
 
 ---
 
@@ -103,12 +103,12 @@ starting new exercise if you have a health condition.*
 
 ---
 
-## Email 3 — A small favour
+## Email 3 — A small favor
 
 **Send:** about 8 days after joining (Wait: 4 days after email 2).
 
 ### Subject line options
-1. A small favour, if the book helped
+1. A small favor, if the book helped
 2. The kindest thing you can do for the next woman
 3. Can I ask you something?
 
@@ -167,7 +167,7 @@ Rev. Dr. LaVeena B. Archers
 - Education and support only. Never claim the book or anything in it treats,
   cures, or reverses a condition.
 - **Never offer anything in exchange for a review.** Amazon prohibits
-  incentivised reviews and enforces against the listing. Asking is fine; paying,
+  incentivized reviews and enforces against the listing. Asking is fine; paying,
   discounting, or bonusing for it is not.
 - Keep Kit's one-click unsubscribe. Do not remove it.
 - If someone replies that they have not read it yet, that is a warm lead, not a

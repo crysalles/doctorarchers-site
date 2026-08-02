@@ -30,7 +30,7 @@ Studying this in the real world is difficult. Women going through natural menopa
 
 The researchers found a way around it. They recruited twenty-eight healthy premenopausal volunteers and used a drug, leuprolide, to induce menopause rapidly, producing hot flashes over four to five weeks in women whose age had not changed at all. They recorded overnight sleep studies before and after [1].
 
-That design separates the hot flashes from the ageing. It is a clever piece of work.
+That design separates the hot flashes from the aging. It is a clever piece of work.
 
 Across forty-eight sleep studies they captured 165 nocturnal hot flash episodes, an average of 3.4 a night [1].
 

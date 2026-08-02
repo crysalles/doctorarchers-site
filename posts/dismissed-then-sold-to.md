@@ -4,20 +4,20 @@ date: 2026-07-27
 slug: dismissed-then-sold-to
 summary: Two arguments about perimenopause are running at once this summer, and they look like opposites. Medicine is failing women. The industry that rushed in is overselling. Both are true, and the second happened because of the first.
 questions:
-  - What did the new Lancet review find? :: A scoping review screening 4,056 records and analysing 89 studies found that women commonly experience fragmented care and limited access to evidence-based treatment, and report feeling dismissed, unsupported and uninformed about their options. Provider training was inadequate and national guidelines were inconsistently applied.
+  - What did the new Lancet review find? :: A scoping review screening 4,056 records and analyzing 89 studies found that women commonly experience fragmented care and limited access to evidence-based treatment, and report feeling dismissed, unsupported and uninformed about their options. Provider training was inadequate and national guidelines were inconsistently applied.
   - Is it true that not every midlife symptom is hormonal? :: The critics' strongest evidence is a 2005 NIH consensus statement which concluded that vasomotor symptoms and vaginal dryness were clearly attributable to menopause, with sleep disturbance possible, and that the evidence did not support attributing much else. It is also twenty-one years old, which is a real weakness in leaning on it today.
   - So who should you believe? :: Both, on the parts each one gets right. The care gap is documented. The overselling is documented. A woman can be genuinely dismissed by her doctor and genuinely oversold to by the people who offered to help.
 references:
   - Kalbarczyk A, Morgan R, et al. Navigating menopausal care- a scoping review of health system responsiveness and gaps. Lancet Obstet Gynaecol Womens Health. 2026. https://doi.org/10.1016/S3050-5038(26)00083-X
   - National Institutes of Health State-of-the-Science Conference statement- management of menopause-related symptoms. Ann Intern Med. 2005;142(12 Pt 1):1003-1013. https://pubmed.ncbi.nlm.nih.gov/15968015/
-  - Fugh-Berman A, et al. The perimenopause movement sells women the lie that they are ruled by their hormones. STAT News, March 2026. (Opinion, not a study.) https://www.statnews.com/2026/03/26/perimenopause-symptoms-evidence-supplements/
+  - Bencivenga P, Fugh-Berman A. The perimenopause movement sells women the lie that they are ruled by their hormones. STAT News, March 2026. (Opinion, not a study.) https://www.statnews.com/2026/03/26/perimenopause-symptoms-evidence-supplements/
 ---
 
 Two arguments about perimenopause are running side by side this summer, and if you have been anywhere near the internet you have met both.
 
 The first says that medicine is failing women in midlife, that you are dismissed and under-treated and left to work it out yourself.
 
-The second says the opposite. That perimenopause has been turned into an industry, that ordinary midlife is being medicalised, and that women are being told a hundred different things are hormonal by people who happen to be selling the fix.
+The second says the opposite. That perimenopause has been turned into an industry, that ordinary midlife is being medicalized, and that women are being told a hundred different things are hormonal by people who happen to be selling the fix.
 
 They are usually presented as sides. You are supposed to pick one.
 
@@ -25,7 +25,7 @@ I do not think they are sides at all. I think both are true, and that the second
 
 # The dismissal is documented now
 
-A scoping review published this summer in *The Lancet Obstetrics, Gynaecology & Women's Health* screened 4,056 published records and analysed 89 studies, drawing mainly on evidence from the UK, United States and Australia [1].
+A scoping review published this summer in *The Lancet Obstetrics, Gynaecology & Women's Health* screened 4,056 published records and analyzed 89 studies, drawing mainly on evidence from the UK, United States and Australia [1].
 
 What it found will not surprise you if you have lived it. Women commonly experience fragmented services and limited access to evidence-based treatment. They report feeling dismissed, unsupported and uninformed about what their options even are. Provider training on menopause remains inadequate, and national guidelines are applied inconsistently [1].
 
@@ -37,7 +37,7 @@ That is a serious journal, eighty-nine studies, saying plainly that the dismissa
 
 Now the part my own corner of the world does not enjoy.
 
-There is a growing critique, argued most sharply by researchers at Georgetown, that the perimenopause movement has gone well past its evidence. That the lists of a hundred symptoms are not supported. That midlife men report a good deal of the same forgetfulness, weight gain and disturbed sleep. And that almost everybody amplifying those lists is, one way or another, selling something [3].
+There is a growing critique, argued most sharply by researchers at Georgetown, that the perimenopause movement has gone well past its evidence. That the lists of a hundred symptoms are not supported. That midlife men report a good deal of the same forgetfulness, sweating and weight gain. And that almost everybody amplifying those lists is, one way or another, selling something [3].
 
 Their strongest card is an NIH State-of-the-Science consensus statement, which concluded that vasomotor symptoms and vaginal dryness were clearly attributable to menopause, with sleep disturbance possible, and that the evidence did not support confidently attributing much beyond that [2].
 
@@ -69,9 +69,9 @@ You were failed twice. First by the people who should have investigated and did 
 
 Hold both truths at once, because you need both.
 
-Do not let the backlash talk you out of your own experience. The care gap is documented in eighty-nine studies [1], and your symptoms are not less real because somebody wrote an article about over-medicalisation.
+Do not let the backlash talk you out of your own experience. The care gap is documented in eighty-nine studies [1], and your symptoms are not less real because somebody wrote an article about over-medicalization.
 
-And do not let the certainty of the internet substitute for actual investigation. If someone attributes everything you are feeling to hormones without looking for anything else, they have not answered your question. They have relabelled it.
+And do not let the certainty of the internet substitute for actual investigation. If someone attributes everything you are feeling to hormones without looking for anything else, they have not answered your question. They have relabeled it.
 
 The useful posture in the middle is the same one I keep coming back to. Ask what was measured. Ask who it was measured in. Ask what would change the plan. Notice when a claim arrives attached to a product, mine included.
 

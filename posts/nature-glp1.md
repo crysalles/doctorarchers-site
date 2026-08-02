@@ -25,7 +25,7 @@ Your body has been running this system your whole life. One sophisticated enough
 
 ## The Supplement Trap: Honest Weighing
 
-I watched a woman I'll call Donna spend, over two years, more on supplements marketed for weight than a year of the actual drug would have cost. Every few months she arrived with a new bottle. A berberine blend one visit, a gummy marketed with a celebrity face the next. Each was purchased on the strength of a video that promised it would do what the drugs did, without the cost or the needles.
+I watched a woman I'll call Donna spend a couple of years and a genuinely uncomfortable amount of money chasing supplements marketed for weight, with nothing to show for it. Every few months she arrived with a new bottle. A berberine blend one visit, a gummy marketed with a celebrity face the next. Each was purchased on the strength of a video that promised it would do what the drugs did, without the cost or the needles.
 
 None of them moved her weight in any measurable way. Each disappointment sent her looking harder for the next answer rather than questioning the premise itself.
 

@@ -41,7 +41,7 @@ There is a second thing that stayed. The boxed warning for **endometrial cancer 
 
 To understand why this is being revisited, it helps to know what produced the box in the first place.
 
-In 2002 the Women's Health Initiative stopped one of its arms early. It had randomised 16,608 postmenopausal women aged 50 to 79 to either combined estrogen plus progestin or placebo, and after an average of 5.2 years the monitoring board halted it because the results crossed a boundary for breast cancer and the overall balance of risks and benefits had tipped [2].
+In 2002 the Women's Health Initiative stopped one of its arms early. It had randomized 16,608 postmenopausal women aged 50 to 79 to either combined estrogen plus progestin or placebo, and after an average of 5.2 years the monitoring board halted it because the results crossed a boundary for breast cancer and the overall balance of risks and benefits had tipped [2].
 
 The finding reshaped women's medicine almost overnight. It is worth looking at the actual numbers, because very few women ever were shown them.
 

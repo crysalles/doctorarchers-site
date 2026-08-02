@@ -7,7 +7,7 @@
 
 ## Subject line options
 
-1. A small favour, if the book helped
+1. A small favor, if the book helped
 2. The one thing that helps another woman find it
 3. Can I ask you something?
 
@@ -63,6 +63,6 @@ Rev. Dr. LaVeena B. Archers, PhD
 - The link goes straight to Amazon's review composer for ASIN `B0H9JKKSRT`,
   so the reader does not have to hunt for the button.
 - **Do not** offer anything in return for a review. Amazon prohibits
-  incentivised reviews and enforces it against the listing, not the reviewer.
+  incentivized reviews and enforces it against the listing, not the reviewer.
 - If someone replies saying they have not read it, that is a warm lead, not a
   failure. Reply personally.

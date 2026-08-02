@@ -2,11 +2,11 @@
 title: Your Ferritin Is "Normal" and You Are Still Exhausted
 date: 2026-08-02
 slug: ferritin-normal-still-exhausted
-summary: Iron can run low long before it shows up as anaemia, and taking iron does not always fix it. I tested low for twenty years and nobody asked why. Here is what ferritin measures, and the question that usually goes unasked.
+summary: Iron can run low long before it shows up as anemia, and taking iron does not always fix it. I tested low for twenty years and nobody asked why. Here is what ferritin measures, and the question that usually goes unasked.
 questions:
-  - Can you be iron deficient without being anaemic? :: Yes. Anaemia happens once iron stores have been depleted long enough to affect red blood cells. Stores can run low well before that, which is why a normal haemoglobin does not rule out low iron.
-  - Does taking iron help fatigue if you are not anaemic? :: A meta-analysis of six randomised controlled trials found a modest but statistically significant improvement in fatigue when iron was given to people who were iron deficient without anaemia.
-  - What if you take iron and nothing improves? :: That is information, not failure. Professional guidance treats a lack of response to oral iron as a reason to reassess rather than persist, and absorption problems such as coeliac disease, H. pylori infection and autoimmune gastritis are recognised causes that will not resolve while the underlying issue is untreated.
+  - Can you be iron deficient without being anemic? :: Yes. Anemia happens once iron stores have been depleted long enough to affect red blood cells. Stores can run low well before that, which is why a normal hemoglobin does not rule out low iron.
+  - Does taking iron help fatigue if you are not anemic? :: A meta-analysis of six randomized controlled trials found a modest but statistically significant improvement in fatigue when iron was given to people who were iron deficient without anemia.
+  - What if you take iron and nothing improves? :: That is information, not failure. Professional guidance treats a lack of response to oral iron as a reason to reassess rather than persist, and absorption problems such as celiac disease, H. pylori infection and autoimmune gastritis are recognized causes that will not resolve while the underlying issue is untreated.
 references:
   - Yokoi K, Konomi A. Iron deficiency without anaemia is a potential cause of fatigue- meta-analyses of randomised controlled trials and cross-sectional studies. Br J Nutr. 2017;117(10):1422-1431. https://doi.org/10.1017/S0007114517001349
   - Hansen R, Sommer VM, Pinborg A, et al. Intravenous ferric derisomaltose versus oral iron for persistent iron deficient pregnant women- a randomised controlled trial. Arch Gynecol Obstet. 2022;308(4):1165-1173. https://doi.org/10.1007/s00404-022-06768-x
@@ -15,17 +15,17 @@ references:
   - DeLoughery TG, Jackson CS, Ko CW, Rockey DC. AGA Clinical Practice Update on Management of Iron Deficiency Anemia- Expert Review. Clin Gastroenterol Hepatol. 2024;22(8):1575-1583. https://doi.org/10.1016/j.cgh.2024.03.046
 ---
 
-You went in because you are tired in a way that sleep does not fix. They ran bloodwork. Your haemoglobin came back fine, so you were told your iron was fine, and you went home with nothing.
+You went in because you are tired in a way that sleep does not fix. They ran bloodwork. Your hemoglobin came back fine, so you were told your iron was fine, and you went home with nothing.
 
 That conversation is incomplete. I know it from both sides of the exam room table, and the second half of this piece is mine.
 
-# Haemoglobin and ferritin answer different questions
+# Hemoglobin and ferritin answer different questions
 
-Haemoglobin tells you whether you are anaemic today. Ferritin tells you roughly how much iron you have in storage.
+Hemoglobin tells you whether you are anemic today. Ferritin tells you roughly how much iron you have in storage.
 
-Those two fall out of step, and they do it in a set order. Stores empty first. Anaemia arrives later, once the reserve has been drawn down so far that your body can no longer keep red blood cell production going. Iron deficiency without anaemia is the stage before the diagnosis, and it affects an estimated one to two billion people worldwide [3].
+Those two fall out of step, and they do it in a set order. Stores empty first. Anemia arrives later, once the reserve has been drawn down so far that your body can no longer keep red blood cell production going. Iron deficiency without anemia is the stage before the diagnosis, and it affects an estimated one to two billion people worldwide [3].
 
-So a normal haemoglobin does not tell you your iron is fine. It tells you that you are not anaemic yet. If nobody ran a ferritin, nobody asked about your stores.
+So a normal hemoglobin does not tell you your iron is fine. It tells you that you are not anemic yet. If nobody ran a ferritin, nobody asked about your stores.
 
 # The normal range is doing a lot of work
 
@@ -37,13 +37,13 @@ The result is flagged normal because it is common, not because it is fine.
 
 # What the research supports, and what it does not
 
-A meta-analysis pooling six randomised controlled trials found that giving iron to people who were deficient without anaemia produced a statistically significant improvement in fatigue [1]. The pooled effect size was 0.33, and the trials agreed closely with one another.
+A meta-analysis pooling six randomized controlled trials found that giving iron to people who were deficient without anemia produced a statistically significant improvement in fatigue [1]. The pooled effect size was 0.33, and the trials agreed closely with one another.
 
 That is real. It is also modest. Iron helped meaningfully for some people. It did not transform everyone who took it.
 
-The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anaemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one.
+The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one.
 
-There is one more limit. Much of the trial evidence on treating non-anaemic iron deficiency comes from pregnant women [2,3], because that is where the funding and the clinical urgency have been. Pregnancy is not the same situation as a forty-six year old with heavy periods and a demanding life. The findings are suggestive for her. They were not gathered on her.
+There is one more limit. Much of the completed trial evidence on treating non-anemic iron deficiency comes from pregnant women [2], with more currently underway [3], because that is where the funding and the clinical urgency have been. Pregnancy is not the same situation as a forty-six year old with heavy periods and a demanding life. The findings are suggestive for her. They were not gathered on her.
 
 # Why midlife women sit right in the gap
 
@@ -65,7 +65,7 @@ Not why I was losing it. Not why I was not absorbing it. The deficiency was note
 
 Professional guidance is clear that if ferritin does not improve after a trial of oral iron, or if someone has a condition where oral iron is unlikely to be absorbed, the answer is to change the approach rather than repeat it [5]. A lack of response is a finding. It is meant to prompt the next question.
 
-And there is a list of next questions. Conventional gastrointestinal workup fails to establish the cause of iron deficiency in roughly one third of patients, and abnormal absorption is increasingly recognised as a major reason why [4]. Coeliac disease, Helicobacter pylori infection and autoimmune atrophic gastritis are all recognised causes. All can be screened for without anything invasive. And curing previously refractory iron deficiency by eradicating H. pylori has provided strong evidence of a real cause and effect relationship [4].
+And there is a list of next questions. Conventional gastrointestinal workup fails to establish the cause of iron deficiency in roughly one third of patients, and abnormal absorption is increasingly recognized as a major reason why [4]. Celiac disease, Helicobacter pylori infection and autoimmune atrophic gastritis are all recognized causes. All can be screened for without anything invasive. And curing previously refractory iron deficiency by eradicating H. pylori has provided strong evidence of a real cause and effect relationship [4].
 
 Read that last part again. There are people whose iron deficiency resisted supplementation for years and resolved when somebody finally treated the reason for it.
 

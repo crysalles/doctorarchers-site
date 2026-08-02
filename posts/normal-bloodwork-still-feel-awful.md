@@ -11,7 +11,7 @@ If that is you, let me say it clearly: you are not imagining it, and you are not
 
 # Why "normal" often misses the point
 
-Standard lab ranges are built to catch disease, not to describe thriving. They are wide, they are population averages, and they flag the point where something has already gone clearly wrong. You can sit well inside the normal range and still be a long way from where your body actually works.
+Standard lab ranges are built from the middle of a population's results, not to describe thriving. They are wide, they are population averages, and by the time a result falls outside them, something has usually already gone clearly wrong. You can sit well inside the normal range and still be a long way from where your body actually works.
 
 Take thyroid, iron, or vitamin D. A result can land at the low end of normal, technically fine on paper, while your energy and your mood tell a very different story. The number is accurate. It is simply answering a narrower question than the one you walked in with.
 

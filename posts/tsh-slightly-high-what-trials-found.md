@@ -29,9 +29,9 @@ TSH is also a signal rather than a supply. It is the message the pituitary sends
 
 # The trial that tried to answer it
 
-The TRUST trial is the largest and best designed attempt, and it was built to give a clean answer: randomised, double blind, placebo controlled [1].
+The TRUST trial is the largest and best designed attempt, and it was built to give a clean answer: randomized, double blind, placebo controlled [1].
 
-Researchers enrolled 737 adults aged sixty-five and over with persistent subclinical hypothyroidism, meaning a TSH between 4.60 and 19.99 with free thyroxine still in range. Half received levothyroxine, starting at 50 micrograms daily and adjusted to their TSH. Half received placebo, with mock dose adjustments so that neither they nor their doctors could tell who was getting what [1].
+Researchers enrolled 737 adults aged sixty-five and over with persistent subclinical hypothyroidism, meaning a TSH between 4.60 and 19.99 with free thyroxine still in range. Half received levothyroxine, starting at 50 micrograms daily (lower for smaller patients and those with heart disease) and adjusted to their TSH. Half received placebo, with mock dose adjustments so that neither they nor their doctors could tell who was getting what [1].
 
 The drug did its biochemical job. Average TSH fell from 6.40 at the start to 3.63 in the treated group, against 5.48 on placebo [1].
 

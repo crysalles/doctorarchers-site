@@ -23,7 +23,7 @@ That word is worth taking apart, because most people, including a good number of
 
 A reference range is not handed down from physiology. It is built, by measurement, and the method is plain once you have seen it done.
 
-Here is a real example. Researchers wanted to establish the normal value for a blood marker called the neutrophil-to-lymphocyte ratio, which had been used in research for years without anyone defining what normal looked like in healthy people. So they took routine blood samples from 413 workers in a health prevention programme, calculated the distribution, and reported the 2.5th and 97.5th percentiles. The answer came out between 0.78 and 3.53 [1].
+Here is a real example. Researchers wanted to establish the normal value for a blood marker called the neutrophil-to-lymphocyte ratio, which had been used in research for years without anyone defining what normal looked like in healthy people. So they took routine blood samples from 413 workers in a health prevention program, calculated the distribution, and reported the 2.5th and 97.5th percentiles. The answer came out between 0.78 and 3.53 [1].
 
 That is the whole method. Measure a group considered healthy. Cut off the bottom 2.5 percent and the top 2.5 percent. Call what is left in the middle normal.
 

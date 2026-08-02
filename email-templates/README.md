@@ -26,10 +26,10 @@ sequence in Kit, paste the copy, and hit send yourself.
 - Never claim the book or anything in it treats, cures, or reverses a
   condition. Education and support only — the same scope that governs the site.
 - Keep the one-click unsubscribe Kit adds automatically. Do not remove it.
-- Amazon requires that a review is honest and unincentivised. **Never offer
+- Amazon requires that a review is honest and unincentivized. **Never offer
   anything in exchange for a review** — no discount, no bonus, no freebie.
   Asking is fine; paying for it violates Amazon's terms and can get the
-  listing penalised.
+  listing penalized.
 
 ## Useful links
 

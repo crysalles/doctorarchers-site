@@ -31,7 +31,7 @@ This is not my extrapolation. A review in *Advances in Nutrition* by researchers
 
 For our seventy kilo woman, that moves the figure from fifty-six grams to eighty-four. It is a meaningfully different day of eating.
 
-The same review highlights the amino acid leucine, which plays a central role in signalling muscle to build [1]. That is why protein quality and distribution matter, not only the daily total.
+The same review highlights the amino acid leucine, which plays a central role in signaling muscle to build [1]. That is why protein quality and distribution matter, not only the daily total.
 
 The reasoning behind the higher figure is age-related loss of muscle mass and function, and how much of that decline adequate protein might offset [1]. The authors are careful, and note honestly that longer-term intervention trials are still needed [1]. But the direction of the evidence is not seriously in dispute.
 
@@ -57,11 +57,11 @@ This comes up every time, so let me deal with it directly.
 
 The review states that the often-cited negative effects of higher protein intakes on renal and bone health are without a scientific foundation in humans [1].
 
-That is unusually blunt language for a scientific paper, and it is worth taking seriously. The kidney concern originates largely in people who already have kidney disease, where protein restriction genuinely is part of management, and was then generalised to everyone. If you have kidney disease or reduced kidney function, that is a real conversation to have with your doctor and I am not waving it away. If you do not, the fear has been doing more harm than the protein.
+That is unusually blunt language for a scientific paper, and it is worth taking seriously. The kidney concern originates largely in people who already have kidney disease, where protein restriction genuinely is part of management, and was then generalized to everyone. If you have kidney disease or reduced kidney function, that is a real conversation to have with your doctor and I am not waving it away. If you do not, the fear has been doing more harm than the protein.
 
 # Protein alone builds nothing
 
-Protein is the raw material. Resistance training is the signal that tells your body to use it. Supervised resistance programmes running longer than ten weeks have produced increases of roughly three kilograms in lean mass and about twenty-five percent in strength, in men and women [3].
+Protein is the raw material. Resistance training is the signal that tells your body to use it. Supervised resistance programs running longer than ten weeks have produced increases of roughly three kilograms in lean mass and about twenty-five percent in strength, in men and women [3].
 
 Protein without training gives your body materials it has no particular reason to use. Training without adequate protein asks for a build and supplies no bricks. They are not alternatives, and the research consistently treats them as a pair.
 
@@ -69,13 +69,13 @@ Protein without training gives your body materials it has no particular reason t
 
 Not a special diet. Just deliberate.
 
-Protein at breakfast rather than at dinner alone. A source at every meal instead of two out of three. Attention to whether you are actually reaching the number rather than assuming, because most people substantially overestimate their intake until they count it for a few days.
+Protein at breakfast rather than at dinner alone. A source at every meal instead of two out of three. Attention to whether you are actually reaching the number rather than assuming, because most people are surprised by the gap once they actually track their intake for a few days.
 
 And if your appetite is suppressed for any reason, whether by medication, illness or age, the case for making every meal count gets stronger.
 
 # Where the evidence thins
 
-The higher figures come substantially from research in older adults and in athletes [1,2]. A woman in her late forties who does not train sits at neither pole, and the precise number for her has not been established with the same rigour. The authors of the review say plainly that longer-term trials are still needed [1].
+The higher figures come substantially from research in older adults and in athletes [1,2]. A woman in her late forties who does not train sits at neither pole, and the precise number for her has not been established with the same rigor. The authors of the review say plainly that longer-term trials are still needed [1].
 
 But the central claim holds, and the people who study this state it openly: 0.8 g/kg was set as a minimum to prevent deficiency, and it is not an optimum for maintaining muscle in midlife [1].
 
