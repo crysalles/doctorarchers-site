@@ -36,6 +36,6 @@ These are the ground everything else is built on, and for a great many women the
 
 Being told everything is normal, when your body says otherwise, is its own kind of dismissal. The aim is simple: stop overriding what you already feel, and start working with your body from the roots. No panic, no chasing every test.
 
-That is the whole idea behind my book, *A Symptom Is a Signal*, a calm, well-researched map of the root-cause approach to women's health, especially through perimenopause and beyond.
+That is the whole idea behind my book, *Bad Medicine Blues*, a calm, well-researched map of the root-cause approach to women's health, especially through perimenopause and beyond.
 
-If any of this sounds like you, the opening chapter is free to read. [Read a free chapter of A Symptom Is a Signal](../book.html#free-chapter).
+If any of this sounds like you, the opening chapter is free to read. [Read a free chapter of Bad Medicine Blues](../book.html#free-chapter).

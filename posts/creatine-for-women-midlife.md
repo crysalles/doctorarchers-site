@@ -35,4 +35,4 @@ A few simple pointers:
 
 Creatine is one of the rare supplements that is cheap, well studied, and genuinely aligned with aging strong. It will not do the work for you, and it is no substitute for protein, sleep, and movement. Paired with those foundations, it is a small, sensible edge.
 
-I go deeper on creatine, protein, and building a body that carries you in *A Symptom Is a Signal*. [Read a free chapter](../book.html#free-chapter).
+I go deeper on creatine, protein, and building a body that carries you in *Bad Medicine Blues*. [Read a free chapter](../book.html#free-chapter).

@@ -23,7 +23,7 @@ A little while ago you picked up the Companion Workbook, which means you and I
 are probably somewhere in the same conversation — the one about feeling unwell
 while being told everything looks fine.
 
-If you have read *A Symptom Is a Signal*, or even part of it, I want to ask you
+If you have read *Bad Medicine Blues*, or even part of it, I want to ask you
 for something small.
 
 Would you leave an honest review on Amazon?

@@ -65,7 +65,7 @@ points back to the book, for example:
 Already live or scheduled (skip these topics): creatine for women, the protein number, GLP-1 (several:
 your-body-already-makes-glp-1, nature-glp1, glp1-muscle-loss, fibre-and-your-own-glp1), normal
 bloodwork / ferritin / TSH, why you wake at 3am, what changes first in perimenopause, the FDA hormone
-warning change, A Symptom Is a Signal on Kindle, and **blue-zones-what-they-actually-ate (already done as
+warning change, Bad Medicine Blues on Kindle, and **blue-zones-what-they-actually-ate (already done as
 the model post - copy its structure).**
 
 ## Manifest (12 posts, each with its source chapter and angle)

@@ -89,4 +89,4 @@ If you are already taking iron and nothing is shifting, that is the moment to st
 
 What you do with any of it belongs with you and a qualified professional who knows your history. My part is to make sure you know the question exists, because for twenty years, nobody made sure I did.
 
-I go deeper on iron, energy, and the root-cause approach in *A Symptom Is a Signal*. [Read a free chapter](../book.html#free-chapter).
+I go deeper on iron, energy, and the root-cause approach in *Bad Medicine Blues*. [Read a free chapter](../book.html#free-chapter).

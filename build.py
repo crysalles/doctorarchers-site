@@ -158,7 +158,7 @@ FOOTER = """
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="../book.html">A Symptom Is a Signal — the book</a></li>
+          <li><a href="../book.html">Bad Medicine Blues — the book</a></li>
           <li><a href="index.html#browse-by-topic">Topic guides</a></li>
           <li><a href="../testing.html">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
@@ -239,7 +239,7 @@ PERSON_NODE = {
     "alternateName": "Rev. Dr. LaVeena Archers",
     "url": f"{SITE_URL}/",
     "description": (
-        "Holistic Functional Medicine educator and author of A Symptom Is a Signal. "
+        "Holistic Functional Medicine educator and author of Bad Medicine Blues. "
         "Educates and supports; does not diagnose, treat, prescribe, or manage "
         "disease. Services offered within a Private Membership Association."
     ),
@@ -1168,7 +1168,7 @@ LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — LaVeenaArchers.com
 
 > Root-cause health education for women, grounded in the peer-reviewed
 > literature. Author of the Dr. Archers Root-Cause Guides, beginning with
-> *A Symptom Is a Signal: The Natural, Root-Cause Approach to Women's Energy,
+> *Bad Medicine Blues: The Natural, Root-Cause Approach to Women's Energy,
 > Hormones, and Vitality*.
 
 ## About the author

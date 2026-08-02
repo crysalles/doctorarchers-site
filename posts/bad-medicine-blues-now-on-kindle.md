@@ -1,11 +1,11 @@
 ---
-title: A Symptom Is a Signal: Now on Kindle, and Free to Read in Kindle Unlimited
+title: Bad Medicine Blues Is Now on Kindle, and Free to Read in Kindle Unlimited
 date: 2026-07-24
 slug: bad-medicine-blues-now-on-kindle
 summary: My book first came into the world last November. As of this week it is on Amazon Kindle, and free to read for anyone with Kindle Unlimited. Here is what is inside and who it is for.
 ---
 
-Some news I have been waiting to share. My book, A Symptom Is a Signal: A Root-Cause Guide to Women's Energy, Hormones, and Vitality, first came into the world last November. Until now it lived quietly with a small circle of readers. As of this week, it is available on Amazon Kindle, and free to read for anyone with Kindle Unlimited.
+Some news I have been waiting to share. My book, Bad Medicine Blues: The Natural, Root-Cause Approach to Women's Energy, Hormones, and Vitality, first came into the world last November. Until now it lived quietly with a small circle of readers. As of this week, it is available on Amazon Kindle, and free to read for anyone with Kindle Unlimited.
 
 # What the book is about
 
@@ -21,7 +21,7 @@ I wanted this book to reach the woman who needs it, not only the woman who can s
 
 # Read it
 
-You can find A Symptom Is a Signal on Amazon Kindle here: [Read on Amazon Kindle](https://amzn.to/4fDUnDB). As an Amazon Associate, I earn from qualifying purchases.
+You can find Bad Medicine Blues on Amazon Kindle here: [Read on Amazon Kindle](https://amzn.to/4fDUnDB). As an Amazon Associate, I earn from qualifying purchases.
 
 If it speaks to you, a short and honest review helps another woman find it more than almost anything else. And if you know someone in the thick of the change who has been feeling unseen, this book was written for her too.
 

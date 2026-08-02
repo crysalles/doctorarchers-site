@@ -1,7 +1,7 @@
 # LaVeenaArchers.com — static site
 
 A clean, fast, accessible, code-based rebuild of laveenaarchers.com, off
-Squarespace, unified with the look of *A Symptom Is a Signal*. Plain HTML + one
+Squarespace, unified with the look of *Bad Medicine Blues*. Plain HTML + one
 shared stylesheet + a tiny Python blog generator. No frameworks, no build
 tools, no third-party requests of any kind.
 
@@ -13,7 +13,7 @@ tools, no third-party requests of any kind.
 | `about.html` | About & Scope (bio, credentials, scope by credential, PMA) |
 | `services.html` | Services (four categories, tier placeholders) |
 | `training.html` | Training & Certifications |
-| `book.html` | The Book — *A Symptom Is a Signal* sales page (the `/book` page) |
+| `book.html` | The Book — *Bad Medicine Blues* sales page (the `/book` page) |
 | `testimonials.html` | Testimonials (the four real quotes) |
 | `faq.html` | FAQ (native `<details>` accordion) |
 | `contact.html` | Contact / Booking |
@@ -292,7 +292,7 @@ them inert so the site previews safely.
      into **`[KIT_NEWSLETTER_FORM_UID]`** in `blog/index.html` (2 spots).
 
 3. **Sell the book (Kit Commerce).**
-   - In Kit → **Products**, create a product ("A Symptom Is a Signal — the bundle"),
+   - In Kit → **Products**, create a product ("Bad Medicine Blues — the bundle"),
      upload the book PDF/ePub + workbook + checklist, and set the price.
    - Copy the product's **share URL** and paste it into **`[KIT_BOOK_PRODUCT_URL]`**
      in `book.html` (3 spots: hero, buy box, final call).
