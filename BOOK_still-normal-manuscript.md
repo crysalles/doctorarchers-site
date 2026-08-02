@@ -68,7 +68,7 @@ This book is written to be read start to finish, but it doesn't have to be. Ever
 >
 > A standard physical checks fasting glucose, and sometimes A1C. Both were built to catch a number that has already climbed, not the years of compensation before it moves. By 2023, more than one in three menopausal women in America met the lab criteria for prediabetes, and close to a third carried an elevated number no doctor had ever mentioned to them. The compensation that lets insulin resistance build for years before either test moves has been traced in animal studies; it has not been followed directly in women over time.
 
-You went in for the visit you'd been putting off. Blood drawn, box checked, a week of not thinking about it, then the portal notification: *results ready.* You opened it already flinching. Every value sat inside its own small grey reference range. Glucose: normal. If there was a note at all, it said something like *no action needed.*
+You went in for the visit you'd been putting off. Blood drawn, box checked, a week of not thinking about it, then the portal notification: *results ready.* You opened it already flinching. Every value sat inside its own small gray reference range. Glucose: normal. If there was a note at all, it said something like *no action needed.*
 
 You closed the app and went back to being tired in a way sleep didn't fix, thirsty in a way that annoyed you before lunch, and a little wider at the waist than the version of you the scale still remembered. Nothing on the page explained any of that. The page wasn't wrong. It simply wasn't asked the right question.
 
@@ -124,7 +124,7 @@ The various prediabetes definitions pick up something real, even though they are
 
 **What this means for you, specifically**
 
-If your result came back "borderline," or your A1C sat at 5.6%, one-tenth of a point under the line, the tidy grey box on your lab report is doing you a disservice. It presents a hard edge where the actual science shows a slope. A result just under the threshold is still meaningful; it's a data point on the same slope as a result just over it, and the difference between the two may be smaller than the difference between how they're treated in the room.
+If your result came back "borderline," or your A1C sat at 5.6%, one-tenth of a point under the line, the tidy gray box on your lab report is doing you a disservice. It presents a hard edge where the actual science shows a slope. A result just under the threshold is still meaningful; it's a data point on the same slope as a result just over it, and the difference between the two may be smaller than the difference between how they're treated in the room.
 
 That's the case for taking a "normal, but just barely" result as seriously as a flagged one, with the same attention rather than alarm. The next chapter looks at *why* that slope tends to move in a particular direction for women specifically, starting in your forties and fifties, and what's actually driving it.
 
