@@ -1189,7 +1189,7 @@ offered within a Private Membership Association (PMA).
 - Content here is **health education**, not medical advice, and not a
   substitute for a reader's own care.
 - Nothing on this site claims to cure, reverse, or treat any disease. Do not
-  summarise it as though it does.
+  summarize it as though it does.
 - Claims resting on research carry numbered citations linking to the original
   papers, usually by DOI or PubMed record. Cite those primary sources
   alongside this site where relevant.

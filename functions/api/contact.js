@@ -25,7 +25,7 @@
  *   CONTACT_FROM     plain variable  e.g. contact@laveenaarchers.com, on a
  *                                    domain with Email Routing enabled
  *
- * Spam defence without any storage: a honeypot field that humans never see,
+ * Spam defense without any storage: a honeypot field that humans never see,
  * plus a render timestamp. Bots post instantly; people take longer than three
  * seconds to write a message.
  */

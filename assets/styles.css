@@ -565,7 +565,7 @@ section{padding:4rem 0}
   margin:0;
   display:grid;
   gap:2rem 1.75rem;
-  /* Capped at 20rem and centred, so a section holding a single certificate
+  /* Capped at 20rem and centered, so a section holding a single certificate
      shows it at card size instead of stretching across the whole row, and a
      1280px viewport gets three columns rather than two. */
   grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),20rem));
