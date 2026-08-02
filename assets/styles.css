@@ -565,7 +565,11 @@ section{padding:4rem 0}
   margin:0;
   display:grid;
   gap:2rem 1.75rem;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));
+  /* Capped at 20rem and centred, so a section holding a single certificate
+     shows it at card size instead of stretching across the whole row, and a
+     1280px viewport gets three columns rather than two. */
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),20rem));
+  justify-content:center;
 }
 .cred-card{ display:flex; flex-direction:column; margin:0 }
 .cred-card .shot{
@@ -606,8 +610,8 @@ section{padding:4rem 0}
   margin-top:.5rem;
   padding-top:.5rem;
   border-top:1px dotted var(--line);
-  font-size:.85rem;
-  line-height:1.5;
+  font-size:.875rem; /* a disclosure nobody can read is not a disclosure */
+  line-height:1.55;
   color:#6f6656;
 }
 

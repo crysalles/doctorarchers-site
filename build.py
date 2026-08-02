@@ -1108,6 +1108,7 @@ SITEMAP_PRIORITY = {
     "books.html": "0.9",
     "about.html": "0.8",
     "testing.html": "0.8",
+    "credentials.html": "0.7",
     "how-i-research.html": "0.7",
     "scope-of-practice.html": "0.7",
     "contact.html": "0.7",
