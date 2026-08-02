@@ -6,7 +6,7 @@
 
 ## Medical Disclaimer
 
-LaVeena B. Archers holds a Doctor of Natural Medicine degree and works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
+LaVeena B. Archers holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and the pentadoctorate from the Rockwell School of Holistic Medicine. Neither institution is accredited by an agency recognized by the U.S. Department of Education. In 2025 she became board certified by exam as a Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. That board is a private credentialing organization, and its certification is not state or federally regulated. She works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
 
 If you have kidney disease, speak to your doctor before taking a magnesium supplement; impaired kidneys can struggle to clear excess magnesium, and Chapter 11's discussion of magnesium is not a recommendation for anyone with reduced kidney function. If you are pregnant, speak to your doctor before changing your diet, exercise, or supplement routine; several of the trials in this book excluded pregnant women, and none of the findings here should be assumed to apply during pregnancy.
 
@@ -66,7 +66,7 @@ This book is written to be read start to finish, but it doesn't have to be. Ever
 
 > **Short Version**
 >
-> A standard physical checks fasting glucose, and sometimes A1C. Both were built to catch a number that has already climbed, not the years of compensation before it moves. By 2023, more than one in three menopausal women in America met the lab criteria for prediabetes, and close to a third carried an elevated number no doctor had ever mentioned to them. Insulin resistance can build for years before either test moves.
+> A standard physical checks fasting glucose, and sometimes A1C. Both were built to catch a number that has already climbed, not the years of compensation before it moves. By 2023, more than one in three menopausal women in America met the lab criteria for prediabetes, and close to a third carried an elevated number no doctor had ever mentioned to them. The compensation that lets insulin resistance build for years before either test moves has been traced in animal studies; it has not been followed directly in women over time.
 
 You went in for the visit you'd been putting off. Blood drawn, box checked, a week of not thinking about it, then the portal notification: *results ready.* You opened it already flinching. Every value sat inside its own small grey reference range. Glucose: normal. If there was a note at all, it said something like *no action needed.*
 
@@ -142,7 +142,7 @@ Kilpatrick ES, Bloomgarden ZT, Zimmet PZ. International Expert Committee report 
 
 > **Short Version**
 >
-> Before menopause, women have a measurable insulin-sensitivity advantage over men the same age, and estrogen is part of why, through a traceable effect on how much glucose the liver releases. Two separate meta-analyses of hormone therapy trials, two decades apart, both found it lowers insulin resistance scores in postmenopausal women, with estrogen alone outperforming estrogen combined with a progestogen. The effect is real and modest rather than a reversal, and whether hormone therapy suits you depends on your own history and risk factors.
+> Before menopause, women have a measurable insulin-sensitivity advantage over men the same age, and estrogen is part of why, through a mechanism traced in mice affecting how much glucose the liver releases, not yet confirmed the same way in women. Two separate meta-analyses of hormone therapy trials, two decades apart, both found it lowers insulin resistance scores in postmenopausal women, with estrogen alone outperforming estrogen combined with a progestogen. That human effect is real and modest rather than a reversal, and whether hormone therapy suits you depends on your own history and risk factors.
 
 Here's a fact most women are never told, because there's rarely a reason to mention it until it stops being true: before menopause, women have a real, measurable insulin-sensitivity advantage over men their own age, and a lower rate of type 2 diabetes to go with it. Researchers studying why landed on a specific hormone doing specific work, and on what happens in its absence. **[animals only]** A mouse model, described below.
 
@@ -186,7 +186,7 @@ Li T, Jiang NS, Kaskey J, Schnatz PF, Nudy M. Hormone therapy and insulin resist
 
 > **Short Version**
 >
-> Routine diabetes screening isn't universal. US guidelines target adults 35 to 70 who have overweight or obesity, which leaves out a woman at a BMI of 23, a woman of 33, and a woman of 72. Even when the test is ordered, your pancreas compensates by producing more insulin, holding fasting glucose in the normal range while the resistance underneath it builds. The test reports the outcome of that compensation, and moves only once the compensation starts to fail.
+> Routine diabetes screening isn't universal. US guidelines target adults 35 to 70 who have overweight or obesity, which leaves out a woman at a BMI of 23, a woman of 33, and a woman of 72. Even when the test is ordered, your pancreas compensates by producing more insulin, holding fasting glucose in the normal range while the resistance underneath it builds, a pattern traced directly in mouse studies of the compensation mechanism. The test reports the outcome of that compensation, and moves only once it starts to fail.
 
 The ritual feels thorough. Cuff on your arm, stethoscope on your chest, a vial or two of blood sent off to a lab that will, a few days later, hand back a page of numbers with the word "normal" printed next to most of them. It's reasonable to walk out of that room believing you've been checked for everything worth checking. You haven't, and not because anyone was careless: the checking itself has a narrower job than it looks like it does.
 
@@ -224,7 +224,7 @@ Chen C, Chmelova H, Cohrs CM, et al. Alterations in β-Cell Calcium Dynamics and
 
 > **Short Version**
 >
-> A1C averages roughly three months of blood sugar and runs falsely high if your iron is low. Fasting glucose is one snapshot and can stay normal for years. Fasting insulin shows how hard your body is working to keep it there, and is the number rarely ordered. HOMA-IR combines glucose and insulin into an estimate carrying real imprecision. The OGTT is the only one that watches your body handle an actual glucose load, and it is the one a routine visit is least likely to order.
+> A1C averages roughly three months of blood sugar and can run falsely high if your iron is low, an effect clearly shown in some populations and, in the one study that looked specifically at non-pregnant women, only a trend that did not reach significance. Fasting glucose is one snapshot and can stay normal for years. Fasting insulin shows how hard your body is working to keep it there, and is the number rarely ordered. HOMA-IR combines glucose and insulin into an estimate carrying real imprecision. The OGTT is the only one that watches your body handle an actual glucose load, and it is the one a routine visit is least likely to order.
 
 Five numbers show up again and again in this book, and almost nobody has ever sat you down and explained what each one is actually built to catch, or what it quietly can't. None of them is useless. None of them is complete on its own, either. Here's what each one is really doing.
 
@@ -370,7 +370,7 @@ Kashiwagi K, Inaishi J, Kinoshita S, et al. Assessment of glycemic variability a
 
 > **Short Version**
 >
-> Muscle is the largest site for clearing glucose from your blood, and muscle contraction opens a second route into the cell that doesn't require insulin's permission at all. Across 77 randomized trials of lifestyle programs in prediabetes, those including supervised exercise training cut diabetes incidence to a relative risk of 0.40, against 0.69 for programs without it. Not every kind of movement moves every number: Nordic walking lowered A1C across six trials while leaving fasting glucose and HOMA-IR unchanged.
+> Muscle is the largest site for clearing glucose from your blood, and cell and animal research traces a second route into the cell that muscle contraction opens without needing insulin's permission at all. Across 77 randomized trials of lifestyle programs in prediabetes, those including supervised exercise training cut diabetes incidence to a relative risk of 0.40, against 0.69 for programs without it. Not every kind of movement moves every number: Nordic walking lowered A1C across six trials while leaving fasting glucose and HOMA-IR unchanged.
 
 This chapter sits at the exact point where this territory and *The Muscle You Keep* overlap: the same tissue, asked about from two different directions. That book asks how you keep your muscle through midlife. This chapter asks something narrower: what does having it actually do to your blood sugar. The answer turns out to be the strongest, most consistently supported claim gathered here.
 
@@ -484,7 +484,7 @@ The experimental studies show a real mechanism in a small number of people over 
 
 **Why menopause makes this harder, not just more annoying**
 
-Sleep disruption in midlife is often filed under "hot flashes, obviously," and stops there. There's a second, less-discussed mechanism: declining estrogen and progesterone reduce the tone-supporting effect these hormones normally have on the upper airway, and a multidisciplinary consensus statement on sleep-disordered breathing in women identifies menopause as a genuine, independent driver of increased obstructive sleep apnea risk, a physical airway problem, not just a hormonal hot-flash problem. **[shown in people]** A synthesized expert consensus statement drawing on existing epidemiology and physiology, not a single new trial, but the underlying mechanism (hormone-dependent airway tone) is well established. Some of the "can't sleep through the night" of midlife has a structural component to raise with a clinician, not only a symptom to wait out.
+Sleep disruption in midlife is often filed under "hot flashes, obviously," and stops there. There's a second, less-discussed mechanism: declining estrogen and progesterone reduce the tone-supporting effect these hormones normally have on the upper airway, and a multidisciplinary consensus statement on sleep-disordered breathing in women identifies menopause as a genuine, independent driver of increased obstructive sleep apnea risk, a physical airway problem, not just a hormonal hot-flash problem. **[associated only]** A synthesized expert consensus statement drawing on existing epidemiology and physiology, not a trial of its own, but the underlying mechanism (hormone-dependent airway tone) is well established. Some of the "can't sleep through the night" of midlife has a structural component to raise with a clinician, not only a symptom to wait out.
 
 **Stress: real, plausible, and harder to isolate than sleep**
 
@@ -608,7 +608,7 @@ GLP-1 medications were developed as diabetes drugs before they became known for 
 
 **What the drug doesn't cover: muscle**
 
-A real-world study of 94 adults, 86% of them women, averaging 46 years old, tracked body composition over three months of treatment with a compounded semaglutide and vitamin B12 injection at a commercial wellness clinic. Meaningful fat loss came with it, and lean muscle mass rose slightly as a proportion of total body weight, but the absolute number told a different story: participants lost close to a kilogram of skeletal muscle mass along with the fat. **[shown in people]** A real-world retrospective cohort at a single wellness studio, not a randomized trial, and the compounded formulation is not identical to the FDA-approved semaglutide brands, though the muscle-loss finding matches what's seen in placebo-controlled trials of the approved drug elsewhere in this chapter.
+A real-world study of 94 adults, 86% of them women, averaging 46 years old, tracked body composition over three months of treatment with a compounded semaglutide and vitamin B12 injection at a commercial wellness clinic. Meaningful fat loss came with it, and lean muscle mass rose slightly as a proportion of total body weight, but the absolute number told a different story: participants lost close to a kilogram of skeletal muscle mass along with the fat. **[associated only]** A real-world retrospective cohort at a single wellness studio, not a randomized trial, and the compounded formulation is not identical to the FDA-approved semaglutide brands, though the muscle-loss finding matches what's seen in placebo-controlled trials of the approved drug elsewhere in this chapter.
 
 A more tightly controlled study makes the same point over a much shorter window. Twenty adults with obesity took liraglutide or placebo for 35 days each, in a randomized crossover design. Absolute lean mass in the trunk and limbs measurably decreased on the drug, even though the fat-free mass *percentage* held steady, because total weight was dropping too. **[shown in people]** A short randomized crossover trial; the muscle loss appeared within five weeks, not years.
 
@@ -640,7 +640,7 @@ Wilding JPH, Batterham RL, Davies M, et al. Weight regain and cardiometabolic ef
 
 > **Short Version**
 >
-> Estrogen through perimenopause doesn't decline in a straight line. It swings, sometimes above your own earlier baseline before dropping again, and insulin sensitivity moves with it. A fasting glucose or A1C drawn during one stretch can read differently from the same test a few months later, with nothing else in your life changed. Fasting insulin and HOMA-IR move more slowly than fasting glucose, which makes them steadier reference points through the transition.
+> Estrogen through perimenopause doesn't decline in a straight line. It swings, sometimes above your own earlier baseline before dropping again, and insulin sensitivity is reasoned to move with it, though no study has directly tracked the two together in the same women over time. A fasting glucose or A1C drawn during one stretch can read differently from the same test a few months later, with nothing else in your life changed. Fasting insulin and HOMA-IR move more slowly than fasting glucose, which may make them steadier reference points through the transition.
 
 Perimenopause resists a clean before-and-after story. Cycles shift, then don't, then do again. A symptom shows up for two months and vanishes. A lab drawn on one visit reads differently than the same test six months later, and neither reading is wrong; the biology underneath is genuinely in motion. If you've felt like you can't get a stable read on your own body lately, that instinct is accurate, not a failure of attention.
 
@@ -676,7 +676,7 @@ A parent on insulin. A sibling diagnosed in their forties. A grandmother who los
 
 **How much the family history actually matters**
 
-A large multicenter study of over 8,000 people without diabetes, run across four research centers in Germany, tested exactly this question directly: does having at least one first-degree relative with diabetes raise your own odds of prediabetes, independent of your weight? It found a genuine, statistically significant association: an unadjusted odds ratio of 1.40, which fell to 1.26 but remained statistically significant once age, sex, and BMI were accounted for. **[shown in people]** A large multicenter study; a real, adjusted association, not simply two things that happen to run together in the same families for unrelated reasons.
+A large multicenter study of over 8,000 people without diabetes, run across four research centers in Germany, tested exactly this question directly: does having at least one first-degree relative with diabetes raise your own odds of prediabetes, independent of your weight? It found a genuine, statistically significant association: an unadjusted odds ratio of 1.40, which fell to 1.26 but remained statistically significant once age, sex, and BMI were accounted for. **[associated only]** A large multicenter study; a real, adjusted association, not a trial, and not simply two things that happen to run together in the same families for unrelated reasons.
 
 The detail worth sitting with is what happened when the researchers split the group by weight. The link between family history and prediabetes showed up specifically in people who were *not* obese. If you've been told your risk is low because your BMI looks fine, and diabetes runs in your family anyway, this study says that reassurance is missing half the picture. Family history carries its own signal, separate from weight, and it doesn't wait for the scale to move before it starts mattering.
 
