@@ -372,7 +372,7 @@ Kashiwagi K, Inaishi J, Kinoshita S, et al. Assessment of glycemic variability a
 >
 > Muscle is the largest site for clearing glucose from your blood, and cell and animal research traces a second route into the cell that muscle contraction opens without needing insulin's permission at all. Across 77 randomized trials of lifestyle programs in prediabetes, those including supervised exercise training cut diabetes incidence to a relative risk of 0.40, against 0.69 for programs without it. Not every kind of movement moves every number: Nordic walking lowered A1C across six trials while leaving fasting glucose and HOMA-IR unchanged.
 
-This chapter sits at the exact point where this territory and *The Muscle You Keep* overlap: the same tissue, asked about from two different directions. That book asks how you keep your muscle through midlife. This chapter asks something narrower: what does having it actually do to your blood sugar. The answer turns out to be the strongest, most consistently supported claim gathered here.
+This chapter sits at the exact point where this territory and *The Muscle You Keep* overlap: the same tissue, asked about from two different directions. That book asks how you keep your muscle through midlife. This chapter asks something narrower: what does having it actually do to your blood sugar. The answer turns out to rest on one of the strongest, most consistently supported mechanisms in this book.
 
 **Muscle is where the glucose goes**
 
@@ -382,7 +382,7 @@ A detailed 2026 review of the molecular pathways involved lays this out precisel
 
 **A relationship that runs both ways**
 
-The connection isn't one-directional. A 2025 review examining the link between muscle loss and type 2 diabetes describes it as bidirectional: less muscle mass means fewer sites available to clear glucose, which worsens insulin resistance, which in turn accelerates further muscle loss, a cycle that can quietly compound through the same years covered in Chapter 3. **[associated only]** The individual mechanistic pieces are well established in lab and observational data; the full cycle as a sustained causal loop hasn't been demonstrated end-to-end in a trial. This is precisely the mechanism *The Muscle You Keep* is built around from the other side: protecting muscle isn't cosmetic maintenance, it's protecting one of your body's main tools for managing its own blood sugar.
+The connection isn't one-directional. A 2025 review of creatine supplementation combined with exercise for preventing type 2 diabetes opens with a synthesis of exactly this cycle as its background: less muscle mass means fewer sites available to clear glucose, which worsens insulin resistance, which in turn accelerates further muscle loss, a cycle that can quietly compound through the same years covered in Chapter 3. **[associated only]** The individual mechanistic pieces are well established in lab and observational data; the full cycle as a sustained causal loop hasn't been demonstrated end-to-end in a trial. This is precisely the mechanism *The Muscle You Keep* is built around from the other side: protecting muscle isn't cosmetic maintenance, it's protecting one of your body's main tools for managing its own blood sugar.
 
 **Does this actually change outcomes, at scale?**
 
@@ -578,7 +578,7 @@ That's not a discouraging finding. It's a realistic one: "watch it" means someth
 
 You don't need new information for this. You need the pieces already covered, put in one place:
 
-The panel from Chapters 5 and 6: fasting glucose, A1C, fasting insulin, and a calculated HOMA-IR, so you're tracking more than the two numbers your last physical happened to order. Food order from Chapter 9, the single best-evidenced habit in this book for someone in your exact population. The muscle connection from Chapter 8: resistance training isn't optional here, it's the strongest lever found in this book. Sleep from Chapter 10, which moves insulin sensitivity by a measurable amount within days, not months. And a retest on a schedule you actually know, rather than a vague someday: ask your prescriber directly what interval they recommend for you and why, the same way Chapter 6 suggested asking for the panel itself.
+The panel from Chapters 5 and 6: fasting glucose, A1C, fasting insulin, and a calculated HOMA-IR, so you're tracking more than the two numbers your last physical happened to order. Food order from Chapter 9, the single best-evidenced habit in this book for someone in your exact population. The muscle connection from Chapter 8: structured exercise isn't optional here, it works through a mechanism that doesn't wait on insulin at all. Sleep from Chapter 10, which moves insulin sensitivity by a measurable amount within days, not months. And a retest on a schedule you actually know, rather than a vague someday: ask your prescriber directly what interval they recommend for you and why, the same way Chapter 6 suggested asking for the panel itself.
 
 **What "watching it" is worth, done right**
 
@@ -660,7 +660,7 @@ And bring a clinician who takes the transition itself seriously, not one who tre
 
 **The instability itself is the finding**
 
-That's not a gap in your self-tracking. Expect variation, plan for repeat testing rather than a single number, and lean on the fuller panel and the symptom pattern together, since either one alone is easier to misread than the two combined.
+The instability itself is the finding, not a gap in your self-tracking. Expect variation, plan for repeat testing rather than a single number, and lean on the fuller panel and the symptom pattern together, since either one alone is easier to misread than the two combined.
 
 The final chapter in this part is for something less clinical and harder to plan around: the fear that comes with watching this condition run in your own family.
 
@@ -698,7 +698,7 @@ Wagner R, Thorand B, Osterhoff MA, et al. Family history of diabetes is associat
 
 **Example one.** Fasting glucose 94 mg/dL. A1C 5.4%. Both comfortably inside a standard "normal" range, and the panel most women get told closes the conversation. Without a fasting insulin or HOMA-IR alongside them, this pair can't rule out the compensation pattern from Chapter 4, a pancreas working harder to hold these two numbers steady. If nothing else in your history raises a flag, this result is genuinely reassuring. If it doesn't match how you feel, ask for the fuller panel from Chapter 6 rather than accepting the reassurance at face value.
 
-**Example two.** Fasting glucose 98 mg/dL. Fasting insulin 18 μIU/mL, flagged high by the lab. A1C 5.5%. This is the pattern Chapter 5 built the whole book around: a completely normal glucose and A1C sitting next to an insulin level doing visibly more work than it should to get there. This is not a diagnosis. It's the earliest visible sign of the compensation Chapter 4 described, and it's exactly the situation Chapter 12 is written for.
+**Example two.** Fasting glucose 98 mg/dL. Fasting insulin 18 μIU/mL, flagged high by the lab. A1C 5.5%. This is the compensation pattern Chapter 4 built the whole book around: a completely normal glucose and A1C sitting next to an insulin level doing visibly more work than it should to get there. This is not a diagnosis. It's the earliest visible sign of that compensation, and it's exactly the situation Chapter 12 is written for.
 
 **Example three.** A1C 5.7%, the bottom edge of the prediabetes range from Chapter 2. Ferritin, drawn separately, comes back low. Before treating the A1C as the full story, raise Chapter 5's iron-deficiency finding directly with your clinician: a genuinely low iron store can push A1C upward on its own, independent of your actual blood sugar. This doesn't mean the number is meaningless. It means it deserves a second look, not an immediate verdict.
 
