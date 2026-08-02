@@ -1,6 +1,6 @@
 # Still Normal: A Root-Cause Guide to Insulin Resistance, Blood Sugar, and Prediabetes for Women Over 40
 
-*Manuscript draft. House style: dagger flag, US English. See house-style-update-dagger-and-us-english.md.*
+*Manuscript draft. House style: dagger flag, US English, five-tag evidence marker system. See the house style and voice guide for the full rules this draft follows.*
 
 ---
 
@@ -16,9 +16,25 @@ Always seek the advice of a qualified medical professional with any questions ab
 
 ## How the claims in this book are marked
 
-Every substantive claim carries a small tag: **[shown in people]** (demonstrated in human trials), **[associated, not shown]** (correlation only), **[animals only]** (rats, mice, or cells in a dish), or **[not studied]** (no one has properly tested it, or it's a mechanism being reasoned toward). Opinions and judgments carry no tag.
+Every substantive claim carries a small tag, set in small capitals, at the end of the sentence or of the particular claim it applies to. There are five.
+
+**[shown in people]** Demonstrated in human trials.
+
+**[associated only]** Observed in people, but observationally. A correlation, with cause not established.
+
+**[animals only]** Demonstrated in living animals, almost always rodents, and not yet in humans. Often good science. Not the same as evidence about you.
+
+**[tested, didn't hold]** Researchers ran a proper study of this, and it did not work. The result showed no effect, or an effect in the wrong direction from the one hoped for. This is a finding, not a gap. Somebody looked, and what they found was that the thing does not do what it is said to do. The real confusion is against *not studied*. Tested, didn't hold means somebody checked and it failed. Not studied means nobody checked. They aren't degrees of the same thing, and one isn't a softer version of the other. A product that has been tested and failed is very often sold as though nobody had gotten around to looking yet.
+
+**[not studied]** Covers two situations under one tag. Sometimes no one has properly tested the question at all. Other times the claim is my own reasoning, stitched together from other evidence rather than drawn from a study of its own. Both are legitimate, and neither is a failure the way *tested, didn't hold* is, so as you read, notice which kind you're looking at.
+
+Opinions and judgments carry no tag.
 
 **† not in women your age.** It marks a claim whose evidence comes from people older or younger than you, or from men, or from some other group you don't belong to. In the text the dagger usually appears on its own, tucked inside the bracket, as in **[shown in people †]**. It means the same thing every time.
+
+**The count.** This book makes 49 tagged claims. Thirty-eight are shown in people, ten of those drawn from a group you may not belong to. Three are associated only. Four are animals only. Two are tested, didn't hold. Two are not studied. Ten claims in forty-nine, roughly one in five, carry the dagger.
+
+**How to weigh them.** Use the tags this way as you read. When you see *shown in people* with no flag attached, give it the most weight. When you see *tested, didn't hold*, give it the least: that one has already been checked and found wanting, and no amount of hope should move it back up the list. When you see any other tag, or the dagger, treat the claim as a possibility worth weighing rather than a settled fact, and decide for yourself how much it should move you.
 
 ---
 
@@ -47,6 +63,10 @@ This book is written to be read start to finish, but it doesn't have to be. Ever
 ## Part One — Why Your Labs Said Fine and Your Body Knows Better
 
 ### Chapter 1: The Blind Spot in a Normal Panel
+
+> **Short Version**
+>
+> A standard physical checks fasting glucose, and sometimes A1C. Both were built to catch a number that has already climbed, not the years of compensation before it moves. By 2023, more than one in three menopausal women in America met the lab criteria for prediabetes, and close to a third carried an elevated number no doctor had ever mentioned to them. Insulin resistance can build for years before either test moves.
 
 You went in for the visit you'd been putting off. Blood drawn, box checked, a week of not thinking about it, then the portal notification: *results ready.* You opened it already flinching. Every value sat inside its own small grey reference range. Glucose: normal. If there was a note at all, it said something like *no action needed.*
 
@@ -79,6 +99,10 @@ Park J-H, Lee Smith M, Sherman LD, Roh T, Prochnow T. Trends in type 2 diabetes,
 ---
 
 ### Chapter 2: What Prediabetes Actually Means, and Why the Line Is Drawn Where It Is
+
+> **Short Version**
+>
+> The same blood draw can be prediabetes under one standard and normal under another. The American Diabetes Association calls fasting glucose from 100 to 125 impaired; the World Health Organization starts at 110. The A1C range in wide use today, 5.7 to 6.4 percent, sits below where the 2009 expert committee that proposed it originally drew the line. Progression rates to diabetes differ depending on which definition diagnosed you. The threshold is a negotiated point on a slope, and it has moved before.
 
 The same blood draw, run through the same lab, can be "prediabetes" in one country and "normal" in another, simply because two different medical bodies drew the fasting-glucose line in two different places, and neither line has been retired. The American Diabetes Association calls fasting glucose from 100 to 125 mg/dL impaired. The World Health Organization's threshold starts higher, at 110. If your result landed between those two numbers, you have simultaneously qualified and not qualified for the same label, and both organizations would defend their line.
 
@@ -115,6 +139,10 @@ Kilpatrick ES, Bloomgarden ZT, Zimmet PZ. International Expert Committee report 
 ---
 
 ### Chapter 3: Estrogen, Insulin, and the Transition Nobody Explained
+
+> **Short Version**
+>
+> Before menopause, women have a measurable insulin-sensitivity advantage over men the same age, and estrogen is part of why, through a traceable effect on how much glucose the liver releases. Two separate meta-analyses of hormone therapy trials, two decades apart, both found it lowers insulin resistance scores in postmenopausal women, with estrogen alone outperforming estrogen combined with a progestogen. The effect is real and modest rather than a reversal, and whether hormone therapy suits you depends on your own history and risk factors.
 
 Here's a fact most women are never told, because there's rarely a reason to mention it until it stops being true: before menopause, women have a real, measurable insulin-sensitivity advantage over men their own age, and a lower rate of type 2 diabetes to go with it. Researchers studying why landed on a specific hormone doing specific work, and on what happens in its absence. **[animals only]** A mouse model, described below.
 
@@ -156,6 +184,10 @@ Li T, Jiang NS, Kaskey J, Schnatz PF, Nudy M. Hormone therapy and insulin resist
 
 ### Chapter 4: What a Standard Physical Wasn't Built to Catch
 
+> **Short Version**
+>
+> Routine diabetes screening isn't universal. US guidelines target adults 35 to 70 who have overweight or obesity, which leaves out a woman at a BMI of 23, a woman of 33, and a woman of 72. Even when the test is ordered, your pancreas compensates by producing more insulin, holding fasting glucose in the normal range while the resistance underneath it builds. The test reports the outcome of that compensation, and moves only once the compensation starts to fail.
+
 The ritual feels thorough. Cuff on your arm, stethoscope on your chest, a vial or two of blood sent off to a lab that will, a few days later, hand back a page of numbers with the word "normal" printed next to most of them. It's reasonable to walk out of that room believing you've been checked for everything worth checking. You haven't, and not because anyone was careless: the checking itself has a narrower job than it looks like it does.
 
 **Who actually gets screened**
@@ -189,6 +221,10 @@ Chen C, Chmelova H, Cohrs CM, et al. Alterations in β-Cell Calcium Dynamics and
 ## Part Two — Reading the Numbers Yourself
 
 ### Chapter 5: A1C, Fasting Glucose, Fasting Insulin, HOMA-IR, OGTT: What Each One Actually Measures, and Where Each One Fails Alone
+
+> **Short Version**
+>
+> A1C averages roughly three months of blood sugar and runs falsely high if your iron is low. Fasting glucose is one snapshot and can stay normal for years. Fasting insulin shows how hard your body is working to keep it there, and is the number rarely ordered. HOMA-IR combines glucose and insulin into an estimate carrying real imprecision. The OGTT is the only one that watches your body handle an actual glucose load, and it is the one a routine visit is least likely to order.
 
 Five numbers show up again and again in this book, and almost nobody has ever sat you down and explained what each one is actually built to catch, or what it quietly can't. None of them is useless. None of them is complete on its own, either. Here's what each one is really doing.
 
@@ -244,6 +280,10 @@ Ho JP-Y, Lau ES-H, Kwan OC, et al. One-hour post-load plasma glucose level predi
 
 ### Chapter 6: The Panel to Ask For
 
+> **Short Version**
+>
+> Four numbers from a single draw: fasting glucose, A1C, fasting insulin, and a HOMA-IR calculated from the last two. Ask about an oral glucose tolerance test as well if you have a family history, a history of gestational diabetes, PCOS, or a previous borderline result. Fasting insulin sits outside standard screening guidelines, so whether it's covered varies by plan and by how the order is coded. Ask what it costs before the draw rather than after.
+
 Everything so far has explained why. This chapter is the how.
 
 **The panel itself**
@@ -282,6 +322,10 @@ Xie W, Wang Y, Xiao S, Qiu L, Yu Y, Zhang Z. Association of gestational diabetes
 
 ### Chapter 7: Continuous Glucose Monitors: What's Shown, What's Sold
 
+> **Short Version**
+>
+> In healthy nondiabetic adults wearing a research-grade sensor, mean glucose ran 98 to 99 mg/dL, and they spent a median 96 percent of the time between 70 and 140. A rise after a meal is the system working. The estimated A1C most consumer apps display ran 0.59 percentage points above real lab values, with a clinically meaningful gap in 71 percent of healthy participants. Whether wearing one changes any outcome for someone without diabetes hasn't been tested in a randomized trial.
+
 Of every tool in this space, this is the one you've most likely already seen someone wear: a small sensor on the back of an arm, paired to a phone app promising real-time insight into "how your body actually responds to food." It's also the tool with the widest gap between what's marketed and what's been measured. This chapter closes that gap in both directions: what a CGM genuinely shows you, and what its most popular feature is currently getting wrong.
 
 **What "normal" actually looks like on a sensor**
@@ -298,7 +342,7 @@ If you or a friend has worn a consumer CGM and been quietly alarmed by an "estim
 
 **Does wearing one actually change anything?**
 
-Here's the bigger, harder question, and the one no consumer marketing wants asked directly: for someone without diabetes, does wearing a CGM and watching the graph actually lead to better blood sugar, better weight, or any other measured outcome, or does it just produce more data to look at? A 2025 review examining exactly this question, specifically for CGM combined with the newer weight-loss medications in people who have obesity but not diabetes, found something stark: no randomized controlled trials have tested this combination at all. The reviewers called it "a critical evidence gap," and noted that the CGM-derived metrics themselves remain unstandardized in this context, meaning even the numbers the device produces aren't yet agreed upon, let alone proven to change what happens next. **[not studied]** This is the field's own researchers naming the gap, not an assumption made here.
+Here's the bigger, harder question, and the one the marketing doesn't answer: for someone without diabetes, does wearing a CGM and watching the graph actually lead to better blood sugar, better weight, or any other measured outcome, or does it just produce more data to look at? A 2025 review examining exactly this question, specifically for CGM combined with the newer weight-loss medications in people who have obesity but not diabetes, found something stark: no randomized controlled trials have tested this combination at all. The reviewers called it "a critical evidence gap," and noted that the CGM-derived metrics themselves remain unstandardized in this context, meaning even the numbers the device produces aren't yet agreed upon, let alone proven to change what happens next. **[not studied]** This is the field's own researchers naming the gap, not an assumption made here.
 
 That doesn't mean CGMs are useless in research. A small study of 40 healthy and prediabetic adults, tracking glucose alongside diet and step counts for two weeks, found real, measurable differences in glucose variability between the two groups; prediabetes was linked to significantly higher swings in blood sugar across the day. **[shown in people]** A small observational study. This shows CGMs can detect real physiological differences worth studying further. It does not show that an individual wearing one and adjusting their own behavior based on the graph produces better outcomes than not wearing one; that specific question hasn't been tested. The tool clearly works as a research instrument. Whether it works as a personal behavior-change device, for an individual without diabetes deciding what to eat for dinner based on a graph, is a different question, and it's one the evidence hasn't answered yet, no matter how confidently an app's marketing page answers it for you.
 
@@ -324,6 +368,10 @@ Kashiwagi K, Inaishi J, Kinoshita S, et al. Assessment of glycemic variability a
 
 ### Chapter 8: The Muscle Connection
 
+> **Short Version**
+>
+> Muscle is the largest site for clearing glucose from your blood, and muscle contraction opens a second route into the cell that doesn't require insulin's permission at all. Across 77 randomized trials of lifestyle programs in prediabetes, those including supervised exercise training cut diabetes incidence to a relative risk of 0.40, against 0.69 for programs without it. Not every kind of movement moves every number: Nordic walking lowered A1C across six trials while leaving fasting glucose and HOMA-IR unchanged.
+
 This chapter sits at the exact point where this territory and *The Muscle You Keep* overlap: the same tissue, asked about from two different directions. That book asks how you keep your muscle through midlife. This chapter asks something narrower: what does having it actually do to your blood sugar. The answer turns out to be the strongest, most consistently supported claim gathered here.
 
 **Muscle is where the glucose goes**
@@ -334,7 +382,7 @@ A detailed 2026 review of the molecular pathways involved lays this out precisel
 
 **A relationship that runs both ways**
 
-The connection isn't one-directional. A 2025 review examining the link between muscle loss and type 2 diabetes describes it as bidirectional: less muscle mass means fewer sites available to clear glucose, which worsens insulin resistance, which in turn accelerates further muscle loss, a cycle that can quietly compound through the same years covered in Chapter 3. **[associated, not shown]** The individual mechanistic pieces are well established in lab and observational data; the full cycle as a sustained causal loop hasn't been demonstrated end-to-end in a trial. This is precisely the mechanism *The Muscle You Keep* is built around from the other side: protecting muscle isn't cosmetic maintenance, it's protecting one of your body's main tools for managing its own blood sugar.
+The connection isn't one-directional. A 2025 review examining the link between muscle loss and type 2 diabetes describes it as bidirectional: less muscle mass means fewer sites available to clear glucose, which worsens insulin resistance, which in turn accelerates further muscle loss, a cycle that can quietly compound through the same years covered in Chapter 3. **[associated only]** The individual mechanistic pieces are well established in lab and observational data; the full cycle as a sustained causal loop hasn't been demonstrated end-to-end in a trial. This is precisely the mechanism *The Muscle You Keep* is built around from the other side: protecting muscle isn't cosmetic maintenance, it's protecting one of your body's main tools for managing its own blood sugar.
 
 **Does this actually change outcomes, at scale?**
 
@@ -364,6 +412,10 @@ Chen S, An X, Wu A, et al. Effect of Nordic Walking on Anthropometrics, Glycemia
 
 ### Chapter 9: Food, Graded Honestly
 
+> **Short Version**
+>
+> Eating protein and vegetables before carbohydrate lowered the glucose response by 38.8 percent against carbohydrate first, tested in people with prediabetes specifically. Walking after each meal beat one daily walk, though that trial ran in people already diagnosed with type 2 diabetes. Apple cider vinegar's fasting-glucose and A1C results come entirely from diagnosed diabetes as well. And nighttime protein, tested directly, made the next morning's glucose worse.
+
 *The Glucose Goddess Method* built an entire bestselling program around four "hacks" (food order, vinegar, a savory breakfast, movement after eating) presented in one uniform, confident tone, as though each carried the same weight of proof. It doesn't. Some of it holds up well. Some of it holds up only for a population most readers of this book aren't in. This chapter grades each one separately and without pretending the evidence is tidier than it is.
 
 **Food order: the best-supported hack in this chapter**
@@ -378,7 +430,7 @@ A well-designed 2016 randomized crossover study compared two ways of meeting the
 
 **Vinegar: real in one population, oversold for this book's readers**
 
-This is the hack that most needs careful treatment. A 2009 trial testing cinnamon and vinegar together found a real drop in blood glucose at the 15-minute mark, but by the end of the full two-hour measurement window, the overall glucose response was no different from the control meal. A real randomized trial; the headline effect measured at one early timepoint did not survive across the full postprandial period.
+This is the hack that most needs careful treatment. A 2009 trial testing cinnamon and vinegar together found a real drop in blood glucose at the 15-minute mark, but by the end of the full two-hour measurement window, the overall glucose response was no different from the control meal. **[tested, didn't hold]** A real randomized trial, and the headline effect measured at one early timepoint did not survive across the full postprandial period.
 
 Zoom out to the larger evidence base, though, and vinegar looks more credible than that one trial suggests, just not for the population reading this book. A 2023 network meta-analysis pooling 44 randomized trials and 3,130 participants found apple cider vinegar produced the largest fasting-glucose reduction of six herbs tested, and was one of only two that meaningfully lowered A1C. **[shown in people †]** Every trial in this network meta-analysis was conducted in people already diagnosed with type 2 diabetes. The size of any effect in prediabetes, or in a woman with normal labs trying to stay ahead of a diagnosis, has not been separately established.
 
@@ -386,7 +438,7 @@ Vinegar has real effects, just not proven ones for your situation yet. "A splash
 
 **A savory breakfast, and where the evidence stops**
 
-The advice to favor a protein-forward breakfast over a sugary one is reasonable and consistent with the food-order evidence above: protein and vegetables ahead of refined carbohydrate, applied to the first meal of the day rather than a later one. Some popular advice extends this into claims about *nighttime* protein intake improving the next morning's blood sugar. At least one trial testing that specific version found the opposite of what was expected: a dose of whey protein taken in the middle of the night measurably *worsened* the following breakfast's glucose response. A real randomized crossover trial; the specific claim tested, nighttime protein improving next-day glucose, not only lacked support, it ran backward. That's why the savory-breakfast advice here stops at the first meal of the day rather than extending into nighttime protein timing.
+The advice to favor a protein-forward breakfast over a sugary one is reasonable and consistent with the food-order evidence above: protein and vegetables ahead of refined carbohydrate, applied to the first meal of the day rather than a later one. Some popular advice extends this into claims about *nighttime* protein intake improving the next morning's blood sugar. At least one trial testing that specific version found the opposite of what was expected: a dose of whey protein taken in the middle of the night measurably *worsened* the following breakfast's glucose response. **[tested, didn't hold]** A real randomized crossover trial, and the specific claim tested, nighttime protein improving next-day glucose, didn't merely lack support. It ran backward. That's why the savory-breakfast advice here stops at the first meal of the day rather than extending into nighttime protein timing.
 
 **The graded verdict**
 
@@ -410,6 +462,10 @@ Smith ES, Adama E, Clayton K, et al. Nocturnal whey protein ingestion impairs po
 
 ### Chapter 10: Sleep, Stress, and the Numbers Nobody Mentions
 
+> **Short Version**
+>
+> Four days at 4.5 hours in bed left insulin signaling in fat cells nearly three times weaker. Two weeks at 5.5 hours reduced both glucose tolerance and insulin sensitivity. Sleeping under six hours a night carries roughly 30 percent higher future diabetes risk, across more than 447,000 people. Menopause independently raises obstructive sleep apnea risk through hormonal effects on airway tone. Stress is harder to separate from everything that tends to arrive with it.
+
 Food gets a chapter. Movement got its own chapter, plus a bridge to an entire other book. Sleep and stress usually get a bullet point at most, even though the evidence for them is real; neither one produces a clean before-and-after photo, which makes them easy to skip in most blood-sugar content. This chapter gives them the space the evidence actually earns.
 
 **What losing sleep does to your insulin, directly measured**
@@ -432,7 +488,7 @@ Sleep disruption in midlife is often filed under "hot flashes, obviously," and s
 
 **Stress: real, plausible, and harder to isolate than sleep**
 
-It would be tidy to end this chapter with a clean cortisol story: stress raises cortisol, cortisol raises blood sugar, manage your stress and the number moves. Some of that is well established: glucocorticoids reliably raise blood glucose, which is precisely why people prescribed steroid medications are routinely monitored for it. But the leap from that pharmacological fact to "your day-to-day psychological stress is measurably raising your blood sugar right now" is a harder one to isolate cleanly in real life, for a simple reason: chronic stress rarely travels alone. It tends to arrive bundled with worse sleep, less appealing food choices, and less movement, which makes it genuinely difficult for research to credit stress itself, apart from everything stress tends to bring with it. **[associated, not shown]** This is the actual state of the evidence for chronic psychological stress specifically, as distinct from the sleep-restriction studies above, which could isolate sleep alone.
+It would be tidy to end this chapter with a clean cortisol story: stress raises cortisol, cortisol raises blood sugar, manage your stress and the number moves. Some of that is well established: glucocorticoids reliably raise blood glucose, which is precisely why people prescribed steroid medications are routinely monitored for it. But the leap from that pharmacological fact to "your day-to-day psychological stress is measurably raising your blood sugar right now" is a harder one to isolate cleanly in real life, for a simple reason: chronic stress rarely travels alone. It tends to arrive bundled with worse sleep, less appealing food choices, and less movement, which makes it genuinely difficult for research to credit stress itself, apart from everything stress tends to bring with it. **[associated only]** This is the actual state of the evidence for chronic psychological stress specifically, as distinct from the sleep-restriction studies above, which could isolate sleep alone.
 
 What has been tested more directly is whether stress-reduction practices themselves move the needle. A 2025 review of yoga and meditation practices in people with type 2 diabetes found that practices like Pranayama, Asanas, and meditation were associated with reductions in inflammatory markers, several stress hormones, and improved HOMA-IR scores. **[shown in people †]** This is a narrative review, not a single controlled trial, and every study it draws on was conducted in people already diagnosed with type 2 diabetes, not prediabetes. It's a reasonable, low-risk thing to try on the strength of a plausible mechanism and a genuinely diabetes-diagnosed evidence base, not a proven fix for a reader who doesn't yet have that diagnosis.
 
@@ -458,13 +514,17 @@ Joshi HB, Nair AS, Bellave R, et al. Role of Yoga in Distinctly Targeting Modifi
 
 ### Chapter 11: The Supplement Aisle, Graded
 
+> **Short Version**
+>
+> Berberine has real trial data behind it, all of it from people who already have type 2 diabetes, and two credible meta-analyses disagree on how large the effect is. Chromium has only ever been tested as an add-on to prescribed diabetes medication. Magnesium is the one item on this shelf tested directly in prediabetic adults, where it improved two-hour OGTT glucose and HOMA-IR modestly, with good tolerability and no significant change in fasting glucose.
+
 Every bottle on this shelf is marketed with the same confidence, in the same font, at the same volume. The evidence behind them isn't nearly so uniform. This chapter grades three of the most commonly recommended blood-sugar supplements, and the one that comes out looking best is not the one getting the most attention online.
 
 **Berberine: real evidence, in the wrong population, and even researchers don't agree how big the effect is**
 
 Berberine has the loudest reputation of anything here, sold online as "nature's Ozempic," recommended in comment sections under every blood-sugar video. A 2021 meta-analysis pooling 46 randomized trials in people with type 2 diabetes found real reductions in HbA1c (–0.73 percentage points), fasting glucose, and HOMA-IR, alongside improvements in cholesterol markers. **[shown in people †]** A substantial meta-analysis, but every trial was conducted in people already diagnosed with type 2 diabetes: not prediabetes, not healthy adults trying to stay ahead of a diagnosis.
 
-Here's the detail that matters more than the headline number: a newer 2026 meta-analysis, using a larger and more recent set of over 30 trials, arrived at a noticeably smaller effect, describing berberine's benefit as "statistically significant but clinically modest," and finding, in a molecular-modeling side analysis, that berberine binds its target digestive enzyme more weakly than the prescription drug it's often compared to. **[shown in people †]** Also diagnosed type 2 diabetes only. Two credible meta-analyses, both real, land on different magnitudes for the same question, which is itself useful information. When even the researchers studying a supplement can't agree on how big its effect is, "nature's Ozempic" doesn't accurately describe where the evidence actually sits.
+Here's the detail that matters more than the headline number: a newer 2026 meta-analysis, using a larger and more recent set of over 30 trials, arrived at a noticeably smaller effect, describing berberine's benefit as "statistically significant but clinically modest." **[shown in people †]** Also diagnosed type 2 diabetes only. The same paper ran a molecular-modeling side analysis finding that berberine binds its target digestive enzyme more weakly than the prescription drug it's often compared to. That part is computer modeling of a molecule rather than a measurement in any living body, so treat it as an explanation for the modest clinical numbers rather than as evidence of its own. Two credible meta-analyses, both real, land on different magnitudes for the same question, which is itself useful information. When even the researchers studying a supplement can't agree on how big its effect is, "nature's Ozempic" doesn't accurately describe where the evidence actually sits.
 
 **Chromium: same story, and only ever tested as an add-on**
 
@@ -497,6 +557,10 @@ Basit A, Kumar S, Ahmed H, et al. Impact of oral magnesium supplementation on gl
 ## Part Four — Your Situation
 
 ### Chapter 12: If You've Been Told to "Just Watch It"
+
+> **Short Version**
+>
+> In a trial of 3,234 adults with elevated glucose, a structured lifestyle program cut diabetes incidence by 58 percent over 2.8 years. Metformin cut it by 31 percent. Ten years on, the lifestyle group still held the lowest cumulative incidence, a 34 percent reduction, though year-by-year rates converged once everyone was offered the same support. The benefit came from the practice continuing rather than from a single successful year.
 
 "Let's just watch it" can land like a dismissal, the same non-answer as the normal panel from Chapter 1, delivered again with a slightly more concerned tone. It doesn't have to be one. "Watching it" happens to describe one of the best-tested interventions in all of preventive medicine, if you know what watching it well actually means. Most people are never told.
 
@@ -531,6 +595,10 @@ Diabetes Prevention Program Research Group. 10-year follow-up of diabetes incide
 ---
 
 ### Chapter 13: If You're on a GLP-1 Medication
+
+> **Short Version**
+>
+> The medication is already doing much of what the earlier chapters describe, by lowering glucose directly. What it doesn't do is protect muscle: real-world and randomized data both show lean mass falling alongside fat, within five weeks in one crossover trial. A year after stopping semaglutide, participants had regained roughly two-thirds of the weight they'd lost, and cardiometabolic measures had moved back toward where they started.
 
 *Your Body's Own GLP-1* covers the drug decision itself: what these medications do, what they cost, whether to start, escalate, stop, or resume. That question belongs there, and this chapter will not repeat it. What belongs here is narrower: what happens to your blood sugar specifically, while you're taking one, and what happens to it if you stop.
 
@@ -570,11 +638,15 @@ Wilding JPH, Batterham RL, Davies M, et al. Weight regain and cardiometabolic ef
 
 ### Chapter 14: If You're Perimenopausal and Everything Feels Like Guessing
 
+> **Short Version**
+>
+> Estrogen through perimenopause doesn't decline in a straight line. It swings, sometimes above your own earlier baseline before dropping again, and insulin sensitivity moves with it. A fasting glucose or A1C drawn during one stretch can read differently from the same test a few months later, with nothing else in your life changed. Fasting insulin and HOMA-IR move more slowly than fasting glucose, which makes them steadier reference points through the transition.
+
 Perimenopause resists a clean before-and-after story. Cycles shift, then don't, then do again. A symptom shows up for two months and vanishes. A lab drawn on one visit reads differently than the same test six months later, and neither reading is wrong; the biology underneath is genuinely in motion. If you've felt like you can't get a stable read on your own body lately, that instinct is accurate, not a failure of attention.
 
 **Why the ground is actually moving**
 
-Chapter 3 covered the mechanism: estrogen has a real, traceable role in keeping insulin working efficiently, and that role weakens as estrogen production becomes erratic through the transition, not simply low. Erratic is the operative word. Estrogen during perimenopause doesn't decline in a smooth line; it swings, sometimes higher than a woman's own baseline before dropping again, on a timeline that varies from cycle to cycle. A body's insulin sensitivity, tied to that hormone, moves along with it. A fasting glucose or A1C drawn during a higher-estrogen stretch can look different from one drawn a few months later during a lower stretch, in the same woman, without anything else in her life changing. **[associated, not shown]** The estrogen fluctuation pattern itself is well documented; a study specifically tracking glucose changes in step with those individual hormonal swings, in the same women over time, hasn't been done at the scale this book would want before calling it proven.
+Chapter 3 covered the mechanism: estrogen has a real, traceable role in keeping insulin working efficiently, and that role weakens as estrogen production becomes erratic through the transition, not simply low. Erratic is the operative word. Estrogen during perimenopause doesn't decline in a smooth line; it swings, sometimes higher than a woman's own baseline before dropping again, on a timeline that varies from cycle to cycle. A body's insulin sensitivity, tied to that hormone, moves along with it. A fasting glucose or A1C drawn during a higher-estrogen stretch can look different from one drawn a few months later during a lower stretch, in the same woman, without anything else in her life changing. **[associated only]** The estrogen fluctuation pattern itself is well documented; a study specifically tracking glucose changes in step with those individual hormonal swings, in the same women over time, hasn't been done at the scale this book would want before calling it proven.
 
 **What to actually do with a moving target**
 
@@ -595,6 +667,10 @@ The final chapter in this part is for something less clinical and harder to plan
 ---
 
 ### Chapter 15: If It Runs in Your Family and You're Afraid of the Number
+
+> **Short Version**
+>
+> Having at least one first-degree relative with diabetes raised the odds of prediabetes by 40 percent unadjusted, and by 26 percent after accounting for age, sex, and BMI, across more than 8,000 people. The association showed up specifically in people who were not obese. A normal weight doesn't cancel the risk a family history carries, and a relative's diagnosis isn't a prediction about your body.
 
 A parent on insulin. A sibling diagnosed in their forties. A grandmother who lost her sight to it, or her toes. If diabetes has already moved through your family, this book's whole premise, catch it early, read the labs yourself, act on what you find, can land less like empowerment and more like a countdown you didn't ask to start watching.
 
@@ -617,14 +693,6 @@ What ran in your family already happened to someone else's body, under someone e
 Wagner R, Thorand B, Osterhoff MA, et al. Family history of diabetes is associated with higher risk for prediabetes: a multicentre analysis from the German Center for Diabetes Research. *Diabetologia*. 2013;56(10):2176–80. DOI: 10.1007/s00125-013-3002-1
 
 ---
-
-## What This Book Won't Do
-
-It won't sell you a natural alternative to a drug that doesn't have one. Chapter 7 named exactly where continuous glucose monitors are hype ahead of evidence, and Chapter 11 named exactly where berberine and chromium's real trial data belongs to a diagnosis you may not have. Neither chapter softened that into a maybe.
-
-It won't hand you a protocol with a name, a miracle food, or a fourteen-day reset. The single best-evidenced habit in this entire book, food order from Chapter 9, took one paragraph to state and doesn't need a branded program built around it.
-
-It won't tell you what to do about a medication. If you're on a GLP-1 drug, Chapter 13 named what changes for your blood sugar while you're on it and after you stop, and left the decision itself with you and your prescriber, exactly where *Your Body's Own GLP-1* leaves it too.
 
 ## Appendix A: Reading Your Own Panel, Three Worked Examples
 
@@ -716,52 +784,59 @@ Three or four rows, filled in over a year or two, tell you more than any single 
 
 ## Appendix F: The Master Claim Ledger
 
-Every graded claim in this book, gathered in one place. Chapter references point to where each one is explained in full.
+Every tagged claim in this book, gathered in one place. Chapter references point to where each one is explained in full. Untagged statements are my own judgment, or non-empirical facts such as the date a guideline was issued.
 
 | Chapter | Claim | Tag |
 |---|---|---|
 | 1 | Prediabetes in menopausal women rose from 24.3% to 35.2% over 20 years; unrecognized hyperglycemia rose from 23.9% to 32.9% | shown in people |
-| 1 | Earlier recognition of unrecognized hyperglycemia changes long-term outcomes | not studied |
-| 2 | The 2009 expert committee flagged A1C 6.0–6.4% as elevated risk | shown in people |
-| 2 | Progression rates to diabetes differ depending on which prediabetes definition is used | shown in people |
-| 3 | Estrogen suppresses liver glucose output via the ERα-Akt-Foxo1 pathway | animals only |
-| 3 | Hormone therapy reduces HOMA-IR and abdominal fat in postmenopausal women (107-trial meta-analysis) | shown in people |
-| 3 | Estrogen alone outperforms estrogen-plus-progestogen for HOMA-IR improvement (17-trial meta-analysis) | shown in people |
-| 4 | USPSTF recommends diabetes screening for adults 35–70 with overweight or obesity | shown in people |
-| 4 | Beta cells compensate for insulin resistance through functional adaptation before mass expansion | animals only |
-| 5 | Iron-deficiency anemia falsely elevates A1C in gastrectomy patients | shown in people † |
-| 5 | The same false-elevation pattern is significant in pregnant women, only a trend in non-pregnant women | shown in people † |
+| 1 | A third of menopausal women carried an elevated glucose or A1C that had been measured but never communicated to them | shown in people |
+| 1 | Whether recognizing that hyperglycemia earlier changes long-term outcomes | not studied |
+| 2 | The 2009 International Expert Committee flagged A1C 6.0–6.4% as a category of elevated risk | shown in people |
+| 2 | Progression rates to diabetes differ by which prediabetes definition was used, across 70 pooled prospective studies | shown in people |
+| 3 | Estrogen suppresses liver glucose output through a receptor-to-Foxo1 signaling chain | animals only |
+| 3 | Removing Foxo1 abolishes estrogen's effect on insulin sensitivity | animals only |
+| 3 | Hormone therapy reduced HOMA-IR by 35.8% in women who already had diabetes, in a 107-trial meta-analysis | shown in people |
+| 3 | Estrogen alone outperformed estrogen plus progestogen for HOMA-IR, in a 17-trial meta-analysis of 5,772 women | shown in people |
+| 4 | USPSTF recommends diabetes and prediabetes screening for adults 35 to 70 with overweight or obesity | shown in people |
+| 4 | Beta cells compensate for insulin resistance through functional adaptation before cell-mass expansion, and that compensation falters as prediabetes begins | animals only |
+| 5 | Ferritin correlates negatively with A1C in gastrectomy patients, inflating the A1C reading independent of blood sugar | shown in people † |
+| 5 | The same false elevation reached significance in pregnant women with iron deficiency and only trended in non-pregnant women | shown in people † |
 | 5 | Fasting insulin reference ranges are not standardized across populations | shown in people |
-| 5 | HOMA-IR correlates strongly with the euglycemic clamp but carries real imprecision (CV ~31%) | shown in people |
-| 5 | HOMA-IR's validity against the clamp differs between South Asian and Caucasian adults | shown in people † |
-| 5 | A 1-hour OGTT reading predicts future diabetes independent of standard fasting and 2-hour results | shown in people † |
-| 6 | Gestational diabetes history is associated with a 45% higher risk of cardiovascular and cerebrovascular disease | shown in people |
-| 7 | Reference data for normal CGM readings in healthy nondiabetic adults | shown in people |
-| 7 | Consumer CGM's estimated A1C runs an average of 0.59 points high, with 71% showing a clinically meaningful gap | shown in people |
-| 7 | CGM combined with GLP-1 medications, tested in people with obesity but not diabetes | not studied |
-| 7 | CGM detects real glycemic-variability differences between healthy and prediabetic adults | shown in people |
-| 8 | Muscle contraction activates an insulin-independent pathway for glucose uptake (GLUT4/AMPK) | animals only |
-| 8 | Muscle loss and insulin resistance form a bidirectional, compounding cycle | associated, not shown |
-| 8 | Supervised exercise added to lifestyle programs roughly doubles their effectiveness at preventing diabetes | shown in people |
-| 8 | Nordic walking reduces A1C but not fasting glucose or HOMA-IR | shown in people |
-| 9 | Eating protein and vegetables before carbohydrate lowers glucose response by 38.8% in people with prediabetes | shown in people |
-| 9 | Walking after meals lowers postprandial glucose more than walking once daily | shown in people † |
-| 9 | Apple cider vinegar produces real fasting-glucose and A1C reduction across a large trial network | shown in people † |
-| 10 | Four days of sleep restriction impairs cellular insulin signaling by nearly threefold | shown in people |
-| 10 | Two weeks of sleep restriction reduces glucose tolerance and insulin sensitivity | shown in people |
-| 10 | Sleeping under six hours a night is associated with roughly 30% higher future diabetes risk | shown in people |
-| 10 | Menopause independently raises obstructive sleep apnea risk through airway-tone hormones | shown in people |
-| 10 | Chronic psychological stress raises blood sugar in daily life | associated, not shown |
-| 10 | Yoga and meditation are associated with reduced stress hormones and improved HOMA-IR in type 2 diabetes | shown in people † |
-| 11 | Berberine reduces HbA1c and fasting glucose in type 2 diabetes (two meta-analyses, differing effect sizes) | shown in people † |
-| 11 | Chromium improves glycemic markers as an add-on to prescribed diabetes medication | shown in people † |
-| 11 | Oral magnesium improves OGTT glucose and HOMA-IR in adults with prediabetes | shown in people |
-| 12 | Intensive lifestyle intervention reduces diabetes incidence by 58% over three years | shown in people |
-| 12 | The cumulative benefit of early lifestyle intervention persists at ten years | shown in people |
-| 13 | GLP-1 medications produce some lean muscle mass loss alongside fat loss | shown in people |
-| 13 | Cardiometabolic improvements from semaglutide substantially reverse within a year of stopping | shown in people |
-| 14 | Fluctuating estrogen during perimenopause produces corresponding swings in insulin sensitivity | associated, not shown |
-| 15 | Family history of diabetes raises prediabetes risk independent of BMI, most clearly in non-obese adults | shown in people |
+| 5 | HOMA-IR correlates with the euglycemic clamp at Rs = 0.88, with fasting insulin alone nearly as strong at 0.81 | shown in people |
+| 5 | HOMA-IR's individual estimate carries a coefficient of variation near 31% | shown in people |
+| 5 | HOMA-IR tracked the clamp in South Asian adults but not in Caucasian adults, in a small comparison | shown in people † |
+| 5 | A high 1-hour OGTT reading predicted future type 2 diabetes independent of fasting and 2-hour results, over 12 years | shown in people † |
+| 6 | Gestational diabetes history carried a 45% higher risk of cardiovascular and cerebrovascular disease, including in women who never developed diabetes | shown in people |
+| 7 | Healthy nondiabetic adults spent a median 96% of time between 70 and 140 mg/dL, with a median 30 minutes a day above 140 | shown in people |
+| 7 | Consumer CGM estimated A1C ran 0.59 points high on average, with a clinically meaningful gap in 71% of healthy participants | shown in people |
+| 7 | Whether CGM use combined with GLP-1 medications changes outcomes in people with obesity but not diabetes | not studied |
+| 7 | CGM detected real glycemic-variability differences between healthy and prediabetic adults, in 40 participants | shown in people |
+| 8 | Muscle contraction recruits GLUT4 through a calcium and AMPK route independent of insulin signaling | animals only |
+| 8 | Muscle loss and insulin resistance form a bidirectional, compounding cycle | associated only |
+| 8 | Lifestyle programs including supervised exercise cut diabetes incidence to RR 0.40, against 0.69 without, across 77 trials and 22,629 participants | shown in people |
+| 8 | Nordic walking reduced A1C but left fasting glucose and HOMA-IR unchanged, across six trials | shown in people |
+| 9 | Eating protein and vegetables before carbohydrate lowered glucose area-under-the-curve by 38.8% in people with prediabetes | shown in people |
+| 9 | Walking after each meal lowered postprandial glucose more than one daily walk, most strongly after the evening meal | shown in people † |
+| 9 | Cinnamon with vinegar produced an early 15-minute drop that did not survive the full two-hour postprandial window | tested, didn't hold |
+| 9 | Apple cider vinegar produced the largest fasting-glucose reduction of six herbs, across 44 trials and 3,130 participants | shown in people † |
+| 9 | Nocturnal whey protein worsened rather than improved the following breakfast's glucose response | tested, didn't hold |
+| 10 | Four days of sleep restriction weakened insulin signaling in fat cells by nearly threefold | shown in people |
+| 10 | Two weeks of sleep restriction reduced glucose tolerance and insulin sensitivity; 24-hour cortisol was unchanged while norepinephrine and epinephrine rose | shown in people |
+| 10 | Sleeping under six hours a night carried roughly 30% higher future diabetes risk across more than 447,000 people | shown in people |
+| 10 | Menopause independently raises obstructive sleep apnea risk through hormone-dependent airway tone | shown in people |
+| 10 | Chronic psychological stress raises blood sugar in daily life, separable from the sleep, food, and movement changes that accompany it | associated only |
+| 10 | Yoga and meditation practices tracked with reduced stress hormones and improved HOMA-IR in type 2 diabetes | shown in people † |
+| 11 | Berberine reduced HbA1c by 0.73 points, plus fasting glucose and HOMA-IR, across 46 trials in type 2 diabetes | shown in people † |
+| 11 | A newer meta-analysis of over 30 trials found berberine's benefit statistically significant but clinically modest | shown in people † |
+| 11 | Chromium improved HbA1c, fasting glucose, and HOMA-IR as an add-on to prescribed diabetes medication, across 119 trials | shown in people † |
+| 11 | Oral magnesium improved 2-hour OGTT glucose and HOMA-IR in prediabetic adults, with no significant change in fasting glucose, across five trials | shown in people |
+| 12 | Intensive lifestyle intervention reduced diabetes incidence by 58% over 2.8 years; just under seven people needed to participate to prevent one case | shown in people |
+| 12 | Cumulative incidence stayed 34% lower in the lifestyle group at ten years, while year-by-year rates converged once all groups were offered support | shown in people |
+| 13 | Compounded semaglutide produced fat loss alongside close to a kilogram of skeletal muscle loss over three months | shown in people |
+| 13 | Liraglutide measurably reduced absolute lean mass in trunk and limbs within 35 days | shown in people |
+| 13 | One year after stopping semaglutide, participants regained about two-thirds of lost weight and cardiometabolic gains reverted | shown in people |
+| 14 | Fluctuating estrogen through perimenopause produces corresponding swings in insulin sensitivity | associated only |
+| 15 | Family history of diabetes raised prediabetes odds to 1.40 unadjusted and 1.26 adjusted, most clearly in non-obese adults | shown in people |
 
 ## Appendix G: Glucose Unit Conversion
 
@@ -782,3 +857,17 @@ A1C is reported as a percentage in both systems and needs no conversion.
 ---
 
 *[End of manuscript draft. Front matter, title page, and author bio to be finalized separately.]*
+
+---
+
+# Jacket and Listing Copy
+
+*Not book interior. This block is marketing copy for the back cover, the Amazon listing, and the site page. It sits outside the manuscript proper so that the house-style rule against "what this book is and is not" framing inside the book stays intact. The positioning that used to run as a closing section now lives here, where it belongs.*
+
+> Your fasting glucose was normal. Your A1C was normal. And insulin resistance can build for years before either number moves.
+>
+> *Still Normal* is written for that stretch, when your body is working harder to hold two numbers steady and nothing on the page says so. It covers the panel a standard visit doesn't order, why the prediabetes threshold sits where it does and how often it has been redrawn, what estrogen's decline actually does to insulin sensitivity through midlife, and what the evidence supports for moving any of it.
+>
+> Every claim carries a tag showing what kind of evidence sits behind it, and a dagger wherever that evidence came from people who aren't women your age. All forty-nine are listed in one table at the back, so you can check the book against itself.
+>
+> There is no protocol with a name here, no miracle food, no fourteen-day reset. The best-evidenced habit in the book takes a single paragraph to state. Where continuous glucose monitors are sold ahead of their evidence, the book says so. Where berberine's real trial data belongs to a diagnosis you may not have, it says that too. And it never tells you what to do about a medication, because that decision belongs to you and your prescriber.
