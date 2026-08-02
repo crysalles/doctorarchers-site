@@ -32,7 +32,7 @@ Opinions and judgments carry no tag.
 
 **† not in women your age.** It marks a claim whose evidence comes from people older or younger than you, or from men, or from some other group you don't belong to. In the text the dagger usually appears on its own, tucked inside the bracket, as in **[shown in people †]**. It means the same thing every time.
 
-**The count.** This book makes 49 tagged claims. Thirty-eight are shown in people, ten of those drawn from a group you may not belong to. Two are associated only. Four are animals only. Two are tested, didn't hold. Three are not studied. Ten claims in forty-nine, roughly one in five, carry the dagger.
+**The count.** This book makes 47 tagged claims. Twenty-nine are shown in people, ten of those drawn from a group you may not belong to. Nine are associated only. Four are animals only. Two are tested, didn't hold. Three are not studied. Ten claims in forty-seven, roughly one in five, carry the dagger. Two additional facts in the book, naming what a guideline or expert committee recommends, carry no tag at all: they're events, not findings, and grading them as evidence would be its own kind of overstatement.
 
 **How to weigh them.** Use the tags this way as you read. When you see *shown in people* with no flag attached, give it the most weight. When you see *tested, didn't hold*, give it the least: that one has already been checked and found wanting, and no amount of hope should move it back up the list. When you see any other tag, or the dagger, treat the claim as a possibility worth weighing rather than a settled fact, and decide for yourself how much it should move you.
 
@@ -791,13 +791,11 @@ Every tagged claim in this book, gathered in one place. Chapter references point
 | 1 | Prediabetes in menopausal women rose from 24.3% to 35.2% over 20 years; unrecognized hyperglycemia rose from 23.9% to 32.9% | shown in people |
 | 1 | A third of menopausal women carried an elevated glucose or A1C that had been measured but never communicated to them | shown in people |
 | 1 | Whether recognizing that hyperglycemia earlier changes long-term outcomes | not studied |
-| 2 | The 2009 International Expert Committee flagged A1C 6.0–6.4% as a category of elevated risk | shown in people |
-| 2 | Progression rates to diabetes differ by which prediabetes definition was used, across 70 pooled prospective studies | shown in people |
+| 2 | Progression rates to diabetes differ by which prediabetes definition was used, across 70 pooled prospective studies | associated only |
 | 3 | Estrogen suppresses liver glucose output through a receptor-to-Foxo1 signaling chain | animals only |
 | 3 | Removing Foxo1 abolishes estrogen's effect on insulin sensitivity | animals only |
 | 3 | Hormone therapy reduced HOMA-IR by 35.8% in women who already had diabetes, in a 107-trial meta-analysis | shown in people |
 | 3 | Estrogen alone outperformed estrogen plus progestogen for HOMA-IR, in a 17-trial meta-analysis of 5,772 women | shown in people |
-| 4 | USPSTF recommends diabetes and prediabetes screening for adults 35 to 70 with overweight or obesity | shown in people |
 | 4 | Beta cells compensate for insulin resistance through functional adaptation before cell-mass expansion, and that compensation falters as prediabetes begins | animals only |
 | 5 | Ferritin correlates negatively with A1C in gastrectomy patients, inflating the A1C reading independent of blood sugar | shown in people † |
 | 5 | The same false elevation reached significance in pregnant women with iron deficiency and only trended in non-pregnant women | shown in people † |
@@ -806,11 +804,11 @@ Every tagged claim in this book, gathered in one place. Chapter references point
 | 5 | HOMA-IR's individual estimate carries a coefficient of variation near 31% | shown in people |
 | 5 | HOMA-IR tracked the clamp in South Asian adults but not in Caucasian adults, in a small comparison | shown in people † |
 | 5 | A high 1-hour OGTT reading predicted future type 2 diabetes independent of fasting and 2-hour results, over 12 years | shown in people † |
-| 6 | Gestational diabetes history carried a 45% higher risk of cardiovascular and cerebrovascular disease, including in women who never developed diabetes | shown in people |
+| 6 | Gestational diabetes history carried a 45% higher risk of cardiovascular and cerebrovascular disease, including in women who never developed diabetes | associated only |
 | 7 | Healthy nondiabetic adults spent a median 96% of time between 70 and 140 mg/dL, with a median 30 minutes a day above 140 | shown in people |
 | 7 | Consumer CGM estimated A1C ran 0.59 points high on average, with a clinically meaningful gap in 71% of healthy participants | shown in people |
 | 7 | Whether CGM use combined with GLP-1 medications changes outcomes in people with obesity but not diabetes | not studied |
-| 7 | CGM detected real glycemic-variability differences between healthy and prediabetic adults, in 40 participants | shown in people |
+| 7 | CGM detected real glycemic-variability differences between healthy and prediabetic adults, in 40 participants | associated only |
 | 8 | Muscle contraction recruits GLUT4 through a calcium and AMPK route independent of insulin signaling | animals only |
 | 8 | Muscle loss and insulin resistance form a bidirectional, compounding cycle | associated only |
 | 8 | Lifestyle programs including supervised exercise cut diabetes incidence to RR 0.40, against 0.69 without, across 77 trials and 22,629 participants | shown in people |
@@ -822,8 +820,8 @@ Every tagged claim in this book, gathered in one place. Chapter references point
 | 9 | Nocturnal whey protein worsened rather than improved the following breakfast's glucose response | tested, didn't hold |
 | 10 | Four days of sleep restriction weakened insulin signaling in fat cells by nearly threefold | shown in people |
 | 10 | Two weeks of sleep restriction reduced glucose tolerance and insulin sensitivity; 24-hour cortisol was unchanged while norepinephrine and epinephrine rose | shown in people |
-| 10 | Sleeping under six hours a night carried roughly 30% higher future diabetes risk across more than 447,000 people | shown in people |
-| 10 | Menopause independently raises obstructive sleep apnea risk through hormone-dependent airway tone | shown in people |
+| 10 | Sleeping under six hours a night carried roughly 30% higher future diabetes risk across more than 447,000 people | associated only |
+| 10 | Menopause independently raises obstructive sleep apnea risk through hormone-dependent airway tone | associated only |
 | 10 | Chronic psychological stress raises blood sugar in daily life, separable from the sleep, food, and movement changes that accompany it | associated only |
 | 10 | Yoga and meditation practices tracked with reduced stress hormones and improved HOMA-IR in type 2 diabetes | shown in people † |
 | 11 | Berberine reduced HbA1c by 0.73 points, plus fasting glucose and HOMA-IR, across 46 trials in type 2 diabetes | shown in people † |
@@ -832,11 +830,11 @@ Every tagged claim in this book, gathered in one place. Chapter references point
 | 11 | Oral magnesium improved 2-hour OGTT glucose and HOMA-IR in prediabetic adults, with no significant change in fasting glucose, across five trials | shown in people |
 | 12 | Intensive lifestyle intervention reduced diabetes incidence by 58% over 2.8 years; just under seven people needed to participate to prevent one case | shown in people |
 | 12 | Cumulative incidence stayed 34% lower in the lifestyle group at ten years, while year-by-year rates converged once all groups were offered support | shown in people |
-| 13 | Compounded semaglutide produced fat loss alongside close to a kilogram of skeletal muscle loss over three months | shown in people |
+| 13 | Compounded semaglutide produced fat loss alongside close to a kilogram of skeletal muscle loss over three months | associated only |
 | 13 | Liraglutide measurably reduced absolute lean mass in trunk and limbs within 35 days | shown in people |
 | 13 | One year after stopping semaglutide, participants regained about two-thirds of lost weight and cardiometabolic gains reverted | shown in people |
 | 14 | Fluctuating estrogen through perimenopause produces corresponding swings in insulin sensitivity | not studied |
-| 15 | Family history of diabetes raised prediabetes odds to 1.40 unadjusted and 1.26 adjusted, most clearly in non-obese adults | shown in people |
+| 15 | Family history of diabetes raised prediabetes odds to 1.40 unadjusted and 1.26 adjusted, most clearly in non-obese adults | associated only |
 
 ## Appendix G: Glucose Unit Conversion
 
