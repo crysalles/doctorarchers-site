@@ -599,12 +599,6 @@ section{padding:4rem 0}
   font-size:.92rem;
   color:var(--charcoal);
 }
-.cred-card .cred-date{
-  display:block;
-  margin-top:.15rem;
-  font-size:.85rem;
-  color:#6f6656;
-}
 .cred-card .cred-note{
   display:block;
   margin-top:.5rem;
