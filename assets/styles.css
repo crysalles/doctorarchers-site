@@ -415,6 +415,10 @@ section{padding:4rem 0}
 }
 .scope-callout p:last-child{margin-bottom:0}
 
+/* ============ Topic hub cross-link callout ============ */
+.hub-callout ul{margin:.6rem 0 0;padding-left:1.25rem}
+.hub-callout li{margin-bottom:.3rem}
+
 /* ============ Blog ============ */
 .post-list{list-style:none;padding:0;margin:2rem 0;display:grid;gap:1.5rem}
 .post-card{

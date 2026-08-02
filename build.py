@@ -159,6 +159,7 @@ FOOTER = """
         <h3>Explore</h3>
         <ul class="footer-links">
           <li><a href="../book.html">Bad Medicine Blues — the book</a></li>
+          <li><a href="index.html#browse-by-topic">Topic guides</a></li>
           <li><a href="../testing.html">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
@@ -329,6 +330,33 @@ def article_json_ld(meta, refs, canonical):
     return dump_json_ld(graph)
 
 
+def hub_json_ld(hub, member_metas, canonical):
+    """CollectionPage node for a topic hub, linking to member Article @ids.
+
+    Mirrors article_json_ld: composes with PERSON_NODE/WEBSITE_NODE via
+    dump_json_ld, and reuses each member's existing canonical#article @id
+    rather than re-declaring their Article nodes, which are already emitted
+    on the member pages themselves."""
+    collection = {
+        "@type": "CollectionPage",
+        "@id": canonical + "#collection",
+        "isPartOf": {"@id": WEBSITE_ID},
+        "mainEntityOfPage": canonical,
+        "url": canonical,
+        "name": hub["title"],
+        "description": hub["description"],
+        "author": {"@id": PERSON_ID},
+        "publisher": {"@id": PERSON_ID},
+        "inLanguage": "en",
+        "isAccessibleForFree": True,
+        "hasPart": [
+            {"@id": f"{SITE_URL}/blog/{m['slug']}.html#article"}
+            for m in member_metas
+        ],
+    }
+    return dump_json_ld([PERSON_NODE, WEBSITE_NODE, collection])
+
+
 # --------------------------------------------------------------------------
 # Front matter
 # --------------------------------------------------------------------------
@@ -411,6 +439,102 @@ def parse_front_matter(text, path):
         parsed.append((question.strip(), answer.strip()))
     meta["questions"] = parsed
     return meta, body
+
+
+# --------------------------------------------------------------------------
+# Topic hubs
+#
+# A hub is a curated bundle of already-published posts that make one larger
+# argument together. It is declarative data, not a hand-written page — every
+# hub renders through the same build_hub_page(), so adding the next one
+# (perimenopause/midlife, then GLP-1/metabolic) is a new entry here, not new
+# code. "members" is reading order, not date order, and each member gets its
+# own framing sentence rather than reusing the post's existing summary.
+#
+# A hub only ever builds once every one of its members is actually live in
+# the current run (see hub readiness in main()) — a hub linking to a post
+# that is not published yet is worse than no hub at all.
+# --------------------------------------------------------------------------
+
+HUB_DEFINITIONS = [
+    {
+        "hub_slug": "normal-labs",
+        "title": "When Your Labs Say “Normal” but You Don’t Feel Normal",
+        "description": (
+            "A normal result and a body that does not feel normal can both "
+            "be true at once. Four articles, one argument: what a reference "
+            "range actually measures, where it fails you, and what happens "
+            "when correcting an abnormal number changes nothing anyway."
+        ),
+        "intro_html": (
+            "<p>You are not imagining it, and the paperwork is not lying to "
+            "you either. A normal result and a body that does not feel "
+            "normal can both be true at the same time, and understanding "
+            "why is the whole argument of these four pieces, read in "
+            "order.</p>"
+        ),
+        "members": [
+            {
+                "slug": "normal-bloodwork-still-feel-awful",
+                "framing": (
+                    "Start here. The gap between a normal panel and how you "
+                    "actually feel is not a contradiction, and this is what "
+                    "that gap is usually about."
+                ),
+            },
+            {
+                "slug": "what-normal-lab-results-mean",
+                "framing": (
+                    "Then the mechanics: how a reference range gets built "
+                    "in the first place, and why “normal” was only ever a "
+                    "statement about what is common, not about what is "
+                    "right for you."
+                ),
+            },
+            {
+                "slug": "ferritin-normal-still-exhausted",
+                "framing": (
+                    "A worked example, and a personal one. Ferritin can sit "
+                    "inside the normal range for twenty years while "
+                    "genuinely explaining the exhaustion — the number that "
+                    "finally answers “why am I so tired.”"
+                ),
+            },
+            {
+                "slug": "tsh-slightly-high-what-trials-found",
+                "framing": (
+                    "And the other direction, which the story above does "
+                    "not cover: sometimes the number is flagged abnormal, "
+                    "gets treated, and the treatment trial found no symptom "
+                    "benefit at all. Knowing which situation you are "
+                    "actually in is the real skill."
+                ),
+            },
+        ],
+        # Extra links beyond the member posts (used by later hubs, e.g. the
+        # GLP-1 hub pointing at support-kit.html / books.html#reader-list).
+        # Present as an empty list here so build_hub_page never needs to
+        # special-case a hub that doesn't use it.
+        "extra_links": [],
+    },
+]
+
+
+def hub_for_slug(slug):
+    """Return (hub, member_entry) if slug belongs to a hub, else (None, None)."""
+    for hub in HUB_DEFINITIONS:
+        for member in hub["members"]:
+            if member["slug"] == slug:
+                return hub, member
+    return None, None
+
+
+def ready_hubs(posts_by_slug):
+    """Hubs whose every member is live in this run's posts_by_slug."""
+    return [
+        hub for hub in HUB_DEFINITIONS
+        if all(m["slug"] in posts_by_slug for m in hub["members"])
+    ]
 
 
 # --------------------------------------------------------------------------
@@ -500,6 +624,35 @@ def render_references(refs):
         '      <h2 id="refs-title">Sources</h2>\n'
         "      <ol>\n" + "\n".join(items) + "\n      </ol>\n"
         "    </section>\n"
+    )
+
+
+def render_hub_callout(meta, posts_by_slug, built_hub_slugs):
+    """A small 'part of this guide' box linking to a post's hub and siblings.
+
+    Renders nothing unless the post's hub is actually going to be built in
+    THIS run — a post must never link to a hub page that will not exist."""
+    hub, _ = hub_for_slug(meta["slug"])
+    if not hub or hub["hub_slug"] not in built_hub_slugs:
+        return ""
+    sibling_items = []
+    for member in hub["members"]:
+        if member["slug"] == meta["slug"]:
+            continue
+        sib = posts_by_slug.get(member["slug"])
+        if not sib:
+            continue
+        sibling_items.append(
+            f'        <li><a href="{esc_attr(sib["slug"])}.html">'
+            f'{render_inline(sib["title"])}</a></li>'
+        )
+    items = "\n".join(sibling_items)
+    return (
+        '\n    <aside class="scope-callout hub-callout" aria-label="Part of a topic guide">\n'
+        f'      <p><strong>Part of the guide:</strong> '
+        f'<a href="{esc_attr(hub["hub_slug"])}.html">{render_inline(hub["title"])}</a></p>\n'
+        "      <ul>\n" + items + "\n      </ul>\n"
+        "    </aside>\n"
     )
 
 
@@ -647,7 +800,8 @@ def post_image(meta):
     return f"{SITE_URL}/{image.lstrip('/')}"
 
 
-def build_post_page(meta, body_html):
+def build_post_page(meta, body_html, posts_by_slug=None, built_hub_slugs=frozenset()):
+    posts_by_slug = posts_by_slug or {}
     canonical = f"{SITE_URL}/blog/{meta['slug']}.html"
     refs = [split_reference(r) for r in meta["references"]]
     head = HEADER.format(
@@ -682,6 +836,7 @@ def build_post_page(meta, body_html):
 {render_questions(meta["questions"])}
 {insert_inline_optin(body_html)}
 {render_references(refs)}
+{render_hub_callout(meta, posts_by_slug, built_hub_slugs)}
     <p style="margin-top:2.5rem"><a href="index.html">← All posts</a></p>
   </article>
 """
@@ -689,6 +844,7 @@ def build_post_page(meta, body_html):
 
 
 def build_index_page(posts):
+    posts_by_slug = {m["slug"]: m for m in posts}
     canonical = f"{SITE_URL}/blog/index.html"
     head = HEADER.format(
         title_tag="Blog — Rev. Dr. LaVeena Archers",
@@ -709,6 +865,25 @@ def build_index_page(posts):
     cards_html = "\n".join(cards) if cards else \
         '      <li class="post-card"><p>No posts yet. Add a markdown file to posts/ and run build.py.</p></li>'
 
+    hubs_html = ""
+    ready = ready_hubs(posts_by_slug)
+    if ready:
+        hub_cards = "\n".join(
+            f'        <li class="post-card"><h3><a href="{esc_attr(hub["hub_slug"])}.html">'
+            f'{render_inline(hub["title"])}</a></h3><p>{render_inline(hub["description"])}</p></li>'
+            for hub in ready
+        )
+        hubs_html = f"""
+  <section id="browse-by-topic" aria-label="Browse by topic">
+    <div class="wrap narrow" style="margin-inline:auto">
+      <h2>Browse by topic</h2>
+      <ul class="post-list">
+{hub_cards}
+      </ul>
+    </div>
+  </section>
+"""
+
     body = f"""
   <section class="page-hero" aria-labelledby="blog-title">
     <div class="wrap">
@@ -717,7 +892,7 @@ def build_index_page(posts):
       <p class="lede">Clear-eyed and grounded, and never a substitute for your own medical care.</p>
     </div>
   </section>
-
+{hubs_html}
   <section style="padding-top:0" aria-label="All posts">
     <div class="wrap narrow" style="margin-inline:auto">
       <ul class="post-list">
@@ -727,6 +902,71 @@ def build_index_page(posts):
   </section>
 
 {optin_block("blog-optin")}
+"""
+    return head + body + FOOTER
+
+
+def build_hub_page(hub, posts_by_slug):
+    """Render one topic hub page.
+
+    Mirrors build_index_page's card loop, but in curated order with each
+    member's own framing sentence instead of date order and its summary."""
+    canonical = f"{SITE_URL}/blog/{hub['hub_slug']}.html"
+    member_metas = [posts_by_slug[m["slug"]] for m in hub["members"]]
+
+    head = HEADER.format(
+        title_tag=esc_attr(hub["title"]) + " — Rev. Dr. LaVeena Archers",
+        description=esc_attr(hub["description"]),
+        canonical=canonical,
+        og_type="website",
+        og_title=esc_attr(hub["title"]),
+        og_image=DEFAULT_OG_IMAGE,
+        json_ld=hub_json_ld(hub, member_metas, canonical),
+    )
+
+    cards = []
+    for member, meta in zip(hub["members"], member_metas):
+        cards.append(f"""      <li class="post-card">
+        <h2><a href="{esc_attr(meta['slug'])}.html">{render_inline(meta['title'])}</a></h2>
+        <p class="post-meta"><time datetime="{esc_attr(meta['date'])}">{esc_attr(meta['date_pretty'])}</time></p>
+        <p>{render_inline(member['framing'])}</p>
+      </li>""")
+    cards_html = "\n".join(cards)
+
+    extra_links_html = ""
+    if hub["extra_links"]:
+        items = "\n".join(
+            f'        <li><a href="{esc_attr(link["href"])}">{esc_attr(link["text"])}</a></li>'
+            for link in hub["extra_links"]
+        )
+        extra_links_html = f"""
+  <section aria-label="Related resources">
+    <div class="wrap narrow" style="margin-inline:auto">
+      <ul class="footer-links">
+{items}
+      </ul>
+    </div>
+  </section>
+"""
+
+    body = f"""
+  <section class="page-hero" aria-labelledby="hub-title">
+    <div class="wrap">
+      <span class="eyebrow">Topic guide</span>
+      <h1 id="hub-title">{render_inline(hub['title'])}</h1>
+      {hub['intro_html']}
+    </div>
+  </section>
+
+  <section style="padding-top:0" aria-label="Articles in this guide">
+    <div class="wrap narrow" style="margin-inline:auto">
+      <ul class="post-list">
+{cards_html}
+      </ul>
+    </div>
+  </section>
+{extra_links_html}
+{optin_block("hub-optin")}
 """
     return head + body + FOOTER
 
@@ -765,7 +1005,7 @@ def is_indexable(path):
     return "noindex" not in head
 
 
-def build_sitemap(posts):
+def build_sitemap(posts, built_hubs=()):
     """Generate sitemap.xml from what is actually on disk.
 
     Hand-maintained sitemaps drift the moment you add a page; this one cannot."""
@@ -782,6 +1022,8 @@ def build_sitemap(posts):
         entries.append((
             f"{SITE_URL}/blog/{meta['slug']}.html", "0.5", meta["reviewed"],
         ))
+    for hub in built_hubs:
+        entries.append((f"{SITE_URL}/blog/{hub['hub_slug']}.html", "0.6", None))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -845,7 +1087,7 @@ def extract_meta(path):
     return clean(title.group(1) if title else ""), clean(desc.group(1) if desc else "")
 
 
-def build_llms_txt(posts):
+def build_llms_txt(posts, built_hubs=()):
     """Write llms.txt — a plain-language map of the site for AI assistants.
 
     Generated rather than hand-written so it cannot drift out of date."""
@@ -867,6 +1109,12 @@ def build_llms_txt(posts):
             f"Published {meta['date']}, last reviewed {meta['reviewed']}.{cited}"
         )
 
+    if built_hubs:
+        lines.append("\n## Topic guides\n")
+        for hub in built_hubs:
+            loc = f"{SITE_URL}/blog/{hub['hub_slug']}.html"
+            lines.append(f"- [{hub['title']}]({loc}): {hub['description']}")
+
     (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return len(lines)
 
@@ -881,8 +1129,14 @@ def main():
     include_future = "--all" in sys.argv
     today = date.today()
 
+    # Pass 1: parse and gate every post, rendering its markdown body, but do
+    # not write any post HTML yet. A post's own page may need to link to a
+    # topic hub, and whether that hub exists depends on which OTHER posts
+    # are live this run — so hub readiness has to be resolved before any
+    # post file is written.
     posts = []
     scheduled = []
+    rendered = []   # (meta, body_html) pairs not yet written to disk
     for md_file in sorted(POSTS_DIR.glob("*.md")):
         text = md_file.read_text(encoding="utf-8")
         meta, body = parse_front_matter(text, md_file.name)
@@ -894,24 +1148,48 @@ def main():
                 stale.unlink()   # never leave a scheduled post reachable
             continue
 
-        body_html = markdown_to_html(body)
-        page = build_post_page(meta, body_html)
+        rendered.append((meta, markdown_to_html(body)))
+        posts.append(meta)
+
+    posts.sort(key=lambda m: m["date_obj"], reverse=True)  # newest first
+    posts_by_slug = {m["slug"]: m for m in posts}
+    built_hub_slugs = {hub["hub_slug"] for hub in ready_hubs(posts_by_slug)}
+
+    # Pass 2: now write every post's page, with full knowledge of which
+    # hubs will actually exist this run.
+    for meta, body_html in rendered:
+        page = build_post_page(meta, body_html, posts_by_slug, built_hub_slugs)
         out_file = OUT_DIR / f"{meta['slug']}.html"
         out_file.write_text(page, encoding="utf-8")
-        print(f"  wrote blog/{out_file.name}  ({md_file.name})")
-        posts.append(meta)
+        print(f"  wrote blog/{out_file.name}  ({meta['slug']}.md)")
 
     for meta in sorted(scheduled, key=lambda m: m["date_obj"]):
         print(f"  scheduled  {meta['slug']}  (publishes {meta['date']})")
 
-    posts.sort(key=lambda m: m["date_obj"], reverse=True)  # newest first
     (OUT_DIR / "index.html").write_text(build_index_page(posts), encoding="utf-8")
     print(f"  wrote blog/index.html  ({len(posts)} post(s), newest first)")
 
-    count = build_sitemap(posts)
+    # Topic hubs: a hub builds only when every one of its members is live
+    # in posts_by_slug THIS run. If a hub was built previously (e.g. by a
+    # prior --all run) and a member is no longer available, its stale page
+    # is deleted — never leave a hub reachable once it is incomplete.
+    built_hubs = []
+    for hub in HUB_DEFINITIONS:
+        out_file = OUT_DIR / f"{hub['hub_slug']}.html"
+        if hub["hub_slug"] not in built_hub_slugs:
+            if out_file.exists():
+                out_file.unlink()
+            missing = [m["slug"] for m in hub["members"] if m["slug"] not in posts_by_slug]
+            print(f"  hub skipped  {hub['hub_slug']}  (waiting on: {', '.join(missing)})")
+            continue
+        out_file.write_text(build_hub_page(hub, posts_by_slug), encoding="utf-8")
+        print(f"  wrote blog/{hub['hub_slug']}.html  (hub, {len(hub['members'])} articles)")
+        built_hubs.append(hub)
+
+    count = build_sitemap(posts, built_hubs)
     print(f"  wrote sitemap.xml     ({count} URLs)")
 
-    build_llms_txt(posts)
+    build_llms_txt(posts, built_hubs)
     print("  wrote llms.txt        (site map for AI assistants)")
 
 
