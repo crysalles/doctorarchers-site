@@ -168,7 +168,7 @@ FOOTER = """
         </ul>
       </div>
     </div>
-    <p class="disclaimer"><strong>Scope of practice.</strong> Rev. Dr. LaVeena B. Archers is a Doctor of Natural Medicine and board-certified holistic practitioner. She is not a conventional medical doctor. Her role is to educate and support, not to diagnose, treat, prescribe, or manage diseases. Services are offered within a Private Membership Association (PMA). Nothing on this website is medical advice, and nothing here promises to cure, reverse, or treat any disease. Always seek the advice of a qualified medical professional with any questions about a medical condition.</p>
+    <p class="disclaimer"><strong>Scope of practice.</strong> Rev. Dr. LaVeena B. Archers is board certified by exam as a Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board, a private credentialing organization whose certification is not state or federally regulated. She is not a medical doctor. Her role is to educate and support, not to diagnose, treat, prescribe, or manage diseases. Services are offered within a Private Membership Association (PMA). Nothing on this website is medical advice, and nothing here promises to cure, reverse, or treat any disease. Always seek the advice of a qualified medical professional with any questions about a medical condition.</p>
   </div>
 </footer>
 
@@ -250,7 +250,6 @@ PERSON_NODE = {
             "Doctor of Natural Medicine (DNM)",
             "Board-Certified Holistic Functional Medicine Doctor (BC-HFMD)",
             "Board-Certified Holistic Functional Nutrition Doctor (BC-HFND)",
-            "Board-Certified Holistic Health Practitioner (BC-HHP)",
         )
     ],
     "knowsAbout": [
@@ -1174,12 +1173,13 @@ LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — LaVeenaArchers.com
 
 ## About the author
 
-Rev. Dr. LaVeena B. Archers holds a PhD and is a Doctor of Natural Medicine
-(DNM), board-certified in Holistic Functional Medicine (BC-HFMD) and Holistic
-Functional Nutrition (BC-HFND), and a Board-Certified Holistic Health
-Practitioner (BC-HHP). She is a Certified Executive Coach.
+Rev. Dr. LaVeena B. Archers is board certified by exam as a Doctor of Natural
+Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional
+Nutrition by the American Natural Wellness Practitioners Board, a private
+credentialing organization whose certification is not state or federally
+regulated. She is a Certified Executive Coach.
 
-She is **not** a conventional medical doctor. Her role is to educate and
+She is **not** a medical doctor. Her role is to educate and
 support, never to diagnose, treat, prescribe, or manage disease. Services are
 offered within a Private Membership Association (PMA).
 
