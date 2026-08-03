@@ -6,7 +6,7 @@
 
 ## Medical Disclaimer
 
-LaVeena B. Archers holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and the pentadoctorate from the Rockwell School of Holistic Medicine. Neither institution is accredited by an agency recognized by the U.S. Department of Education. In 2025 she became board certified by exam as a Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. That board is a private credentialing organization, and its certification is not state or federally regulated. She works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
+LaVeena B. Archers holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and the pentadoctorate from the Rockwell School of Holistic Medicine, and in 2025 she became a board certified Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. Each of those three certifications required passing a board examination. That board is a private credentialing organization, and its certification is not state or federally regulated. Neither Kingdom College of Natural Health nor the Rockwell School of Holistic Medicine is accredited by an agency recognized by the U.S. Department of Education. She works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
 
 If you have kidney disease, speak to your doctor before taking a magnesium supplement; impaired kidneys can struggle to clear excess magnesium, and Chapter 11's discussion of magnesium is not a recommendation for anyone with reduced kidney function. If you are pregnant, speak to your doctor before changing your diet, exercise, or supplement routine; several of the trials in this book excluded pregnant women, and none of the findings here should be assumed to apply during pregnancy.
 
@@ -62,7 +62,7 @@ This book is written to be read start to finish, but it doesn't have to be. Ever
 
 ## Part One — Why Your Labs Said Fine and Your Body Knows Better
 
-### Chapter 1: The Blind Spot in a Normal Panel
+### Chapter 1: The Blind Spot in a Normal Number
 
 > **Short Version**
 >
