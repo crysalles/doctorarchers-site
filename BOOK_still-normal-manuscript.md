@@ -4,15 +4,7 @@
 
 ---
 
-## Medical Disclaimer
-
-LaVeena B. Archers holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and the pentadoctorate from the Rockwell School of Holistic Medicine, and in 2025 she became a board certified Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. Each of those three certifications required passing a board examination. That board is a private credentialing organization, and its certification is not state or federally regulated. Neither Kingdom College of Natural Health nor the Rockwell School of Holistic Medicine is accredited by an agency recognized by the U.S. Department of Education. She works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
-
-If you have kidney disease, speak to your doctor before taking a magnesium supplement; impaired kidneys can struggle to clear excess magnesium, and Chapter 11's discussion of magnesium is not a recommendation for anyone with reduced kidney function. If you are pregnant, speak to your doctor before changing your diet, exercise, or supplement routine; several of the trials in this book excluded pregnant women, and none of the findings here should be assumed to apply during pregnancy.
-
-Always seek the advice of a qualified medical professional with any questions about a medical condition, and never delay or disregard professional medical care because of something you read here.
-
-**When to contact a clinician promptly, not just eventually.** This book is written for the years before a diagnosis, when numbers are borderline and nothing feels urgent. That is not always the situation you're in. If a fasting glucose result comes back at 126 mg/dL or higher, or a random (non-fasting) result at 200 mg/dL or higher, whether from a standard lab or a direct-access test you ordered yourself, that result meets the standard laboratory threshold used to diagnose diabetes, and it belongs in front of a clinician soon, not queued up for your next annual visit. The same is true if you have any of those results alongside excessive thirst, frequent urination, unexplained weight loss, blurred vision, or unusual fatigue: contact a clinician promptly rather than waiting to see if it resolves. None of this book's chapters, including the ones on ordering your own labs, are a substitute for that step.
+*The full medical disclaimer appears at the back of this book, after the appendices.*
 
 ---
 
@@ -859,6 +851,18 @@ Most U.S. labs report glucose in mg/dL; most research outside the U.S., and some
 | 200 | 11.1 |
 
 A1C is reported as a percentage in both systems and needs no conversion.
+
+---
+
+## Medical Disclaimer
+
+LaVeena B. Archers holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and the pentadoctorate from the Rockwell School of Holistic Medicine, and in 2025 she became a board certified Doctor of Natural Medicine, a Doctor of Holistic Functional Medicine, and a Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. Each of those three certifications required passing a board examination. That board is a private credentialing organization, and its certification is not state or federally regulated. Neither Kingdom College of Natural Health nor the Rockwell School of Holistic Medicine is accredited by an agency recognized by the U.S. Department of Education. She works as a longevity specialist, educator, and writer. She is not a medical doctor, and nothing in this book is medical advice, diagnosis, or treatment. This book is for education and information only. It does not promise to cure, reverse, or treat any disease, and it will never advise you to start, change, or stop a medication. Decisions about medication and treatment belong with you and your own physician or prescriber.
+
+If you have kidney disease, speak to your doctor before taking a magnesium supplement; impaired kidneys can struggle to clear excess magnesium, and Chapter 11's discussion of magnesium is not a recommendation for anyone with reduced kidney function. If you are pregnant, speak to your doctor before changing your diet, exercise, or supplement routine; several of the trials in this book excluded pregnant women, and none of the findings here should be assumed to apply during pregnancy.
+
+Always seek the advice of a qualified medical professional with any questions about a medical condition, and never delay or disregard professional medical care because of something you read here.
+
+**When to contact a clinician promptly, not just eventually.** This book is written for the years before a diagnosis, when numbers are borderline and nothing feels urgent. That is not always the situation you're in. If a fasting glucose result comes back at 126 mg/dL or higher, or a random (non-fasting) result at 200 mg/dL or higher, whether from a standard lab or a direct-access test you ordered yourself, that result meets the standard laboratory threshold used to diagnose diabetes, and it belongs in front of a clinician soon, not queued up for your next annual visit. The same is true if you have any of those results alongside excessive thirst, frequent urination, unexplained weight loss, blurred vision, or unusual fatigue: contact a clinician promptly rather than waiting to see if it resolves. None of this book's chapters, including the ones on ordering your own labs, are a substitute for that step.
 
 ---
 
