@@ -49,6 +49,8 @@ A short cut for reading out of order:
 | "Diabetes runs in my family and I'm afraid of the number." | Chapter 15 |
 | "I just got my results back and don't know what they mean." | Appendix A |
 | "I want the exact evidence tier behind every claim in one place." | Appendix F |
+| "I have a question this book might already have answered." | Appendix H |
+| "I'm reading this with a book club or a friend." | Appendix I |
 
 This book is written to be read start to finish, but it doesn't have to be. Every chapter stands on its own, and each one names the chapters it leans on if you want to go back for the full argument.
 
@@ -865,6 +867,99 @@ Most U.S. labs report glucose in mg/dL; most research outside the U.S., and some
 | 200 | 11.1 |
 
 A1C is reported as a percentage in both systems and needs no conversion.
+
+---
+
+## Appendix H: Frequently Asked Questions
+
+**Is prediabetes the same thing as diabetes?**
+No. Prediabetes is the stage before that, where fasting glucose or A1C has drifted upward but hasn't crossed the diagnostic line for diabetes. Chapter 2 covers exactly where that line sits, and how much it depends on which body drew it.
+
+**My labs came back normal. Do I still need to worry about any of this?**
+Not worry, but a second look is reasonable if something doesn't add up. A standard panel is built to catch a number that's already climbed, not the years of compensation before it moves. Chapter 1 and Chapter 4 cover what a normal result can and can't rule out.
+
+**Do I need a continuous glucose monitor if I don't have diabetes?**
+The evidence doesn't currently support that as a general recommendation. Chapter 7 covers what CGMs have actually been shown to do in people without diabetes, and where the marketing gets ahead of the research.
+
+**Should I try keto or a low-carb diet?**
+This book doesn't grade that question the way it grades food order, walking, or vinegar, because none of the evidence in Chapter 9 actually tested it. It's a conversation for your own doctor, not a hack to lift from a chapter.
+
+**Is it worth paying out of pocket for a fasting insulin test?**
+Only you can weigh the cost, but Chapter 5 and Chapter 6 explain why fasting insulin can reveal compensation years before fasting glucose or A1C do, and why it isn't part of standard screening the way those two tests are.
+
+**Will berberine or magnesium fix this for me?**
+Neither is a fix, and Chapter 11 grades both honestly: real trial data, real caveats, and a population mismatch that matters before you spend money in that aisle.
+
+**I'm already on a GLP-1 medication. Does this book still apply to me?**
+Yes. Chapter 13 is written specifically for that situation: what the medication is already doing for your blood sugar, and what it isn't doing for your muscle.
+
+**Diabetes runs in my family. Does that mean I'm destined to get it?**
+No. Chapter 15 covers what family history actually changes about your risk, and what it doesn't change about your options.
+
+**Is this book medical advice?**
+No. Nothing here is a diagnosis, a treatment plan, or medication guidance. The full Medical Disclaimer at the back of this book explains exactly what this book is and isn't, and it's worth reading before you act on anything here.
+
+**What if my results don't match what I expected from reading this book?**
+Bring the question to your own clinician rather than trying to resolve it from a book. Appendix A walks through three worked examples if you want a model for how to think through a result before that conversation.
+
+---
+
+## Appendix I: For Reading Groups and Reflection
+
+1. Chapter 1 describes opening a portal message that says "normal" while still feeling unwell. Have you had a version of that moment? What did you do with it?
+2. The book draws a distinction between a doctor saying "your labs are normal, so you're fine" and one saying "your labs are within normal, so let's look further." Which have you experienced more often?
+3. Chapter 4 argues a standard physical was built to catch two specific, late-stage failures, not the years of compensation before them. Did that reframe a past "normal" result for you?
+4. Chapter 6 gives you an exact script for asking for a fuller panel. Is there a conversation with a clinician you've been putting off, and what's stopped you from having it?
+5. Chapter 8 makes the case that muscle is a glucose-clearing organ your body relies on, not just something tied to how you look. Has that changed how you think about strength training?
+6. Chapter 9 grades four popular "hacks" honestly, and only one holds up well for this book's readers. Were you surprised by which one it was?
+7. Chapter 12 argues that "let's just watch it" can be one of the best-tested interventions in medicine, if you know what watching it well means. Has "watch it" ever felt like a dismissal to you? Does this chapter change that?
+8. The book tags every substantive claim rather than stating everything in the same confident tone. Did tracking the tags change how you read any particular chapter?
+9. If you could ask the author one question after reading this book, what would it be?
+10. What's one thing from this book you're actually going to do differently, starting this week?
+
+---
+
+## Appendix J: Trusted Resources
+
+This book leans on findings from a specific set of organizations throughout. If you want to go further than what's cited here, these are good places to start.
+
+**The American Diabetes Association** publishes the Standards of Care in Diabetes each year, updated as new evidence comes in, and is the source behind the diagnostic thresholds discussed in Chapter 2.
+
+**The U.S. Preventive Services Task Force** publishes the screening recommendation Chapter 4 and Chapter 6 both reference: who current guidelines say should be screened for prediabetes, and who they leave out.
+
+**The World Health Organization** maintains its own, separately drawn diagnostic thresholds, also discussed in Chapter 2.
+
+Each of these publishes its guidance publicly and updates it as evidence changes, which is exactly why this book treats a threshold as a drawn line rather than a fixed fact.
+
+---
+
+## About the Author
+
+Rev. Dr. LaVeena B. Archers writes the Root-Cause Guides from both sides of the exam-room table. Her own iron tested low for twenty years before anyone thought to ask why, an experience she writes about in Chapter 1, and it shaped how she reads every lab value in this book: not just whether a number falls inside its range, but whether anyone actually asked the question that range was built to answer.
+
+She holds a Doctor of Holistic Functional Medicine degree from Kingdom College of Natural Health and a pentadoctorate from the Rockwell School of Holistic Medicine, and in 2025 she was board certified as a Doctor of Natural Medicine, Doctor of Holistic Functional Medicine, and Doctor of Functional Nutrition by the American Natural Wellness Practitioners Board. She is not a medical doctor. The full detail behind those credentials, including the accreditation status of both schools and the private, unregulated nature of that board, is in the Medical Disclaimer at the back of this book.
+
+She is currently working through the same perimenopause transition Chapter 14 was written for, which is part of why it needed writing.
+
+---
+
+## Work With Me
+
+This book stands on its own, and you don't need anything further from me to use it. If you'd like to go further:
+
+[Shop Labs](https://labs.rupahealth.com/store/storefront_nYeZEmn) if you're ready to order testing directly.
+
+[Shop Supplements](https://us.fullscript.com/welcome/iconic/store-start) for a professional-grade source, once you've decided something in Chapter 11 is worth trying.
+
+[Join the reader list](https://book.laveenaarchers.com/books.html#reader-list) to hear about future books in this series, including *Fine on Paper*, the companion guide to the rest of your labs.
+
+[How I Research](https://book.laveenaarchers.com/how-i-research.html) if you want to see the standard every citation in this book was held to.
+
+---
+
+## Will You Leave a Review?
+
+If this book helped you ask a better question at your next appointment, or order one test you wouldn't have known to ask for, a short review helps another woman find it who's standing where you were when you opened Chapter 1. It takes a few minutes, and for an independently published book, it makes a real difference.
 
 ---
 
