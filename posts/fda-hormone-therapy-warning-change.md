@@ -5,7 +5,7 @@ slug: fda-hormone-therapy-warning-change
 tags: hormone-therapy, menopause, perimenopause, medical-dismissal
 summary: The headlines said the FDA removed the breast cancer warning from hormone therapy. What the FDA actually did is narrower and more interesting than that, and the part almost nobody reported is the part you most need to know.
 questions:
-  - What did the FDA actually change? :: It asked drug companies to remove risk statements about cardiovascular disease, breast cancer and probable dementia from the boxed warning on menopausal hormone therapy products, and to make other safety labelling changes.
+  - What did the FDA actually change? :: It asked drug companies to remove risk statements about cardiovascular disease, breast cancer and probable dementia from the boxed warning on menopausal hormone therapy products, and to make other safety labeling changes.
   - Does that mean the FDA decided those risks are not real? :: No. The FDA explicitly did not ask companies to remove cardiovascular disease and breast cancer from the Warnings and Precautions section of the label. The risks left the box. They did not leave the label.
   - What was kept in the boxed warning? :: The boxed warning for endometrial cancer on systemic estrogen-alone products remains. The FDA did not request its removal.
 references:
@@ -20,7 +20,7 @@ The real change is narrower than that, and the most important part of it went al
 
 # What changed
 
-The FDA asked the makers of hormone therapy products to remove language about the risk of **cardiovascular disease, breast cancer and probable dementia** from the boxed warning, and to make other safety-related labelling changes [1].
+The FDA asked the makers of hormone therapy products to remove language about the risk of **cardiovascular disease, breast cancer and probable dementia** from the boxed warning, and to make other safety-related labeling changes [1].
 
 A boxed warning is the most prominent safety warning the FDA applies to a prescription drug. It sits at the top of the label in a black border, which is where the nickname comes from. Putting a risk in that box is the agency's strongest way of saying pay attention to this.
 
