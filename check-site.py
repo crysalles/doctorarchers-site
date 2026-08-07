@@ -185,6 +185,35 @@ def check_picture_sources(base: Path) -> None:
                     fail("links", f"{page.relative_to(base)} <source> -> {url} (missing)")
 
 
+def check_placeholders(base: Path) -> None:
+    """No unfilled placeholder may reach a reader.
+
+    On 2026-08-07 a deploy published three of these to the live /training page,
+    including a note addressed to the author asking whether the certifications
+    were accredited. They were sitting in the working tree as in-progress copy;
+    the deploy sweeps every root *.html, so it took them along.
+
+    The guillemet markers are the house convention for "decide this before it
+    ships". The bracketed forms are the older README-style placeholders.
+    """
+    patterns = [
+        # Unbounded between the markers on purpose. A first attempt capped this
+        # at 200 characters and missed the one that mattered most — a 340-char
+        # note asking whether the certifications were accredited. The longest
+        # placeholder is always the one carrying the real unresolved question.
+        (re.compile(r"«[^»]*»"), "«…»"),
+        (re.compile(r"\[(?:[A-Z][A-Z0-9_]{4,})\]"), "[UPPER_CASE]"),
+        (re.compile(r"\bTK\b|\bTODO\b|\bFIXME\b"), "TK/TODO/FIXME"),
+    ]
+    for page in pages(base):
+        html = source(page)
+        body = html.partition("<body")[2] or html
+        for rx, label in patterns:
+            for m in rx.finditer(body):
+                fail("placeholder", f"{page.relative_to(base)} still contains an "
+                                    f"unfilled {label}: {m.group(0)[:70]}")
+
+
 def check_leaks(base: Path) -> None:
     """dist/ must never contain source, notes, or manuscripts."""
     for f in base.rglob("*"):
@@ -240,7 +269,7 @@ def main() -> None:
               "Run stage-deploy.py first for a real pre-deploy check.\n")
 
     for fn in (check_links, check_jsonld, check_canonical, check_images,
-               check_picture_sources, check_sitemap):
+               check_picture_sources, check_sitemap, check_placeholders):
         fn(base)
     if base is DIST:
         check_leaks(base)
