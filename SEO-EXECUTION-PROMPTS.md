@@ -291,15 +291,29 @@ future gate for the URL that serves 200, and pair `GATED_POST_SLUGS` with a
 matching `_headers` rule in the same edit — the constant only stops the build
 advertising a URL, it does not stop anything indexing a page reached another way.
 
-**4. The credential lists still disagree between pages.** This was the original
-audit finding and it is deliberately *not* fixed. `index.html` asserts 4
-credentials, `credentials.html` 14, `about.html` 6, with different wording and
-different `credentialCategory` values for what look like the same qualifications.
-Every node is byte-identical to what it was before this session — nothing was
-reworded — but one `@id` is still describing one person three different ways.
+**4. ~~The credential lists disagree~~ — SCHEMA DONE, 2026-08-07. One item left
+for you.**
 
-Reconciling them means deciding which list is correct, which is yours to make and
-not safely inferable from the markup.
+`credentials.html`'s 14-entry list is now the only one on the site, copied
+byte-identical (verified by hashing the array before and after). It is the list
+built from the certificate images themselves: correct issuer, correct dates, the
+five Rockwell doctorates named individually, Kingdom College's degree kept
+distinct from the ANWPB board certifications. `index.html`'s 4-entry list and
+`about.html`'s 6-entry list are gone, and `build.py` no longer defines a
+credential list at all, so a second one cannot reappear on the next build.
+
+The full list stays on the five pages whose subject is your qualifications —
+credentials, about, scope-of-practice, index, training — where it sits beside
+the certificates and the private-board disclosure. Every other page carries the
+same person and the same `@id` without the array.
+
+**Still needs you — the visible post-nominals.** `BC-HFMD · BC-HFND` appears in
+body text on `book.html`, `glp1-book.html`, `about.html` and `training.html`.
+The second one expands to "Board-Certified Holistic Functional **Nutrition**
+Doctor", but your certificate reads "Doctor of Functional Nutrition" — no
+"Holistic". That is a claim about what a board certified you as, in visible
+copy, so it is not something to rewrite on inference. Confirm the wording you
+want and it is a one-line sweep.
 
 **5. ~~`blog/ozempic-muscle-loss.html`~~ — DONE, 2026-08-07.** Handled
 automatically. `SUPERSEDED` in `build.py` maps it to `glp1-muscle-loss`; on the
