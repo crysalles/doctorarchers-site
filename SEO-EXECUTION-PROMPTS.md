@@ -329,9 +329,11 @@ Why that page and not the other: it is hand-written with no `posts/*.md` source,
 has zero inbound links, is in neither `sitemap.xml` nor `llms.txt`, and carries
 no inline citations across 1,158 words against 12 in its replacement.
 
-**6. `DEPLOY.md` describes Netlify.** The site is on Cloudflare Pages. The file no
-longer deploys, but it will mislead the next person who reads it — including a
-future session of me.
+**6. ~~`DEPLOY.md` describes Netlify~~ — DONE, 2026-08-07.** Rewritten for
+Cloudflare Pages. Two sections were not merely stale but harmful to follow: the
+Google Workspace MX warning (this domain uses Namecheap forwarding) and the
+Netlify Forms instructions (which silently discarded submissions, hence the Pages
+Function). `README.md` had the same error in eight places and was corrected too.
 
 **7. Your review pass on the post edits.** Per the protocol in `CLAUDE.md`, your
 read is the final human gate. What changed in `posts/*.md`: opening paragraphs
