@@ -276,21 +276,20 @@ low-risk consolidation. Moving canonical to the apex would be the stronger
 long-term brand, but it is a full host migration and should be its own project,
 not a side effect of this one.
 
-**3. The Nature GLP-1 shield has almost certainly expired.** The noindex traces to
-commit 6f93c8e, 2026-07-28, *"Temporarily shield book-matching web content during
-KDP review."* Its commit body says plainly: *"Restore after the title is
-approved."* The title **is** approved — `glp1-book.html` links a live Amazon
-listing. So the stated condition for removing the shield has been met.
+**3. ~~The Nature GLP-1 shield~~ — DONE, 2026-08-07.** Lifted on your say-so.
+`_headers` rules removed, `GATED_POST_SLUGS` emptied, so the post is back in
+sitemap.xml, llms.txt and the blog index. Verified live: `/blog/nature-glp1`
+returns 200 with no `X-Robots-Tag`.
 
-This matters more now than it did last week, because the mechanism was broken
-until today: the noindex was keyed on the `.html` path and never reached the URL
-that served the article. Fixing it means a real, cited article is now genuinely
-suppressed for the first time — on the strength of a directive that expired.
+The sample-PDF gate from the same commit is untouched and still holds — that one
+shields a lead magnet you get by joining the list, unrelated to KDP.
 
-To restore it: delete both `/blog/nature-glp1` rules from `_headers` and remove
-`nature-glp1` from `GATED_POST_SLUGS` in `build.py` (which will let it back into
-sitemap.xml and llms.txt). Left in place pending your call, since "is the KDP
-review finished" is not something to infer from a product page.
+Worth remembering: the original rule was written for `/blog/nature-glp1.html`,
+which Pages 308-redirects, so the noindex landed on the redirect and the article
+was fully indexable the entire time the shield was supposedly up. Write any
+future gate for the URL that serves 200, and pair `GATED_POST_SLUGS` with a
+matching `_headers` rule in the same edit — the constant only stops the build
+advertising a URL, it does not stop anything indexing a page reached another way.
 
 **4. The credential lists still disagree between pages.** This was the original
 audit finding and it is deliberately *not* fixed. `index.html` asserts 4
