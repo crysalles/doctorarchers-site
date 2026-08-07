@@ -307,13 +307,17 @@ credentials, about, scope-of-practice, index, training — where it sits beside
 the certificates and the private-board disclosure. Every other page carries the
 same person and the same `@id` without the array.
 
-**Still needs you — the visible post-nominals.** `BC-HFMD · BC-HFND` appears in
-body text on `book.html`, `glp1-book.html`, `about.html` and `training.html`.
-The second one expands to "Board-Certified Holistic Functional **Nutrition**
-Doctor", but your certificate reads "Doctor of Functional Nutrition" — no
-"Holistic". That is a claim about what a board certified you as, in visible
-copy, so it is not something to rewrite on inference. Confirm the wording you
-want and it is a one-line sweep.
+**Visible post-nominals — DONE, 2026-08-07.** LaVeena confirmed BC-HFND should
+read "Doctor of Functional Nutrition". Swept from `about.html`, `book.html`,
+`glp1-book.html` and `training.html`. BC-HFMD went in the same pass, since every
+occurrence sat beside BC-HFND — that one is the same words in the certificate's
+order, not a changed claim.
+
+No wording was invented: the replacements are the phrasing already live on
+`scope-of-practice.html` and `credentials.html`. Those four pages were the
+outliers. "Holistic Functional Nutrition" now survives nowhere on the site except
+a `build.py` comment recording what the error was, and "by exam" is intact on all
+47 pages.
 
 **5. ~~`blog/ozempic-muscle-loss.html`~~ — DONE, 2026-08-07.** Handled
 automatically. `SUPERSEDED` in `build.py` maps it to `glp1-muscle-loss`; on the
