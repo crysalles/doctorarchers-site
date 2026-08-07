@@ -250,14 +250,53 @@ AVIF-aware.
 
 ## Part 5 — Still open
 
-- **Purge the Cloudflare cache** (dashboard → Caching → Configuration → Purge
-  Everything). Until then, edge copies of the leaked manuscript and draft posts
-  keep serving for up to 7 days. The wrangler token cannot do this — it has only
-  `zone:read`.
-- **301 apex and www to `book.`** — a Cloudflare Redirect Rule, not a repo change.
-- **`blog/ozempic-muscle-loss.html`** duplicates the scheduled post
-  `glp1-muscle-loss` (2026-08-12). Two pages competing on one topic; consolidate
-  before that date.
-- **`DEPLOY.md` describes Netlify.** The site has been on Cloudflare Pages for
-  some time. The file is now excluded from the deploy, but it will still mislead
-  the next person who reads it.
+Ordered by urgency. The first two need the Cloudflare dashboard and cannot be
+done from this repo.
+
+**1. Purge the Cloudflare cache — do this first.** The origin no longer has the
+manuscript or the draft posts (verified: a cache-buster query returns 404), but
+static assets are served `s-maxage=604800`, so edge copies keep serving for up to
+7 days to anyone who has the URL. Dashboard → Caching → Configuration → Purge
+Everything. The wrangler OAuth token holds only `zone:read` and cannot purge, so
+this is not automatable with the current credentials.
+
+**2. 301 the apex and www to `book.`** All three hostnames are custom domains on
+the same Pages project, which is why `laveenaarchers.com`,
+`www.laveenaarchers.com` and `book.laveenaarchers.com` all return 200 with
+byte-identical content. Canonical tags are currently the only thing consolidating
+them.
+
+*Order matters:* create the Redirect Rule **first**, then remove the two custom
+domains from the Pages project. Removing them first leaves the apex resolving to
+Pages with no route, which breaks it.
+
+Worth deciding deliberately while you are in there: `book.` is the canonical host
+today and every signal on the site points at it, so redirecting to it is the
+low-risk consolidation. Moving canonical to the apex would be the stronger
+long-term brand, but it is a full host migration and should be its own project,
+not a side effect of this one.
+
+**3. The Nature GLP-1 shield may have expired.** The noindex on that post traces
+to commit 6f93c8e, 2026-07-28, *"Temporarily shield book-matching web content
+during KDP review."* That was ten days ago. The mechanism is now fixed and
+actually working — which means if the KDP review is over, a real article is being
+deliberately kept out of search for no remaining reason. Worth an explicit
+decision either way.
+
+**4. `blog/ozempic-muscle-loss.html` duplicates a post scheduled for 2026-08-12**
+(`glp1-muscle-loss`). Two pages competing on one topic. The old page has no
+inbound links and is not in the sitemap, so the cheapest resolution is a 301 to
+the new post once it publishes. Decide before the 12th.
+
+**5. `DEPLOY.md` describes Netlify.** The site is on Cloudflare Pages. The file no
+longer deploys, but it will mislead the next person who reads it — including a
+future session of me.
+
+**6. Your review pass on the post edits.** Per the protocol in `CLAUDE.md`, your
+read is the final human gate. What changed in `posts/*.md`: opening paragraphs
+reordered so the answer comes first, some H2s rephrased as questions, contextual
+internal links added, and existing `[n]` markers carried into the Quick-answers
+blocks. Reference lists are byte-identical across every post and no new factual
+claim was introduced — but "the citation now attached to this Quick answer really
+does support this sentence" is exactly the judgment the protocol exists for, and
+it has not had your eyes yet.
