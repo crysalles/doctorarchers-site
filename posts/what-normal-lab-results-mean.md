@@ -83,6 +83,6 @@ Ask what it was last time, because a trend is worth more than a snapshot.
 
 And ask what result would have changed the plan. That one is quietly powerful. It reveals whether the test was ever capable of answering your question, or whether you have been reassured by a measurement that was not looking for the thing you came in about.
 
-None of this is a reason to distrust your lab work, and none of it is medical advice; every number above is tied to a source you can check, which is [the editorial standard this site runs on](/how-i-research). What your results mean for you belongs with a professional who knows your history. It is a reason to hold the word normal a little more lightly than the tone of voice it usually arrives in.
+None of this is a reason to distrust your lab work, and none of it is medical advice; every number above is tied to a source you can check. What your results mean for you belongs with a professional who knows your history. It is a reason to hold the word normal a little more lightly than the tone of voice it usually arrives in.
 
 If your labs keep coming back normal while your body says otherwise, [that gap is where my book starts](/book#free-chapter).

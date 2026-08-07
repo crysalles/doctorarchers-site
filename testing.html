@@ -36,13 +36,50 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://book.laveenaarchers.com/#laveena" },
+    {
+      "@type": "Person",
+      "@id": "https://book.laveenaarchers.com/#laveena",
+      "name": "Rev. Dr. LaVeena B. Archers, PhD",
+      "alternateName": "Rev. Dr. LaVeena Archers",
+      "url": "https://book.laveenaarchers.com/",
+      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease. Services offered within a Private Membership Association.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Executive Coach"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Doctor of Natural Medicine (DNM)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Board-Certified Holistic Functional Medicine Doctor (BC-HFMD)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Board-Certified Holistic Functional Nutrition Doctor (BC-HFND)"
+        }
+      ],
+      "knowsAbout": [
+        "Holistic Functional Medicine",
+        "Functional nutrition",
+        "Human Design",
+        "Entrepreneur wellness",
+        "Longevity"
+      ],
+      "sameAs": [
+        "https://www.doctorarchers.com/"
+      ]
+    },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
       "url": "https://book.laveenaarchers.com/",
       "name": "LaVeenaArchers.com",
-      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publisher": {
+        "@id": "https://book.laveenaarchers.com/#laveena"
+      },
       "inLanguage": "en"
     },
     {
@@ -51,8 +88,12 @@
       "url": "https://book.laveenaarchers.com/testing",
       "name": "Testing & Learning",
       "description": "How to order professional-grade lab testing from home and learn to make sense of the results, so you can have a better-informed conversation with your own provider. Education, not medical advice.",
-      "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
-      "about": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "isPartOf": {
+        "@id": "https://book.laveenaarchers.com/#website"
+      },
+      "about": {
+        "@id": "https://book.laveenaarchers.com/#laveena"
+      },
       "inLanguage": "en"
     }
   ]

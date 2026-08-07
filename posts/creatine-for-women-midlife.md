@@ -37,6 +37,6 @@ A few simple pointers:
 
 # Is creatine worth taking?
 
-Creatine is one of the rare supplements that is cheap, well studied by [the standard I hold sources on this site to](/how-i-research), and genuinely aligned with aging strong. It will not do the work for you, and it is no substitute for protein, sleep, and movement. Paired with those foundations, it is a small, sensible edge.
+Creatine is one of the rare supplements that is cheap, well studied, and genuinely aligned with aging strong. It will not do the work for you, and it is no substitute for protein, sleep, and movement. Paired with those foundations, it is a small, sensible edge.
 
 I go deeper on creatine, protein, and building a body that carries you in [*The Muscle You Keep*](/muscle-you-keep), and on the wider root-cause picture in *Bad Medicine Blues*. [Read a free chapter](/book#free-chapter).

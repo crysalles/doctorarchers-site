@@ -109,7 +109,7 @@ Time outdoors has earned remarkably precise evidence. Studies measuring cortisol
 
 Notice the shape every one of these supplement claims has. Some grain of truth sits underneath nearly every supplement, every trend, every claim. The marketing is what stretches that grain into a promise the evidence cannot support.
 
-Learning to spot that gap, between what a compound genuinely does in a careful study and what a label or a video claims it does, is a skill you will use for the rest of your life, long after every product named here has been replaced by the next trend. It is also [the standard I try to hold every claim on this site to](/how-i-research).
+Learning to spot that gap, between what a compound genuinely does in a careful study and what a label or a video claims it does, is a skill you will use for the rest of your life, long after every product named here has been replaced by the next trend.
 
 Your body already knows how to manage appetite and blood sugar. It is running a sophisticated system right now. The work is not to find the magic supplement that finally makes it work. The work is to give that system the support it evolved to run on: real food with enough protein and fiber, movement that challenges your muscles, sleep that is genuinely protected, and time to rest your nervous system.
 

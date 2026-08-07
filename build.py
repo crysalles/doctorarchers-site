@@ -866,7 +866,7 @@ HUB_DEFINITIONS = [
                 ),
             },
             {
-                "slug": "fibre-and-your-own-glp1",
+                "slug": "fiber-and-your-own-glp1",
                 "framing": (
                     "The one piece of the “natural GLP-1” story with a "
                     "real trial behind it — and exactly where that "
@@ -1605,7 +1605,17 @@ def build_sitemap(posts, built_hubs=()):
 # sentences ("Lose fat and muscle. Regain mostly fat.") would be listed with
 # nothing but the hook. This is still a ceiling, so one very long description
 # cannot bloat the file on its own.
-LLMS_DESCRIPTION_MAX = 200
+#
+# 300, not 200. At 200 the clamp cut scope-of-practice.html's description
+# (238 chars) at its last full sentence and dropped the final clause: "Not a
+# medical doctor; educates and supports." Losing that particular sentence, in
+# the one file whose entire job is telling AI assistants who she is and what
+# she does not do, is the worst possible thing for this clamp to trim. Any
+# ceiling low enough to cut a page's closing sentence will eventually cut a
+# disclaimer, because disclaimers are written last. Keep this above the
+# longest description on the site (currently book.html at 291) so the clamp
+# stays a runaway-length backstop and never an editor.
+LLMS_DESCRIPTION_MAX = 300
 
 LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — LaVeenaArchers.com
 

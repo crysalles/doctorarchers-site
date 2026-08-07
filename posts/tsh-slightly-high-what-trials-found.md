@@ -45,7 +45,7 @@ They did not. At one year there was no difference between the groups in the hypo
 
 # Why that result is uncomfortable for both sides
 
-The TRUST result costs both sides of the usual argument something, and I would rather say so than quietly pick the side that suits me, which is [the editorial standard this site runs on](/how-i-research).
+The TRUST result costs both sides of the usual argument something, and I would rather say so than quietly pick the side that suits me.
 
 It is uncomfortable for the natural health world, mine included, where a slightly raised TSH is often treated as a smoking gun and the explanation a woman has been denied. In these participants, correcting it changed nothing they could feel.
 

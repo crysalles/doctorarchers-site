@@ -43,7 +43,7 @@ A meta-analysis pooling six randomized controlled trials found that giving iron 
 
 That is real. It is also modest. Iron helped meaningfully for some people. It did not transform everyone who took it.
 
-The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one, which is [the editorial standard this site runs on](/how-i-research).
+The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one.
 
 There is one more limit. Much of the completed trial evidence on treating non-anemic iron deficiency comes from pregnant women [2], with more currently underway [3], because that is where the funding and the clinical urgency have been. Pregnancy is not the same situation as a forty-six year old with heavy periods and a demanding life. The findings are suggestive for her. They were not gathered on her.
 

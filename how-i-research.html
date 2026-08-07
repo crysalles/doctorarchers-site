@@ -33,13 +33,28 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://book.laveenaarchers.com/#laveena" },
+    {
+      "@type": "Person",
+      "@id": "https://book.laveenaarchers.com/#laveena",
+      "name": "Rev. Dr. LaVeena B. Archers, PhD",
+      "url": "https://book.laveenaarchers.com/",
+      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
+      "knowsAbout": [
+        "Holistic Functional Medicine",
+        "Functional nutrition",
+        "Human Design",
+        "Entrepreneur wellness",
+        "Longevity"
+      ]
+    },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
       "url": "https://book.laveenaarchers.com/",
       "name": "LaVeenaArchers.com",
-      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publisher": {
+        "@id": "https://book.laveenaarchers.com/#laveena"
+      },
       "inLanguage": "en"
     },
     {
@@ -48,8 +63,12 @@
       "url": "https://book.laveenaarchers.com/how-i-research",
       "name": "How I Research — Editorial Standards",
       "description": "The editorial standards behind everything published on LaVeenaArchers.com: sourcing, review, AI use, and corrections.",
-      "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
-      "about": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "isPartOf": {
+        "@id": "https://book.laveenaarchers.com/#website"
+      },
+      "about": {
+        "@id": "https://book.laveenaarchers.com/#laveena"
+      },
       "inLanguage": "en"
     }
   ]

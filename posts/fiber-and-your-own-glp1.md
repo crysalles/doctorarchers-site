@@ -53,7 +53,7 @@ The participants had type 2 diabetes [1]. Their metabolic state, their gut compo
 
 When you start from impaired glucose control, there is a great deal of headroom for an intervention to show a benefit. When you start from reasonably good control, the same intervention may produce a much smaller measurable change. That is not a failure of the fiber, but it does mean the number from this trial is not the number you should expect.
 
-I would rather tell you that than let you infer a promise the research did not make, which is [the editorial standard this site runs on](/how-i-research).
+I would rather tell you that than let you infer a promise the research did not make.
 
 # What is fair to say about fiber and GLP-1?
 

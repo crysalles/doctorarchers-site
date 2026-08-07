@@ -33,13 +33,86 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@id": "https://book.laveenaarchers.com/#laveena" },
+    {
+      "@type": "Person",
+      "@id": "https://book.laveenaarchers.com/#laveena",
+      "name": "Rev. Dr. LaVeena B. Archers, PhD",
+      "alternateName": "Rev. Dr. LaVeena Archers",
+      "url": "https://book.laveenaarchers.com/",
+      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease. Services offered within a Private Membership Association.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Executive Coach"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Doctor of Holistic Functional Medicine",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Kingdom College of Natural Health"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Pentadoctorate",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Rockwell School of Holistic Medicine"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Doctor of Natural Medicine",
+          "credentialCategory": "certification",
+          "dateCreated": "2025",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "American Natural Wellness Practitioners Board",
+            "description": "Private credentialing organization. Certification is not state or federally regulated."
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Doctor of Holistic Functional Medicine",
+          "credentialCategory": "certification",
+          "dateCreated": "2025",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "American Natural Wellness Practitioners Board",
+            "description": "Private credentialing organization. Certification is not state or federally regulated."
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Doctor of Functional Nutrition",
+          "credentialCategory": "certification",
+          "dateCreated": "2025",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "American Natural Wellness Practitioners Board",
+            "description": "Private credentialing organization. Certification is not state or federally regulated."
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Holistic Functional Medicine",
+        "Functional nutrition",
+        "Human Design",
+        "Entrepreneur wellness",
+        "Longevity"
+      ]
+    },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
       "url": "https://book.laveenaarchers.com/",
       "name": "LaVeenaArchers.com",
-      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publisher": {
+        "@id": "https://book.laveenaarchers.com/#laveena"
+      },
       "inLanguage": "en"
     }
   ]
