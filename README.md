@@ -157,34 +157,33 @@ To publish a run of posts on a drip rather than all at once, just set the
   posts on the live site. Re-run plain `python3 build.py` before committing.
 
 The GitHub Action in `.github/workflows/publish-scheduled-posts.yml` runs the
-build once a day at 19:00 UTC (noon in Arizona). When a post comes due it commits
-and pushes, which triggers the Netlify deploy. If nothing is due, it exits
-without committing. You can also run it on demand from the repo's **Actions**
+build once a day at 19:00 UTC (noon in Arizona). When a post comes due it
+commits, pushes, stages `dist/`, runs `check-site.py` and deploys with wrangler.
+The Pages project has **no Git connection**, so pushing to GitHub does not
+deploy anything by itself — the job has to do it explicitly. If nothing is due,
+it exits without committing. You can also run it on demand from the repo's **Actions**
 tab, and the schedule needs no maintenance as you add posts.
 
 Markdown supported: `#`–`######` headings (auto-shifted down one level so
 the post title stays the page's only `h1`), paragraphs, `-`/`*` and `1.`
 lists, `>` quotes, ``` fences, bold/italic/inline code/links.
 
-## Deploying to laveenaarchers.com
+## Deploying
 
-**Netlify:** drag this folder onto app.netlify.com (or connect a Git repo;
-no build command, publish directory = the folder itself). Then Domain
-settings → add `laveenaarchers.com`. At your DNS registrar, point an `A`/
-`ALIAS` record for the apex to Netlify (or switch nameservers to Netlify
-DNS) and a `CNAME` for `www` to your site's `*.netlify.app` name. To serve
-`book.html` as `/book`, either enable "Pretty URLs" (Site settings → Build &
-deploy → Post processing) or add a `_redirects` file with lines like
-`/book /book.html 200`.
+The site is on **Cloudflare Pages**, project `doctorarchers-site`, live at
+<https://book.laveenaarchers.com>. Full detail in `DEPLOY.md`.
 
-**Cloudflare Pages:** create a project → direct upload (or Git), no build
-command. Pages serves clean URLs automatically, so `/book`, `/about`, etc.
-work out of the box. Add the custom domain in the Pages project; if the
-domain's DNS is on Cloudflare it wires itself, otherwise follow the CNAME
-instructions shown.
+```bash
+python3 build.py && python3 stage-deploy.py --deploy
+```
 
-In Squarespace: after DNS cutover, keep the account only long enough to
-confirm nothing else (email forwarding, etc.) depends on it.
+`stage-deploy.py` is an allowlist that assembles `dist/`. **Never run
+`wrangler pages deploy .`** — that uploads the whole working tree, which once
+put an unpublished book manuscript and every scheduled draft post live.
+
+Pages serves clean URLs automatically and 308-redirects `/foo.html` to `/foo`,
+so canonicals, sitemap entries and internal links all use the extensionless
+form.
 
 ## Claims to review (LaVeena decides; nothing was deleted silently)
 
@@ -248,24 +247,18 @@ The site no longer shows an email address anywhere (better for spam). All
 is only ever the *private destination* the form delivers to — it is never printed
 on a page or in the page source / structured data.
 
-**The form is pre-wired for Netlify Forms (recommended, free):**
-1. Deploy the site on Netlify. Netlify auto-detects the form (it has
-   `data-netlify="true"` and a hidden `form-name="contact"`).
-2. In Netlify → **Forms → Form notifications**, add an email notification to
-   `the contact form`. Submissions now arrive in your inbox; the address stays
-   private. A honeypot field is already included for spam.
-3. (Optional) create a `/thank-you` page and set the form `action` to it for a
-   nicer post-submit screen.
+**The form posts to `/api/contact`**, a Cloudflare Pages Function at
+`functions/api/contact.js`, which sends through Cloudflare's Email Sending REST
+API. It was pre-wired for Netlify Forms originally; that silently discarded every
+submission once the site moved to Pages, which is why the Function exists.
 
-**If you host on Cloudflare Pages or elsewhere instead**, use a form backend and
-change the form `action` in `contact.html`:
-- **Formspree** or **Web3Forms** (both free): create a form, set the destination to
-  `the contact form` (private), and paste their endpoint URL into
-  `action="[CONTACT_FORM_ENDPOINT]"`.
+It needs four values set in the Cloudflare dashboard under **Workers & Pages →
+doctorarchers-site → Settings → Variables and Secrets** — never in the repo:
+`CF_ACCOUNT_ID` and `CONTACT_FROM` as plain variables, `EMAIL_API_TOKEN` and
+`CONTACT_TO` as secrets. `CONTACT_TO` must be a **verified destination address**
+on the account; that is what keeps sending free.
 
-Until a handler is connected, the form is inert (submitting just reloads with
-`?sent=1`), so the page previews safely. Your Google Workspace address
-`the contact form` is the reply-to / destination in whichever tool you choose.
+Spam defense is a honeypot field plus a render timestamp, with no storage.
 
 ---
 

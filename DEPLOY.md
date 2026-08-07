@@ -1,201 +1,196 @@
-# Deploy LaVeenaArchers.com — step by step
+# Deploying book.laveenaarchers.com
 
-Your site is packaged and ready: **`doctorarchers-site-DEPLOY.zip`** (in Downloads).
-Netlify is the recommended host because your contact form uses Netlify Forms.
+The site is on **Cloudflare Pages**, project `doctorarchers-site`. It is live at
+<https://book.laveenaarchers.com>.
 
----
-
-## 🟢 CHOSEN PATH: launch on a subdomain (`book.laveenaarchers.com`)
-
-This is the plan. It is the **safe, email-proof** way to launch now while your
-Squarespace site stays exactly as it is until it lapses (Feb 14, 2027). You are
-only **adding** one subdomain record. You are **not** changing the apex domain,
-and you are **not** touching your MX (email) records, so `the contact form`
-cannot be affected.
-
-1. **Deploy the zip to Netlify.** Sign up at netlify.com (free), then drag
-   `doctorarchers-site-DEPLOY.zip` onto the "drag and drop" deploy area. Netlify
-   gives you a temporary address like `random-name.netlify.app`. Open it and
-   click around; the whole site should work.
-2. **Turn on the contact form.** Netlify → your site → **Forms** → it should show
-   a "contact" form. **Form notifications → Add notification → Email** →
-   `the contact form`.
-3. **Add the subdomain in Netlify.** Domain management → **Add a domain** → type
-   **`book.laveenaarchers.com`** → Netlify shows you the target to point it at
-   (your `random-name.netlify.app`).
-4. **Add ONE DNS record where laveenaarchers.com's DNS lives** (Squarespace domains
-   dashboard, or Namecheap Advanced DNS, wherever you manage it):
-
-   | Type  | Host / Name | Value                        | TTL       |
-   |-------|-------------|------------------------------|-----------|
-   | CNAME | `book`      | `your-site-name.netlify.app` | Automatic |
-
-   That is the whole DNS change. **Do not touch** the `@`/apex records, and **do
-   not touch** any `MX` or `TXT` records. Your website and email keep working.
-5. **HTTPS.** Once the record resolves (minutes to a couple of hours), Netlify
-   auto-issues SSL for `book.laveenaarchers.com`. Turn on **Force HTTPS**. Done:
-   the book is live at **https://book.laveenaarchers.com**.
-6. **Later (optional), Feb 2027 or whenever:** to move the whole site onto the
-   main `laveenaarchers.com`, follow the full apex + MX instructions below. Not
-   needed now.
-
-> The rest of this document (apex A-record + the MX/email warnings) only applies
-> if you later point the **root** `laveenaarchers.com` at Netlify. For the
-> subdomain launch above, you can ignore it.
+> **This file used to describe a Netlify launch.** That was the original plan and
+> it is no longer how anything works: the host is Cloudflare Pages, the contact
+> form is a Pages Function rather than Netlify Forms, and the DNS warnings in the
+> old version named Google Workspace MX records this domain does not have.
+> Rewritten 2026-08-07. If you find another document still saying Netlify, it is
+> out of date — `README.md` had the same problem.
 
 ---
 
-## (Later) Full apex-domain deploy
+## Deploy
 
-Plan for about 30–45 minutes. Your current Squarespace site stays live until the
-very last step (DNS), so nothing breaks while you set up.
+```bash
+python3 build.py && python3 stage-deploy.py --deploy
+```
 
-> ⚠️ **The one thing not to skip:** when you change DNS, you must KEEP your Google
-> Workspace **MX records** or email to **the contact form stops working.**
-> Step 5 tells you exactly how. Read it before you touch DNS.
+That is the whole thing. It renders `posts/*.md` into `blog/`, assembles `dist/`,
+and uploads `dist/` to Pages.
 
----
+To look before you publish, run the two steps separately:
 
-## Step 0 — What to have ready (optional but ideal before launch)
-The site deploys fine with a few placeholders still in, and the built-in guard
-keeps unfinished buttons/forms safe (they just show a gentle note). For a clean
-public launch, ideally fill these first (all locations are in `README.md`):
-- **Kit**: opt-in form UID, newsletter form UID, and the Commerce product URL →
-  `[KIT_OPTIN_FORM_UID]`, `[KIT_NEWSLETTER_FORM_UID]`, `[KIT_BOOK_PRODUCT_URL]`.
-- **Images**: `[PORTRAIT_IMAGE_URL]`, `[BOOK_COVER_IMAGE_URL]`.
-- **PMA signup**: `[PMA_SIGNUP_URL_OR_EMBED]`. **Privacy**: `[PRIVACY_DETAILS]`.
-You can also launch now and fill them later — just re-deploy (Step 6) after edits.
+```bash
+python3 build.py
+python3 stage-deploy.py     # assembles dist/, deploys nothing
+python3 check-site.py       # exits non-zero if anything is wrong
+npx wrangler@4 pages deploy dist --project-name doctorarchers-site --branch main
+```
 
----
+### Never `wrangler pages deploy .`
 
-## Step 1 — Create a Netlify account
-Go to **netlify.com** → sign up (free). No credit card needed.
+Deploying the repo root uploads **every file in the working tree**. That is how a
+complete unpublished book manuscript, all eight future-dated draft posts,
+`build.py` and the internal working notes were once publicly fetchable in
+production, at 200, with no guessing required.
 
-## Step 2 — Deploy the site (drag-and-drop)
-1. In Netlify, open **Sites** → find the **"drag and drop"** deploy area
-   (or **Add new site → Deploy manually**).
-2. Drag **`doctorarchers-site-DEPLOY.zip`** onto it (or unzip and drag the folder).
-3. Netlify gives you a temporary URL like `random-name.netlify.app`. Open it —
-   your whole site should be live there. Click around and check it.
+`stage-deploy.py` exists to prevent that. It is an **allowlist**: a file reaches
+`dist/` only if a rule in its `ALLOW` list names it, and it hard-fails if a page
+it expects is missing. A denylist would fail silently and permanently — add a new
+manuscript, forget to exclude it, and it is public until someone notices.
 
-*(Optional, for auto-updates later: instead of drag-and-drop, put the folder in a
-GitHub repo and "Import from Git." Then edits push live automatically. Not
-required — drag-and-drop is fine; to update you just re-drag the new zip.)*
+`.assetsignore` does **not** work here. It is a Workers-assets feature and the
+`wrangler pages deploy` code path ignores it entirely — verified against wrangler
+4.120.0 by deploying with one in place and watching the excluded files come back
+200. Do not reach for it.
 
-## Step 3 — Turn on the contact form
-1. Netlify → your site → **Forms**. It should already show a form named
-   **"contact"** (detected automatically).
-2. **Forms → Form notifications → Add notification → Email notification** →
-   send to **the contact form**. Now messages from the site's contact form
-   land in your inbox, and your address never appears on the site. A spam
-   honeypot is already built in.
+### `check-site.py`
 
-## Step 4 — Add your domain
-1. Netlify → **Domain management → Add a domain** → type **laveenaarchers.com**.
-2. Netlify will confirm you own it and then show you the DNS to set (Step 5).
-   Add **both** `laveenaarchers.com` and `www.laveenaarchers.com` (Netlify redirects
-   one to the other automatically).
-
-## Step 5 — Point DNS (the careful step) 🔑
-Your domain's DNS is managed wherever **laveenaarchers.com** is registered (likely
-Squarespace/Google Domains/Squarespace Domains, or your registrar). Pick ONE option:
-
-**Option A — Netlify DNS (simplest, Netlify recommends).**
-- In Netlify's domain setup, choose **"Use Netlify DNS"**. It gives you **4
-  nameservers** (like `dns1.p0X.nsone.net`).
-- At your registrar, replace the current nameservers with Netlify's 4.
-- **Then, in Netlify DNS, re-add your Google Workspace MX records** (see box below)
-  so email keeps working. With Netlify DNS you manage all records there.
-
-**Option B — Keep current DNS, just point the site (safest for email).**
-- Leave your nameservers alone. At your current DNS host, set:
-  - **A record** for `laveenaarchers.com` (the apex/root) → **`75.2.60.5`**
-    (Netlify's load balancer), OR an ALIAS/ANAME to your Netlify site if your host
-    supports it.
-  - **CNAME** for `www` → your Netlify site (`your-site-name.netlify.app`).
-- This leaves your MX (email) records untouched — the safest path.
-
-> ⚠️ **EMAIL — do not break this.** `the contact form` runs on Google
-> Workspace, which uses **MX records** on your domain. Changing the A/CNAME above
-> does NOT affect email. But if you switch nameservers (Option A), the old MX
-> records don't come along — you must re-create them in Netlify DNS. Google
-> Workspace MX is a single record: `1  smtp.google.com` (older accounts may have
-> five ASPMX records — copy whatever your registrar currently shows before you
-> change anything). **When in doubt, use Option B**, which never touches email.
-
-## Step 6 — HTTPS (automatic)
-Once DNS resolves (minutes to a few hours), Netlify auto-issues a free SSL
-certificate. Turn on **"Force HTTPS"** in Domain settings. Done — the site is live
-at https://laveenaarchers.com.
-
-## Step 7 — Finish the connections
-- **Kit**: create the opt-in form (with the free-chapter incentive email),
-  newsletter form, and the Commerce product, then paste the IDs into the brackets
-  and re-deploy (Step 2). Full steps are in `README.md → Kit setup`.
-- **Google Search Console**: add laveenaarchers.com and submit
-  `https://laveenaarchers.com/sitemap.xml` so Google indexes the new site.
+Gates the deploy on broken links, JSON-LD that does not parse, canonicals
+pointing at redirects, images missing `alt`, an above-the-fold image marked
+`loading="lazy"`, `og:image` pointing at AVIF/WebP, and `dist/` containing
+anything it should not. Every check is there because that exact thing was broken
+once. It runs automatically in CI before every deploy.
 
 ---
 
-## Post-launch checklist
-- [ ] Every page loads and looks right on **phone** and desktop.
-- [ ] Send yourself a test through the **contact form** → it arrives at
-      the contact form.
-- [ ] Test the **free-chapter opt-in** and **Buy** button (after Kit is wired).
-- [ ] **Email still works** — send a test to the contact form from another
-      account and confirm it arrives.
-- [ ] Booking (**OnceHub**), **Shop Labs** (Rupa), **Shop Supplements**
-      (Fullscript) links all open.
-- [ ] Prices ($27 / $14) and the 30-day guarantee read correctly on `/book`.
+## Scheduled posts
 
-## Updating later
-- **Any page**: edit the file, re-zip the folder, re-drag to Netlify (or `git
-  push` if you connected Git).
-- **Blog post**: add a markdown file in `posts/`, run `python3 build.py`, then
-  re-deploy. (Details in `README.md`.)
+A post with a **future `date:`** is scheduled, not published. `build.py` holds it
+back and does not render it.
 
-## Safety / rollback
-Your Squarespace site stays fully intact until you change DNS in Step 5, and you
-can point DNS back to it at any time. Nothing here deletes your old site — you're
-just choosing where the domain points.
+**Never run `python3 build.py --all`.** That renders everything including
+unpublished drafts, and deploying that output puts unreviewed work live.
+
+`.github/workflows/publish-scheduled-posts.yml` runs daily at **19:00 UTC** (noon
+in Arizona, which does not observe DST). If a post has come due it builds,
+commits, pushes, stages, runs `check-site.py`, and deploys — with no human in the
+loop at that point.
+
+**Committing and pushing a post with a future date is the point of no manual
+return.** Treat it as approving that post for publication on its date.
+
+The job needs one repository secret, `CLOUDFLARE_API_TOKEN`, with the
+**Cloudflare Pages: Edit** permission. It is set and working — the last few
+`Publish scheduled post(s):` commits came from it. Without the secret the job
+still builds and commits, then fails loudly rather than deploying silently.
 
 ---
 
-## Namecheap DNS — exact records (this domain is registered at Namecheap)
+## Domains and DNS
 
-**First check:** Namecheap → Domain List → Manage laveenaarchers.com → **Domain**
-tab → **Nameservers**.
-- "Namecheap BasicDNS" → DNS is here; your Google MX records are already here, so
-  do Section A and leave email alone.
-- "Custom DNS" (Squarespace) → switch to Namecheap BasicDNS, then re-add Google MX
-  + SPF/DKIM/DMARC (Section B) as well as the records below.
+DNS is on Cloudflare nameservers (`johnathan.ns.cloudflare.com`,
+`blakely.ns.cloudflare.com`).
 
-**⚠️ Before editing:** screenshot your current Advanced DNS records, especially any
-**MX** and **TXT** (`v=spf1...`, `google._domainkey`, `_dmarc`). That's your email
-restore point.
+**Three hostnames are custom domains on the same Pages project**, so all three
+serve identical content:
 
-### Section A — point the website to Netlify
-Advanced DNS → Host Records. Delete existing `@`/`www` A/CNAME/URL-Redirect records
-that point to Squarespace or parking. Do NOT touch MX/TXT. Then add:
+| Hostname | Status |
+|---|---|
+| `book.laveenaarchers.com` | canonical — every canonical tag, sitemap URL and schema `@id` points here |
+| `laveenaarchers.com` | serves 200, **should 301 to `book.`** |
+| `www.laveenaarchers.com` | serves 200, **should 301 to `book.`** |
 
-| Type         | Host | Value                        | TTL       |
-|--------------|------|------------------------------|-----------|
-| A Record     | @    | 75.2.60.5                    | Automatic |
-| CNAME Record | www  | your-site-name.netlify.app   | Automatic |
+Right now canonical tags are the only thing consolidating the three. To fix it,
+create a **Redirect Rule first**, then remove the apex and www custom domains
+from the Pages project. Doing it in the other order leaves the apex resolving to
+Pages with no route, which breaks it.
 
-(`your-site-name` = the temporary Netlify URL from your drag-and-drop deploy.
-Apex `@` must be an A record on Namecheap, not a CNAME.)
+### Email — do not touch MX
 
-Keep "Mail Settings" on **Custom MX** (leave your existing Google MX as-is).
+`laveenaarchers.com` uses **Namecheap email forwarding**:
 
-### Section B — only if you switched nameservers to Namecheap BasicDNS
-Re-add email so it keeps working:
-- MX Record | Host @ | Value `smtp.google.com` | Priority 1  (or your five existing
-  `ASPMX...google.com` records — match what you had).
-- TXT Record | Host @ | `v=spf1 include:_spf.google.com ~all`
-- Plus your existing DKIM (`google._domainkey`) and DMARC (`_dmarc`) TXT records,
-  copied from your screenshot.
+```
+10 eforward1.registrar-servers.com.    10 eforward2.registrar-servers.com.
+10 eforward3.registrar-servers.com.    15 eforward4.registrar-servers.com.
+20 eforward5.registrar-servers.com.
+```
 
-### Netlify side
-Add laveenaarchers.com + www in Netlify → Domain management. After it verifies
-(minutes to a few hours), enable Force HTTPS.
+Website records (A/CNAME) and mail records (MX) are independent — changing where
+the site points does not affect email. The previous version of this file warned
+at length about preserving **Google Workspace** MX records. This domain does not
+have them, and following that advice would replace working forwarding with mail
+routing for an account that isn't there.
+
+---
+
+## The contact form
+
+`contact.html` posts to `/api/contact`, a **Pages Function** at
+`functions/api/contact.js`. It sends through Cloudflare's Email Sending REST API.
+
+Netlify Forms is gone. When the site moved to Cloudflare Pages it kept silently
+discarding every submission, which is why the Function exists.
+
+It needs four values set in the dashboard under **Workers & Pages →
+doctorarchers-site → Settings → Variables and Secrets**. None of them may ever
+appear in the repo or in any HTML:
+
+| Name | Kind | What it is |
+|---|---|---|
+| `CF_ACCOUNT_ID` | variable | Cloudflare account id |
+| `EMAIL_API_TOKEN` | **secret** | API token with email sending permission |
+| `CONTACT_TO` | **secret** | a **verified destination address** on the account |
+| `CONTACT_FROM` | variable | an address on a domain with Email Routing enabled |
+
+Sending to a verified destination address is free on every plan. Point
+`CONTACT_TO` anywhere else and the send fails — that is the constraint that keeps
+this costing nothing.
+
+Spam defense is a honeypot field plus a render timestamp, with no storage.
+
+---
+
+## Cache
+
+Cloudflare caches static assets for **7 days** (`s-maxage=604800`). Removing a
+file from a deploy does not evict it from the edge — a deleted file keeps serving
+to anyone with the URL until the cache is purged.
+
+Purge from the dashboard: **Caching → Configuration → Purge Everything**. The
+wrangler OAuth token holds only `zone:read` and **cannot** purge, so this is not
+scriptable with the current credentials.
+
+To check whether something is really gone, request it with a junk query string.
+That bypasses the cached copy and shows you what the origin actually has:
+
+```bash
+curl -sI "https://book.laveenaarchers.com/whatever?cachebust=$RANDOM"
+```
+
+---
+
+## Rollback
+
+Every deploy is an immutable snapshot and Pages keeps them all.
+
+```bash
+npx wrangler@4 pages deployment list --project-name doctorarchers-site
+```
+
+Roll back from the dashboard (**Workers & Pages → doctorarchers-site →
+Deployments → ⋯ → Rollback**), or redeploy a known-good tree. Rolling back does
+not purge the cache.
+
+---
+
+## Checklist after a deploy
+
+- [ ] `check-site.py` passed (CI runs it; run it yourself for a manual deploy).
+- [ ] Pages load on phone and desktop.
+- [ ] A test message through the contact form arrives.
+- [ ] Nothing private is public — spot-check a manuscript and a scheduled post:
+      `curl -sI https://book.laveenaarchers.com/BOOK_still-normal-manuscript.md`
+      and `.../posts/why-you-wake-at-3am.md` should both be **404**.
+- [ ] Booking (OnceHub), Shop Labs (Rupa) and Shop Supplements (Fullscript)
+      links open.
+
+## Related
+
+- `README.md` — site structure, Kit setup, writing posts
+- `stage-deploy.py` — the allowlist; read `ALLOW` and `DENY` before adding files
+- `check-site.py` — pre-deploy checks
+- `CLAUDE.md` — the fact-check protocol that must run before any post is scheduled
