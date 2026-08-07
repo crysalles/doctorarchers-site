@@ -260,21 +260,24 @@ static assets are served `s-maxage=604800`, so edge copies keep serving for up t
 Everything. The wrangler OAuth token holds only `zone:read` and cannot purge, so
 this is not automatable with the current credentials.
 
-**2. 301 the apex and www to `book.`** All three hostnames are custom domains on
-the same Pages project, which is why `laveenaarchers.com`,
-`www.laveenaarchers.com` and `book.laveenaarchers.com` all return 200 with
-byte-identical content. Canonical tags are currently the only thing consolidating
-them.
+**2. ~~301 the apex and www to `book.`~~ — DONE, 2026-08-07.** Both hostnames
+now 301 to `book.laveenaarchers.com`, preserving path and query.
 
-*Order matters:* create the Redirect Rule **first**, then remove the two custom
-domains from the Pages project. Removing them first leaves the apex resolving to
-Pages with no route, which breaks it.
+Done in `functions/_middleware.js`, not as a Cloudflare Redirect Rule. A zone
+Redirect Rule is the better tool — edge-level, no Worker invocations — but the
+available token could not reach it (`zone:read` is not enough even to list
+rulesets, and Bulk Redirects were closed too). `_redirects` cannot do it either;
+Cloudflare documents domain-level redirects as explicitly unsupported there.
 
-Worth deciding deliberately while you are in there: `book.` is the canonical host
-today and every signal on the site points at it, so redirecting to it is the
-low-risk consolidation. Moving canonical to the apex would be the stronger
-long-term brand, but it is a full host migration and should be its own project,
-not a side effect of this one.
+**If you ever create the Redirect Rule** (laveenaarchers.com → Rules → Redirect
+Rules, then remove the apex and www custom domains from the Pages project — in
+that order, or the apex breaks), delete `functions/_middleware.js` and
+`_routes.json`. The file says so at the top.
+
+`_routes.json` keeps `/assets/*` out of Functions, so images and CSS are served
+directly and never invoke a Worker. Both files are in `stage-deploy.py`'s
+`REQUIRED` list, because losing `_routes.json` would not break anything visibly
+— it would just quietly put a Worker in front of every image.
 
 **3. ~~The Nature GLP-1 shield~~ — DONE, 2026-08-07.** Lifted on your say-so.
 `_headers` rules removed, `GATED_POST_SLUGS` emptied, so the post is back in
