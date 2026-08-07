@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>How I Research — Editorial Standards | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="How Rev. Dr. LaVeena B. Archers researches, sources, reviews, and corrects everything published on this site. Where the evidence comes from, how AI is used, and what she will never claim.">
-<link rel="canonical" href="https://book.laveenaarchers.com/how-i-research.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/how-i-research">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="How I Research — Editorial Standards">
 <meta property="og:description" content="Where the evidence comes from, how every piece is reviewed, and what I will never claim. The editorial standards behind everything published here.">
-<meta property="og:url" content="https://book.laveenaarchers.com/how-i-research.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/how-i-research">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
@@ -29,14 +33,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
-    },
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
@@ -47,8 +44,8 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://book.laveenaarchers.com/how-i-research.html",
-      "url": "https://book.laveenaarchers.com/how-i-research.html",
+      "@id": "https://book.laveenaarchers.com/how-i-research",
+      "url": "https://book.laveenaarchers.com/how-i-research",
       "name": "How I Research — Editorial Standards",
       "description": "The editorial standards behind everything published on LaVeenaArchers.com: sourcing, review, AI use, and corrections.",
       "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
@@ -65,15 +62,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -81,7 +78,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -133,7 +130,7 @@
     <div class="wrap narrow" style="margin-inline:auto">
       <h2 id="never-title">What I will never do here</h2>
       <ul>
-        <li><strong>Diagnose, treat, prescribe, or manage disease.</strong> I am a Doctor of Natural Medicine, not a medical doctor. My role is to educate and support. The full detail is on the <a href="scope-of-practice.html">scope of practice</a> page.</li>
+        <li><strong>Diagnose, treat, prescribe, or manage disease.</strong> I am a Doctor of Natural Medicine, not a medical doctor. My role is to educate and support. The full detail is on the <a href="/scope-of-practice">scope of practice</a> page.</li>
         <li><strong>Promise a cure, a reversal, or a guaranteed result.</strong> Nobody honest can, and the people who do are usually selling something.</li>
         <li><strong>Use fear to sell.</strong> Frightening women about their own bodies is an effective marketing tactic and a corrosive one. I am not interested in it.</li>
         <li><strong>Let a product decide a conclusion.</strong> Where I recommend a lab or a supplement I may earn a commission, and I will tell you so on that page. No claim on this site is written to justify a sale.</li>
@@ -146,7 +143,7 @@
     <div class="wrap narrow">
       <h2 id="corrections-title">Corrections</h2>
       <p>I will get things wrong. When that happens I would far rather know.</p>
-      <p>If you find an error, a misread study, a broken source link, or a claim that has been overtaken by newer evidence, tell me through <a href="contact.html">the contact form</a> and point me at it. Substantive corrections are made in the article itself and the review date is updated, so the record shows the piece has been revisited rather than silently patched.</p>
+      <p>If you find an error, a misread study, a broken source link, or a claim that has been overtaken by newer evidence, tell me through <a href="/contact">the contact form</a> and point me at it. Substantive corrections are made in the article itself and the review date is updated, so the record shows the piece has been revisited rather than silently patched.</p>
     </div>
   </section>
 
@@ -191,19 +188,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

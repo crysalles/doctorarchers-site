@@ -26,7 +26,13 @@ What it does:
 
        reviewed:   the date the post was last checked for accuracy. Shown as
                    "Last reviewed ..." whenever it differs from the publication
-                   date, and used as dateModified in the Article schema.
+                   date, and used as dateModified in the Article schema (never
+                   earlier than datePublished — see meta["modified"]).
+
+       description: a purpose-written meta description, one complete thought
+                   under 155 characters. This is what a search result and a
+                   link preview actually show. Without it the build falls back
+                   to "summary:", clamped to the last whole sentence that fits.
 
        references: one source per "  - " line. Each becomes a numbered entry in
                    a "Sources" section at the foot of the post, with any trailing
@@ -66,6 +72,7 @@ Markdown supported (a deliberate, honest subset):
 import html
 import json
 import re
+import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -82,7 +89,134 @@ SITE_URL = "https://book.laveenaarchers.com"
 DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/laveena-archers-portrait.jpg"
 
 # --------------------------------------------------------------------------
-# Shared page template (mirrors the hand-written pages, with ../ paths)
+# URLs
+#
+# The site is on Cloudflare Pages, which serves every page extensionless and
+# 308-redirects the .html form. Measured against production on 2026-08-07:
+#
+#     /about.html       308 -> /about        /about   200
+#     /blog/index.html  308 -> /blog/        /blog/   200
+#     /blog             308 -> /blog/
+#
+# So the extensionless form is the URL that actually serves 200, and the .html
+# form is a redirect. Every URL this build emits — canonical, og:url, the
+# JSON-LD @id and url properties, sitemap <loc>, llms.txt, and every internal
+# link in the templates — has to use the extensionless form. Emitting .html
+# means the canonical tag points somewhere other than the page serving it,
+# which is the site contradicting itself.
+#
+# Internal links are ROOT-relative ("/about", not "../about"). From an
+# extensionless URL a relative path is genuinely ambiguous: at /blog/a-post
+# the base is /blog/, but at /blog it is /, so "index.html" resolves to two
+# different pages depending on which form the reader arrived on. A leading
+# slash removes the question entirely.
+# --------------------------------------------------------------------------
+
+BLOG_PATH = "/blog/"
+BLOG_INDEX_URL = f"{SITE_URL}{BLOG_PATH}"
+
+
+def page_path(name):
+    """Root-relative extensionless path for a hand-written page's file name."""
+    stem = name[:-len(".html")] if name.endswith(".html") else name
+    return "/" if stem == "index" else f"/{stem}"
+
+
+def page_url(name):
+    """Absolute extensionless URL for a hand-written page's file name."""
+    return f"{SITE_URL}{page_path(name)}"
+
+
+def post_path(slug):
+    """Root-relative extensionless path for a post."""
+    return f"{BLOG_PATH}{slug}"
+
+
+def post_url(slug):
+    """Absolute extensionless URL for a post."""
+    return f"{SITE_URL}{post_path(slug)}"
+
+
+def hub_path(hub_slug):
+    """Root-relative extensionless path for a topic hub page."""
+    return f"{BLOG_PATH}{hub_slug}"
+
+
+def hub_url(hub_slug):
+    """Absolute extensionless URL for a topic hub page."""
+    return f"{SITE_URL}{hub_path(hub_slug)}"
+
+
+# --------------------------------------------------------------------------
+# Title and description budgets
+#
+# A <title> past ~60 characters and a description past ~155 get truncated in
+# the results page, so anything beyond those is wasted or, worse, cuts a
+# sentence in half where a reader can see it. The old template spent 27 of the
+# title budget on a fixed " — Rev. Dr. LaVeena Archers" suffix on every single
+# page, and reused the (long) summary verbatim as the description.
+# --------------------------------------------------------------------------
+
+TITLE_MAX = 60
+TITLE_SUFFIX = " — Dr. Archers"
+DESCRIPTION_MAX = 155
+
+# Periods that end an abbreviation or a middle initial, not a sentence.
+# Without this the sentence scan below would cut "Rev. Dr. LaVeena B. Archers"
+# after "Rev." and call it a complete thought.
+ABBREVIATIONS = {
+    "dr", "rev", "mr", "mrs", "ms", "st", "prof", "vs", "no", "approx",
+    "eg", "ie", "etc", "phd", "fig", "jan", "feb", "mar", "apr", "jun",
+    "jul", "aug", "sep", "sept", "oct", "nov", "dec",
+}
+
+
+def page_title(base):
+    """<title> text: the page's own title, plus a short brand suffix if it fits.
+
+    Titles are never invented or shortened here. A headline with no room for
+    the suffix is emitted bare, because a real title running slightly past the
+    cut still reads as itself, while a title guaranteed to be truncated does
+    not."""
+    if len(base) + len(TITLE_SUFFIX) <= TITLE_MAX:
+        return base + TITLE_SUFFIX
+    return base
+
+
+def _sentence_ends(text):
+    """Offsets just past each sentence-ending mark in text."""
+    for match in re.finditer(r"(\w*)([.!?])(?=\s|$)", text):
+        word, mark = match.group(1), match.group(2)
+        if mark == "." and (len(word) == 1 or word.lower() in ABBREVIATIONS):
+            continue
+        yield match.end()
+
+
+def meta_description(text, limit=DESCRIPTION_MAX):
+    """Clamp a description to what a search result will actually show.
+
+    Prefers the last COMPLETE sentence that fits, so a clamped description
+    still ends on a finished thought and cannot change the meaning of the one
+    it cuts. Only when the very first sentence is itself too long does it fall
+    back to a whole-word cut with a trailing ellipsis. Never splits a word.
+
+    "limit" exists because llms.txt is not a search result and has no reason
+    to be held to the SERP budget — see LLMS_DESCRIPTION_MAX."""
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+
+    fits = [end for end in _sentence_ends(text) if end <= limit]
+    if fits:
+        return text[:fits[-1]]
+
+    window = text[:limit - 1]
+    space = window.rfind(" ")
+    return (window[:space] if space > 0 else window).rstrip(" ,;:—–-") + "…"
+
+
+# --------------------------------------------------------------------------
+# Shared page template (mirrors the hand-written pages, root-relative paths)
 # --------------------------------------------------------------------------
 
 HEADER = """<!DOCTYPE html>
@@ -93,6 +227,17 @@ HEADER = """<!DOCTYPE html>
 <title>{title_tag}</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
+
+<!-- Microsoft ships no separate AI crawler. bingbot does the indexing, the
+     Copilot answers AND the model training, all under one user-agent, and
+     there is no robots.txt token that tells them apart. The page-level
+     "nocache" directive is the only lever there is: it stops Microsoft
+     serving and training on a cached copy of the page body, while KEEPING
+     the page eligible to be surfaced and cited in Copilot answers.
+     Do NOT "correct" this to "noarchive" — noarchive drops her out of
+     Copilot answers altogether, which is the opposite of the intent. Neither
+     directive affects ordinary indexing, so this is not a noindex. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="{og_type}">
@@ -110,7 +255,7 @@ HEADER = """<!DOCTYPE html>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
 
-<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css">
 
 <script type="application/ld+json">
 {json_ld}
@@ -122,15 +267,15 @@ HEADER = """<!DOCTYPE html>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="../index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="../index.html">Home</a>
-      <a href="index.html" aria-current="page">Library</a>
-      <a href="../books.html">Books</a>
-      <a href="../about.html">About</a>
-      <a href="../testing.html">Testing &amp; Learning</a>
-      <a href="../contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/"{nav_current}>Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -138,13 +283,18 @@ HEADER = """<!DOCTYPE html>
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="../book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 """
+
+# Only the Library index is the "current page" for the nav's Library link.
+# On a post or a hub page that link goes somewhere else, so aria-current there
+# would tell a screen reader the reader is already on a page they are not on.
+NAV_CURRENT = ' aria-current="page"'
 
 FOOTER = """
 </main>
@@ -160,19 +310,19 @@ FOOTER = """
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="../contact.html">Contact form</a></li>
+          <li><a href="/contact">Contact form</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="../book.html">Bad Medicine Blues — the book</a></li>
-          <li><a href="index.html#browse-by-topic">Topic guides</a></li>
-          <li><a href="../testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues — the book</a></li>
+          <li><a href="/blog/#browse-by-topic">Topic guides</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="../how-i-research.html">How I research</a></li>
-          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>
@@ -180,8 +330,8 @@ FOOTER = """
   </div>
 </footer>
 
-<script src="../assets/site.js"></script>
-<script src="../assets/analytics.js" defer></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>
 """
@@ -290,19 +440,72 @@ def dump_json_ld(graph):
 
 SITE_JSON_LD = dump_json_ld([PERSON_NODE, WEBSITE_NODE])
 
+# Schema dates carry an explicit UTC offset. A bare "2026-08-04" is legal but
+# ambiguous, and validators would rather be told. America/Phoenix does not
+# observe daylight saving, so one fixed offset is correct all year — change
+# this if the site ever moves somewhere that does.
+SITE_TZ_OFFSET = "-07:00"
 
-def article_json_ld(meta, refs, canonical):
-    """Per-post Article node: author, dates, and the sources it cites."""
+
+def schema_datetime(day):
+    """A YYYY-MM-DD front-matter date as a full ISO 8601 timestamp."""
+    return f"{day}T00:00:00{SITE_TZ_OFFSET}"
+
+
+# Reference URLs that identify a published paper rather than a web page. A DOI,
+# a PubMed record and a PMC record each resolve to one specific article, which
+# is what lets the citation be emitted as a typed ScholarlyArticle carrying a
+# resolvable identifier instead of a DOI buried in a prose string.
+PAPER_URL_PATTERNS = (
+    (re.compile(r"^https?://(?:dx\.)?doi\.org/(10\.\S+)$", re.I), "DOI"),
+    (re.compile(r"^https?://pubmed\.ncbi\.nlm\.nih\.gov/(\d+)/?$", re.I), "PMID"),
+    (re.compile(r"^https?://(?:www\.)?ncbi\.nlm\.nih\.gov/pmc/articles/(PMC\d+)/?$", re.I), "PMCID"),
+)
+
+
+def citation_node(ref):
+    """One front-matter reference as a schema.org node.
+
+    A source with a DOI/PubMed/PMC URL becomes a ScholarlyArticle whose
+    "identifier" carries the bare DOI or accession number, so a machine can
+    resolve the exact paper instead of string-matching the prose. Anything
+    else — an FDA page, a professional-society statement, a news report — stays
+    an untyped CreativeWork, because calling it a scholarly article would be a
+    claim the source does not support. The human-readable citation always
+    stays in "name"."""
+    node = {"@type": "CreativeWork", "name": ref["text"]}
+    if not ref["url"]:
+        return node
+    node["url"] = ref["url"]
+    for pattern, property_id in PAPER_URL_PATTERNS:
+        match = pattern.match(ref["url"])
+        if match:
+            node["@type"] = "ScholarlyArticle"
+            node["identifier"] = {
+                "@type": "PropertyValue",
+                "propertyID": property_id,
+                "value": match.group(1),
+            }
+            break
+    return node
+
+
+def article_json_ld(meta, refs, canonical, qa_pairs=()):
+    """Per-post Article node: author, dates, and the sources it cites.
+
+    author and publisher are @id references to the single PERSON_NODE in the
+    same @graph rather than inline copies of it, so every page describes one
+    author identity instead of re-declaring a near-duplicate Person."""
     article = {
         "@type": "Article",
         "@id": canonical + "#article",
         "isPartOf": {"@id": WEBSITE_ID},
         "mainEntityOfPage": canonical,
         "headline": meta["title"],
-        "description": meta["summary"],
+        "description": meta["description"],
         "url": canonical,
-        "datePublished": meta["date"],
-        "dateModified": meta["reviewed"],
+        "datePublished": schema_datetime(meta["date"]),
+        "dateModified": schema_datetime(meta["modified"]),
         "image": post_image(meta),
         "author": {"@id": PERSON_ID},
         "publisher": {"@id": PERSON_ID},
@@ -310,17 +513,15 @@ def article_json_ld(meta, refs, canonical):
         "isAccessibleForFree": True,
     }
     if refs:
-        article["citation"] = [
-            {"@type": "CreativeWork", "name": r["text"],
-             **({"url": r["url"]} if r["url"] else {})}
-            for r in refs
-        ]
+        article["citation"] = [citation_node(r) for r in refs]
 
     graph = [PERSON_NODE, WEBSITE_NODE, article]
 
     # A post's "Quick answers" also published as FAQPage, so assistants can
-    # lift a question and its answer as a unit.
-    if meta["questions"]:
+    # lift a question and its answer as a unit. The text here is taken from
+    # the SAME rendered pairs the visible <dl> is built from — see
+    # rendered_questions() for why that matters.
+    if qa_pairs:
         graph.append({
             "@type": "FAQPage",
             "@id": canonical + "#faq",
@@ -328,10 +529,12 @@ def article_json_ld(meta, refs, canonical):
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": question,
-                    "acceptedAnswer": {"@type": "Answer", "text": answer},
+                    "name": pair["question_text"],
+                    "acceptedAnswer": {
+                        "@type": "Answer", "text": pair["answer_text"],
+                    },
                 }
-                for question, answer in meta["questions"]
+                for pair in qa_pairs
             ],
         })
     return dump_json_ld(graph)
@@ -357,7 +560,7 @@ def hub_json_ld(hub, member_metas, canonical):
         "inLanguage": "en",
         "isAccessibleForFree": True,
         "hasPart": [
-            {"@id": f"{SITE_URL}/blog/{m['slug']}.html#article"}
+            {"@id": post_url(m["slug"]) + "#article"}
             for m in member_metas
         ],
     }
@@ -424,6 +627,23 @@ def parse_front_matter(text, path):
     except ValueError:
         raise SystemExit(f"ERROR: {path} reviewed '{meta['reviewed']}' must be YYYY-MM-DD.")
     meta["reviewed_pretty"] = f"{r.strftime('%B')} {r.day}, {r.year}"
+
+    # dateModified must never precede datePublished — that combination is not
+    # a valid Article. It happens for real: a scheduled post can be drafted
+    # and fact-checked weeks before the date it is set to publish, leaving
+    # "reviewed:" earlier than "date:". Clamp the schema/sitemap value.
+    # meta["reviewed"] itself is left untouched, because the visible "Last
+    # reviewed" byline is a true statement about when the piece was checked
+    # and should keep saying so.
+    meta["modified"] = max(meta["reviewed"], meta["date"])
+
+    # "description:" is an optional purpose-written meta description. Falls
+    # back to "summary:", clamped to the last whole sentence that fits. Both
+    # go through the clamp, so an over-long hand-written one cannot slip past.
+    description = meta.get("description") or ""
+    if isinstance(description, list):
+        description = description[0] if description else ""
+    meta["description"] = meta_description(description or meta["summary"])
 
     # "references:" is an optional list of sources, one per "  - " line.
     refs = meta.get("references") or []
@@ -656,7 +876,7 @@ HUB_DEFINITIONS = [
         ],
         "extra_links": [
             {
-                "href": "../support-kit.html",
+                "href": "/support-kit",
                 "text": "Free GLP-1 Support Kit — the plate, the protein cheat sheet, and questions to bring to your prescriber",
             },
             {
@@ -665,7 +885,7 @@ HUB_DEFINITIONS = [
                 # list" card links there too). Confirmed present directly in
                 # books.html as of 2026-08-02 -- if this section is ever
                 # renamed or removed, update the id here to match.
-                "href": "../books.html#reader-list",
+                "href": "/books#reader-list",
                 "text": "Join the reader list for Your Body's Own GLP-1, the next book in the series",
             },
         ],
@@ -736,18 +956,53 @@ def split_reference(raw):
     return {"text": text or url, "url": url}
 
 
-def render_questions(questions):
+def html_text(fragment):
+    """The plain text a reader actually sees for a rendered inline fragment."""
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", "", fragment)).split())
+
+
+def rendered_questions(questions):
+    """Render each Q&A pair ONCE, for both the visible box and the schema.
+
+    Google requires FAQPage markup to repeat text that is visibly on the page,
+    and a mismatch is a manual-action risk, not just a lost rich result. The
+    only way to guarantee they match is to render once here and derive both
+    outputs from that single rendering: the <dl> gets the HTML, the JSON-LD
+    gets the plain text of the very same HTML.
+
+    Formatting the two separately is exactly how they drift. render_inline
+    turns *emphasis* into a tag, [text](url) into a link and a [1] citation
+    marker into a superscript link — so the raw front-matter string and what
+    a reader sees are already different strings today, and every future bit of
+    inline markdown widens the gap silently."""
+    pairs = []
+    for question, answer in questions:
+        question_html = render_inline(question)
+        answer_html = render_inline(answer)
+        pairs.append({
+            "question_html": question_html,
+            "answer_html": answer_html,
+            "question_text": html_text(question_html),
+            "answer_text": html_text(answer_html),
+        })
+    return pairs
+
+
+def render_questions(pairs):
     """Render the plain-language Q&A summary that opens a post.
+
+    Takes the pairs from rendered_questions() rather than the raw front
+    matter, so this block and the FAQPage node cannot say different things.
 
     Deliberately a visible definition list rather than a collapsed accordion:
     readers who want the short answer get it immediately, and AI assistants
     can extract a question and its answer without executing anything."""
-    if not questions:
+    if not pairs:
         return ""
     rows = []
-    for question, answer in questions:
-        rows.append(f"        <dt>{render_inline(question)}</dt>")
-        rows.append(f"        <dd>{render_inline(answer)}</dd>")
+    for pair in pairs:
+        rows.append(f"        <dt>{pair['question_html']}</dt>")
+        rows.append(f"        <dd>{pair['answer_html']}</dd>")
     return (
         '\n    <section class="quick-answers" aria-labelledby="qa-title">\n'
         '      <h2 id="qa-title">Quick answers</h2>\n'
@@ -796,14 +1051,14 @@ def render_hub_callout(meta, posts_by_slug, built_hub_slugs):
         if not sib:
             continue
         sibling_items.append(
-            f'        <li><a href="{esc_attr(sib["slug"])}.html">'
+            f'        <li><a href="{esc_attr(post_path(sib["slug"]))}">'
             f'{render_inline(sib["title"])}</a></li>'
         )
     items = "\n".join(sibling_items)
     return (
         '\n    <aside class="scope-callout hub-callout" aria-label="Part of a topic guide">\n'
         f'      <p><strong>Part of the guide:</strong> '
-        f'<a href="{esc_attr(hub["hub_slug"])}.html">{render_inline(hub["title"])}</a></p>\n'
+        f'<a href="{esc_attr(hub_path(hub["hub_slug"]))}">{render_inline(hub["title"])}</a></p>\n'
         "      <ul>\n" + items + "\n      </ul>\n"
         "    </aside>\n"
     )
@@ -866,7 +1121,7 @@ def render_related(meta, posts_by_slug, built_hub_slugs):
     for other in matches:
         items.append(
             '        <li>\n'
-            f'          <a href="{esc_attr(other["slug"])}.html">{render_inline(other["title"])}</a>\n'
+            f'          <a href="{esc_attr(post_path(other["slug"]))}">{render_inline(other["title"])}</a>\n'
             f'          <span class="related-summary">{render_inline(other["summary"])}</span>\n'
             '        </li>'
         )
@@ -1024,16 +1279,18 @@ def post_image(meta):
 
 def build_post_page(meta, body_html, posts_by_slug=None, built_hub_slugs=frozenset()):
     posts_by_slug = posts_by_slug or {}
-    canonical = f"{SITE_URL}/blog/{meta['slug']}.html"
+    canonical = post_url(meta["slug"])
     refs = [split_reference(r) for r in meta["references"]]
+    qa_pairs = rendered_questions(meta["questions"])
     head = HEADER.format(
-        title_tag=esc_attr(meta["title"]) + " — Rev. Dr. LaVeena Archers",
-        description=esc_attr(meta["summary"]),
+        title_tag=esc_attr(page_title(meta["title"])),
+        description=esc_attr(meta["description"]),
         canonical=canonical,
+        nav_current="",
         og_type="article",
         og_title=esc_attr(meta["title"]),
         og_image=esc_attr(post_image(meta)),
-        json_ld=article_json_ld(meta, refs, canonical),
+        json_ld=article_json_ld(meta, refs, canonical, qa_pairs),
     )
 
     # "Last reviewed" only earns its place when it differs from publication.
@@ -1050,38 +1307,51 @@ def build_post_page(meta, body_html, posts_by_slug=None, built_hub_slugs=frozens
     <h1>{render_inline(meta["title"])}</h1>
     <p class="post-meta"><time datetime="{esc_attr(meta["date"])}">{esc_attr(meta["date_pretty"])}</time>{reviewed}</p>
     <p class="byline">Written and reviewed by
-      <a href="../about.html">{AUTHOR_NAME}</a><br>
+      <a href="/about">{AUTHOR_NAME}</a><br>
       <span class="byline-cred">{AUTHOR_CREDENTIALS}</span><br>
       <span class="byline-note">Educational content only. Not medical advice, and
-        never a substitute for your own care. <a href="../scope-of-practice.html">Scope of practice</a>.</span>
+        never a substitute for your own care. <a href="/scope-of-practice">Scope of practice</a>.</span>
     </p>
-{render_questions(meta["questions"])}
+{render_questions(qa_pairs)}
 {insert_inline_optin(body_html)}
 {render_references(refs)}
 {render_hub_callout(meta, posts_by_slug, built_hub_slugs)}
 {render_related(meta, posts_by_slug, built_hub_slugs)}
-    <p style="margin-top:2.5rem"><a href="index.html">← All posts</a></p>
+    <p style="margin-top:2.5rem"><a href="{BLOG_PATH}">← All posts</a></p>
   </article>
 """
     return head + article + optin_block("post-optin") + FOOTER
 
 
+# The library index's own title and description. INDEX_TITLE is the page's
+# visible <h1> verbatim — it describes the page far better than the old
+# "Blog — Rev. Dr. LaVeena Archers" did, and leaves room for the short brand
+# suffix inside the 60-character budget.
+INDEX_TITLE = "Notes on holistic functional health"
+INDEX_DESCRIPTION = (
+    "Notes on holistic functional health, clear-eyed and grounded, from "
+    "Rev. Dr. LaVeena B. Archers, PhD."
+)
+
+
 def build_index_page(posts):
     posts_by_slug = {m["slug"]: m for m in posts}
-    canonical = f"{SITE_URL}/blog/index.html"
+    # The library index is the one page whose nav "Library" link points at
+    # itself, so it is the one page that gets aria-current.
     head = HEADER.format(
-        title_tag="Blog — Rev. Dr. LaVeena Archers",
-        description="Notes on holistic functional health, clear-eyed and grounded, from Rev. Dr. LaVeena B. Archers, PhD.",
-        canonical=canonical,
+        title_tag=esc_attr(page_title(INDEX_TITLE)),
+        description=esc_attr(meta_description(INDEX_DESCRIPTION)),
+        canonical=BLOG_INDEX_URL,
+        nav_current=NAV_CURRENT,
         og_type="website",
-        og_title="Blog — Rev. Dr. LaVeena Archers",
+        og_title=esc_attr(INDEX_TITLE),
         og_image=DEFAULT_OG_IMAGE,
         json_ld=SITE_JSON_LD,
     )
     cards = []
     for meta in posts:
         cards.append(f"""      <li class="post-card">
-        <h2><a href="{esc_attr(meta['slug'])}.html">{render_inline(meta['title'])}</a></h2>
+        <h2><a href="{esc_attr(post_path(meta['slug']))}">{render_inline(meta['title'])}</a></h2>
         <p class="post-meta"><time datetime="{esc_attr(meta['date'])}">{esc_attr(meta['date_pretty'])}</time></p>
         <p>{render_inline(meta['summary'])}</p>
       </li>""")
@@ -1092,7 +1362,7 @@ def build_index_page(posts):
     ready = ready_hubs(posts_by_slug)
     if ready:
         hub_cards = "\n".join(
-            f'        <li class="post-card"><h3><a href="{esc_attr(hub["hub_slug"])}.html">'
+            f'        <li class="post-card"><h3><a href="{esc_attr(hub_path(hub["hub_slug"]))}">'
             f'{render_inline(hub["title"])}</a></h3><p>{render_inline(hub["description"])}</p></li>'
             for hub in ready
         )
@@ -1134,13 +1404,14 @@ def build_hub_page(hub, posts_by_slug):
 
     Mirrors build_index_page's card loop, but in curated order with each
     member's own framing sentence instead of date order and its summary."""
-    canonical = f"{SITE_URL}/blog/{hub['hub_slug']}.html"
+    canonical = hub_url(hub["hub_slug"])
     member_metas = [posts_by_slug[m["slug"]] for m in hub["members"]]
 
     head = HEADER.format(
-        title_tag=esc_attr(hub["title"]) + " — Rev. Dr. LaVeena Archers",
-        description=esc_attr(hub["description"]),
+        title_tag=esc_attr(page_title(hub["title"])),
+        description=esc_attr(meta_description(hub["description"])),
         canonical=canonical,
+        nav_current="",
         og_type="website",
         og_title=esc_attr(hub["title"]),
         og_image=DEFAULT_OG_IMAGE,
@@ -1150,7 +1421,7 @@ def build_hub_page(hub, posts_by_slug):
     cards = []
     for member, meta in zip(hub["members"], member_metas):
         cards.append(f"""      <li class="post-card">
-        <h2><a href="{esc_attr(meta['slug'])}.html">{render_inline(meta['title'])}</a></h2>
+        <h2><a href="{esc_attr(post_path(meta['slug']))}">{render_inline(meta['title'])}</a></h2>
         <p class="post-meta"><time datetime="{esc_attr(meta['date'])}">{esc_attr(meta['date_pretty'])}</time></p>
         <p>{render_inline(member['framing'])}</p>
       </li>""")
@@ -1195,6 +1466,10 @@ def build_hub_page(hub, posts_by_slug):
 
 
 # Pages that deserve more than the default weight. Anything not listed gets 0.5.
+# Only pages that can actually be emitted belong here: services.html and
+# training.html used to carry weights but both are <meta robots noindex>, so
+# their entries could never fire and only misled the next reader into thinking
+# they were in the sitemap.
 SITEMAP_PRIORITY = {
     "index.html": "1.0",
     "book.html": "0.9",
@@ -1207,58 +1482,130 @@ SITEMAP_PRIORITY = {
     "how-i-research.html": "0.7",
     "scope-of-practice.html": "0.7",
     "contact.html": "0.7",
-    "services.html": "0.7",
     "blog/index.html": "0.6",
     "faq.html": "0.6",
     "join-pma.html": "0.6",
     "testimonials.html": "0.6",
-    "training.html": "0.6",
     "privacy.html": "0.3",
 }
 
 SITEMAP_SKIP = {"404.html"}
 
+# Root pages that exist on disk and are NOT noindexed, but that still must
+# not be advertised. These are drafts held back from dist/ by stage-deploy.py's
+# DENY list, so a sitemap or llms.txt entry would point at a production 404.
+# Keep this in step with that DENY list: publishing a draft means removing it
+# from both, in the same change.
+#
+# The other held-back draft, blog/why-glp1-stops-working.html, needs no entry:
+# it is a stale file with no posts/*.md source, so this build never emits it.
+UNPUBLISHED_PAGES = {"glp1-updates.html"}
+
+# Posts that are deliberately gated. nature-glp1 stays reachable and stays
+# linked from the GLP-1 topic guide for readers who arrive through it, but
+# robots.txt Disallows the crawler — so listing it in sitemap.xml or llms.txt
+# would be this build advertising the exact URL robots.txt is holding back.
+GATED_POST_SLUGS = {"nature-glp1"}
+
 
 def is_indexable(path):
     """False for pages that ask robots not to index them.
 
-    Thank-you and delivery pages carry <meta name="robots" content="noindex">;
-    listing them in the sitemap or llms.txt would contradict that."""
+    Thank-you and delivery pages, the review page and the noindexed service
+    pages carry <meta name="robots" content="noindex">; listing them in the
+    sitemap or llms.txt would contradict that."""
     if path.name in SITEMAP_SKIP:
         return False
     head = path.read_text(encoding="utf-8")[:4000]
     return "noindex" not in head
 
 
+def publishable_pages():
+    """Every hand-written root page that belongs in sitemap.xml and llms.txt.
+
+    Read off the disk rather than a hand-maintained list, because a list is
+    exactly what leaves good-years.html and hope-press.html invisible for
+    weeks after they go live. Two kinds of page are dropped: the noindexed
+    ones (404, review, the *-thanks delivery pages) and the drafts
+    stage-deploy.py keeps out of dist/."""
+    return [
+        page for page in sorted(ROOT.glob("*.html"))
+        if page.name not in UNPUBLISHED_PAGES and is_indexable(page)
+    ]
+
+
+def git_lastmod(path):
+    """Last-commit date (YYYY-MM-DD) for a hand-written page.
+
+    Hand-written pages carry no front matter, so the repo's own history is the
+    only honest "last modified" signal available for them. Falls back to the
+    file's mtime when git cannot answer — a page added but not yet committed,
+    or a checkout without git — so every sitemap entry still gets a lastmod
+    rather than silently going without one."""
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", path.name],
+            cwd=ROOT, capture_output=True, text=True, timeout=15, check=False,
+        )
+        stamp = result.stdout.strip()
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp):
+            return stamp
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return date.fromtimestamp(path.stat().st_mtime).isoformat()
+
+
 def build_sitemap(posts, built_hubs=()):
     """Generate sitemap.xml from what is actually on disk.
 
-    Hand-maintained sitemaps drift the moment you add a page; this one cannot."""
+    Hand-maintained sitemaps drift the moment you add a page; this one cannot.
+    Every URL carries a <lastmod> — posts and hubs from front matter, hand-
+    written pages from git — because an entry without one tells a crawler
+    nothing it can act on, and most of this file used to be entries like that.
+    """
     entries = []
 
-    for page in sorted(ROOT.glob("*.html")):
-        if not is_indexable(page):
-            continue
-        loc = f"{SITE_URL}/" if page.name == "index.html" else f"{SITE_URL}/{page.name}"
-        entries.append((loc, SITEMAP_PRIORITY.get(page.name, "0.5"), None))
+    for page in publishable_pages():
+        entries.append((page_url(page.name),
+                        SITEMAP_PRIORITY.get(page.name, "0.5"),
+                        git_lastmod(page)))
 
-    entries.append((f"{SITE_URL}/blog/index.html", SITEMAP_PRIORITY["blog/index.html"], None))
-    for meta in posts:
-        entries.append((
-            f"{SITE_URL}/blog/{meta['slug']}.html", "0.5", meta["reviewed"],
-        ))
+    listed = [m for m in posts if m["slug"] not in GATED_POST_SLUGS]
+    by_slug = {m["slug"]: m for m in posts}
+
+    # The library index and every hub page are regenerated from their posts,
+    # so each is exactly as fresh as the freshest post it shows.
+    entries.append((
+        BLOG_INDEX_URL,
+        SITEMAP_PRIORITY["blog/index.html"],
+        max((m["modified"] for m in listed), default=date.today().isoformat()),
+    ))
+    for meta in listed:
+        entries.append((post_url(meta["slug"]), "0.5", meta["modified"]))
     for hub in built_hubs:
-        entries.append((f"{SITE_URL}/blog/{hub['hub_slug']}.html", "0.6", None))
+        entries.append((
+            hub_url(hub["hub_slug"]), "0.6",
+            max(by_slug[m["slug"]]["modified"] for m in hub["members"]),
+        ))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, priority, lastmod in entries:
-        mod = f"<lastmod>{lastmod}</lastmod>" if lastmod else ""
-        lines.append(f"  <url><loc>{loc}</loc>{mod}<priority>{priority}</priority></url>")
+        lines.append(
+            f"  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>"
+            f"<priority>{priority}</priority></url>"
+        )
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return len(entries)
 
+
+# llms.txt is read, not ranked, so the 155-character SERP budget does not
+# apply to it — held to that, a page whose blurb opens with two short punchy
+# sentences ("Lose fat and muscle. Regain mostly fat.") would be listed with
+# nothing but the hook. This is still a ceiling, so one very long description
+# cannot bloat the file on its own.
+LLMS_DESCRIPTION_MAX = 200
 
 LLMS_INTRO = """# Rev. Dr. LaVeena B. Archers, PhD — LaVeenaArchers.com
 
@@ -1291,7 +1638,7 @@ offered within a Private Membership Association (PMA).
 - Articles carry a publication date and, where revisited, a "last reviewed"
   date. Prefer the review date when judging currency.
 - Editorial standards, sourcing policy, and AI-use disclosure:
-  {site}/how-i-research.html
+  {site}/how-i-research
 
 ## Topics covered
 
@@ -1313,33 +1660,60 @@ def extract_meta(path):
     return clean(title.group(1) if title else ""), clean(desc.group(1) if desc else "")
 
 
+def strip_brand(title):
+    """Drop a trailing "— Rev. Dr. LaVeena Archers" style segment from a title.
+
+    The llms.txt header names her twice and states her credentials in full;
+    repeating the name in the link text of nearly every entry underneath is
+    noise a model has to read past, and it crowded out the part of each title
+    that actually distinguishes one page from another.
+
+    Only TRAILING brand segments go. "About Rev. Dr. LaVeena B. Archers, PhD —
+    Root-Cause Health" keeps its name, because there the name is the subject
+    of the page rather than a suffix."""
+    parts = re.split(r"\s+[—–|]\s+", title)
+    while len(parts) > 1 and "archers" in parts[-1].lower():
+        parts.pop()
+    return " — ".join(parts)
+
+
 def build_llms_txt(posts, built_hubs=()):
     """Write llms.txt — a plain-language map of the site for AI assistants.
 
-    Generated rather than hand-written so it cannot drift out of date."""
+    Generated rather than hand-written so it cannot drift out of date. Entries
+    are deliberately terse: one clamped description per page, no repetition of
+    the author's name, and no gated URLs. The framing prose above the listings
+    is where the substance is."""
     lines = [LLMS_INTRO.format(site=SITE_URL)]
 
-    for page in sorted(ROOT.glob("*.html")):
-        if not is_indexable(page):
-            continue
+    for page in publishable_pages():
         title, desc = extract_meta(page)
-        loc = f"{SITE_URL}/" if page.name == "index.html" else f"{SITE_URL}/{page.name}"
-        lines.append(f"- [{title}]({loc}){': ' + desc if desc else ''}")
+        title = strip_brand(title)
+        loc = page_url(page.name)
+        summary = meta_description(desc, LLMS_DESCRIPTION_MAX) if desc else ""
+        lines.append(f"- [{title}]({loc}){': ' + summary if summary else ''}")
 
     lines.append("\n## Articles\n")
     for meta in posts:
-        loc = f"{SITE_URL}/blog/{meta['slug']}.html"
-        cited = f" ({len(meta['references'])} cited sources)" if meta["references"] else ""
+        if meta["slug"] in GATED_POST_SLUGS:
+            continue
+        # "reviewed" only earns its words when it says something "date" did not.
+        dates = f"Published {meta['date']}"
+        if meta["modified"] != meta["date"]:
+            dates += f", reviewed {meta['modified']}"
+        cited = f", {len(meta['references'])} cited sources" if meta["references"] else ""
         lines.append(
-            f"- [{meta['title']}]({loc}): {meta['summary']} "
-            f"Published {meta['date']}, last reviewed {meta['reviewed']}.{cited}"
+            f"- [{meta['title']}]({post_url(meta['slug'])}): "
+            f"{meta['description']} ({dates}{cited}.)"
         )
 
     if built_hubs:
         lines.append("\n## Topic guides\n")
         for hub in built_hubs:
-            loc = f"{SITE_URL}/blog/{hub['hub_slug']}.html"
-            lines.append(f"- [{hub['title']}]({loc}): {hub['description']}")
+            lines.append(
+                f"- [{hub['title']}]({hub_url(hub['hub_slug'])}): "
+                f"{meta_description(hub['description'], LLMS_DESCRIPTION_MAX)}"
+            )
 
     (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return len(lines)

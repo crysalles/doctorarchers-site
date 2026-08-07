@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>About Rev. Dr. LaVeena B. Archers, PhD — Root-Cause Health</title>
 <meta name="description" content="Meet Rev. Dr. LaVeena B. Archers, PhD: Doctor of Natural Medicine and board-certified holistic functional medicine practitioner. Her credentials, her scope of practice, and how the PMA works.">
-<link rel="canonical" href="https://book.laveenaarchers.com/about.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/about">
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="About &amp; Scope — Rev. Dr. LaVeena B. Archers, PhD">
 <meta property="og:description" content="Credentials, scope of practice, and the Private Membership Association model.">
-<meta property="og:url" content="https://book.laveenaarchers.com/about.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/about">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
@@ -29,28 +33,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "alternateName": "Rev. Dr. LaVeena Archers",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease. Services offered within a Private Membership Association.",
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "Certified Executive Coach" },
-        { "@type": "EducationalOccupationalCredential", "name": "Doctor of Holistic Functional Medicine", "credentialCategory": "degree",
-          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Kingdom College of Natural Health" } },
-        { "@type": "EducationalOccupationalCredential", "name": "Pentadoctorate", "credentialCategory": "degree",
-          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Rockwell School of Holistic Medicine" } },
-        { "@type": "EducationalOccupationalCredential", "name": "Doctor of Natural Medicine", "credentialCategory": "certification", "dateCreated": "2025",
-          "recognizedBy": { "@type": "Organization", "name": "American Natural Wellness Practitioners Board", "description": "Private credentialing organization. Certification is not state or federally regulated." } },
-        { "@type": "EducationalOccupationalCredential", "name": "Doctor of Holistic Functional Medicine", "credentialCategory": "certification", "dateCreated": "2025",
-          "recognizedBy": { "@type": "Organization", "name": "American Natural Wellness Practitioners Board", "description": "Private credentialing organization. Certification is not state or federally regulated." } },
-        { "@type": "EducationalOccupationalCredential", "name": "Doctor of Functional Nutrition", "credentialCategory": "certification", "dateCreated": "2025",
-          "recognizedBy": { "@type": "Organization", "name": "American Natural Wellness Practitioners Board", "description": "Private credentialing organization. Certification is not state or federally regulated." } }
-      ],
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
-    },
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
@@ -69,15 +52,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html" aria-current="page">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about" aria-current="page">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -85,7 +68,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -99,15 +82,21 @@
         <span class="eyebrow">About &amp; Scope</span>
         <h1 id="about-title">Rev. Dr. LaVeena B. Archers, PhD</h1>
         <p class="lede">Holistic Functional Medicine educator, teacher, and author, with a special focus on entrepreneur wellness.</p>
-        <p>LaVeena's work blends traditional healing, modern functional insights, and holistic lifestyle strategies, informed by Human Design. She is a 3/5 Human Design Projector Teacher, a Certified Executive Coach, and the author of <a href="book.html"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room table after her own long road through illness, dismissal, and the slow, unglamorous work of rebuilding her health from the roots up.</p>
-        <p>Her teaching operates within a Private Membership Association (PMA), a private, members-only framework. <a href="join-pma.html">Read about joining the PMA</a>.</p>
+        <p>LaVeena's work blends traditional healing, modern functional insights, and holistic lifestyle strategies, informed by Human Design. She is a 3/5 Human Design Projector Teacher, a Certified Executive Coach, and the author of <a href="/book"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room table after her own long road through illness, dismissal, and the slow, unglamorous work of rebuilding her health from the roots up.</p>
+        <p>She has gone on writing since. <a href="/muscle-you-keep"><em>The Muscle You Keep</em>, on protein, muscle, and the GLP-1 medications for women over 40</a>, came out of the same habit of going back to the trials rather than repeating what everyone says.</p>
+        <p>Her teaching operates within a Private Membership Association (PMA), a private, members-only framework. <a href="/join-pma">Read about joining the PMA</a>.</p>
+        <p>If you have a question before going any further, the <a href="/faq">FAQ answers what people ask most often: scope of practice, the PMA, medical advice, and how to get started</a>.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="book.html#free-chapter">Read a free chapter</a>
-          <a class="btn btn-outline" href="testing.html">Testing &amp; Learning</a>
+          <a class="btn btn-primary" href="/book#free-chapter">Read a free chapter</a>
+          <a class="btn btn-outline" href="/testing">Testing &amp; Learning</a>
         </div>
       </div>
       <div>
-        <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        <picture>
+          <source srcset="assets/laveena-archers-portrait-560.avif" type="image/avif">
+          <source srcset="assets/laveena-archers-portrait-560.webp" type="image/webp">
+          <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        </picture>
         <p class="credential">Doctor of Natural Medicine · Board-Certified Holistic Functional Medicine Doctor</p>
       </div>
     </div>
@@ -153,11 +142,15 @@
         <li>3/5 Human Design Projector Teacher</li>
       </ul>
       <figure class="cert-strip">
-        <img src="assets/certifications.png" alt="Certifying boards: American Association of Natural Wellness Coaches, American Natural Wellness Coaches Board, American Association of Natural Wellness Practitioners, and American Natural Wellness Practitioners Board" loading="lazy" width="1078" height="244">
+        <picture>
+          <source srcset="assets/certifications-1078.avif" type="image/avif">
+          <source srcset="assets/certifications-1078.webp" type="image/webp">
+          <img src="assets/certifications.png" alt="Certifying boards: American Association of Natural Wellness Coaches, American Natural Wellness Coaches Board, American Association of Natural Wellness Practitioners, and American Natural Wellness Practitioners Board" loading="lazy" width="1078" height="244">
+        </picture>
         <figcaption>Certified through the American Association of Natural Wellness Coaches, the American Association of Natural Wellness Practitioners, and their national boards (ANWCB and ANWPB).</figcaption>
       </figure>
       <p class="not-md">LaVeena is <strong>not a medical doctor</strong>. Her doctorates and board certifications are in natural medicine and functional nutrition. She is not licensed to practice medicine or naturopathic medicine in any state, she does not run a clinical practice, and she does not diagnose, treat, prescribe, or manage disease.</p>
-      <p class="not-md"><a href="credentials.html">See every certificate in full</a> &mdash; each one with its issuing institution and a plain note on what it is and is not.</p>
+      <p class="not-md"><a href="/credentials">See every certificate in full</a> &mdash; each one with its issuing institution and a plain note on what it is and is not.</p>
     </div>
   </section>
 
@@ -190,7 +183,7 @@
           </ul>
         </div>
       </div>
-      <p class="center" style="margin-top:1.5rem"><a href="scope-of-practice.html">Read LaVeena's full scope of practice →</a></p>
+      <p class="center" style="margin-top:1.5rem"><a href="/scope-of-practice">Read LaVeena's full scope of practice →</a></p>
     </div>
   </section>
 
@@ -201,8 +194,8 @@
       <h2 id="about-cta-title">Work with LaVeena</h2>
       <p>Start with the book, or learn to understand your own lab results with professional-grade testing.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-gold" href="testing.html">Testing &amp; Learning</a>
-        <a class="btn btn-outline" style="color:var(--cream);border-color:var(--cream)" href="books.html">Read the books</a>
+        <a class="btn btn-gold" href="/testing">Testing &amp; Learning</a>
+        <a class="btn btn-outline" style="color:var(--cream);border-color:var(--cream)" href="/books">Read the books</a>
       </div>
     </div>
   </section>
@@ -248,19 +241,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

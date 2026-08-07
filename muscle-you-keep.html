@@ -5,56 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Muscle You Keep — Protein, Muscle &amp; GLP-1 Medications for Women Over 40 | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="Lose fat and muscle. Regain mostly fat. A root-cause guide to food, protein and GLP-1 medications for women over 40 — with every claim labeled for how well the evidence actually supports it.">
-<link rel="canonical" href="https://book.laveenaarchers.com/muscle-you-keep.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/muscle-you-keep">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
+
+<!-- COVER ART PENDING. This page previously pointed four references — the on-page hero
+     <img>, og:image, twitter:image and the JSON-LD Book image — at
+     assets/the-muscle-you-keep-cover.png, which does not exist in this repo and 404s
+     live. The social/schema images below fall back to the portrait, which is the
+     site-wide default used by every blog post. When the real cover art lands, drop it
+     in assets/, run optimize-images.py, and restore all four references plus the hero
+     <picture> further down this file. -->
 
 <!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="The Muscle You Keep — What GLP-1 Drugs and Rapid Weight Loss Do to Muscle, and What Women Can Do About It After 40">
 <meta property="og:description" content="Lose fat and muscle. Regain mostly fat. That's the trade nobody warned you about.">
-<meta property="og:url" content="https://book.laveenaarchers.com/muscle-you-keep.html">
-<meta property="og:image" content="https://book.laveenaarchers.com/assets/the-muscle-you-keep-cover.png">
+<meta property="og:url" content="https://book.laveenaarchers.com/muscle-you-keep">
+<meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Muscle You Keep — Protein, Muscle &amp; GLP-1 Medications for Women Over 40">
 <meta name="twitter:description" content="Lose fat and muscle. Regain mostly fat. That's the trade nobody warned you about.">
-<meta name="twitter:image" content="https://book.laveenaarchers.com/assets/the-muscle-you-keep-cover.png">
+<meta name="twitter:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
 
 <link rel="stylesheet" href="assets/styles.css">
 
+<!-- JSON-LD: Book + Hope Press + sitewide WebSite. The book is not on sale yet — the
+     page says "Coming soon" and offers no purchase link — so there is deliberately no
+     offers node here. The Person is referenced by the ONE shared @id and defined once,
+     on the homepage. The image is the portrait placeholder; see the COVER ART PENDING
+     note above. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://book.laveenaarchers.com/muscle-you-keep.html#book",
+      "@id": "https://book.laveenaarchers.com/muscle-you-keep#book",
       "name": "The Muscle You Keep",
       "alternateName": "The Muscle You Keep: What GLP-1 Drugs and Rapid Weight Loss Do to Muscle, and What Women Can Do About It After 40",
       "description": "A root-cause guide to protecting muscle through midlife, whether you are taking a GLP-1 medication, coming off one, still deciding, or never taking one. Twenty-four chapters, sixteen appendices, and more than a hundred peer-reviewed sources, with every substantive claim labeled for the strength of the evidence behind it.",
       "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publisher": { "@id": "https://book.laveenaarchers.com/#hope-press" },
       "bookFormat": "https://schema.org/EBook",
       "inLanguage": "en",
-      "image": "https://book.laveenaarchers.com/assets/the-muscle-you-keep-cover.png",
-      "url": "https://book.laveenaarchers.com/muscle-you-keep.html",
-      "genre": "Health &amp; Wellness"
+      "image": "https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg",
+      "url": "https://book.laveenaarchers.com/muscle-you-keep",
+      "genre": "Health & Wellness"
     },
     {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Author of Bad Medicine Blues. Board certified in natural medicine and functional nutrition. Not a medical doctor.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Perimenopause", "Longevity"]
+      "@type": "Organization",
+      "@id": "https://book.laveenaarchers.com/#hope-press",
+      "name": "Hope Press",
+      "url": "https://book.laveenaarchers.com/hope-press",
+      "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
+      "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
+      "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
     },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
       "url": "https://book.laveenaarchers.com/",
-      "name": "Rev. Dr. LaVeena Archers"
+      "name": "LaVeenaArchers.com",
+      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en"
     }
   ]
 }
@@ -66,15 +88,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -103,7 +125,15 @@
         </div>
       </div>
 
-      <img src="assets/the-muscle-you-keep-cover.png" alt="The Muscle You Keep by Rev. Dr. LaVeena B. Archers — book cover" width="300" height="450" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      <!-- COVER ART PENDING — hero image removed. It pointed at
+           assets/the-muscle-you-keep-cover.png, which does not exist in this repo and
+           404s live; there is no cover file for this book anywhere yet. When the art
+           lands, drop it in assets/, run optimize-images.py, and restore this as a
+           <picture class="hero-cover"> with AVIF + WebP <source>s ahead of the raster
+           fallback, matching the hero on /book, /glp1-book and /good-years. The class
+           must sit on the <picture>, not the <img>: it is the direct grid item of
+           .hero-grid and carries order:-1 / margin:0 auto below 820px. Also restore the
+           og:image, twitter:image and JSON-LD Book image in <head>. -->
     </div>
   </section>
 
@@ -140,7 +170,7 @@
       </div>
       <p>Most health books state everything in the same tone of voice. A finding from a large human trial sounds exactly like a mechanism observed in mice, which sounds exactly like the author's opinion. You have no way to tell them apart, and that is usually the point.</p>
       <p>This book marks every substantive claim as one of six things: <strong>shown in people</strong>, <strong>associated only</strong>, <strong>shown in the lab</strong>, <strong>animals only</strong>, <strong>tested but didn&rsquo;t hold</strong>, or <strong>not studied</strong>. Plus a flag that appears more often than you would expect: <em>not in women your age</em>.</p>
-      <p class="statline">The book makes <strong>274 marked claims</strong>. A hundred and twenty-eight are not shown in people. Forty-seven more were shown in people older than you, or in men, or in some group you do not belong to. <strong>Fewer than half the claims in this book were demonstrated in people like you.</strong></p>
+      <p class="statline">The book makes <strong>283 marked claims</strong>. A hundred and thirty are not shown in people. Fifty-four more were shown in people older than you, or in men, or in some group you do not belong to. <strong>Fewer than half the claims in this book were demonstrated in people like you.</strong></p>
       <p>That is not a failure of the research behind it. It is the honest state of this field, and it is the reason the book needed writing. Open it at any page and check.</p>
     </div>
   </section>
@@ -220,8 +250,8 @@
     <div class="wrap narrow center">
       <hr class="rule" aria-hidden="true">
       <h2 id="author-title">About the author</h2>
-      <p><strong>Rev. Dr. LaVeena Archers</strong> writes for women who were told their labs were normal and sent home anyway. She is the author of <a href="book.html"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room.</p>
-      <p class="microcopy"><a href="how-i-research.html">How I research</a></p>
+      <p><strong>Rev. Dr. LaVeena Archers</strong> writes for women who were told their labs were normal and sent home anyway. She is the author of <a href="/book"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room.</p>
+      <p class="microcopy"><a href="/how-i-research">How I research</a></p>
     </div>
   </section>
 
@@ -238,7 +268,7 @@
         <li><strong>More than 40 peer-reviewed sources</strong>, cited in full with DOIs</li>
       </ul>
       <p class="priceline">Coming soon</p>
-      <a class="btn btn-gold" href="contact.html">Tell me when it is out</a>
+      <a class="btn btn-gold" href="/contact">Tell me when it is out</a>
       <p class="reassure">No spam. One email when the book is available.</p>
     </div>
   </section>
@@ -255,20 +285,20 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="books.html">All books</a></li>
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/books">All books</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>Privacy — Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="The privacy statement for LaVeenaArchers.com: your email is used only for what you asked for, never sold, and every email has a one-click unsubscribe. This site sets no third-party trackers.">
-<link rel="canonical" href="https://book.laveenaarchers.com/privacy.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/privacy">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Privacy — Rev. Dr. LaVeena Archers">
 <meta property="og:description" content="Your email is used only for what you asked for, never sold. No third-party trackers on this site.">
-<meta property="og:url" content="https://book.laveenaarchers.com/privacy.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/privacy">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
@@ -29,14 +33,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
-    },
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
@@ -55,15 +52,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -71,7 +68,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -115,7 +112,7 @@
       <p>We do not sell or rent your personal information. We share it only with the service providers that help run this business (for example email, hosting, and payment processors), and where required by law. Records are kept as long as needed for the purpose they were collected and for legal and accounting requirements, typically five years or more. You may request access to, correction of, or deletion of your data at any time, and readers in the EU/EEA and California have the additional rights granted under the GDPR and CCPA/CPRA. This site is not directed to children under 16.</p>
 
       <h2>Contact and unsubscribe</h2>
-      <p>For any privacy request, or to ask how your information is handled, use the <a href="contact.html">contact form</a>. You can unsubscribe from emails at any time using the link at the bottom of any message.</p>
+      <p>For any privacy request, or to ask how your information is handled, use the <a href="/contact">contact form</a>. You can unsubscribe from emails at any time using the link at the bottom of any message.</p>
     </div>
   </section>
 
@@ -132,19 +129,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

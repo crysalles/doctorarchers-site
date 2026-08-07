@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Books by Rev. Dr. LaVeena Archers — The Root-Cause Guides</title>
 <meta name="description" content="Books by Rev. Dr. LaVeena B. Archers, PhD. Start with Bad Medicine Blues, the well-researched, root-cause guide to women's energy, hormones, and vitality. More titles on the way.">
-<link rel="canonical" href="https://book.laveenaarchers.com/books.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/books">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Books by Rev. Dr. LaVeena Archers">
 <meta property="og:description" content="Well-researched, root-cause health books. Start with Bad Medicine Blues.">
-<meta property="og:url" content="https://book.laveenaarchers.com/books.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/books">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/bad-medicine-blues-cover.png">
 
@@ -24,6 +28,81 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
 
 <link rel="stylesheet" href="assets/styles.css">
+
+<!-- JSON-LD: this is the site's book catalog, so a CollectionPage whose ItemList
+     points at each title's own canonical URL and Book @id. Deliberately NOT a second
+     copy of each Book object — the full Book lives on its own page, and duplicating
+     it here is how the descriptions drift apart. Still Normal has no page of its own
+     yet, so it is not listed. The Person is referenced by the ONE shared @id and
+     defined once, on the homepage. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://book.laveenaarchers.com/books",
+      "url": "https://book.laveenaarchers.com/books",
+      "name": "Books by Rev. Dr. LaVeena Archers",
+      "description": "The Dr. Archers Root-Cause Guides: calm, well-researched health books for women, published by Hope Press.",
+      "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
+      "about": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en",
+      "mainEntity": {
+        "@type": "ItemList",
+        "@id": "https://book.laveenaarchers.com/books#list",
+        "name": "The Dr. Archers Root-Cause Guides",
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://book.laveenaarchers.com/book",
+            "item": { "@id": "https://book.laveenaarchers.com/book#book" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://book.laveenaarchers.com/glp1-book",
+            "item": { "@id": "https://book.laveenaarchers.com/glp1-book#book" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://book.laveenaarchers.com/good-years",
+            "item": { "@id": "https://book.laveenaarchers.com/good-years#book" }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://book.laveenaarchers.com/worth-investigating",
+            "item": { "@id": "https://book.laveenaarchers.com/worth-investigating#book" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://book.laveenaarchers.com/#hope-press",
+      "name": "Hope Press",
+      "url": "https://book.laveenaarchers.com/hope-press",
+      "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
+      "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
+      "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://book.laveenaarchers.com/#website",
+      "url": "https://book.laveenaarchers.com/",
+      "name": "LaVeenaArchers.com",
+      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -31,15 +110,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html" aria-current="page">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books" aria-current="page">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -47,7 +126,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -60,7 +139,7 @@
       <span class="eyebrow">The Dr. Archers Root-Cause Guides</span>
       <h1 id="books-title">Books for women who were told their labs are normal</h1>
       <p class="support" style="margin-inline:auto">Calm, well-researched guides to feeling like yourself again. Written from both sides of the exam-room table, with no hype and no fear-selling. Start with the first below. More are on the way.</p>
-      <p class="microcopy" style="margin-inline:auto">All of them published by <a href="hope-press.html">Hope Press</a>, my own independent imprint &mdash; and what that does and does not guarantee is set out plainly there.</p>
+      <p class="microcopy" style="margin-inline:auto">All of them published by <a href="/hope-press">Hope Press</a>, my own independent imprint &mdash; and what that does and does not guarantee is set out plainly there.</p>
     </div>
   </section>
 
@@ -73,12 +152,19 @@
         <p class="sub">The Natural, Root-Cause Approach to Women's Energy, Hormones, and Vitality</p>
         <p>The level-headed, science-grounded guide for women who are tired of being told their bloodwork is normal while they feel anything but. 29 chapters, 39 recipes, and week-by-week protocols, written for women in perimenopause and beyond.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="book.html">About the book</a>
-          <a class="btn btn-outline" href="book.html#free-chapter">Read a free chapter</a>
+          <a class="btn btn-primary" href="/book">About the book</a>
+          <a class="btn btn-outline" href="/book#free-chapter">Read a free chapter</a>
         </div>
       </div>
       <div>
-        <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="280" height="420" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+        <!-- The <img> sits inside a plain <div> grid item here, so .hero-cover's
+             order/margin rules never took effect. Class stays on the <img> — moving it
+             to the <picture> would change nothing and break parity with the other pages. -->
+        <picture>
+          <source type="image/avif" srcset="assets/bad-medicine-blues-cover-600.avif">
+          <source type="image/webp" srcset="assets/bad-medicine-blues-cover-600.webp">
+          <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="280" height="420" class="hero-cover" fetchpriority="high" decoding="async" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+        </picture>
       </div>
     </div>
   </section>
@@ -96,19 +182,19 @@
           <span class="pill">Now available</span>
           <h3>Bad Medicine Blues</h3>
           <p>The calm, well-researched map of the root-cause approach to women's health, for anyone tired of being told their bloodwork is normal. On sale now. A revised and expanded edition is finishing behind it, grown to 30 chapters with all 1,071 of its claims labeled for how well the evidence supports them.</p>
-          <a class="card-link" href="book.html">See the book &rarr;</a>
+          <a class="card-link" href="/book">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">Now available</span>
           <h3>Your Body's Own GLP-1</h3>
           <p>If the weight-loss injections and peptides have you curious, this is the complete, well-researched picture: the science of the Ozempic era, and every natural way to support the GLP-1 your body already makes. Fair to the medicine, candid about the limits of the natural path.</p>
-          <a class="card-link" href="glp1-book.html">Now on Amazon &mdash; see the book &rarr;</a>
+          <a class="card-link" href="/glp1-book">Now on Amazon &mdash; see the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">Out now</span>
           <h3>The Good Years</h3>
           <p>Book Two of the Root-Cause Guides. The evidence-based longevity guide written for a woman's body, not a man's. Thirty-six chapters on the levers that actually move healthspan, honest about the many times the truest answer is "save your money." All 639 claims tagged for how good the evidence really is.</p>
-          <a class="card-link" href="good-years.html">Now on Amazon &mdash; see the book &rarr;</a>
+          <a class="card-link" href="/good-years">Now on Amazon &mdash; see the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">Planned</span>
@@ -120,7 +206,7 @@
           <span class="pill">Planned</span>
           <h3>Worth Investigating</h3>
           <p>A root-cause guide to reading your own symptoms: what they mean, what to ask, and when to stop looking. Twelve symptom chapters, each ending in a one-page Signal Card you can take to the appointment. For the part before a diagnosis, when all you have is the thing you can feel.</p>
-          <a class="card-link" href="worth-investigating.html">See the book &rarr;</a>
+          <a class="card-link" href="/worth-investigating">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <svg class="icon" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="28" height="22" rx="3"/><path d="M6 13l14 10L34 13"/></svg>
@@ -173,20 +259,20 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="hope-press.html">Hope Press, the publisher</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/hope-press">Hope Press, the publisher</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

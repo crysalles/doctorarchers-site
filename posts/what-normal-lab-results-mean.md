@@ -4,9 +4,10 @@ date: 2026-07-31
 slug: what-normal-lab-results-mean
 tags: lab-results, medical-dismissal
 summary: "Everything came back normal" is one of the most deflating sentences in medicine, and one of the most misunderstood, including by some of the people saying it. Here is how a reference range is built, and what it can and cannot tell you.
+description: A reference range is the middle 95% of a healthy group's results. How that gets built, why one in twenty healthy people flags, and what to ask instead.
 questions:
-  - How is a normal range decided? :: A laboratory measures a marker in a group of people considered healthy and defines the normal range as the middle 95% of those results, cutting off the lowest 2.5% and the highest 2.5%. It describes what is common in that group.
-  - Does a result outside the range mean something is wrong? :: Not necessarily. Because the range is drawn around the middle 95% of healthy people, roughly one in twenty healthy people falls outside it on any given test by design.
+  - How is a normal range decided? :: A laboratory measures a marker in a group of people considered healthy and defines the normal range as the middle 95% of those results, cutting off the lowest 2.5% and the highest 2.5% [1]. It describes what is common in that group.
+  - Does a result outside the range mean something is wrong? :: Not necessarily. Because the range is drawn around the middle 95% of healthy people [1], roughly one in twenty healthy people falls outside it on any given test by design.
   - Does a normal result mean nothing is wrong? :: No. It means your result resembles the reference group's. Whether that is good for you depends on the marker, your history, and what the number is doing over time.
 references:
   - Forget P, Khalifa C, Defour JP, Latinne D, Van Pel MC, De Kock M. What is the normal value of the neutrophil-to-lymphocyte ratio? BMC Res Notes. 2017;10(1):12. https://doi.org/10.1186/s13104-016-2335-5
@@ -14,13 +15,13 @@ references:
   - Stott DJ, Rodondi N, Kearney PM, et al. Thyroid hormone therapy for older adults with subclinical hypothyroidism. N Engl J Med. 2017;376(26):2534-2544. https://doi.org/10.1056/NEJMoa1603825
 ---
 
-"Everything came back normal."
+"Normal" on a lab report means your result sits inside the middle 95 percent of a group of people considered healthy, with the lowest 2.5 percent and the highest 2.5 percent cut off [1]. That is the whole of it. It is a statement about how common your result is among the people who were measured, not a statement that your result is good, or optimal, or right for you — and by that arithmetic roughly one in twenty perfectly healthy people flags abnormal on any given test.
 
-If you have heard that while feeling distinctly unwell, you know the particular deflation it produces. You went looking for an explanation and came home with a word that sounds like an answer and works like a door closing.
+If you have heard "everything came back normal" while feeling distinctly unwell, you know the particular deflation it produces. You went looking for an explanation and came home with a word that sounds like an answer and works like a door closing.
 
 That word is worth taking apart, because most people, including a good number of the people saying it, have never been told how it is made.
 
-# Where the range comes from
+# Where does a normal range come from?
 
 A reference range is not handed down from physiology. It is built, by measurement, and the method is plain once you have seen it done.
 
@@ -30,7 +31,7 @@ That is the whole method. Measure a group considered healthy. Cut off the bottom
 
 It is a sensible way to do it. It is also worth understanding what it produces.
 
-# Two consequences nobody mentions
+# What does a normal range fail to tell you?
 
 One in twenty healthy people is abnormal on any given test. Not because anything is wrong with them, but because the range was drawn to exclude the outer five percent of a healthy group. That is arithmetic, not pathology. Run enough tests on a perfectly well person and something will eventually flag.
 
@@ -38,9 +39,9 @@ And being inside the range means you resemble the reference group. That is all i
 
 This is the gap that swallows so many women. You are told normal and you hear fine. What was actually said was unremarkable.
 
-# Normal is not one fixed thing
+# Is "normal" the same everywhere?
 
-The second problem is that normal moves, depending on who you are and what question is being asked.
+Normal moves, depending on who you are and what question is being asked.
 
 Take thyroid stimulating hormone in pregnancy. European guidance sets a different threshold for each trimester, above 2.5, 3.0 and 3.5 respectively with a normal free thyroxine, because what counts as concerning in the first trimester is not what counts as concerning in the third [2]. In one study using those definitions, twenty-six percent of the pregnant women assessed met the criteria for subclinical hypothyroidism [2].
 
@@ -48,11 +49,11 @@ Same hormone. Potentially the same woman at different points. Different threshol
 
 Reference ranges also vary between laboratories, because different labs use different equipment, methods and reference populations. A result flagged normal by one lab can sit outside the range printed by another. That is not sloppiness, it is a real consequence of how the ranges are made. But it does mean normal is a property of a particular report, not of your body.
 
-# Normal is not the goal either
+# Does correcting an abnormal number make you feel better?
 
-Here is the finding that reframed this for me, and it comes from a large, well-conducted trial.
+Here is the finding that reframed the whole idea of normal for me, and it comes from a large, well-conducted trial.
 
-The TRUST trial randomised 737 adults aged sixty-five and over who had persistent subclinical hypothyroidism, meaning a raised TSH between 4.60 and 19.99 with free thyroxine still inside the reference range, to either levothyroxine or placebo, double blind [3].
+The TRUST trial randomized 737 adults aged sixty-five and over who had persistent [subclinical hypothyroidism](/blog/tsh-slightly-high-what-trials-found), meaning a raised TSH between 4.60 and 19.99 with free thyroxine still inside the reference range, to either levothyroxine or placebo, double blind [3].
 
 The treatment worked, in the sense that it moved the number. TSH fell to 3.63 in the treated group against 5.48 on placebo [3].
 
@@ -62,9 +63,9 @@ The number was corrected. The people did not feel better.
 
 I hold that trial in mind constantly, because it cuts against something both conventional and alternative medicine do enthusiastically, which is treating the reading rather than the person. It also carries a caveat I will not skip over. Those participants averaged seventy-four years of age. That tells us something valuable about older adults. It does not tell us what would happen in a forty-eight year old woman, because she was not in the study.
 
-# So what is a lab result good for?
+# What is a lab result actually good for?
 
-Quite a lot, when it is asked the right question.
+A lab result is good for quite a lot, when it is asked the right question.
 
 Numbers are excellent at tracking change. A result drifting steadily in one direction across three years tells you something a single snapshot never will, even when every one of those readings was called normal.
 
@@ -72,16 +73,16 @@ They are excellent at ruling specific things in or out, which is a narrower and 
 
 And they are one input among several, alongside your history, your symptoms, and what has actually changed in your life. A number that conflicts with how you feel is not proof that you are wrong. It is a prompt to ask a better question.
 
-# What to ask instead
+# What should you ask your doctor instead?
 
 Ask for the number, not the verdict. Normal is a summary. The value is the data. Write it down.
 
-Ask where in the range it sits. The bottom of a range and the top of it are both normal and often mean very different things.
+Ask where in the range it sits. The bottom of a range and the top of it are both normal and often mean very different things, as [a ferritin result shows especially clearly](/blog/ferritin-normal-still-exhausted).
 
 Ask what it was last time, because a trend is worth more than a snapshot.
 
 And ask what result would have changed the plan. That one is quietly powerful. It reveals whether the test was ever capable of answering your question, or whether you have been reassured by a measurement that was not looking for the thing you came in about.
 
-None of this is a reason to distrust your lab work, and none of it is medical advice. What your results mean for you belongs with a professional who knows your history. It is a reason to hold the word normal a little more lightly than the tone of voice it usually arrives in.
+None of this is a reason to distrust your lab work, and none of it is medical advice; every number above is tied to a source you can check, which is [the editorial standard this site runs on](/how-i-research). What your results mean for you belongs with a professional who knows your history. It is a reason to hold the word normal a little more lightly than the tone of voice it usually arrives in.
 
-If your labs keep coming back normal while your body says otherwise, [that gap is where my book starts](../book.html#free-chapter).
+If your labs keep coming back normal while your body says otherwise, [that gap is where my book starts](/book#free-chapter).

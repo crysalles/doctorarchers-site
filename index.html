@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>Rev. Dr. LaVeena Archers — Root-Cause Health for Women, Cited</title>
 <meta name="description" content="A cited library of plain-language articles on women's energy, hormones and metabolism in midlife, and the books they come from. By Rev. Dr. LaVeena B. Archers, PhD.">
 <link rel="canonical" href="https://book.laveenaarchers.com/">
@@ -28,7 +32,17 @@
 
 <!-- JSON-LD: sitewide Person + WebSite.
      Deliberately NOT MedicalBusiness/Physician: she educates and supports,
-     she does not diagnose or treat. -->
+     she does not diagnose or treat.
+
+     THIS IS THE ONE AUTHORITATIVE COPY of the Person node. Every other page on
+     the site references it as {"@id": ".../#laveena"} rather than restating it.
+     Fourteen pages used to carry their own inline copy, three of them with
+     mutually incompatible credential lists. If a credential changes, it changes
+     here, once. Do not paste this object into another page.
+
+     sameAs: only URLs that have been fetched and confirmed to name her. Do not
+     add a guessed profile URL. doctorarchers.com was checked on 2026-08-07 and
+     names "Reverend Dr. LaVeena Brianne Archers, PhD". -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +60,8 @@
         { "@type": "EducationalOccupationalCredential", "name": "Board-Certified Holistic Functional Medicine Doctor (BC-HFMD)" },
         { "@type": "EducationalOccupationalCredential", "name": "Board-Certified Holistic Functional Nutrition Doctor (BC-HFND)" }
       ],
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
+      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"],
+      "sameAs": ["https://www.doctorarchers.com/"]
     },
     {
       "@type": "WebSite",
@@ -67,15 +82,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -83,7 +98,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -99,12 +114,16 @@
         <p class="sub">Author of the Dr. Archers Root-Cause Guides · Doctor of Natural Medicine</p>
         <p class="support">A growing library of cited, plain-language articles on women's energy, hormones and metabolism in midlife, and the books they come from. Every claim that rests on research links out to the paper it came from, so you can check me rather than trust me.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="blog/index.html">Read the library</a>
-          <a class="btn btn-outline" href="books.html">Explore the books</a>
+          <a class="btn btn-primary" href="/blog/">Read the library</a>
+          <a class="btn btn-outline" href="/books">Explore the books</a>
         </div>
       </div>
       <div>
-        <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        <picture>
+          <source srcset="assets/laveena-archers-portrait-560.avif" type="image/avif">
+          <source srcset="assets/laveena-archers-portrait-560.webp" type="image/webp">
+          <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        </picture>
       </div>
     </div>
   </section>
@@ -119,11 +138,15 @@
         <p>Almost every famous longevity book was written by a man, built on research done mostly in men. This one is written for a woman&rsquo;s body, and every one of its 639 claims carries a tag showing how good the evidence behind it actually is. Out now on Kindle at $9.99 and in paperback at $21.99.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HCR2XHLW">Get it on Amazon</a>
-          <a class="btn btn-outline" href="good-years.html">About the book</a>
+          <a class="btn btn-outline" href="/good-years">About the book</a>
         </div>
       </div>
       <div>
-        <img src="assets/good-years-cover.jpg" alt="The Good Years by Rev. Dr. LaVeena B. Archers &mdash; book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+        <picture>
+          <source srcset="assets/good-years-cover-600.avif" type="image/avif">
+          <source srcset="assets/good-years-cover-600.webp" type="image/webp">
+          <img src="assets/good-years-cover.jpg" alt="The Good Years by Rev. Dr. LaVeena B. Archers &mdash; book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);" loading="lazy" decoding="async">
+        </picture>
       </div>
     </div>
   </section>
@@ -138,11 +161,15 @@
         <p>The complete, science-grounded picture of the weight-loss shots for women: the real trial data weighed fairly, and every natural way to support the GLP-1 your body already makes. Now on Amazon in Kindle, paperback, and hardcover, and free to read in Kindle Unlimited.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://amzn.to/4g1lZ6T">Get it on Amazon</a>
-          <a class="btn btn-outline" href="glp1-book.html">Read a free chapter</a>
+          <a class="btn btn-outline" href="/glp1-book">Read a free chapter</a>
         </div>
       </div>
       <div>
-        <img src="assets/glp1-book-cover.jpg" alt="Your Body&rsquo;s Own GLP-1 by Rev. Dr. LaVeena B. Archers, PhD &mdash; book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+        <picture>
+          <source srcset="assets/glp1-book-cover-600.avif" type="image/avif">
+          <source srcset="assets/glp1-book-cover-600.webp" type="image/webp">
+          <img src="assets/glp1-book-cover.jpg" alt="Your Body&rsquo;s Own GLP-1 by Rev. Dr. LaVeena B. Archers, PhD &mdash; book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);" loading="lazy" decoding="async">
+        </picture>
       </div>
     </div>
   </section>
@@ -160,19 +187,19 @@
           <svg class="icon" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h13a4 4 0 0 1 4 4v21a3 3 0 0 0-3-3H8z"/><path d="M32 8H21a4 4 0 0 0-4 4v18"/></svg>
           <h3>Read the library</h3>
           <p>Cited, plain-language articles on the questions women in midlife actually ask. Every claim resting on research links out to the paper, so you can check it yourself.</p>
-          <a class="card-link" href="blog/index.html">Read the library</a>
+          <a class="card-link" href="/blog/">Read the library</a>
         </div>
         <div class="col-card">
           <svg class="icon" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6h8M18 6v7l-7 15a3 3 0 0 0 3 4h12a3 3 0 0 0 3-4l-7-15V6"/><path d="M13 25h14"/></svg>
           <h3>Testing &amp; Learning</h3>
           <p>Professional-grade lab testing and supplements, plus the articles here to help you make sense of your own results. On your schedule.</p>
-          <a class="card-link" href="testing.html">Testing &amp; Learning</a>
+          <a class="card-link" href="/testing">Testing &amp; Learning</a>
         </div>
         <div class="col-card">
           <svg class="icon" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="28" height="22" rx="3"/><path d="M6 13l14 10L34 13"/></svg>
           <h3>Free reader workbook</h3>
           <p>Join the reader list and get the Companion Workbook and Quick-Start Checklist free, plus the occasional grounded note on root-cause health. Unsubscribe anytime.</p>
-          <a class="card-link" href="book.html#free-chapter">Get the free workbook</a>
+          <a class="card-link" href="/book#free-chapter">Get the free workbook</a>
         </div>
       </div>
     </div>
@@ -187,12 +214,16 @@
         <p class="sub">The Natural, Root-Cause Approach to Women's Energy, Hormones, and Vitality</p>
         <p>The level-headed, science-grounded guide for women who are tired of being told their bloodwork is normal while they feel anything but. 29 chapters, 39 recipes, and week-by-week protocols, written from both sides of the exam-room table.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="book.html">About the book</a>
-          <a class="btn btn-outline" href="book.html#free-chapter">Read a free chapter</a>
+          <a class="btn btn-primary" href="/book">About the book</a>
+          <a class="btn btn-outline" href="/book#free-chapter">Read a free chapter</a>
         </div>
       </div>
       <div>
-        <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+        <picture>
+          <source srcset="assets/bad-medicine-blues-cover-600.avif" type="image/avif">
+          <source srcset="assets/bad-medicine-blues-cover-600.webp" type="image/webp">
+          <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="220" height="330" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);" loading="lazy" decoding="async">
+        </picture>
       </div>
     </div>
   </section>
@@ -214,7 +245,7 @@
           <figcaption>— RO</figcaption>
         </figure>
       </div>
-      <p class="center" style="margin-top:2rem"><a class="btn btn-outline" href="testimonials.html">Read more kind words</a></p>
+      <p class="center" style="margin-top:2rem"><a class="btn btn-outline" href="/testimonials">Read more kind words</a></p>
     </div>
   </section>
 
@@ -225,7 +256,7 @@
       <h2 id="cta-title">Ready to begin?</h2>
       <p>Read a free chapter of Bad Medicine Blues, or browse the professional-grade labs and supplements Dr. Archers trusts.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+        <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
       </div>
       <p style="margin-top:1.5rem"><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a> &nbsp;·&nbsp; <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></p>
     </div>
@@ -272,19 +303,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Rev. Dr. LaVeena Archers</title>
-<meta name="robots" content="noindex">
+<title>Page not found (404) — Rev. Dr. LaVeena Archers</title>
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="noindex,nocache">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
+<!-- Every path here must be ROOT-relative. This page is served for any 404,
+     including deep ones like /blog/foo/bar, where a relative src would resolve
+     against /blog/foo/ and 404 in turn. -->
 <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
@@ -15,11 +22,13 @@
     <p class="lede">The page you were looking for is not here. Let's get you back to solid ground.</p>
     <p class="btn-row" style="justify-content:center;gap:.75rem;flex-wrap:wrap">
       <a class="btn btn-primary" href="/">Return home</a>
-      <a class="btn btn-outline" href="/book.html">The book</a>
-      <a class="btn btn-outline" href="/testing.html">Testing &amp; Learning</a>
+      <a class="btn btn-outline" href="/blog/">Read the library</a>
+      <a class="btn btn-outline" href="/books">The books</a>
+      <a class="btn btn-outline" href="/testing">Testing &amp; Learning</a>
     </p>
+    <p style="margin-top:1.5rem"><a href="/contact">Tell me what you were looking for</a> and I will point you at it, or fix the link.</p>
   </div>
 </main>
-<script src="assets/analytics.js" defer></script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>

@@ -70,12 +70,29 @@ jobs:
       # case matters: edits to pages, styles or the footer are committed by
       # hand and would otherwise sit in the repo, never reaching the site,
       # because the Pages project has no Git connection.
+      #
+      # Deploys dist/, NEVER the repo root. `pages deploy .` uploads every file
+      # in the checkout, which is how a complete unpublished book manuscript,
+      # all eight future-dated draft posts, build.py and the internal working
+      # notes ended up publicly fetchable in production. stage-deploy.py copies
+      # only the allowlisted files into dist/ and hard-fails if a page it
+      # expects is missing. check-site.py then gates on broken links, invalid
+      # JSON-LD, canonicals pointing at redirects, and dist/ containing anything
+      # it should not — so a bad build stops here rather than going live.
+      - name: Stage and verify the publishable files
+        if: >-
+          env.CLOUDFLARE_API_TOKEN != '' &&
+          (steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
+        run: |
+          python3 stage-deploy.py
+          python3 check-site.py
+
       - name: Deploy to Cloudflare Pages
         if: >-
           env.CLOUDFLARE_API_TOKEN != '' &&
           (steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
         run: |
-          npx --yes wrangler@4 pages deploy . \
+          npx --yes wrangler@4 pages deploy dist \
             --project-name "$PAGES_PROJECT" \
             --branch main \
             --commit-dirty=true

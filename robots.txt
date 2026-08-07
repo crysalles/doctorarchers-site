@@ -1,10 +1,47 @@
+# Cloudflare PREPENDS a managed block above this file at the edge — the AI
+# training-crawler blocks and the Content-Signal line come from there, not from
+# here, and cannot be edited from this repo. Fetch the live URL to see the whole
+# thing; reading only the top of it makes this file look like it was replaced.
+# It is not: everything below is served intact.
+#
+# Disallow stops CRAWLING. It does not stop INDEXING, and the two get confused
+# constantly. A page that is disallowed but linked from elsewhere can still be
+# listed in search results — as a bare URL, because the crawler was never
+# allowed to fetch the page and read the noindex telling it to stay out. So for
+# anything that carries a noindex, the disallow is worse than useless: it is the
+# thing preventing the noindex from being obeyed. Disallow is only right for
+# content that should never be fetched at all.
+
 User-agent: *
 Allow: /
-Disallow: /email-templates/
+
+# Not deployed at all any more — stage-deploy.py keeps build sources and post
+# markdown out of dist/, so these paths 404. Kept as a second line of defence:
+# if the deploy is ever pointed back at the repo root, these two directories are
+# the ones that leak unpublished drafts and internal material, and a crawler
+# that reads this file will not touch them in the window before someone notices.
 Disallow: /posts/
+Disallow: /email-templates/
+
+# Gated lead magnet. This one should genuinely never be fetched: it is the free
+# sample chapter, and the whole point is that you get it by joining the list.
+# Nothing links to it publicly, so there is no URL-only-indexing risk to trade
+# against. It also carries X-Robots-Tag: noindex from _headers as a backstop.
 Disallow: /assets/glp1-ch1-sample-7k2m9x.pdf
-Disallow: /blog/nature-glp1.html
-Disallow: /glp1-chapter-thanks
-Disallow: /support-kit-thanks
+
+# DELIBERATELY NOT DISALLOWED, and each one is a correction of a rule that used
+# to be here:
+#
+#   /blog/nature-glp1 — five published articles link to it. Under a Disallow,
+#   Google follows those links, cannot fetch the page, and is free to index the
+#   bare URL forever. It now returns X-Robots-Tag: noindex, noarchive, nofollow
+#   on the URL that actually serves it (the old rule named the .html form, which
+#   Pages 308-redirects away, so the header was landing on the redirect and the
+#   article itself was fully indexable). Letting crawlers fetch it is what makes
+#   the noindex work.
+#
+#   /glp1-chapter-thanks and /support-kit-thanks — same reasoning. Both carry
+#   noindex in the page source and in _headers. Allowing the fetch is what gets
+#   them dropped from the index rather than merely un-crawled.
 
 Sitemap: https://book.laveenaarchers.com/sitemap.xml

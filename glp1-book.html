@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your Body's Own GLP-1 — A Woman's Guide to Weight, Hormones, and Appetite | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="The complete, well-researched picture of the Ozempic era for women: the real trial data on the drugs, fairly weighed, and every evidence-based way to support the GLP-1 your own body already makes. By Rev. Dr. LaVeena B. Archers.">
-<link rel="canonical" href="https://book.laveenaarchers.com/glp1-book.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/glp1-book">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="Your Body's Own GLP-1 — A Woman's Guide to Weight, Hormones, and Appetite in the Weight-Loss Drug Era">
 <meta property="og:description" content="The drugs, fairly weighed, and every natural way to support the GLP-1 your body already makes. Fair to the medicine, candid about the limits of the natural path.">
-<meta property="og:url" content="https://book.laveenaarchers.com/glp1-book.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/glp1-book">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/glp1-book-cover.jpg">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 
@@ -25,33 +29,83 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
-<!-- JSON-LD: Book + Person. Byline carries no PhD, matching the book. -->
+<!-- JSON-LD: Book + Hope Press + sitewide WebSite.
+     The page sells Kindle, paperback and hardcover, so each is its own workExample
+     rather than a single bookFormat: EBook. No price is stated anywhere on the page,
+     so the offers carry availability and url only — do not invent one.
+     The Person is referenced by the ONE shared @id and defined once, on the homepage. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://book.laveenaarchers.com/glp1-book.html#book",
+      "@id": "https://book.laveenaarchers.com/glp1-book#book",
       "name": "Your Body's Own GLP-1",
       "alternateName": "Your Body's Own GLP-1: A Woman's Guide to Weight, Hormones, and Appetite in the Weight-Loss Drug Era",
       "description": "A level-headed, science-grounded guide to the GLP-1 era for women: the real trial data on the medications, weighed fairly, and every evidence-based way to support the GLP-1 the body already makes. 21 chapters across five parts.",
       "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "bookFormat": "https://schema.org/EBook",
       "inLanguage": "en",
-      "publisher": "Hope Press",
+      "publisher": { "@id": "https://book.laveenaarchers.com/#hope-press" },
       "genre": "Health & Wellness",
       "image": "https://book.laveenaarchers.com/assets/glp1-book-cover.jpg",
-      "url": "https://book.laveenaarchers.com/glp1-book.html",
-      "offers": { "@type": "Offer", "url": "https://www.amazon.com/dp/B0H4HMTL1F", "availability": "https://schema.org/InStock" }
+      "url": "https://book.laveenaarchers.com/glp1-book",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.amazon.com/dp/B0H4HMTL1F",
+        "availability": "https://schema.org/InStock"
+      },
+      "workExample": [
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/glp1-book#kindle",
+          "name": "Your Body's Own GLP-1 (Kindle edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H4HMTL1F",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/glp1-book#paperback",
+          "name": "Your Body's Own GLP-1 (paperback edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/Paperback",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H4HMTL1F",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/glp1-book#hardcover",
+          "name": "Your Body's Own GLP-1 (hardcover edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/Hardcover",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H4HMTL1F",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
     },
     {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "GLP-1", "Women's health", "Longevity"]
+      "@type": "Organization",
+      "@id": "https://book.laveenaarchers.com/#hope-press",
+      "name": "Hope Press",
+      "url": "https://book.laveenaarchers.com/hope-press",
+      "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
+      "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
+      "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
     },
     {
       "@type": "WebSite",
@@ -71,15 +125,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -109,7 +163,14 @@
         <p class="microcopy" style="margin-top:.9rem">Now on Amazon in Kindle, paperback, and hardcover, free to read in Kindle Unlimited. Prefer a taste first? Read Chapter 1 free and join the reader list.</p>
       </div>
 
-      <img src="assets/glp1-book-cover.jpg" alt="Your Body's Own GLP-1 by Rev. Dr. LaVeena B. Archers — book cover" width="300" height="479" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      <!-- class="hero-cover" lives on the <picture>, not the <img>: the wrapper is the
+           direct grid item of .hero-grid, and the class carries order:-1 / margin:0 auto
+           at <=820px. Left on the <img> the cover drops below the headline on phones. -->
+      <picture class="hero-cover">
+        <source type="image/avif" srcset="assets/glp1-book-cover-600.avif">
+        <source type="image/webp" srcset="assets/glp1-book-cover-600.webp">
+        <img src="assets/glp1-book-cover.jpg" alt="Your Body's Own GLP-1 by Rev. Dr. LaVeena B. Archers — book cover" width="300" height="479" fetchpriority="high" decoding="async" style="display:block;margin-inline:auto;border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      </picture>
     </div>
   </section>
 
@@ -159,10 +220,19 @@
         <h2 id="author-title">Written to be fair, when almost nothing about this subject is.</h2>
         <p>I am Rev. Dr. LaVeena B. Archers. I have spent more than thirty years in health and wellness, long enough to watch miracle after miracle arrive and fade. The GLP-1 medications are not one of those. They are real, they are powerful, and they carry real costs, and women deserve an account that says all three things at once instead of picking a side to sell.</p>
         <p class="not-md">A note on credentials: I am a Doctor of Natural Medicine and a board-certified holistic practitioner. I am <strong>not a medical doctor, and I do not prescribe</strong>. This book will never tell you to start or stop a medication. That decision belongs with you and your own prescriber. What I can do is give you the whole picture, so you walk into that conversation informed.</p>
-        <p><a href="about.html">More about Dr. Archers and her scope of practice →</a></p>
+        <p><a href="/about">More about Dr. Archers and her scope of practice →</a></p>
       </div>
       <div>
-        <img src="assets/glp1-book-cover.jpg" alt="Rev. Dr. LaVeena B. Archers" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        <!-- This author-photo slot was showing the BOOK COVER (glp1-book-cover.jpg, a
+             501x800 cover) behind alt text that claimed it was a photograph of her, at
+             280x350 — an aspect ratio matching neither. Corrected to the actual portrait
+             (800x1000), for which 280x350 is the true 4:5 ratio, so it no longer shifts
+             layout. Same markup as the author slot on /book. -->
+        <picture>
+          <source type="image/avif" srcset="assets/laveena-archers-portrait-560.avif">
+          <source type="image/webp" srcset="assets/laveena-archers-portrait-560.webp">
+          <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers" width="280" height="350" loading="lazy" decoding="async" style="border-radius:14px;object-fit:cover;">
+        </picture>
         <p class="credential">Doctor of Natural Medicine (DNM) · BC-HFMD · BC-HFND</p>
       </div>
     </div>
@@ -232,7 +302,7 @@
       <a class="btn btn-gold" href="https://amzn.to/4g1lZ6T">Get it on Amazon</a>
       <a class="free-link" href="#free-chapter" style="display:block;margin-top:.6rem;font-weight:600">Or read Chapter 1 free &amp; get on the list</a>
       <p class="reassure">Free to read on Kindle Unlimited · Or read the opening chapter here first</p>
-      <p class="reassure" style="margin-top:.9rem">Already read it? <a href="review.html" rel="noopener" style="font-weight:600">Leave an honest review</a>. A sentence or two helps the next woman decide.</p>
+      <p class="reassure" style="margin-top:.9rem">Already read it? <a href="/review" rel="noopener" style="font-weight:600">Leave an honest review</a>. A sentence or two helps the next woman decide.</p>
     </div>
   </section>
 
@@ -275,7 +345,7 @@
       <h2 id="quiz-link-title">Not sure the question is even live for you?</h2>
       <p>The book opens with a reflection exercise for working out whether a GLP-1 is worth discussing at all. I have put it online, free, and your answers never leave your device.</p>
       <p style="margin-top:1.5rem">
-        <a class="btn btn-outline" href="glp1-quiz.html">Try the reflection tool</a>
+        <a class="btn btn-outline" href="/glp1-quiz">Try the reflection tool</a>
       </p>
     </div>
   </section>
@@ -288,7 +358,7 @@
       <h2 id="bonus-link-title">The free GLP-1 trick already in your kitchen</h2>
       <p>There is a way to feed your own GLP-1 that costs nothing and hides in food you already eat. I have gathered the two simple kitchen tricks, the science in one minute, and a grocery short list onto one page. Enter your email and it is yours.</p>
       <p style="margin-top:1.5rem">
-        <a class="btn btn-primary" href="resistant-starch-trick.html">Send me the kitchen trick</a>
+        <a class="btn btn-primary" href="/resistant-starch-trick">Send me the kitchen trick</a>
       </p>
     </div>
   </section>
@@ -350,18 +420,18 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="support-kit.html">The free GLP-1 Support Kit</a></li>
-          <li><a href="resistant-starch-trick.html">Free GLP-1 kitchen trick</a></li>
-          <li><a href="glp1-quiz.html">GLP-1 reflection tool</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/support-kit">The free GLP-1 Support Kit</a></li>
+          <li><a href="/resistant-starch-trick">Free GLP-1 kitchen trick</a></li>
+          <li><a href="/glp1-quiz">GLP-1 reflection tool</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

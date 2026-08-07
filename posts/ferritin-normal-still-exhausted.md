@@ -4,10 +4,11 @@ date: 2026-08-02
 slug: ferritin-normal-still-exhausted
 tags: lab-results, iron, fatigue, midlife
 summary: Iron can run low long before it shows up as anemia, and taking iron does not always fix it. I tested low for twenty years and nobody asked why. Here is what ferritin measures, and the question that usually goes unasked.
+description: Iron stores run low years before anemia shows. What ferritin measures, what the trials found, and the question that usually goes unasked.
 questions:
   - Can you be iron deficient without being anemic? :: Yes. Anemia happens once iron stores have been depleted long enough to affect red blood cells. Stores can run low well before that, which is why a normal hemoglobin does not rule out low iron.
-  - Does taking iron help fatigue if you are not anemic? :: A meta-analysis of six randomized controlled trials found a modest but statistically significant improvement in fatigue when iron was given to people who were iron deficient without anemia.
-  - What if you take iron and nothing improves? :: That is information, not failure. Professional guidance treats a lack of response to oral iron as a reason to reassess rather than persist, and absorption problems such as celiac disease, H. pylori infection and autoimmune gastritis are recognized causes that will not resolve while the underlying issue is untreated.
+  - Does taking iron help fatigue if you are not anemic? :: A meta-analysis of six randomized controlled trials found a modest but statistically significant improvement in fatigue when iron was given to people who were iron deficient without anemia [1].
+  - What if you take iron and nothing improves? :: That is information, not failure. Professional guidance treats a lack of response to oral iron as a reason to reassess rather than persist [5], and absorption problems such as celiac disease, H. pylori infection and autoimmune gastritis are recognized causes that will not resolve while the underlying issue is untreated [4].
 references:
   - Yokoi K, Konomi A. Iron deficiency without anaemia is a potential cause of fatigue- meta-analyses of randomised controlled trials and cross-sectional studies. Br J Nutr. 2017;117(10):1422-1431. https://doi.org/10.1017/S0007114517001349
   - Hansen R, Sommer VM, Pinborg A, et al. Intravenous ferric derisomaltose versus oral iron for persistent iron deficient pregnant women- a randomised controlled trial. Arch Gynecol Obstet. 2022;308(4):1165-1173. https://doi.org/10.1007/s00404-022-06768-x
@@ -16,9 +17,9 @@ references:
   - DeLoughery TG, Jackson CS, Ko CW, Rockey DC. AGA Clinical Practice Update on Management of Iron Deficiency Anemia- Expert Review. Clin Gastroenterol Hepatol. 2024;22(8):1575-1583. https://doi.org/10.1016/j.cgh.2024.03.046
 ---
 
-You went in because you are tired in a way that sleep does not fix. They ran bloodwork. Your hemoglobin came back fine, so you were told your iron was fine, and you went home with nothing.
+A normal hemoglobin does not tell you your iron is fine. It tells you that you are not anemic yet. Iron stores empty first and anemia arrives later, which is why iron deficiency without anemia is the stage before the diagnosis, affecting an estimated one to two billion people worldwide [3]. Research in this area commonly treats a ferritin below 30 as the threshold for deficiency [2,3], a number that sits comfortably inside the normal range printed on a great many reports. And giving iron to people who are deficient without anemia produced a modest but statistically significant improvement in fatigue across six randomized controlled trials [1].
 
-That conversation is incomplete. I know it from both sides of the exam room table, and the second half of this piece is mine.
+So if you went in tired in a way that sleep does not fix, they ran bloodwork, your hemoglobin came back fine and you went home with nothing, that conversation was incomplete. I know it from both sides of the exam room table, and the second half of this piece is mine.
 
 # Hemoglobin and ferritin answer different questions
 
@@ -28,21 +29,21 @@ Those two fall out of step, and they do it in a set order. Stores empty first. A
 
 So a normal hemoglobin does not tell you your iron is fine. It tells you that you are not anemic yet. If nobody ran a ferritin, nobody asked about your stores.
 
-# The normal range is doing a lot of work
+# Why is a "normal" ferritin not reassuring?
 
-Lab reference ranges are built from the spread of results in a reference population. They describe what is common. They are not a statement about what is optimal, and they were never designed for the question you walked in with, which is why am I so tired.
+Lab reference ranges are built from the spread of results in a reference population. [They describe what is common](/blog/what-normal-lab-results-mean). They are not a statement about what is optimal, and they were never designed for the question you walked in with, which is why am I so tired.
 
 For ferritin this matters more than for most markers. The bottom of many lab ranges sits low enough that a woman can be well inside normal while her stores are genuinely depleted. Research in this area commonly treats a ferritin below 30 as the threshold for deficiency [2,3], a number that sits comfortably within the normal range printed on a great many reports.
 
 The result is flagged normal because it is common, not because it is fine.
 
-# What the research supports, and what it does not
+# Does taking iron actually help fatigue?
 
 A meta-analysis pooling six randomized controlled trials found that giving iron to people who were deficient without anemia produced a statistically significant improvement in fatigue [1]. The pooled effect size was 0.33, and the trials agreed closely with one another.
 
 That is real. It is also modest. Iron helped meaningfully for some people. It did not transform everyone who took it.
 
-The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one.
+The same paper looked at cross-sectional studies, which are snapshots of populations rather than trials, and found no significant association between deficiency without anemia and fatigue [1]. The authors were honest that this second result was fragile, and that removing one study flipped it. I would rather show you the untidy version than the tidy one, which is [the editorial standard this site runs on](/how-i-research).
 
 There is one more limit. Much of the completed trial evidence on treating non-anemic iron deficiency comes from pregnant women [2], with more currently underway [3], because that is where the funding and the clinical urgency have been. Pregnancy is not the same situation as a forty-six year old with heavy periods and a demanding life. The findings are suggestive for her. They were not gathered on her.
 
@@ -50,7 +51,7 @@ There is one more limit. Much of the completed trial evidence on treating non-an
 
 If you are still menstruating, you lose iron every month, and heavier or longer cycles are one of the most common features of perimenopause. The years when iron losses tend to rise are the same years when fatigue gets written off as stress, or age, or hormones. The iron question quietly never gets asked.
 
-# The part that was mine
+# Twenty years of testing low, and nobody asked why
 
 I tested low for twenty years.
 
@@ -62,7 +63,7 @@ Nobody ever asked me why.
 
 Not why I was losing it. Not why I was not absorbing it. The deficiency was noted, the supplement was recommended, and the loop closed. It closed the same way for two decades.
 
-# When it is not working, that is information
+# What if you take iron and nothing improves?
 
 Professional guidance is clear that if ferritin does not improve after a trial of oral iron, or if someone has a condition where oral iron is unlikely to be absorbed, the answer is to change the approach rather than repeat it [5]. A lack of response is a finding. It is meant to prompt the next question.
 
@@ -74,20 +75,20 @@ The same guidance covers the smaller practical things. No oral formulation has a
 
 As for the cast iron pans, I still cook in mine. They were never going to close a twenty year deficit, and offering them as the answer let everyone feel that something was being done.
 
-# One caution, in the other direction
+# Can you take too much iron?
 
-Since I have told you my version, let me name the opposite mistake.
+Since I have told you my own twenty years of running low, let me name the opposite mistake.
 
 Iron is one of the few supplements that can harm you if you do not need it. Your body absorbs it carefully and has no efficient way to clear a surplus, so an excess accumulates rather than passing through. Some people carry genetic conditions that cause them to over-absorb it, and do not find out until damage is done.
 
 So this is not an argument for buying iron. It is an argument for asking better questions than the ones I was asked.
 
-# What to do with this
+# What should you actually ask for?
 
-Ask for a ferritin, not just a full blood count. Ask for the number rather than accepting normal, and write it down. A ferritin of 12 and a ferritin of 95 are both normal on many reports and they are not the same situation at all.
+Ask for [a ferritin, not just a full blood count](/testing). Ask for the number rather than accepting normal, and write it down. A ferritin of 12 and a ferritin of 95 are both normal on many reports and they are not the same situation at all.
 
 If you are already taking iron and nothing is shifting, that is the moment to stop repeating the intervention and start looking for the cause. Ask what is being lost, or what is not being absorbed, and why.
 
 What you do with any of it belongs with you and a qualified professional who knows your history. My part is to make sure you know the question exists, because for twenty years, nobody made sure I did.
 
-I go deeper on iron, energy, and the root-cause approach in *Bad Medicine Blues*. [Read a free chapter](../book.html#free-chapter).
+I go deeper on iron, energy, and the root-cause approach in *Bad Medicine Blues*. [Read a free chapter](/book#free-chapter).

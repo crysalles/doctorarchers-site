@@ -1,1 +1,36 @@
-/symptom-is-a-signal.html  /worth-investigating.html  301
+# Format: [source] [destination] [code]. Lines starting with # are comments.
+#
+# Always point the destination at the EXTENSIONLESS form. Cloudflare Pages
+# redirects every /foo.html to /foo before serving it — "Pages will also
+# redirect HTML pages to their extension-less counterparts"
+# (developers.cloudflare.com/pages/configuration/serving-pages/) — so a
+# destination ending in .html costs the visitor and the crawler a second hop
+# and dilutes the 301's signal across two URLs.
+#
+# Sources still need both forms. _redirects is evaluated before that automatic
+# 308, so an .html source does match (verified live: /symptom-is-a-signal.html
+# returned our 301, not the platform's 308). But the extensionless form was
+# the URL that actually served 200 back when the page existed, so it is the
+# one most likely to be linked, and it does not match an .html source rule.
+#
+# Careful: "Redirects are always followed, regardless of whether or not an
+# asset matches the incoming request"
+# (developers.cloudflare.com/pages/configuration/redirects/). A rule here will
+# shadow a real page at the same path. Before adding a page whose slug appears
+# below, delete the rule in the same change.
+
+# Renamed 2026-08-03 in e06c447, "Move the Worth Investigating page to a
+# matching slug". symptom-is-a-signal.html was a live, linkable page before
+# that commit, so both of its serving URLs need to land somewhere.
+# NOTE for future editors: "A Symptom Is a Signal" is also a forthcoming book
+# title. If it ever gets its own page, it cannot use this slug while these
+# rules exist — pick a different one, or retire these first.
+/symptom-is-a-signal.html  /worth-investigating  301
+/symptom-is-a-signal       /worth-investigating  301
+
+# Deliberately NOT redirected: /assets/glp1-chapter-1.pdf, renamed to
+# /assets/glp1-ch1-sample-7k2m9x.pdf in 6f93c8e ("Temporarily shield
+# book-matching web content during KDP review"). The whole point of that
+# rename was to take the guessable URL out of circulation. A redirect would
+# put it straight back and hand the gated sample to anyone who remembers the
+# old path. It 404s today; leave it 404ing.

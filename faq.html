@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>FAQ — Scope, PMA &amp; Getting Started | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="Honest answers about how Rev. Dr. LaVeena B. Archers works: scope of practice, the Private Membership Association, medical advice, Human Design, and how to get started.">
-<link rel="canonical" href="https://book.laveenaarchers.com/faq.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/faq">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="FAQ — Rev. Dr. LaVeena Archers">
 <meta property="og:description" content="Honest answers about scope of practice, the PMA, medical advice, and how to get started.">
-<meta property="og:url" content="https://book.laveenaarchers.com/faq.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/faq">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
@@ -25,16 +29,24 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
-<!-- JSON-LD: FAQPage (answers mirror the visible FAQ exactly; questions whose
-     visible answer still contains an author placeholder are left out of the
-     schema until they are filled in) + sitewide Person/WebSite. -->
+<!-- JSON-LD: FAQPage + sitewide Person/WebSite.
+     EVERY acceptedAnswer here must appear verbatim as visible text on the page.
+     Google requires it, and a mismatch is a manual-action risk. Two did not:
+     "How do I get started?" pointed at a "Testing and Reports page" the site
+     does not have, and the labs answer ended with a sentence about the Shop
+     menu that was nowhere in the body. Both were corrected to match the page
+     rather than the page being edited to match the markup.
+     If you change an answer below, change the visible <p class="answer"> to
+     match, or the FAQ rich result stops being honest.
+     Questions whose visible answer still contains an author placeholder stay
+     out of the schema until they are filled in. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "FAQPage",
-      "@id": "https://book.laveenaarchers.com/faq.html#faq",
+      "@id": "https://book.laveenaarchers.com/faq#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -64,23 +76,16 @@
         {
           "@type": "Question",
           "name": "How do I get started?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The best place to start is the book. Read a free chapter of Bad Medicine Blues, and if you would like your lab results reviewed, see the Testing and Reports page." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The best place to start is the book. Read a free chapter of Bad Medicine Blues, and if you would like your lab results reviewed, see Testing & Learning." }
         },
         {
           "@type": "Question",
           "name": "Where do I get the labs and supplements you work with?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Functional labs are available through her Rupa Health storefront, and professional-grade supplements through her Fullscript store. Links to both are in the Shop menu." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Functional labs are available through her Rupa Health storefront, and professional-grade supplements through her Fullscript store." }
         }
       ]
     },
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine practitioner and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
-    },
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
@@ -99,15 +104,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -115,7 +120,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -139,7 +144,7 @@
         </details>
         <details>
           <summary>Are you a medical doctor?</summary>
-          <p class="answer">No. I am a Doctor of Natural Medicine (DNM) with board certifications in holistic functional medicine, functional nutrition, and a Certified Executive Coach. I am not a medical doctor, and I do not replace one. You can read exactly what each credential covers on the <a href="about.html">About &amp; Scope page</a>.</p>
+          <p class="answer">No. I am a Doctor of Natural Medicine (DNM) with board certifications in holistic functional medicine, functional nutrition, and a Certified Executive Coach. I am not a medical doctor, and I do not replace one. You can read exactly what each credential covers on the <a href="/about">About &amp; Scope page</a>.</p>
         </details>
         <details>
           <summary>Is anything on this site medical advice?</summary>
@@ -147,7 +152,7 @@
         </details>
         <details>
           <summary>What is a Private Membership Association (PMA)?</summary>
-          <p class="answer">A Private Membership Association is a private, contract-based association. LaVeena offers her education and support services to members within this private framework rather than to the general public. Joining is simple and explained on the <a href="join-pma.html">Join PMA page</a>.</p>
+          <p class="answer">A Private Membership Association is a private, contract-based association. LaVeena offers her education and support services to members within this private framework rather than to the general public. Joining is simple and explained on the <a href="/join-pma">Join PMA page</a>.</p>
         </details>
         <details>
           <summary>Do you take insurance?</summary>
@@ -163,7 +168,7 @@
         </details>
         <details>
           <summary>How do I get started?</summary>
-          <p class="answer">The best place to start is the book. <a href="book.html#free-chapter">Read a free chapter</a> of <em>Bad Medicine Blues</em>, and if you would like your lab results reviewed, see <a href="testing.html">Testing &amp; Learning</a>.</p>
+          <p class="answer">The best place to start is the book. <a href="/book#free-chapter">Read a free chapter</a> of <em>Bad Medicine Blues</em>, and if you would like your lab results reviewed, see <a href="/testing">Testing &amp; Learning</a>.</p>
         </details>
         <details>
           <summary>Where do I get the labs and supplements you work with?</summary>
@@ -177,9 +182,9 @@
     <div class="wrap center" style="max-width:44rem">
       <hr class="rule" aria-hidden="true">
       <h2 id="faq-cta-title">Still have a question?</h2>
-      <p><a href="contact.html">Send a message</a> and I will point you in the right direction.</p>
+      <p><a href="/contact">Send a message</a> and I will point you in the right direction.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+        <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
       </div>
     </div>
   </section>
@@ -225,19 +230,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

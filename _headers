@@ -5,9 +5,104 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Gated lead magnets. Each is delivered by email or from a noindex thanks
-# page, so none of them should be findable in search. Without these rules a
-# reader can download the magnet without ever joining the list.
+# ===========================================================================
+# READ THIS BEFORE ADDING ANY RULE
+# ===========================================================================
+# 1. Cloudflare Pages applies EVERY matching rule, not the most specific one.
+#    When two matching rules set the same header name the values are JOINED
+#    WITH A COMMA — "If a header is applied twice in the _headers file, the
+#    values are joined with a comma separator."
+#    (developers.cloudflare.com/pages/configuration/headers/)
+#    So two overlapping Cache-Control rules do not fall back to the narrower
+#    one, they produce "public, max-age=2592000, public, max-age=3600". Every
+#    Cache-Control rule below is keyed on a distinct file extension so that no
+#    two of them can ever match the same path. Keep it that way.
+#
+# 2. Pages redirects every /foo.html to /foo before serving anything — "Pages
+#    will also redirect HTML pages to their extension-less counterparts."
+#    (developers.cloudflare.com/pages/configuration/serving-pages/)
+#    A rule written against an .html path therefore lands on a 308 and never
+#    on the response that actually carries the page. Any rule for an HTML page
+#    must be written for the extensionless form. Both forms are listed here;
+#    the .html one costs nothing and covers direct hits on the redirect.
+#    This does NOT apply to .pdf — only HTML is extension-stripped, confirmed
+#    live: /assets/glp1-ch1-sample-7k2m9x.pdf returns 200 directly with its
+#    X-Robots-Tag intact.
+#
+# 3. Only one splat (*) is allowed per URL pattern, and a splat matches
+#    greedily across "/" — so /assets/*.png also covers
+#    /assets/credentials/whatever.png. That is why there is no separate rule
+#    for the credentials folder.
+
+# ---------------------------------------------------------------------------
+# Browser caching
+# ---------------------------------------------------------------------------
+# Nothing below is marked `immutable`, and that is deliberate. Our filenames
+# are not content-hashed: assets/styles.css and assets/good-years-cover.jpg
+# keep those names forever, and optimize-images.py regenerates the -600.avif /
+# -600.webp derivatives under the same names whenever a source image changes.
+# `immutable` tells the browser never to revalidate before max-age expires, so
+# replacing an image in place would strand returning visitors on the old bytes
+# with no way to force a refresh short of renaming the file. A long max-age
+# already buys nearly all of the performance; `immutable` only adds the part
+# we cannot undo.
+#
+# HTML is deliberately absent from this section. Pages already serves HTML as
+# "public, max-age=0, must-revalidate" (verified live on
+# book.laveenaarchers.com), which is exactly what we want — a content edit is
+# visible on the next request. The only pattern that would catch our
+# extensionless HTML URLs is /*, and per note 1 that would also match every
+# asset and comma-collide with the rules below. Leave HTML on the default.
+#
+# PDFs are absent for the same reason as HTML: the Pages default (4 hours,
+# must-revalidate) is already right for a lead magnet that may be revised in
+# place, and adding a /assets/*.pdf block risks colliding with the gated-PDF
+# rules further down if either ever grows a shared header name.
+
+# Images: book covers, the portrait, the certificate scans, and the .avif /
+# .webp derivatives of all of them. In practice these never change — a new
+# image gets a new filename. 30 days covers essentially every repeat visit,
+# and is short enough that an in-place replacement heals on its own within a
+# month rather than never. .jpg and .jpeg need separate rules because a
+# pattern may hold only one splat and *.jpg does not match *.jpeg.
+/assets/*.avif
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/assets/*.webp
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/assets/*.png
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/assets/*.jpg
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/assets/*.jpeg
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+# Hand-edited source assets. assets/styles.css, assets/site.js,
+# assets/analytics.js, assets/glp1-quiz.js and assets/hope-press-colophon.svg
+# all get edited in place under the same filename, so they need to go stale
+# quickly. One hour, down from the 4-hour Pages default, so a style or script
+# fix reaches returning visitors the same morning it ships. must-revalidate
+# means an edge that is holding an expired copy has to check rather than serve
+# it. This is the one place where a shorter TTL is the correct trade.
+/assets/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/*.svg
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ---------------------------------------------------------------------------
+# Gated lead magnets
+# ---------------------------------------------------------------------------
+# Each is delivered by email or from a noindex thanks page, so none of them
+# should be findable in search. Without these rules a reader can download the
+# magnet without ever joining the list. Verified live: .pdf is not
+# extension-stripped, so these single rules are sufficient as written.
 /assets/glp1-ch1-sample-7k2m9x.pdf
   X-Robots-Tag: noindex, noarchive, nofollow
 
@@ -20,5 +115,76 @@
 /assets/glp1-resistant-starch-trick.pdf
   X-Robots-Tag: noindex, noarchive, nofollow
 
+# ---------------------------------------------------------------------------
+# Gated page: the Nature GLP-1 piece
+# ---------------------------------------------------------------------------
+# This is the one that was actually broken. The .html rule alone put the
+# noindex on a 308 while /blog/nature-glp1 served the full article with no
+# X-Robots-Tag at all — verified live before this change. The page also has no
+# <meta name="robots"> of its own, so the header was the only thing standing
+# between a gated article and Google, and it was pointed at the wrong URL.
+/blog/nature-glp1
+  X-Robots-Tag: noindex, noarchive, nofollow
+
 /blog/nature-glp1.html
   X-Robots-Tag: noindex, noarchive, nofollow
+
+# ---------------------------------------------------------------------------
+# Thanks pages and other non-public pages
+# ---------------------------------------------------------------------------
+# These already carry <meta name="robots" content="noindex,follow"> in the
+# page source, so unlike /blog/nature-glp1 they were not exposed. The headers
+# below are belt and braces: they reach crawlers and fetchers that never parse
+# the HTML, and they hold even if a future template edit drops the meta tag.
+#
+# The value is "noindex, follow", NOT the "noindex, noarchive, nofollow" used
+# for the PDFs above. That is on purpose and should not be tidied into
+# matching. Each of these pages deliberately says `follow` in its own meta
+# tag, and Google combines robots directives by taking the most restrictive —
+# so adding `nofollow` in a header would silently override the page author's
+# choice and stop link equity flowing from the thanks pages to the book pages
+# they link to. Mirror the meta tag; do not extend it.
+/glp1-chapter-thanks
+  X-Robots-Tag: noindex, follow
+
+/glp1-chapter-thanks.html
+  X-Robots-Tag: noindex, follow
+
+/support-kit-thanks
+  X-Robots-Tag: noindex, follow
+
+/support-kit-thanks.html
+  X-Robots-Tag: noindex, follow
+
+/resistant-starch-thanks
+  X-Robots-Tag: noindex, follow
+
+/resistant-starch-thanks.html
+  X-Robots-Tag: noindex, follow
+
+/review
+  X-Robots-Tag: noindex, follow
+
+/review.html
+  X-Robots-Tag: noindex, follow
+
+/training
+  X-Robots-Tag: noindex, follow
+
+/training.html
+  X-Robots-Tag: noindex, follow
+
+/services
+  X-Robots-Tag: noindex, follow
+
+/services.html
+  X-Robots-Tag: noindex, follow
+
+# 404.html is reachable as an ordinary asset — /404 returns HTTP 200, not 404,
+# so the "it is a 404, crawlers ignore it" assumption does not hold here. Its
+# meta tag says plain `noindex` with no `follow`, so this mirrors that exactly.
+/404
+  X-Robots-Tag: noindex
+
+/404.html
+  X-Robots-Tag: noindex

@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Worth Investigating — Reading Your Symptoms, and Knowing What to Ask | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="You know something is wrong. Nobody has found it yet. A root-cause guide to reading your own symptoms, asking better questions, and knowing when to stop looking.">
-<link rel="canonical" href="https://book.laveenaarchers.com/worth-investigating.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/worth-investigating">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="Worth Investigating — A Root-Cause Guide to Reading Your Symptoms">
 <meta property="og:description" content="You are not imagining it. You are just the only one who has been paying attention.">
-<meta property="og:url" content="https://book.laveenaarchers.com/worth-investigating.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/worth-investigating">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 
 <!-- Twitter card -->
@@ -23,29 +27,43 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
+<!-- JSON-LD: Book + Hope Press + sitewide WebSite. The book is still in progress —
+     the page says "Coming soon" with no date and no purchase link — so there is
+     deliberately no offers, datePublished, image or bookFormat here. Do not invent one.
+     The Person is referenced by the ONE shared @id and defined once, on the homepage. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://book.laveenaarchers.com/worth-investigating.html#book",
+      "@id": "https://book.laveenaarchers.com/worth-investigating#book",
       "name": "Worth Investigating",
       "alternateName": "Worth Investigating: A Root-Cause Guide to Reading Your Symptoms — What They Mean, What to Ask, and When to Stop Looking",
       "description": "A root-cause guide to reading your own symptoms: what they mean, what to ask, and when to stop looking. Twenty-six chapters across five parts, twelve Signal Cards, and every substantive claim labeled for the strength of the evidence behind it. In progress.",
       "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "publisher": { "@type": "Organization", "name": "Hope Press" },
+      "publisher": { "@id": "https://book.laveenaarchers.com/#hope-press" },
       "inLanguage": "en",
-      "url": "https://book.laveenaarchers.com/worth-investigating.html",
-      "genre": "Health &amp; Wellness"
+      "url": "https://book.laveenaarchers.com/worth-investigating",
+      "genre": "Health & Wellness"
     },
     {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers",
+      "@type": "Organization",
+      "@id": "https://book.laveenaarchers.com/#hope-press",
+      "name": "Hope Press",
+      "url": "https://book.laveenaarchers.com/hope-press",
+      "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
+      "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
+      "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://book.laveenaarchers.com/#website",
       "url": "https://book.laveenaarchers.com/",
-      "description": "Author of Bad Medicine Blues. Board certified in natural medicine and functional nutrition. Not a medical doctor.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Longevity"]
+      "name": "LaVeenaArchers.com",
+      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en"
     }
   ]
 }
@@ -57,15 +75,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -89,7 +107,7 @@
         <p class="sub">A Root-Cause Guide to Reading Your Symptoms &mdash; What They Mean, What to Ask, and When to Stop Looking</p>
         <p class="support"><strong>You know something is wrong. Nobody has found it yet.</strong> This is the book for the part before a diagnosis, when all you have is the thing you can feel.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="contact.html">Tell me when it's out</a>
+          <a class="btn btn-primary" href="/contact">Tell me when it's out</a>
           <a class="free-link" href="#inside" style="font-weight:600">See what's inside &darr;</a>
         </div>
         <p class="microcopy" style="margin-top:1rem">In progress. No date announced yet.</p>
@@ -220,8 +238,8 @@
     <div class="wrap narrow">
       <hr class="rule" aria-hidden="true">
       <h2 id="author-title">About the author</h2>
-      <p><strong>Rev. Dr. LaVeena Archers</strong> writes for women who were told their labs were normal and sent home anyway. She is the author of <a href="book.html"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room table.</p>
-      <p><a href="how-i-research.html">How I research &rarr;</a></p>
+      <p><strong>Rev. Dr. LaVeena Archers</strong> writes for women who were told their labs were normal and sent home anyway. She is the author of <a href="/book"><em>Bad Medicine Blues</em></a>, written from both sides of the exam-room table.</p>
+      <p><a href="/how-i-research">How I research &rarr;</a></p>
     </div>
   </section>
 
@@ -238,7 +256,7 @@
         <li><span class="part-label">Every claim labeled</span> for the strength of the evidence behind it</li>
       </ul>
       <p class="priceline">Coming soon</p>
-      <a class="btn btn-gold" href="contact.html">Tell me when it's out</a>
+      <a class="btn btn-gold" href="/contact">Tell me when it's out</a>
       <p class="reassure">No spam. One email when the book is available.</p>
     </div>
   </section>
@@ -255,20 +273,20 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="books.html">All books</a></li>
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/books">All books</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

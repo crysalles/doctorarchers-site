@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Good Years — A Woman's Guide to Healthspan, Strength, and Longevity | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="The evidence-based longevity guide written for a woman's body, not a man's. 36 chapters on the levers that actually move healthspan, with all 639 claims tagged for how good the evidence really is. By Rev. Dr. LaVeena B. Archers.">
-<link rel="canonical" href="https://book.laveenaarchers.com/good-years.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/good-years">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="The Good Years — A Woman's Guide to Healthspan, Strength, and Longevity in Midlife and Beyond">
 <meta property="og:description" content="Almost every famous longevity book was written by a man, built on research done mostly in men. This one is written for a woman's body, and it tells you how good the evidence is for every claim it makes.">
-<meta property="og:url" content="https://book.laveenaarchers.com/good-years.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/good-years">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/good-years-cover.jpg">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 
@@ -25,44 +29,79 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
-<!-- JSON-LD: Book + Person. Byline carries no PhD, matching the book. -->
+<!-- JSON-LD: Book + Hope Press + sitewide WebSite.
+     The page sells Kindle at $9.99 and paperback at $21.99, so each is its own
+     workExample with its own priced Offer rather than a single bookFormat: EBook.
+     Every price here is one the page itself prints — never add one it does not.
+     The Person is referenced by the ONE shared @id and defined once, on the homepage. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://book.laveenaarchers.com/good-years.html#book",
+      "@id": "https://book.laveenaarchers.com/good-years#book",
       "name": "The Good Years",
       "alternateName": "The Good Years: A Woman's Guide to Healthspan, Strength, and Longevity in Midlife and Beyond",
       "description": "The evidence-based longevity guide written for a woman's body. 36 chapters across five parts, covering the master levers that are proven and mostly free, a woman's inflection points from perimenopause onward, a clear-eyed teardown of the supplements and biohacks, and a plan by the decade. Every substantive claim carries a tag for how good the evidence behind it actually is.",
       "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "bookFormat": "https://schema.org/EBook",
       "inLanguage": "en",
       "publisher": { "@id": "https://book.laveenaarchers.com/#hope-press" },
       "genre": "Health & Wellness",
       "isPartOf": { "@type": "BookSeries", "name": "Dr. Archers Root-Cause Guides", "position": 2 },
       "image": "https://book.laveenaarchers.com/assets/good-years-cover.jpg",
-      "url": "https://book.laveenaarchers.com/good-years.html",
-      "offers": { "@type": "Offer", "url": "https://www.amazon.com/dp/B0HCR2XHLW", "availability": "https://schema.org/InStock" }
+      "url": "https://book.laveenaarchers.com/good-years",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.amazon.com/dp/B0HCR2XHLW",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "lowPrice": "9.99",
+        "highPrice": "21.99",
+        "offerCount": 2
+      },
+      "workExample": [
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/good-years#kindle",
+          "name": "The Good Years (Kindle edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0HCR2XHLW",
+            "availability": "https://schema.org/InStock",
+            "price": "9.99",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/good-years#paperback",
+          "name": "The Good Years (paperback edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/Paperback",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0HCR2XHLW",
+            "availability": "https://schema.org/InStock",
+            "price": "21.99",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
     },
     {
       "@type": "Organization",
       "@id": "https://book.laveenaarchers.com/#hope-press",
       "name": "Hope Press",
-      "url": "https://book.laveenaarchers.com/hope-press.html",
+      "url": "https://book.laveenaarchers.com/hope-press",
       "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
       "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
       "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research.html"
-    },
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Longevity", "Healthspan", "Menopause", "Women's health"]
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
     },
     {
       "@type": "WebSite",
@@ -82,15 +121,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -115,12 +154,19 @@
         <p class="support">You were promised more years. This book is about making them good ones. Almost every famous longevity book was written by a man, built on research done mostly in men, for a body that runs on a different timeline than yours.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HCR2XHLW">Get it on Amazon Kindle</a>
-          <a class="free-link" href="good-years-starter.html" style="font-weight:600">Or start with the free starter kit &rarr;</a>
+          <a class="free-link" href="/good-years-starter" style="font-weight:600">Or start with the free starter kit &rarr;</a>
         </div>
         <p class="microcopy" style="margin-top:.9rem">Out now on Kindle at $9.99 and in paperback at $21.99.</p>
       </div>
 
-      <img src="assets/good-years-cover.jpg" alt="The Good Years by Rev. Dr. LaVeena B. Archers — book cover" width="300" height="480" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      <!-- class="hero-cover" lives on the <picture>, not the <img>: the wrapper is the
+           direct grid item of .hero-grid, and the class carries order:-1 / margin:0 auto
+           at <=820px. Left on the <img> the cover drops below the headline on phones. -->
+      <picture class="hero-cover">
+        <source type="image/avif" srcset="assets/good-years-cover-600.avif">
+        <source type="image/webp" srcset="assets/good-years-cover-600.webp">
+        <img src="assets/good-years-cover.jpg" alt="The Good Years by Rev. Dr. LaVeena B. Archers — book cover" width="300" height="480" fetchpriority="high" decoding="async" style="display:block;margin-inline:auto;border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      </picture>
     </div>
   </section>
 
@@ -169,7 +215,7 @@
         <li><span class="part-label">Part V — Aging on Your Own Terms</span> Mindset, purpose, designing your later life, and a plan by the decade.</li>
       </ul>
       <p class="center">
-        <a class="btn btn-outline" href="good-years-starter.html">Get the free starter kit &rarr;</a>
+        <a class="btn btn-outline" href="/good-years-starter">Get the free starter kit &rarr;</a>
       </p>
     </div>
   </section>
@@ -181,7 +227,7 @@
         <hr class="rule" aria-hidden="true">
         <h2 id="author-title">Honest about the many times the answer is "save your money."</h2>
       </div>
-      <p>Rev. Dr. LaVeena B. Archers is a Doctor of Natural Medicine, an educator and writer, and the author of <a href="book.html">Bad Medicine Blues</a>. She is not a conventional medical doctor, and not a licensed physician or naturopathic doctor. Her role is to educate and support, never to diagnose, treat, or prescribe.</p>
+      <p>Rev. Dr. LaVeena B. Archers is a Doctor of Natural Medicine, an educator and writer, and the author of <a href="/book">Bad Medicine Blues</a>. She is not a conventional medical doctor, and not a licensed physician or naturopathic doctor. Her role is to educate and support, never to diagnose, treat, or prescribe.</p>
       <p>Most of what moves healthspan costs nothing. That is the least profitable message in the longevity business, which is exactly why so few people are selling it.</p>
     </div>
   </section>
@@ -198,8 +244,8 @@
       </ul>
       <p class="priceline">Kindle $9.99. Paperback $21.99. Both available now.</p>
       <a class="btn btn-gold" href="https://www.amazon.com/dp/B0HCR2XHLW">Get it on Amazon</a>
-      <a class="free-link" href="good-years-starter.html" style="display:block;margin-top:.6rem;font-weight:600">Or start with the free starter kit</a>
-      <p class="reassure" style="margin-top:.9rem">Already read it? <a href="review.html" rel="noopener" style="font-weight:600">Leave an honest review</a>. A sentence or two helps the next woman decide.</p>
+      <a class="free-link" href="/good-years-starter" style="display:block;margin-top:.6rem;font-weight:600">Or start with the free starter kit</a>
+      <p class="reassure" style="margin-top:.9rem">Already read it? <a href="/review" rel="noopener" style="font-weight:600">Leave an honest review</a>. A sentence or two helps the next woman decide.</p>
     </div>
   </section>
 
@@ -211,9 +257,9 @@
         <h2 id="series-title">Book Two of the Root-Cause Guides.</h2>
       </div>
       <ul class="parts">
-        <li><span class="part-label">Book One — Bad Medicine Blues</span> The natural, root-cause approach to women's energy, hormones, and vitality. <a href="book.html">See the book &rarr;</a></li>
+        <li><span class="part-label">Book One — Bad Medicine Blues</span> The natural, root-cause approach to women's energy, hormones, and vitality. <a href="/book">See the book &rarr;</a></li>
         <li><span class="part-label">Book Two — The Good Years</span> A woman's guide to healthspan, strength, and longevity in midlife and beyond. You are here.</li>
-        <li><span class="part-label">Book Three — Worth Investigating</span> A root-cause guide to reading your symptoms: what they mean, what to ask, and when to stop looking. <a href="worth-investigating.html">See the book &rarr;</a></li>
+        <li><span class="part-label">Book Three — Worth Investigating</span> A root-cause guide to reading your symptoms: what they mean, what to ask, and when to stop looking. <a href="/worth-investigating">See the book &rarr;</a></li>
       </ul>
     </div>
   </section>
@@ -240,19 +286,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="books.html">All the books</a></li>
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="good-years-starter.html">The free Good Years starter kit</a></li>
-          <li><a href="good-years-workbook.html">The Good Years workbook</a></li>
-          <li><a href="hope-press.html">Hope Press, the publisher</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/books">All the books</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/good-years-starter">The free Good Years starter kit</a></li>
+          <li><a href="/good-years-workbook">The Good Years workbook</a></li>
+          <li><a href="/hope-press">Hope Press, the publisher</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="nocache">
 <title>The Free GLP-1 Kitchen Trick | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="A free bonus from Your Body's Own GLP-1: two simple, science-backed kitchen tricks that turn everyday starches into food for your own GLP-1. By Rev. Dr. LaVeena B. Archers.">
 <link rel="canonical" href="https://book.laveenaarchers.com/resistant-starch-trick">
@@ -18,6 +22,36 @@
 <meta name="twitter:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233f5e4e'/%3E%3Cpath d='M16 26c0-9 4-14 10-16-1 9-4 14-10 16zm0 0c0-9-4-14-10-16 1 9 4 14 10 16z' fill='%23f6f2e9'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/styles.css">
+
+<!-- JSON-LD: plain WebPage. This page was in sitemap.xml and llms.txt with no
+     structured data at all. Deliberately NOT MedicalWebPage: it is a food
+     technique, offered as education, not as treatment. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
+    {
+      "@type": "WebSite",
+      "@id": "https://book.laveenaarchers.com/#website",
+      "url": "https://book.laveenaarchers.com/",
+      "name": "LaVeenaArchers.com",
+      "publisher": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://book.laveenaarchers.com/resistant-starch-trick",
+      "url": "https://book.laveenaarchers.com/resistant-starch-trick",
+      "name": "The Free GLP-1 Kitchen Trick",
+      "description": "A free bonus from Your Body's Own GLP-1: two simple kitchen tricks that turn everyday starches into food for the gut bacteria linked to your own GLP-1.",
+      "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
+      "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -25,14 +59,14 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
       <a class="btn btn-gold" href="#get-tip">Send me the tip</a>
     </nav>
   </div>
@@ -101,10 +135,10 @@
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="books.html">Books</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/books">Books</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>
@@ -125,7 +159,7 @@
       var data = new FormData(form);
       fetch(form.action, { method: "POST", body: data, mode: "no-cors" })
         .catch(function () {})
-        .then(function () { window.location.href = "resistant-starch-thanks"; });
+        .then(function () { window.location.href = "/resistant-starch-thanks"; });
     });
   })();
 </script>

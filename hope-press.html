@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hope Press — The Publisher | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="Hope Press is the independent imprint behind the Dr. Archers root-cause guides. What it publishes, the editorial standards every title has to meet, and how to reach it for rights, permissions, and review copies.">
-<link rel="canonical" href="https://book.laveenaarchers.com/hope-press.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/hope-press">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hope Press — The Publisher">
 <meta property="og:description" content="The independent imprint behind the root-cause guides. Every claim graded, every source checkable.">
-<meta property="og:url" content="https://book.laveenaarchers.com/hope-press.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/hope-press">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/bad-medicine-blues-cover.png">
 
@@ -25,26 +29,24 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
+<!-- JSON-LD: this is Hope Press's own page, so it carries the imprint's Organization
+     node under the ONE stable @id every Book on the site references as its publisher.
+     Keep this node and the copies on the book pages byte-identical; the imprint used to
+     be modeled three different ways, one of them a bare string.
+     The Person is referenced by that same shared @id and defined once, on the homepage. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine educator and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease."
-    },
-    {
       "@type": "Organization",
       "@id": "https://book.laveenaarchers.com/#hope-press",
       "name": "Hope Press",
-      "url": "https://book.laveenaarchers.com/hope-press.html",
+      "url": "https://book.laveenaarchers.com/hope-press",
       "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
       "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
       "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research.html"
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
     },
     {
       "@type": "WebSite",
@@ -56,8 +58,8 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://book.laveenaarchers.com/hope-press.html",
-      "url": "https://book.laveenaarchers.com/hope-press.html",
+      "@id": "https://book.laveenaarchers.com/hope-press",
+      "url": "https://book.laveenaarchers.com/hope-press",
       "name": "Hope Press — The Publisher",
       "description": "The independent imprint behind the Dr. Archers root-cause guides: what it publishes, its editorial standards, and how to reach it.",
       "isPartOf": { "@id": "https://book.laveenaarchers.com/#website" },
@@ -74,15 +76,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -90,7 +92,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -160,8 +162,8 @@
       <div class="narrow center" style="margin-inline:auto;margin-top:2rem">
         <p>The full method — where the evidence comes from, how each piece is reviewed, how AI is used in the research, and how errors get corrected — is set out separately.</p>
         <div class="btn-row" style="justify-content:center">
-          <a class="btn btn-outline" href="how-i-research.html">Read the editorial standards</a>
-          <a class="btn btn-outline" href="corrections.html">See the corrections log</a>
+          <a class="btn btn-outline" href="/how-i-research">Read the editorial standards</a>
+          <a class="btn btn-outline" href="/corrections">See the corrections log</a>
         </div>
       </div>
     </div>
@@ -180,31 +182,31 @@
           <span class="pill">Available now</span>
           <h3>Bad Medicine Blues</h3>
           <p>The root-cause approach to women's energy, hormones, and vitality. A revised and expanded edition is finishing, grown to 30 chapters with all 1,071 of its claims graded.</p>
-          <a class="card-link" href="book.html">See the book &rarr;</a>
+          <a class="card-link" href="/book">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">Available now</span>
           <h3>Your Body's Own GLP-1</h3>
           <p>The science of the Ozempic era, weighed fairly, and every natural way to support the GLP-1 your body already makes.</p>
-          <a class="card-link" href="glp1-book.html">See the book &rarr;</a>
+          <a class="card-link" href="/glp1-book">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">Available now</span>
           <h3>The Good Years</h3>
           <p>Healthspan, strength, and longevity written for a woman's body rather than a man's, with all 639 of its claims tagged for how good the evidence behind them actually is.</p>
-          <a class="card-link" href="good-years.html">See the book &rarr;</a>
+          <a class="card-link" href="/good-years">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">In progress</span>
           <h3>Worth Investigating</h3>
           <p>Reading your own symptoms: what they mean, what to ask, and when to stop looking. Twelve symptom chapters, each ending in a one-page Signal Card for the appointment.</p>
-          <a class="card-link" href="worth-investigating.html">See the book &rarr;</a>
+          <a class="card-link" href="/worth-investigating">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">In progress</span>
           <h3>The Muscle You Keep</h3>
           <p>What GLP-1 drugs and rapid weight loss do to muscle, and what women can do about it after 40. A book about strength rather than weight.</p>
-          <a class="card-link" href="muscle-you-keep.html">See the book &rarr;</a>
+          <a class="card-link" href="/muscle-you-keep">See the book &rarr;</a>
         </div>
         <div class="col-card">
           <span class="pill">In progress</span>
@@ -240,7 +242,7 @@
         <li><span class="part-label">Corrections</span> If a source does not say what a book claims it says, that is a defect and I want to know. Corrections are logged publicly, not quietly patched.</li>
       </ul>
       <div class="btn-row">
-        <a class="btn btn-primary" href="contact.html">Contact Hope Press</a>
+        <a class="btn btn-primary" href="/contact">Contact Hope Press</a>
       </div>
     </div>
   </section>
@@ -285,18 +287,18 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="books.html">All the books</a></li>
-          <li><a href="hope-press.html">Hope Press, the publisher</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/books">All the books</a></li>
+          <li><a href="/hope-press">Hope Press, the publisher</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

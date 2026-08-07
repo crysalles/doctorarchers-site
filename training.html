@@ -3,16 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,follow">
+<!-- nocache limits Bing/Copilot to title+snippet for training use while keeping
+     the page citable in Copilot answers. Deliberately NOT noarchive, which would
+     drop her out of those answers entirely. -->
+<meta name="robots" content="noindex,follow,nocache">
 <title>Training &amp; Certifications — Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="Rev. Dr. LaVeena B. Archers' professional training and Human Design education, plus the Certified Holistic Health Practitioner and Nutrition Coach certification programs she teaches.">
-<link rel="canonical" href="https://book.laveenaarchers.com/training.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/training">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Training &amp; Certifications — Rev. Dr. LaVeena Archers">
 <meta property="og:description" content="Her professional training and Human Design education, plus the certification programs she teaches.">
-<meta property="og:url" content="https://book.laveenaarchers.com/training.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/training">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/laveena-archers-portrait.jpg">
 
@@ -30,14 +33,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Holistic Functional Medicine practitioner and author of Bad Medicine Blues. Educates and supports; does not diagnose, treat, prescribe, or manage disease.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
-    },
+    { "@id": "https://book.laveenaarchers.com/#laveena" },
     {
       "@type": "WebSite",
       "@id": "https://book.laveenaarchers.com/#website",
@@ -56,15 +52,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -72,7 +68,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -117,7 +113,7 @@
         <h3>Nutrition Coach certifications</h3>
         <p>For coaches who want to give straight, practical nutrition guidance. You learn to teach the whole-food, root-cause approach in a way clients can actually live, grounded in education rather than fads or fear.</p>
       </div>
-      <p style="margin-top:1.5rem">Questions about a program? <a href="contact.html">Send a message</a>.</p>
+      <p style="margin-top:1.5rem">Questions about a program? <a href="/contact">Send a message</a>.</p>
     </div>
   </section>
 
@@ -128,7 +124,7 @@
       <h2 id="training-cta-title">Interested in training with LaVeena?</h2>
       <p>Start with a conversation about where you are and where you want to teach.</p>
       <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-gold" href="contact.html">Send a message</a>
+        <a class="btn btn-gold" href="/contact">Send a message</a>
       </div>
     </div>
   </section>
@@ -174,19 +170,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

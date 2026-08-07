@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bad Medicine Blues — Root-Cause Health for Women | Rev. Dr. LaVeena Archers</title>
 <meta name="description" content="The level-headed, science-grounded guide for women who are tired of being told their bloodwork is normal while they feel anything but. 29 chapters, 39 recipes, week-by-week protocols. A revised edition is finishing, with all 1,071 claims labeled for the strength of the evidence behind them.">
-<link rel="canonical" href="https://book.laveenaarchers.com/book.html">
+<link rel="canonical" href="https://book.laveenaarchers.com/book">
+
+<!-- Limits Microsoft/Bing's training use to title+snippet while keeping the page
+     citable in Copilot answers. Deliberately NOT "noarchive", which would drop it. -->
+<meta name="robots" content="nocache">
 
 <!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="Bad Medicine Blues — The Natural, Root-Cause Approach to Women's Energy, Hormones, and Vitality">
 <meta property="og:description" content="The level-headed, science-grounded guide for women who are tired of being told their bloodwork is normal while they feel anything but.">
-<meta property="og:url" content="https://book.laveenaarchers.com/book.html">
+<meta property="og:url" content="https://book.laveenaarchers.com/book">
 <meta property="og:image" content="https://book.laveenaarchers.com/assets/bad-medicine-blues-cover.png">
 <meta property="og:site_name" content="LaVeenaArchers.com">
 
@@ -25,35 +29,85 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 
-<!-- JSON-LD: Book + sitewide Person/WebSite. The FAQPage schema lives on faq.html only. -->
+<!-- JSON-LD: Book + Hope Press + sitewide WebSite. The FAQPage schema lives on faq.html only.
+     The Person is referenced by the ONE shared @id and defined once, on the homepage.
+     Do not re-inline her description or credential list here: three incompatible
+     copies had already drifted apart across pages. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Book",
-      "@id": "https://book.laveenaarchers.com/book.html#book",
+      "@id": "https://book.laveenaarchers.com/book#book",
       "name": "Bad Medicine Blues",
       "alternateName": "Bad Medicine Blues: The Natural, Root-Cause Approach to Women's Energy, Hormones, and Vitality",
       "description": "A level-headed, science-grounded guide to root-cause, whole-person health for women, especially in perimenopause and beyond. 29 chapters, approximately 71,000 words, with 39 recipes and week-by-week protocols.",
       "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
-      "bookFormat": ["https://schema.org/EBook", "https://schema.org/Hardcover", "https://schema.org/Paperback"],
-      "publisher": { "@type": "Organization", "name": "Hope Press" },
+      "publisher": { "@id": "https://book.laveenaarchers.com/#hope-press" },
       "inLanguage": "en",
       "datePublished": "2025-11",
       "bookEdition": "First edition, revised 2026",
       "isbn": "979-8-90155-465-4",
       "image": "https://book.laveenaarchers.com/assets/bad-medicine-blues-cover.png",
-      "url": "https://book.laveenaarchers.com/book.html",
-      "genre": "Health & Wellness"
+      "url": "https://book.laveenaarchers.com/book",
+      "genre": "Health & Wellness",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.amazon.com/dp/B0H9JKKSRT",
+        "availability": "https://schema.org/InStock"
+      },
+      "workExample": [
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/book#kindle",
+          "name": "Bad Medicine Blues (Kindle edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H9JKKSRT",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/book#hardcover",
+          "name": "Bad Medicine Blues (hardcover edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/Hardcover",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H9JKKSRT",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://book.laveenaarchers.com/book#paperback",
+          "name": "Bad Medicine Blues (paperback edition)",
+          "author": { "@id": "https://book.laveenaarchers.com/#laveena" },
+          "bookFormat": "https://schema.org/Paperback",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0H9JKKSRT",
+            "availability": "https://schema.org/PreOrder"
+          }
+        }
+      ]
     },
     {
-      "@type": "Person",
-      "@id": "https://book.laveenaarchers.com/#laveena",
-      "name": "Rev. Dr. LaVeena B. Archers, PhD",
-      "url": "https://book.laveenaarchers.com/",
-      "description": "Author of Bad Medicine Blues. Board certified in natural medicine and functional nutrition. Not a medical doctor.",
-      "knowsAbout": ["Holistic Functional Medicine", "Functional nutrition", "Human Design", "Entrepreneur wellness", "Longevity"]
+      "@type": "Organization",
+      "@id": "https://book.laveenaarchers.com/#hope-press",
+      "name": "Hope Press",
+      "url": "https://book.laveenaarchers.com/hope-press",
+      "description": "Independent publishing imprint of Rev. Dr. LaVeena B. Archers, publishing evidence-graded root-cause health guides for women over 40.",
+      "logo": "https://book.laveenaarchers.com/assets/hope-press-colophon.svg",
+      "founder": { "@id": "https://book.laveenaarchers.com/#laveena" },
+      "publishingPrinciples": "https://book.laveenaarchers.com/how-i-research"
     },
     {
       "@type": "WebSite",
@@ -73,15 +127,15 @@
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Rev. Dr. LaVeena Archers</a>
+    <a class="brand" href="/">Rev. Dr. LaVeena Archers</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="blog/index.html">Library</a>
-      <a href="books.html">Books</a>
-      <a href="about.html">About</a>
-      <a href="testing.html">Testing &amp; Learning</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/blog/">Library</a>
+      <a href="/books">Books</a>
+      <a href="/about">About</a>
+      <a href="/testing">Testing &amp; Learning</a>
+      <a href="/contact">Contact</a>
       <details class="shop-menu">
         <summary>Shop</summary>
         <div class="shop-list">
@@ -89,7 +143,7 @@
           <a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a>
         </div>
       </details>
-      <a class="btn btn-gold" href="book.html#free-chapter">Read a free chapter</a>
+      <a class="btn btn-gold" href="/book#free-chapter">Read a free chapter</a>
     </nav>
   </div>
 </header>
@@ -110,7 +164,14 @@
         </div>
       </div>
 
-      <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="300" height="450" class="hero-cover" style="border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      <!-- class="hero-cover" lives on the <picture>, not the <img>: the wrapper is the
+           direct grid item of .hero-grid, and the class carries order:-1 / margin:0 auto
+           at <=820px. Left on the <img> the cover drops below the headline on phones. -->
+      <picture class="hero-cover">
+        <source type="image/avif" srcset="assets/bad-medicine-blues-cover-600.avif">
+        <source type="image/webp" srcset="assets/bad-medicine-blues-cover-600.webp">
+        <img src="assets/bad-medicine-blues-cover.png" alt="Bad Medicine Blues by LaVeena B. Archers, PhD — book cover" width="300" height="450" fetchpriority="high" decoding="async" style="display:block;margin-inline:auto;border-radius:10px;box-shadow:0 18px 40px rgba(43,43,43,.28);">
+      </picture>
     </div>
   </section>
 
@@ -160,10 +221,16 @@
         <h2 id="author-title">Written by someone who has been the patient.</h2>
         <p>I am Rev. Dr. LaVeena B. Archers. I wrote this book from both sides of the exam-room table, after my own long road through illness, dismissal, and the slow, unglamorous work of rebuilding my health from the roots up. Every claim here is grounded in real science and cited with care. Where the evidence is strong, I say so. Where it is thin or oversold, I tell you that too. You deserve the truth, not another sales pitch.</p>
         <p class="not-md">A note on credentials: I hold board certifications in natural medicine and functional nutrition. I am <strong>not a medical doctor</strong>, and this book is not a substitute for one. It is a companion for the questions your appointments never had time for.</p>
-        <p><a href="about.html">More about Dr. Archers and her scope of practice →</a></p>
+        <p><a href="/about">More about Dr. Archers and her scope of practice →</a></p>
       </div>
       <div>
-        <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" style="border-radius:14px;object-fit:cover;">
+        <!-- Plain <div> grid item, so .hero-cover's order/margin rules never applied here.
+             No class to move; the wrapper is purely for the AVIF/WebP sources. -->
+        <picture>
+          <source type="image/avif" srcset="assets/laveena-archers-portrait-560.avif">
+          <source type="image/webp" srcset="assets/laveena-archers-portrait-560.webp">
+          <img src="assets/laveena-archers-portrait.jpg" alt="Rev. Dr. LaVeena B. Archers, PhD" width="280" height="350" loading="lazy" decoding="async" style="border-radius:14px;object-fit:cover;">
+        </picture>
         <p class="credential">Doctor of Natural Medicine (DNM) · BC-HFMD · BC-HFND</p>
       </div>
     </div>
@@ -375,9 +442,9 @@
          of the Ozempic era for women. You can read the first chapter free, or try the reflection
          exercise it opens with, for working out whether this decision even applies to you right now.</p>
       <p style="margin-top:1.5rem">
-        <a class="btn btn-primary" href="glp1-book.html">Read the first chapter free</a>
+        <a class="btn btn-primary" href="/glp1-book">Read the first chapter free</a>
         &nbsp;
-        <a class="btn btn-outline" href="glp1-quiz.html">Try the reflection tool</a>
+        <a class="btn btn-outline" href="/glp1-quiz">Try the reflection tool</a>
       </p>
     </div>
   </section>
@@ -395,19 +462,19 @@
       <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="book.html">Bad Medicine Blues, the book</a></li>
-          <li><a href="testing.html">Testing &amp; Learning</a></li>
+          <li><a href="/book">Bad Medicine Blues, the book</a></li>
+          <li><a href="/testing">Testing &amp; Learning</a></li>
           <li><a href="https://labs.rupahealth.com/store/storefront_nYeZEmn" rel="noopener">Shop Labs</a></li>
           <li><a href="https://us.fullscript.com/welcome/iconic/store-start" rel="noopener">Shop Supplements</a></li>
-          <li><a href="join-pma.html">Join the PMA</a></li>
-          <li><a href="how-i-research.html">How I research</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/join-pma">Join the PMA</a></li>
+          <li><a href="/how-i-research">How I research</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

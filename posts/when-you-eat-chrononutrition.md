@@ -5,8 +5,8 @@ slug: when-you-eat-chrononutrition
 tags: meal-timing, metabolism, blood-sugar, nutrition
 summary: There is real science showing meal timing affects your metabolism independently of what and how much you eat. There is also a popular protocol built on top of it that points in the wrong direction, and costs you muscle on the way.
 questions:
-  - Does the timing of meals actually matter, or is it just calories? :: In a controlled feeding study where weight was held steady, eating in an early six-hour window improved insulin sensitivity, blood pressure and oxidative stress without any weight loss. In a separate crossover trial with calories matched exactly, late eating increased hunger and lowered daytime energy expenditure.
-  - Is 16:8 intermittent fasting worth doing? :: In one of the largest randomized trials of it, a noon-to-eight window produced no significant weight advantage over three structured meals across twelve weeks, and the fasting group lost significantly more lean mass.
+  - Does the timing of meals actually matter, or is it just calories? :: In a controlled feeding study where weight was held steady, eating in an early six-hour window improved insulin sensitivity, blood pressure and oxidative stress without any weight loss [1]. In a separate crossover trial with calories matched exactly, late eating increased hunger and lowered daytime energy expenditure [2].
+  - Is 16:8 intermittent fasting worth doing? :: In one of the largest randomized trials of it, a noon-to-eight window produced no significant weight advantage over three structured meals across twelve weeks, and the fasting group lost significantly more lean mass [3].
   - So what does the evidence actually support? :: Eating earlier, rather than eating in a narrower window. Those are two different things, and the popular protocol usually shifts eating later, which is the direction the research suggests you do not want.
 references:
   - Sutton EF, Beyl R, Early KS, Cefalu WT, Ravussin E, Peterson CM. Early time-restricted feeding improves insulin sensitivity, blood pressure, and oxidative stress even without weight loss in men with prediabetes. Cell Metab. 2018;27(6):1212-1221.e3. https://doi.org/10.1016/j.cmet.2018.04.010
@@ -14,11 +14,13 @@ references:
   - Lowe DA, Wu N, Rohdin-Bibby L, et al. Effects of time-restricted eating on weight loss and other metabolic parameters in women and men with overweight and obesity- the TREAT randomized clinical trial. JAMA Intern Med. 2020;180(11):1491-1499. https://doi.org/10.1001/jamainternmed.2020.4153
 ---
 
+Meal timing does affect your metabolism independently of how much you eat, and the popular protocol built on that finding points the wrong way. The research supports eating **earlier**. It does not support eating in a **narrower window**, and the usual noon-to-eight version of 16:8 moves your eating later rather than earlier. When that window was tested properly, across 116 adults for twelve weeks, it produced no significant weight advantage over three structured meals a day, and the fasting group lost significantly more appendicular lean mass [3].
+
 You have probably been told to stop eating after eight, or to skip breakfast and eat between noon and eight, or that a twelve-hour overnight fast will fix your metabolism.
 
 Underneath all of that there is a real field, called chrononutrition, and some of its findings are genuinely striking. There is also a popular protocol sitting on top of it that, on the evidence, points the wrong way.
 
-# The part that is real
+# Does when you eat actually matter?
 
 Your body is not the same machine at eight in the morning and eight at night. Insulin sensitivity, digestion, hormone release and core temperature all run on a daily rhythm, and food is one of the signals that sets that rhythm.
 
@@ -34,7 +36,7 @@ Late eating increased hunger. It raised the ratio of ghrelin to leptin, the two 
 
 Same calories. Different results. That is about as clean a demonstration as human nutrition research gets.
 
-# The part that gets it backwards
+# Why does 16:8 get it backwards?
 
 Here is where the popular version parts company with the science.
 
@@ -48,15 +50,15 @@ The TREAT trial randomized 116 adults for twelve weeks, comparing a noon-to-eigh
 
 Then there is the finding that should stop a woman in midlife in her tracks. In the group who came in for in-person body composition testing, the fasting group lost significantly more **appendicular lean mass**, meaning the muscle in your arms and legs [3].
 
-I have written before about what the GLP-1 medications take from your muscle. This is the same story in a different costume. An intervention that moves the number on the scale a little, and takes some of it out of the tissue you least want to lose.
+I have written before about [what the GLP-1 medications take from your muscle](/blog/glp1-muscle-loss). This is the same story in a different costume. An intervention that moves the number on the scale a little, and takes some of it out of the tissue you least want to lose.
 
 # Why this matters more for you than for a twenty-five year old man
 
 Many popular fasting protocols were road-tested on people with muscle to spare and hormones that were not in flux.
 
-You are working against age-related muscle loss, a rising protein requirement, and a transition that accelerates bone loss. In that context, an eating pattern that compresses your window, blunts your appetite and quietly costs you lean mass is a poor trade even when the scale cooperates.
+You are working against age-related muscle loss, [a rising protein requirement](/blog/protein-midlife-women), and [a transition that accelerates bone loss](/blog/what-changes-first-perimenopause). In that context, an eating pattern that compresses your window, blunts your appetite and quietly costs you lean mass is a poor trade even when the scale cooperates.
 
-It is also worth noticing who was actually in these studies. The early-eating trial that produced those excellent markers studied **men with prediabetes**, a small number of them, over five weeks [1]. It is a proof of concept and the authors present it as one. It is not evidence about a fifty-year-old woman in perimenopause, because she was not in it.
+It is also worth noticing who was actually in these studies. The early-eating trial that produced those excellent markers studied **men with prediabetes**, a small number of them, over five weeks [1]. It is a proof of concept and the authors present it as one. It is not evidence about a fifty-year-old woman in perimenopause, because she was not in it, and [naming who a study was actually done in](/how-i-research) is the standard this site runs on.
 
 # What the evidence actually supports
 
@@ -76,7 +78,7 @@ If you take medication that has to be timed with food, or you manage blood sugar
 
 And if you are already eating well, sleeping badly and running on stress, the timing of your meals is not the loose thread to pull. The unglamorous foundations move more than the schedule does.
 
-# The honest summary
+# The honest summary on meal timing
 
 Meal timing is real. Two well-controlled studies show it affecting metabolism independently of how much you eat [1,2].
 
@@ -84,4 +86,4 @@ The popular protocol built on that finding shifts eating later, which is the wro
 
 Earlier, not narrower. That is the whole of it.
 
-If your energy and your metabolism are the reason you are reading this, [the reader list](../books.html#reader-list) is where I share what I am working on next, including the longevity book this research belongs to.
+If your energy and your metabolism are the reason you are reading this, [*The Good Years*](/good-years) is the longevity book this research belongs to, and [the reader list](/books#reader-list) is where I share what I am working on next.

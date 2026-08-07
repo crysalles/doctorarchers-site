@@ -1,23 +1,25 @@
 ---
 title: Fiber and Your Own GLP-1: What the Evidence Shows
 date: 2026-08-14
-slug: fibre-and-your-own-glp1
+slug: fiber-and-your-own-glp1
 tags: glp1, fiber, gut-health, nutrition, blood-sugar
 summary: There is real science connecting dietary fiber, your gut bacteria, and the GLP-1 your body makes itself. There is also a great deal of overselling built on top of it. Here is where the line falls.
 questions:
-  - Does fiber increase your own GLP-1? :: In a randomized controlled trial, a high-fiber diet promoted a specific group of short-chain-fatty-acid-producing gut bacteria, and greater diversity and abundance of those bacteria was linked to better blood sugar control, partly via increased GLP-1 production.
-  - Is fiber "nature's Ozempic"? :: No. The mechanism is genuinely related, but the scale is not comparable. That trial studied blood sugar control in people with type 2 diabetes, not the 15 to 24% body weight reductions seen with the drugs [2].
-  - Who was actually studied? :: Adults with type 2 diabetes. That is an important limitation when applying the findings to a healthy woman in midlife, whose gut and metabolism are in a different state.
+  - Does fiber increase your own GLP-1? :: In a randomized controlled trial, a high-fiber diet promoted a specific group of short-chain-fatty-acid-producing gut bacteria, and greater diversity and abundance of those bacteria was linked to better blood sugar control, partly via increased GLP-1 production [1].
+  - Is fiber "nature's Ozempic"? :: No. The mechanism is genuinely related, but the scale is not comparable. That trial studied blood sugar control in people with type 2 diabetes [1], not the 15 to 24% body weight reductions seen with the drugs [2].
+  - Who was actually studied? :: Adults with type 2 diabetes [1]. That is an important limitation when applying the findings to a healthy woman in midlife, whose gut and metabolism are in a different state.
 references:
   - Zhao L, Zhang F, Ding X, et al. Gut bacteria selectively promoted by dietary fibers alleviate type 2 diabetes. Science. 2018;359(6380):1151-1156. https://doi.org/10.1126/science.aao5774
   - Locatelli JC, Costa JG, Haynes A, et al. Incretin-based weight loss pharmacotherapy- can resistance exercise optimize changes in body composition? Diabetes Care. 2024;47(10):1718-1730. https://doi.org/10.2337/dci23-0100
 ---
 
-I have written before about the fact that your body already makes GLP-1, and that the drugs everyone is discussing are copies of a hormone you produce yourself. This goes one level down, into the question I get asked most after that one. Can you actually do anything to support your own?
+Yes, fiber genuinely supports the GLP-1 your own body makes, and no, that does not make it "nature's Ozempic." In a randomized controlled trial published in *Science*, a high-fiber diet selectively promoted a particular group of short-chain fatty acid producers in the gut, and where those strains were present in greater diversity and abundance, participants had better blood sugar control, which the researchers attributed partly to increased GLP-1 production [1]. Those participants had type 2 diabetes, and the outcome measured was HbA1c, not the fifteen to twenty-four percent reductions in body weight the more potent drugs produce [2]. Shared mechanism, different magnitude.
+
+I have written before about the fact that [your body already makes GLP-1](/blog/your-body-already-makes-glp-1), and that the drugs everyone is discussing are copies of a hormone you produce yourself. This goes one level down, into the question I get asked most after that one. Can you actually do anything to support your own?
 
 The answer is more interesting than either the supplement industry or the skeptics will tell you.
 
-# The study worth knowing about
+# What does the research on fiber and GLP-1 actually show?
 
 In 2018 a team published a randomized controlled trial in *Science* that is still one of the cleaner demonstrations of this mechanism [1].
 
@@ -33,17 +35,17 @@ There was a second effect. Promoting those strains also crowded out bacteria pro
 
 So the chain is real and traceable. Fiber feeds specific bacteria, those bacteria ferment it into short-chain fatty acids, and that process is associated with more of your own GLP-1 and better glucose control.
 
-# Where the overselling starts
+# Is fiber "nature's Ozempic"?
 
 Now the part that requires discipline.
 
-None of that makes fiber a substitute for the medications, and the phrase "nature's Ozempic", which I have seen attached to everything from psyllium to berberine to a particular brand of tea, is not supported by what this trial found.
+None of those findings make fiber a substitute for the medications, and [the phrase "nature's Ozempic"](/blog/nature-glp1), which I have seen attached to everything from psyllium to berberine to a particular brand of tea, is not supported by what this trial found.
 
 Look at the scale. The trial measured HbA1c improvement in people with type 2 diabetes [1]. It did not measure the fifteen to twenty-four percent reductions in body weight that the more potent GLP-1 drugs produce in trials [2].
 
 Those are not the same magnitude of effect, and describing them as though they are is exactly the kind of claim I try to keep off this site. A shared mechanism does not make the outcomes equivalent. Walking and flying both get you across a city.
 
-# Who was in the study
+# Who was actually in the study?
 
 This is the limitation that matters most for the woman reading this.
 
@@ -51,9 +53,9 @@ The participants had type 2 diabetes [1]. Their metabolic state, their gut compo
 
 When you start from impaired glucose control, there is a great deal of headroom for an intervention to show a benefit. When you start from reasonably good control, the same intervention may produce a much smaller measurable change. That is not a failure of the fiber, but it does mean the number from this trial is not the number you should expect.
 
-I would rather tell you that than let you infer a promise the research did not make.
+I would rather tell you that than let you infer a promise the research did not make, which is [the editorial standard this site runs on](/how-i-research).
 
-# What is fair to say
+# What is fair to say about fiber and GLP-1?
 
 Fiber supports the bacteria that produce short-chain fatty acids, and that process is associated with your own GLP-1 signaling and better glucose handling [1]. That is a genuine, published, mechanistically coherent finding, and it is a good reason to eat more fiber.
 
@@ -71,4 +73,4 @@ What I am saying is that when someone tells you a supplement is nature's Ozempic
 
 Eat the fiber. Distrust the slogan.
 
-I take the whole GLP-1 picture apart properly in the next book in the series, *Your Body's Own GLP-1*. [Join the reader list](../books.html#reader-list) to hear when it lands.
+I take the whole GLP-1 picture apart properly in the next book in the series, [*Your Body's Own GLP-1*](/glp1-book). [Join the reader list](/books#reader-list) to hear when it lands.
