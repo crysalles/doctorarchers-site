@@ -390,6 +390,23 @@ AUTHOR_CREDENTIALS = (
     "Medicine and Functional Nutrition"
 )
 
+# One person, described the same way on every page this build emits.
+#
+# Deliberately carries NO hasCredential. The full, dated, sourced credential
+# list lives on the five pages whose subject is her qualifications —
+# credentials.html, about.html, scope-of-practice.html, index.html and
+# training.html — where it sits next to the certificates themselves and next to
+# the disclosure that ANWPB is a private credentialing organization. That list
+# is 4.6 KB; repeating it under every article would add ~15% to each post's HTML
+# for no gain, and a credential list read without the disclosure beside it is
+# exactly the framing this site works to avoid.
+#
+# Omitting a property is not the same as contradicting one: every page still
+# names the same @id, the same person, the same wording. What must never come
+# back is a SECOND, DIFFERENT credential list. The one that used to live here
+# said "Board-Certified Holistic Functional Nutrition Doctor (BC-HFND)"; her
+# certificate reads "Doctor of Functional Nutrition". Do not re-add a list here
+# without checking it against the certificates on credentials.html.
 PERSON_NODE = {
     "@type": "Person",
     "@id": PERSON_ID,
@@ -398,22 +415,16 @@ PERSON_NODE = {
     "url": f"{SITE_URL}/",
     "description": (
         "Holistic Functional Medicine educator and author of Bad Medicine Blues. "
-        "Educates and supports; does not diagnose, treat, prescribe, or manage "
-        "disease. Services offered within a Private Membership Association."
+        "Not a medical doctor. Educates and supports; does not diagnose, treat, "
+        "prescribe, or manage disease. Services offered within a Private "
+        "Membership Association."
     ),
-    "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "name": n}
-        for n in (
-            "Certified Executive Coach",
-            "Doctor of Natural Medicine (DNM)",
-            "Board-Certified Holistic Functional Medicine Doctor (BC-HFMD)",
-            "Board-Certified Holistic Functional Nutrition Doctor (BC-HFND)",
-        )
-    ],
     "knowsAbout": [
-        "Holistic Functional Medicine", "Functional nutrition", "Human Design",
-        "Entrepreneur wellness", "Longevity",
+        "Holistic Functional Medicine", "Functional nutrition", "Women's health",
+        "Perimenopause", "Menopause", "Longevity", "Healthspan", "GLP-1",
+        "Human Design",
     ],
+    "sameAs": ["https://www.doctorarchers.com/"],
 }
 
 WEBSITE_NODE = {
