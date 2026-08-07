@@ -16,7 +16,7 @@ references:
   - Angulo FJ, Getz J, Taylor JP, et al. A large outbreak of botulism- the hazardous baked potato. J Infect Dis. 1998;178(1):172-7. https://doi.org/10.1086/515615
 ---
 
-Cooking starch and cooling it overnight really does create [resistant starch](/resistant-starch-trick), and it also creates the exact conditions behind two of the better documented kinds of food poisoning. The rule that keeps it safe is short: cool it fast and refrigerate within an hour, never leave cooked starch out overnight, eat cooled rice within a day and other cooled starches within three to four days, refrigerate potatoes unwrapped rather than sealed in foil, and use something acidic where the dish allows it [1]. Reheating does not rescue rice that has been left out, because the toxin survives heat [3].
+Cooking starch and cooling it overnight really does create [resistant starch](/resistant-starch-trick), and it also creates the exact conditions behind two of the better documented kinds of food poisoning. The rule that keeps it safe is short: cool it fast and refrigerate within an hour, never leave cooked starch out overnight, eat cooled rice within a day and other cooled starches within three to four days, refrigerate potatoes unwrapped rather than sealed in foil, and use something acidic where the dish allows it, which in one study inhibited both growth and toxin production [1]. Reheating does not rescue rice that has been left out, because the toxin survives heat [3].
 
 Here is why each of those rules exists.
 

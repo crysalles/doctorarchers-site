@@ -19,7 +19,7 @@ You are awake again. It is somewhere between two and four, the house is silent, 
 
 And you know what did it, because everyone has told you. The hot flash woke you.
 
-There is a study that made me hold that explanation more loosely, and its finding is not what you would expect.
+Here is the study that made me hold that explanation more loosely, and why its finding is not what you would expect.
 
 # How common is waking at 3am in perimenopause?
 
