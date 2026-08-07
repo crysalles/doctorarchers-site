@@ -276,23 +276,42 @@ low-risk consolidation. Moving canonical to the apex would be the stronger
 long-term brand, but it is a full host migration and should be its own project,
 not a side effect of this one.
 
-**3. The Nature GLP-1 shield may have expired.** The noindex on that post traces
-to commit 6f93c8e, 2026-07-28, *"Temporarily shield book-matching web content
-during KDP review."* That was ten days ago. The mechanism is now fixed and
-actually working — which means if the KDP review is over, a real article is being
-deliberately kept out of search for no remaining reason. Worth an explicit
-decision either way.
+**3. The Nature GLP-1 shield has almost certainly expired.** The noindex traces to
+commit 6f93c8e, 2026-07-28, *"Temporarily shield book-matching web content during
+KDP review."* Its commit body says plainly: *"Restore after the title is
+approved."* The title **is** approved — `glp1-book.html` links a live Amazon
+listing. So the stated condition for removing the shield has been met.
 
-**4. `blog/ozempic-muscle-loss.html` duplicates a post scheduled for 2026-08-12**
+This matters more now than it did last week, because the mechanism was broken
+until today: the noindex was keyed on the `.html` path and never reached the URL
+that served the article. Fixing it means a real, cited article is now genuinely
+suppressed for the first time — on the strength of a directive that expired.
+
+To restore it: delete both `/blog/nature-glp1` rules from `_headers` and remove
+`nature-glp1` from `GATED_POST_SLUGS` in `build.py` (which will let it back into
+sitemap.xml and llms.txt). Left in place pending your call, since "is the KDP
+review finished" is not something to infer from a product page.
+
+**4. The credential lists still disagree between pages.** This was the original
+audit finding and it is deliberately *not* fixed. `index.html` asserts 4
+credentials, `credentials.html` 14, `about.html` 6, with different wording and
+different `credentialCategory` values for what look like the same qualifications.
+Every node is byte-identical to what it was before this session — nothing was
+reworded — but one `@id` is still describing one person three different ways.
+
+Reconciling them means deciding which list is correct, which is yours to make and
+not safely inferable from the markup.
+
+**5. `blog/ozempic-muscle-loss.html` duplicates a post scheduled for 2026-08-12**
 (`glp1-muscle-loss`). Two pages competing on one topic. The old page has no
 inbound links and is not in the sitemap, so the cheapest resolution is a 301 to
 the new post once it publishes. Decide before the 12th.
 
-**5. `DEPLOY.md` describes Netlify.** The site is on Cloudflare Pages. The file no
+**6. `DEPLOY.md` describes Netlify.** The site is on Cloudflare Pages. The file no
 longer deploys, but it will mislead the next person who reads it — including a
 future session of me.
 
-**6. Your review pass on the post edits.** Per the protocol in `CLAUDE.md`, your
+**7. Your review pass on the post edits.** Per the protocol in `CLAUDE.md`, your
 read is the final human gate. What changed in `posts/*.md`: opening paragraphs
 reordered so the answer comes first, some H2s rephrased as questions, contextual
 internal links added, and existing `[n]` markers carried into the Quick-answers
