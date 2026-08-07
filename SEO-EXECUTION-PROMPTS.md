@@ -301,10 +301,15 @@ reworded — but one `@id` is still describing one person three different ways.
 Reconciling them means deciding which list is correct, which is yours to make and
 not safely inferable from the markup.
 
-**5. `blog/ozempic-muscle-loss.html` duplicates a post scheduled for 2026-08-12**
-(`glp1-muscle-loss`). Two pages competing on one topic. The old page has no
-inbound links and is not in the sitemap, so the cheapest resolution is a 301 to
-the new post once it publishes. Decide before the 12th.
+**5. ~~`blog/ozempic-muscle-loss.html`~~ — DONE, 2026-08-07.** Handled
+automatically. `SUPERSEDED` in `build.py` maps it to `glp1-muscle-loss`; on the
+first build after that post publishes on the 12th, the stale page is deleted and
+a 301 for both URL forms appears in the generated block of `_redirects`. Nothing
+happens before then, so there is no window where the old URL 404s.
+
+Why that page and not the other: it is hand-written with no `posts/*.md` source,
+has zero inbound links, is in neither `sitemap.xml` nor `llms.txt`, and carries
+no inline citations across 1,158 words against 12 in its replacement.
 
 **6. `DEPLOY.md` describes Netlify.** The site is on Cloudflare Pages. The file no
 longer deploys, but it will mislead the next person who reads it — including a
