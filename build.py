@@ -1501,11 +1501,19 @@ SITEMAP_SKIP = {"404.html"}
 # it is a stale file with no posts/*.md source, so this build never emits it.
 UNPUBLISHED_PAGES = {"glp1-updates.html"}
 
-# Posts that are deliberately gated. nature-glp1 stays reachable and stays
-# linked from the GLP-1 topic guide for readers who arrive through it, but
-# robots.txt Disallows the crawler — so listing it in sitemap.xml or llms.txt
-# would be this build advertising the exact URL robots.txt is holding back.
-GATED_POST_SLUGS = {"nature-glp1"}
+# Posts held out of the blog index, sitemap.xml and llms.txt — reachable by
+# direct link, but never advertised by this build.
+#
+# Empty since 2026-08-07. Its only member was nature-glp1, shielded during the
+# KDP review of Your Body's Own GLP-1 (6f93c8e, "Restore after the title is
+# approved"). The title was approved, so the post is a normal indexable article
+# again.
+#
+# Kept rather than deleted because gating a post needs to stay a one-line
+# change. If you add a slug here, add the matching X-Robots-Tag rule to
+# _headers in the same edit — this set only stops the build advertising the
+# URL, it does not stop anything indexing a page it reaches another way.
+GATED_POST_SLUGS = set()
 
 
 def is_indexable(path):

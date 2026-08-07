@@ -115,25 +115,26 @@
 /assets/glp1-resistant-starch-trick.pdf
   X-Robots-Tag: noindex, noarchive, nofollow
 
-# ---------------------------------------------------------------------------
-# Gated page: the Nature GLP-1 piece
-# ---------------------------------------------------------------------------
-# This is the one that was actually broken. The .html rule alone put the
-# noindex on a 308 while /blog/nature-glp1 served the full article with no
-# X-Robots-Tag at all — verified live before this change. The page also has no
-# <meta name="robots"> of its own, so the header was the only thing standing
-# between a gated article and Google, and it was pointed at the wrong URL.
-/blog/nature-glp1
-  X-Robots-Tag: noindex, noarchive, nofollow
-
-/blog/nature-glp1.html
-  X-Robots-Tag: noindex, noarchive, nofollow
+# The Nature GLP-1 article used to be noindexed here. That shield came from
+# 6f93c8e (2026-07-28), "Temporarily shield book-matching web content during KDP
+# review", whose commit body said: "Restore after the title is approved." The
+# title was approved — Your Body's Own GLP-1 is on sale — so the shield was
+# lifted on 2026-08-07 and the article is a normal indexable post again.
+#
+# The sample-PDF rules above are NOT part of that and must stay. They gate a
+# lead magnet you get by joining the list, which has nothing to do with KDP.
+#
+# Worth knowing if a similar shield is ever needed again: the original rule was
+# written for /blog/nature-glp1.html, and Pages 308-redirects that to
+# /blog/nature-glp1, so the noindex landed on the redirect while the URL serving
+# the article sent no header at all. The shield never actually worked. Write any
+# future rule for the extensionless form.
 
 # ---------------------------------------------------------------------------
 # Thanks pages and other non-public pages
 # ---------------------------------------------------------------------------
 # These already carry <meta name="robots" content="noindex,follow"> in the
-# page source, so unlike /blog/nature-glp1 they were not exposed. The headers
+# page source, so they were never exposed the way nature-glp1 was. The headers
 # below are belt and braces: they reach crawlers and fetchers that never parse
 # the HTML, and they hold even if a future template edit drops the meta tag.
 #

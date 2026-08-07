@@ -32,16 +32,16 @@ Disallow: /assets/glp1-ch1-sample-7k2m9x.pdf
 # DELIBERATELY NOT DISALLOWED, and each one is a correction of a rule that used
 # to be here:
 #
-#   /blog/nature-glp1 — five published articles link to it. Under a Disallow,
-#   Google follows those links, cannot fetch the page, and is free to index the
-#   bare URL forever. It now returns X-Robots-Tag: noindex, noarchive, nofollow
-#   on the URL that actually serves it (the old rule named the .html form, which
-#   Pages 308-redirects away, so the header was landing on the redirect and the
-#   article itself was fully indexable). Letting crawlers fetch it is what makes
-#   the noindex work.
+#   /blog/nature-glp1 — no longer gated at all. It was shielded during the KDP
+#   review of Your Body's Own GLP-1; the title was approved, so the shield came
+#   off on 2026-08-07 and it is a normal indexable article that belongs in the
+#   sitemap. (The rule that used to sit here never worked anyway: it named the
+#   .html form, which Pages 308-redirects away.)
 #
-#   /glp1-chapter-thanks and /support-kit-thanks — same reasoning. Both carry
-#   noindex in the page source and in _headers. Allowing the fetch is what gets
-#   them dropped from the index rather than merely un-crawled.
+#   /glp1-chapter-thanks and /support-kit-thanks — still not for search, but a
+#   Disallow is the wrong tool. Both carry noindex in the page source and in
+#   _headers, and a crawler that is not allowed to fetch them can never read
+#   that noindex. Allowing the fetch is what gets them dropped from the index
+#   rather than merely left uncrawled.
 
 Sitemap: https://book.laveenaarchers.com/sitemap.xml

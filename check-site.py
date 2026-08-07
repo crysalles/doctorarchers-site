@@ -54,6 +54,21 @@ def pages(base: Path) -> list[Path]:
     return sorted(base.rglob("*.html"))
 
 
+def gated_slugs() -> set[str]:
+    """The posts build.py holds out of the sitemap, llms.txt and the blog index.
+
+    Parsed out of build.py's source rather than imported, because importing it
+    runs a build as a side effect. Returns an empty set if the constant moves or
+    is renamed — a missing gate is visible in the sitemap, whereas a check that
+    crashes on every run gets deleted.
+    """
+    src = (ROOT / "build.py").read_text(encoding="utf-8")
+    m = re.search(r"^GATED_POST_SLUGS\s*=\s*(set\(\)|\{[^}]*\})", src, re.M)
+    if not m or m.group(1) == "set()":
+        return set()
+    return set(re.findall(r'"([^"]+)"', m.group(1)))
+
+
 COMMENT = re.compile(r"<!--.*?-->", re.S)
 
 
@@ -208,8 +223,14 @@ def check_sitemap(base: Path) -> None:
     missing_lastmod = len(locs) - xml.count("<lastmod>")
     if missing_lastmod > 0:
         warn("sitemap", f"{missing_lastmod} of {len(locs)} entries have no <lastmod>")
-    if "nature-glp1" in xml:
-        fail("sitemap", "the gated nature-glp1 post is advertised in the sitemap")
+
+    # Read the gate list out of build.py rather than naming a slug here. This
+    # check used to hardcode "nature-glp1" and went stale the moment that post
+    # was un-gated, failing a build that was correct — which is the same class
+    # of bug it exists to catch.
+    for slug in gated_slugs():
+        if slug in xml:
+            fail("sitemap", f"gated post '{slug}' is advertised in the sitemap")
 
 
 def main() -> None:
